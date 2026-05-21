@@ -6,13 +6,16 @@ All agents in this project must follow these conventions. Read this file at the 
 
 ## 0. Read all project rules first
 
-Before anything else, read all five rule files in order. These are the highest-priority instructions and override everything else:
+Before anything else, read all rule files in order. These are the highest-priority instructions and override everything else:
 
-1. `.claude/rules/01_principles.md`
-2. `.claude/rules/02_guardrails.md`
-3. `.claude/rules/03_task-gate.md`
-4. `.claude/rules/04_path-change-detection.md`
-5. `.claude/rules/05_update-report-on-change.md`
+1. `.claude/rules/00_session-checklist.md`
+2. `.claude/rules/01_principles.md`
+3. `.claude/rules/02_guardrails.md`
+4. `.claude/rules/03_task-gate.md`
+5. `.claude/rules/04_path-change-detection.md`
+6. `.claude/rules/05_update-report-on-change.md`
+7. `.claude/rules/06_compact-log.md`
+8. `.claude/rules/07_behavior.md`
 
 ---
 
@@ -58,7 +61,6 @@ All file paths are relative to this root. Never hardcode absolute paths in scrip
 | nextflow-script-agent | `nextflow-script-agent.md` | Nextflow files (`nextflow/`) — may write from scratch | `md_files/NEXTFLOW.md` |
 | script-review-agent | `script-review-agent.md` | Reviews all R + Nextflow scripts; fixes errors from nextflow-stage-report-agent | `md_files/WORKFLOW.md`, `md_files/NEXTFLOW.md` |
 | nextflow-stage-report-agent | `nextflow-stage-report-agent.md` | Inspects `.nextflow.log` and `work/`; invokes script-review-agent on error only; logs report on success | `md_files/NEXTFLOW.md` |
-| nextflow-test-agent | `nextflow-test-agent.md` | Tests stage execution and output files; hands failures to script-review-agent | `md_files/NEXTFLOW.md` |
 | BIOLOGIST | `BIOLOGIST.md` | Reviews plots and parameters for biological interpretability in iSN/DRG context | `md_files/STATUS.md` |
 | troubleshoot_agent | `troubleshoot_agent.md` | Reads SLURM/Nextflow error logs, classifies failure, coordinates with script-review-agent to fix | `md_files/NEXTFLOW.md`, `md_files/STATUS.md` |
 
