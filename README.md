@@ -62,7 +62,7 @@ cd iSN_claude
 
 Before running the install scripts, update all paths and email for your account.
 
-**Recommended: let Claude do it for you.** Install [Claude Code](https://claude.ai/code) in your local computer, then open it in the repo root:
+**Recommended: let Claude do it for you.** Install [Claude Code](https://code.claude.com/docs/en/quickstart) in your local computer, then open it in the repo root:
 
 ```bash
 cd iSN_claude
