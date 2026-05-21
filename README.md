@@ -9,7 +9,7 @@ snRNA-seq analysis of human induced sensory neurons (iSNs), Stages 01–04: ambi
 ## Requirements
 
 - **HTCF cluster account** — all compute jobs run on HTCF via SLURM. You need an account and access to the `interactive` partition.
-- **Claude Code** — install from [claude.ai/code](https://claude.ai/code). This is what runs the agents, applies the rules, and manages the pipeline for you.
+- **Claude Code** — install from [claude.ai/code](https://code.claude.com/docs/en/quickstart). This is what runs the agents, applies the rules, and manages the pipeline for you.
 - **Software dependencies** — the following must be installed and accessible before running the R package install scripts. If you are in the rmlab group on HTCF, these are already at `/ref/rmlab/software/` and the default paths will work. If you are on a different HTCF lab account or a different cluster, install them in your own lab's software directory and update the paths in step 2.
 
   **Must install yourself** (paths set in `r_install/01_cran.sh` lines 27–42):
