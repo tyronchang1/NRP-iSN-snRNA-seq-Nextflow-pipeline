@@ -1,0 +1,123 @@
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+Content type 'application/x-gzip' length 594775 bytes (580 KB)
+==================================================
+downloaded 580 KB
+
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+
+The downloaded source packages are in
+	‘/tmp/RtmpOF57ng/downloaded_packages’
+Warning message:
+In install.packages("systemfonts", lib = lib, repos = repos, configure.args = "--without-fontconfig") :
+  installation of package ‘systemfonts’ had non-zero exit status
+also installing the dependencies ‘systemfonts’, ‘textshaping’, ‘ragg’, ‘pkgdown’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/pkgdown_2.2.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/devtools_2.5.2.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+ERROR: dependency ‘systemfonts’ is not available for package ‘textshaping’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/textshaping’
+ERROR: dependencies ‘systemfonts’, ‘textshaping’ are not available for package ‘ragg’
+Perhaps try a variation of:
+install.packages(c('systemfonts', 'textshaping'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ragg’
+ERROR: dependency ‘ragg’ is not available for package ‘pkgdown’
+Perhaps try a variation of:
+install.packages('ragg')
+* removing ‘/ref/rmlab/software/tyron/R-libs/pkgdown’
+ERROR: dependency ‘pkgdown’ is not available for package ‘devtools’
+Perhaps try a variation of:
+install.packages('pkgdown')
+* removing ‘/ref/rmlab/software/tyron/R-libs/devtools’
+
+The downloaded source packages are in
+	‘/tmp/RtmpOF57ng/downloaded_packages’
+also installing the dependencies ‘systemfonts’, ‘textshaping’, ‘ragg’, ‘pkgdown’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/pkgdown_2.2.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/devtools_2.5.2.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+ERROR: dependency ‘systemfonts’ is not available for package ‘textshaping’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/textshaping’
+ERROR: dependencies ‘systemfonts’, ‘textshaping’ are not available for package ‘ragg’
+Perhaps try a variation of:
+install.packages(c('systemfonts', 'textshaping'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ragg’
+ERROR: dependency ‘ragg’ is not available for package ‘pkgdown’
+Perhaps try a variation of:
+install.packages('ragg')
+* removing ‘/ref/rmlab/software/tyron/R-libs/pkgdown’
+ERROR: dependency ‘pkgdown’ is not available for package ‘devtools’
+Perhaps try a variation of:
+install.packages('pkgdown')
+* removing ‘/ref/rmlab/software/tyron/R-libs/devtools’
+
+The downloaded source packages are in
+	‘/tmp/RtmpOF57ng/downloaded_packages’
+also installing the dependencies ‘systemfonts’, ‘textshaping’, ‘ragg’, ‘pkgdown’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/pkgdown_2.2.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/devtools_2.5.2.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+ERROR: dependency ‘systemfonts’ is not available for package ‘textshaping’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/textshaping’
+ERROR: dependencies ‘systemfonts’, ‘textshaping’ are not available for package ‘ragg’
+Perhaps try a variation of:
+install.packages(c('systemfonts', 'textshaping'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ragg’
+ERROR: dependency ‘ragg’ is not available for package ‘pkgdown’
+Perhaps try a variation of:
+install.packages('ragg')
+* removing ‘/ref/rmlab/software/tyron/R-libs/pkgdown’
+[2026-05-19T20:55:30.076] error: *** JOB 41038293 ON n193 CANCELLED AT 2026-05-19T20:55:30 DUE to SIGNAL Terminated ***

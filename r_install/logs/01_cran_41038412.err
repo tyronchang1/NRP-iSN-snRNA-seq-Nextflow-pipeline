@@ -1,0 +1,85 @@
+also installing the dependencies ‘systemfonts’, ‘textshaping’, ‘googledrive’, ‘googlesheets4’, ‘ragg’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/googledrive_2.1.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/googlesheets4_1.1.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/tidyverse_2.0.0.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+* installing *source* package ‘googledrive’ ...
+** this is package ‘googledrive’ version ‘2.1.2’
+** package ‘googledrive’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (googledrive)
+ERROR: dependency ‘systemfonts’ is not available for package ‘textshaping’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/textshaping’
+* installing *source* package ‘googlesheets4’ ...
+** this is package ‘googlesheets4’ version ‘1.1.2’
+** package ‘googlesheets4’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (googlesheets4)
+ERROR: dependencies ‘systemfonts’, ‘textshaping’ are not available for package ‘ragg’
+Perhaps try a variation of:
+install.packages(c('systemfonts', 'textshaping'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ragg’
+ERROR: dependency ‘ragg’ is not available for package ‘tidyverse’
+Perhaps try a variation of:
+install.packages('ragg')
+* removing ‘/ref/rmlab/software/tyron/R-libs/tidyverse’
+
+The downloaded source packages are in
+	‘/tmp/RtmpIa6GtL/downloaded_packages’
+also installing the dependencies ‘systemfonts’, ‘textshaping’, ‘ragg’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/tidyverse_2.0.0.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+ERROR: dependency ‘systemfonts’ is not available for package ‘textshaping’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/textshaping’
+[2026-05-19T20:59:34.148] error: *** JOB 41038412 ON n193 CANCELLED AT 2026-05-19T20:59:34 DUE to SIGNAL Terminated ***

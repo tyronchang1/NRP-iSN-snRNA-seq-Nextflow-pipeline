@@ -1,0 +1,197 @@
+Downloading GitHub repo bnprks/BPCells@HEAD
+* installing *source* package ‘BPCells’ ...
+** this is package ‘BPCells’ version ‘0.3.1’
+** using staged installation
+ERROR: configuration failed for package ‘BPCells’
+* removing ‘/ref/rmlab/software/tyron/R-libs/BPCells’
+Downloading GitHub repo bnprks/BPCells@HEAD
+* installing *source* package ‘BPCells’ ...
+** this is package ‘BPCells’ version ‘0.3.1’
+** using staged installation
+ERROR: configuration failed for package ‘BPCells’
+* removing ‘/ref/rmlab/software/tyron/R-libs/BPCells’
+Downloading GitHub repo bnprks/BPCells@HEAD
+* installing *source* package ‘BPCells’ ...
+** this is package ‘BPCells’ version ‘0.3.1’
+** using staged installation
+ERROR: configuration failed for package ‘BPCells’
+* removing ‘/ref/rmlab/software/tyron/R-libs/BPCells’
+Downloading GitHub repo mojaveazure/seurat-disk@HEAD
+Installing 1 packages: hdf5r
+trying URL 'https://cloud.r-project.org/src/contrib/hdf5r_1.3.12.tar.gz'
+Content type 'application/x-gzip' length 1919746 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+* installing *source* package ‘hdf5r’ ...
+** this is package ‘hdf5r’ version ‘1.3.12’
+** package ‘hdf5r’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: WARNING:
+Unable to locate HDF5 compilation helper scripts 'h5cc' or 'h5pcc'.
+Please specify --with-hdf5=<LOCATION> as the full path to h5cc or h5pcc.
+HDF5 support is being disabled (equivalent to --with-hdf5=no).
+
+configure: error: hdf5 does not seem to be installed on your platform.
+  Please install the hdf5 library.
+  The required HDF5 library files can be installed as follows:
+      - Debian-based (e.g. Debian >= 8.0, Ubuntu >= 15.04): 'sudo apt-get install libhdf5-dev'
+        - Old Debian-based (e.g Debian < 8.0, Ubuntu < 15.04): Install from source (see INSTALL)
+        - OS X using Homebrew: 'brew install hdf5'
+        - RPM-based (e.g Fedora): 'sudo yum install hdf5-devel'
+ERROR: configuration failed for package ‘hdf5r’
+* removing ‘/ref/rmlab/software/tyron/R-libs/hdf5r’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp9VTGWQ/downloaded_packages’
+ERROR: dependency ‘hdf5r’ is not available for package ‘SeuratDisk’
+Perhaps try a variation of:
+install.packages('hdf5r')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SeuratDisk’
+Downloading GitHub repo mojaveazure/seurat-disk@HEAD
+Installing 1 packages: hdf5r
+trying URL 'https://cloud.r-project.org/src/contrib/hdf5r_1.3.12.tar.gz'
+Content type 'application/x-gzip' length 1919746 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+* installing *source* package ‘hdf5r’ ...
+** this is package ‘hdf5r’ version ‘1.3.12’
+** package ‘hdf5r’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: WARNING:
+Unable to locate HDF5 compilation helper scripts 'h5cc' or 'h5pcc'.
+Please specify --with-hdf5=<LOCATION> as the full path to h5cc or h5pcc.
+HDF5 support is being disabled (equivalent to --with-hdf5=no).
+
+configure: error: hdf5 does not seem to be installed on your platform.
+  Please install the hdf5 library.
+  The required HDF5 library files can be installed as follows:
+      - Debian-based (e.g. Debian >= 8.0, Ubuntu >= 15.04): 'sudo apt-get install libhdf5-dev'
+        - Old Debian-based (e.g Debian < 8.0, Ubuntu < 15.04): Install from source (see INSTALL)
+        - OS X using Homebrew: 'brew install hdf5'
+        - RPM-based (e.g Fedora): 'sudo yum install hdf5-devel'
+ERROR: configuration failed for package ‘hdf5r’
+* removing ‘/ref/rmlab/software/tyron/R-libs/hdf5r’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp9VTGWQ/downloaded_packages’
+ERROR: dependency ‘hdf5r’ is not available for package ‘SeuratDisk’
+Perhaps try a variation of:
+install.packages('hdf5r')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SeuratDisk’
+Downloading GitHub repo mojaveazure/seurat-disk@HEAD
+Installing 1 packages: hdf5r
+trying URL 'https://cloud.r-project.org/src/contrib/hdf5r_1.3.12.tar.gz'
+Content type 'application/x-gzip' length 1919746 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+* installing *source* package ‘hdf5r’ ...
+** this is package ‘hdf5r’ version ‘1.3.12’
+** package ‘hdf5r’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: WARNING:
+Unable to locate HDF5 compilation helper scripts 'h5cc' or 'h5pcc'.
+Please specify --with-hdf5=<LOCATION> as the full path to h5cc or h5pcc.
+HDF5 support is being disabled (equivalent to --with-hdf5=no).
+
+configure: error: hdf5 does not seem to be installed on your platform.
+  Please install the hdf5 library.
+  The required HDF5 library files can be installed as follows:
+      - Debian-based (e.g. Debian >= 8.0, Ubuntu >= 15.04): 'sudo apt-get install libhdf5-dev'
+        - Old Debian-based (e.g Debian < 8.0, Ubuntu < 15.04): Install from source (see INSTALL)
+        - OS X using Homebrew: 'brew install hdf5'
+        - RPM-based (e.g Fedora): 'sudo yum install hdf5-devel'
+ERROR: configuration failed for package ‘hdf5r’
+* removing ‘/ref/rmlab/software/tyron/R-libs/hdf5r’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp9VTGWQ/downloaded_packages’
+ERROR: dependency ‘hdf5r’ is not available for package ‘SeuratDisk’
+Perhaps try a variation of:
+install.packages('hdf5r')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SeuratDisk’
+Downloading GitHub repo immunogenomics/presto@HEAD
+* installing *source* package ‘presto’ ...
+** this is package ‘presto’ version ‘1.0.0’
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using C++14
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-presto/00new/presto/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (presto)
+Downloading GitHub repo cole-trapnell-lab/monocle3@HEAD
+Downloading GitHub repo bnprks/BPCells@HEAD
+* installing *source* package ‘BPCells’ ...
+** this is package ‘BPCells’ version ‘0.3.1’
+** using staged installation
+ERROR: configuration failed for package ‘BPCells’
+* removing ‘/ref/rmlab/software/tyron/R-libs/BPCells’
+Downloading GitHub repo cole-trapnell-lab/speedglm@HEAD
+* installing *source* package ‘speedglm’ ...
+** this is package ‘speedglm’ version ‘0.3-4’
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (speedglm)
+Installing 12 packages: units, s2, warp, biglm, sf, spData, slider, furrr, spdep, rsample, pscl, ggdist
+trying URL 'https://cloud.r-project.org/src/contrib/units_1.0-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/s2_1.1.9.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/warp_0.2.3.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/biglm_0.9-3.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/sf_1.1-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spData_2.3.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/slider_0.3.3.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/furrr_0.4.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spdep_1.4-2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/rsample_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/pscl_1.5.9.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggdist_3.3.3.tar.gz'
+* installing *source* package ‘units’ ...
+** this is package ‘units’ version ‘1.0-1’
+** package ‘units’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: error: in '/tmp/RtmpC6ySkR/R.INSTALL367123282e205f/units':
+configure: error: 
+--------------------------------------------------------------------------------
+  Configuration failed because libudunits2.so was not found. Try installing:
+    * deb: libudunits2-dev (Debian, Ubuntu, ...)
+    * rpm: udunits2-devel (Fedora, EPEL, ...)
+    * brew: udunits (OSX)
+  If udunits2 is already installed in a non-standard location, use:
+    --configure-args='--with-udunits2-lib=/usr/local/lib'
+  if the library was not found, and/or:
+    --configure-args='--with-udunits2-include=/usr/include/udunits2'
+  if the header was not found, replacing paths with appropriate values.
+  You can alternatively set UDUNITS2_INCLUDE and UDUNITS2_LIBS manually.
+--------------------------------------------------------------------------------
+
+See 'config.log' for more details
+ERROR: configuration failed for package ‘units’
+* removing ‘/ref/rmlab/software/tyron/R-libs/units’
+* installing *source* package ‘s2’ ...
+** this is package ‘s2’ version ‘1.1.9’
+** package ‘s2’ successfully unpacked and MD5 sums checked
+** using staged installation
+[2026-05-20T01:30:04.102] error: *** JOB 41042743 ON n002 CANCELLED AT 2026-05-20T01:30:04 DUE to SIGNAL Terminated ***

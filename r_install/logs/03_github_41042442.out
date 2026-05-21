@@ -1,0 +1,95 @@
+=== GitHub Package Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Wed May 20 12:59:55 AM CDT 2026
+
+=== Installing: DoubletFinder (chris-mcginnis-ucsf/DoubletFinder) ===
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/Rtmpp6s6OT/remotes364b46c03aae6/chris-mcginnis-ucsf-DoubletFinder-1b244d8/DESCRIPTION’ ... OK
+* preparing ‘DoubletFinder’:
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+* building ‘DoubletFinder_2.0.6.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+OK: DoubletFinder
+
+=== Installing: BPCells (bnprks/BPCells/r) ===
+/usr/bin/gfortran  -fpic  -g -O2  -c hbin.f -o hbin.o
+/usr/bin/gfortran  -fpic  -g -O2  -c hcell.f -o hcell.o
+/usr/bin/gfortran  -fpic  -g -O2  -c herode.f -o herode.o
+/usr/bin/gfortran  -fpic  -g -O2  -c hsm.f -o hsm.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c reg.c -o reg.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o hexbin.so hbin.o hcell.o herode.o hsm.o reg.o -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/Rtmpp6s6OT/remotes364b4623aefb92/bnprks-BPCells-adc4a3c/r/DESCRIPTION’ ... OK
+* preparing ‘BPCells’:
+* checking DESCRIPTION meta-information ... OK
+* cleaning src
+* running ‘cleanup’
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+* building ‘BPCells_0.3.1.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+Recording install count metrics
+Testing hdf5 by compiling example program...
+
+
+Retrying with pkg-config flags...
+Error running 'pkg-config hdf5 --cflags --libs'
+
+
+Searching for config information with h5cc -showconfig and h5cc -show...
+Failure running either 'h5cc -show' or: 'h5cc -showconfig | awk -F: '/FLAGS|Extra libraries:/ {printf("%s ", $2)}'
+
+
+Searching for hdf5 in a conda env...
+no conda environment found in '$CONDA_PREFIX'
+
+
+Unable to locate libhdf5. Please install manually or edit compiler flags.
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/Rtmpp6s6OT/remotes364b46ed0951f/bnprks-BPCells-adc4a3c/r/DESCRIPTION’ ... OK
+* preparing ‘BPCells’:
+* checking DESCRIPTION meta-information ... OK
+* cleaning src
+* running ‘cleanup’
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+* building ‘BPCells_0.3.1.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+Recording install count metrics
+Testing hdf5 by compiling example program...
+
+
+Retrying with pkg-config flags...
+Error running 'pkg-config hdf5 --cflags --libs'
+
+
+Searching for config information with h5cc -showconfig and h5cc -show...
+Failure running either 'h5cc -show' or: 'h5cc -showconfig | awk -F: '/FLAGS|Extra libraries:/ {printf("%s ", $2)}'
+
+
+Searching for hdf5 in a conda env...
+no conda environment found in '$CONDA_PREFIX'
+
+
+Unable to locate libhdf5. Please install manually or edit compiler flags.
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/Rtmpp6s6OT/remotes364b461813c46d/bnprks-BPCells-adc4a3c/r/DESCRIPTION’ ... OK
+* preparing ‘BPCells’:
+* checking DESCRIPTION meta-information ... OK
+* cleaning src
+* running ‘cleanup’
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+* building ‘BPCells_0.3.1.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+

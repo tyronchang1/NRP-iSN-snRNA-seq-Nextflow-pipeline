@@ -1,0 +1,73 @@
+Registered S3 method overwritten by 'SeuratDisk':
+  method            from  
+  as.sparse.H5Group Seurat
+Downloading GitHub repo cole-trapnell-lab/monocle3@HEAD
+Installing 2 packages: sf, spdep
+trying URL 'https://cloud.r-project.org/src/contrib/sf_1.1-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spdep_1.4-2.tar.gz'
+* installing *source* package ‘sf’ ...
+** this is package ‘sf’ version ‘1.1-1’
+** package ‘sf’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-sf/00new/sf/libs
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (sf)
+* installing *source* package ‘spdep’ ...
+** this is package ‘spdep’ version ‘1.4-2’
+** package ‘spdep’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-spdep/00new/spdep/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (spdep)
+
+The downloaded source packages are in
+	‘/tmp/RtmpbjA6OQ/downloaded_packages’
+* installing *source* package ‘monocle3’ ...
+** this is package ‘monocle3’ version ‘1.4.27’
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using C++11
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-monocle3/00new/monocle3/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (monocle3)
+Registered S3 method overwritten by 'car':
+  method           from
+  na.action.merMod lme4

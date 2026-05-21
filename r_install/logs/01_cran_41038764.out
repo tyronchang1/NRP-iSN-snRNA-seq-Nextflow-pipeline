@@ -1,0 +1,371 @@
+=== R CRAN Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Tue May 19 09:19:07 PM CDT 2026
+SKIP (already installed): BiocManager
+SKIP (already installed): remotes
+SKIP (already installed): pak
+SKIP (already installed): ggplot2
+SKIP (already installed): dplyr
+SKIP (already installed): tidyr
+SKIP (already installed): readr
+SKIP (already installed): purrr
+SKIP (already installed): tibble
+SKIP (already installed): stringr
+SKIP (already installed): forcats
+SKIP (already installed): lubridate
+SKIP (already installed): scales
+SKIP (already installed): broom
+SKIP (already installed): knitr
+SKIP (already installed): lintr
+SKIP (already installed): styler
+SKIP (already installed): here
+SKIP (already installed): markdown
+SKIP (already installed): rmarkdown
+
+=== Installing: Seurat ===
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2   -c ModularityOptimizer.cpp -o ModularityOptimizer.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2   -c RModularityOptimizer.cpp -o RModularityOptimizer.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2   -c data_manipulation.cpp -o data_manipulation.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2   -c fast_NN_dist.cpp -o fast_NN_dist.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2   -c integration.cpp -o integration.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2   -c snn.cpp -o snn.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2   -c stats.cpp -o stats.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I/usr/local/include    -fpic  -g -O2  -c valid_pointer.c -o valid_pointer.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o Seurat.so ModularityOptimizer.o RModularityOptimizer.o RcppExports.o data_manipulation.o fast_NN_dist.o integration.o snn.o stats.o valid_pointer.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+OK: Seurat
+
+=== Installing: SoupX ===
+OK: SoupX
+SKIP (already installed): cowplot
+
+=== Installing: scCustomize ===
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfontconfig -lfreetype
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the fontconfig freetype2 library. Try installing:
+ * deb: libfontconfig1-dev (Debian, Ubuntu, etc)
+ * rpm: fontconfig-devel (Fedora, EPEL)
+ * csw: fontconfig_dev (Solaris)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: freetype (OSX)
+If fontconfig freetype2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a fontconfig freetype2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: fontconfig/fontconfig.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c colorspace.c -o colorspace.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o colorspace.so colorspace.o init.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for string.h... (cached) yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking whether pkg-config knows about cairo... no
+configure: CAIRO_LIBS is unset, attempting to guess it.
+configure: CAIRO_CFLAGS=
+checking if R was compiled with the RConn patch... no
+checking for cairo.h... no
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfontconfig -lfreetype
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the fontconfig freetype2 library. Try installing:
+ * deb: libfontconfig1-dev (Debian, Ubuntu, etc)
+ * rpm: fontconfig-devel (Fedora, EPEL)
+ * csw: fontconfig_dev (Solaris)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: freetype (OSX)
+If fontconfig freetype2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a fontconfig freetype2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: fontconfig/fontconfig.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for string.h... (cached) yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking whether pkg-config knows about cairo... no
+configure: CAIRO_LIBS is unset, attempting to guess it.
+configure: CAIRO_CFLAGS=
+checking if R was compiled with the RConn patch... no
+checking for cairo.h... no
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfontconfig -lfreetype
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the fontconfig freetype2 library. Try installing:
+ * deb: libfontconfig1-dev (Debian, Ubuntu, etc)
+ * rpm: fontconfig-devel (Fedora, EPEL)
+ * csw: fontconfig_dev (Solaris)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: freetype (OSX)
+If fontconfig freetype2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a fontconfig freetype2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: fontconfig/fontconfig.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for string.h... (cached) yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking whether pkg-config knows about cairo... no
+configure: CAIRO_LIBS is unset, attempting to guess it.
+configure: CAIRO_CFLAGS=
+checking if R was compiled with the RConn patch... no
+checking for cairo.h... no
+FAILED: scCustomize
+
+=== Installing: viridis ===
+OK: viridis
+
+=== Installing: ggpubr ===
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -fopenmp -DR_NO_REMAP -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -fopenmp -DR_NO_REMAP -fpic  -g -O2   -c calcBATS.cpp -o calcBATS.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -fopenmp -DR_NO_REMAP -fpic  -g -O2   -c calcTBATS.cpp -o calcTBATS.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -fopenmp -DR_NO_REMAP -fpic  -g -O2   -c etsTargetFunction.cpp -o etsTargetFunction.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -fopenmp -DR_NO_REMAP -fpic  -g -O2   -c etsTargetFunctionWrapper.cpp -o etsTargetFunctionWrapper.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include    -fpic  -g -O2  -c etscalc.c -o etscalc.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include    -fpic  -g -O2  -c etspolyroot.c -o etspolyroot.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -fopenmp -DR_NO_REMAP -fpic  -g -O2   -c makeBATSMatrices.cpp -o makeBATSMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -fopenmp -DR_NO_REMAP -fpic  -g -O2   -c makeTBATSMatrices.cpp -o makeTBATSMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -fopenmp -DR_NO_REMAP -fpic  -g -O2   -c updateMatrices.cpp -o updateMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -fopenmp -DR_NO_REMAP -fpic  -g -O2   -c updateTBATSMatrices.cpp -o updateTBATSMatrices.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o forecast.so RcppExports.o calcBATS.o calcTBATS.o etsTargetFunction.o etsTargetFunctionWrapper.o etscalc.o etspolyroot.o makeBATSMatrices.o makeTBATSMatrices.o updateMatrices.o updateTBATSMatrices.o -fopenmp -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openblas-0.3.30-ymof5atpgk37dyb3nxfcsanao6bttjg4/lib -lopenblas -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether /usr/bin/g++ -std=gnu++17 accepts -g... yes
+checking for /usr/bin/g++ -std=gnu++17 option to enable C++11 features... none needed
+checking how to run the C++ preprocessor... /usr/bin/g++ -std=gnu++17 -E
+checking whether the compiler supports GNU C++... (cached) yes
+checking whether /usr/bin/g++ -std=gnu++17 accepts -g... (cached) yes
+checking for /usr/bin/g++ -std=gnu++17 option to enable C++11 features... (cached) none needed
+checking for pkg-config... /usr/bin/pkg-config
+checking if pkg-config knows NLopt... no
+checking for cmake... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/cmake-3.31.9-znxjxuyx64bqio4s3wc5izrggrpljbvn/bin/cmake
+using cmake via /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/cmake-3.31.9-znxjxuyx64bqio4s3wc5izrggrpljbvn/bin/cmake
+using NLopt via local cmake build on x86_64
+set CC=/usr/bin/gcc
+set CFLAGS=-I/usr/local/include -fpic -g -O2
+set CXX=/usr/bin/g++
+set CXXFLAGS=-std=gnu++11 -I/usr/local/include -fpic -g -O2
+set LDFLAGS=-Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib
+-- The C compiler identification is GNU 11.5.0
+-- The CXX compiler identification is GNU 11.5.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- NLopt version 2.10.0
+-- Looking for getopt.h
+-- Looking for getopt.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for time.h
+-- Looking for time.h - found
+-- Looking for sys/time.h
+-- Looking for sys/time.h - found
+-- Looking for getpid
+-- Looking for getpid - found
+-- Looking for syscall
+-- Looking for syscall - found
+-- Looking for isinf
+-- Looking for isinf - found
+-- Looking for isnan
+-- Looking for isnan - found
+-- Looking for gettimeofday
+-- Looking for gettimeofday - found
+-- Looking for qsort_r
+-- Looking for qsort_r - found
+-- Looking for time
+-- Looking for time - found
+-- Looking for copysign
+-- Looking for copysign - found
+-- Looking for getopt
+-- Looking for getopt - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of uint32_t
+-- Check size of uint32_t - done
+-- Check size of unsigned int
+-- Check size of unsigned int - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Looking for sqrt in m
+-- Looking for sqrt in m - found
+-- Looking for fpclassify
+-- Looking for fpclassify - TRUE
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE - Success
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE - Failed
+-- Looking for __cplusplus
+-- Looking for __cplusplus - found
+-- Could NOT find JNI (missing: JAVA_INCLUDE_PATH JAVA_INCLUDE_PATH2) 
+-- Could NOT find Java (missing: Java_JAR_EXECUTABLE Java_JAVAC_EXECUTABLE Java_JAVAH_EXECUTABLE Java_JAVADOC_EXECUTABLE) (found suitable version "1.8.0.482", minimum required is "1.5")
+-- Configuring done (10.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt-build
+[  2%] Generating nlopt.hpp
+[  2%] Built target generate-cpp
+[  4%] Building C object CMakeFiles/nlopt.dir/src/algs/direct/DIRect.c.o
+[  6%] Building C object CMakeFiles/nlopt.dir/src/algs/direct/direct_wrap.c.o
+[  8%] Building C object CMakeFiles/nlopt.dir/src/algs/direct/DIRserial.c.o
+[ 10%] Building C object CMakeFiles/nlopt.dir/src/algs/direct/DIRsubrout.c.o
+[ 12%] Building C object CMakeFiles/nlopt.dir/src/algs/cdirect/cdirect.c.o
+[ 14%] Building C object CMakeFiles/nlopt.dir/src/algs/cdirect/hybrid.c.o
+[ 16%] Building C object CMakeFiles/nlopt.dir/src/algs/praxis/praxis.c.o
+[ 18%] Building C object CMakeFiles/nlopt.dir/src/algs/crs/crs.c.o
+[ 20%] Building C object CMakeFiles/nlopt.dir/src/algs/mlsl/mlsl.c.o
+[ 22%] Building C object CMakeFiles/nlopt.dir/src/algs/mma/mma.c.o
+[ 24%] Building C object CMakeFiles/nlopt.dir/src/algs/mma/ccsa_quadratic.c.o
+[ 26%] Building C object CMakeFiles/nlopt.dir/src/algs/cobyla/cobyla.c.o
+[ 28%] Building C object CMakeFiles/nlopt.dir/src/algs/newuoa/newuoa.c.o
+[ 30%] Building C object CMakeFiles/nlopt.dir/src/algs/neldermead/nldrmd.c.o
+[ 32%] Building C object CMakeFiles/nlopt.dir/src/algs/neldermead/sbplx.c.o
+[ 34%] Building C object CMakeFiles/nlopt.dir/src/algs/auglag/auglag.c.o
+[ 36%] Building C object CMakeFiles/nlopt.dir/src/algs/bobyqa/bobyqa.c.o
+[ 38%] Building C object CMakeFiles/nlopt.dir/src/algs/isres/isres.c.o
+[ 40%] Building C object CMakeFiles/nlopt.dir/src/algs/slsqp/slsqp.c.o
+[ 42%] Building C object CMakeFiles/nlopt.dir/src/algs/esch/esch.c.o
+[ 44%] Building C object CMakeFiles/nlopt.dir/src/api/general.c.o
+[ 46%] Building C object CMakeFiles/nlopt.dir/src/api/options.c.o
+[ 48%] Building C object CMakeFiles/nlopt.dir/src/api/optimize.c.o
+[ 51%] Building C object CMakeFiles/nlopt.dir/src/api/deprecated.c.o
+[ 53%] Building C object CMakeFiles/nlopt.dir/src/api/f77api.c.o
+[ 55%] Building C object CMakeFiles/nlopt.dir/src/util/mt19937ar.c.o
+[ 57%] Building C object CMakeFiles/nlopt.dir/src/util/sobolseq.c.o
+[ 59%] Building C object CMakeFiles/nlopt.dir/src/util/timer.c.o
+[ 61%] Building C object CMakeFiles/nlopt.dir/src/util/stop.c.o
+[ 63%] Building C object CMakeFiles/nlopt.dir/src/util/redblack.c.o
+[ 65%] Building C object CMakeFiles/nlopt.dir/src/util/qsort_r.c.o
+[ 67%] Building C object CMakeFiles/nlopt.dir/src/util/rescale.c.o
+[ 69%] Building C object CMakeFiles/nlopt.dir/src/algs/luksan/plis.c.o
+[ 71%] Building C object CMakeFiles/nlopt.dir/src/algs/luksan/plip.c.o
+[ 73%] Building C object CMakeFiles/nlopt.dir/src/algs/luksan/pnet.c.o
+[ 75%] Building C object CMakeFiles/nlopt.dir/src/algs/luksan/mssubs.c.o
+[ 77%] Building C object CMakeFiles/nlopt.dir/src/algs/luksan/pssubs.c.o
+[ 79%] Building CXX object CMakeFiles/nlopt.dir/src/algs/stogo/global.cc.o
+[ 81%] Building CXX object CMakeFiles/nlopt.dir/src/algs/stogo/linalg.cc.o
+[ 83%] Building CXX object CMakeFiles/nlopt.dir/src/algs/stogo/local.cc.o
+[ 85%] Building CXX object CMakeFiles/nlopt.dir/src/algs/stogo/stogo.cc.o
+[ 87%] Building CXX object CMakeFiles/nlopt.dir/src/algs/stogo/tools.cc.o
+[ 89%] Building CXX object CMakeFiles/nlopt.dir/src/algs/ags/evolvent.cc.o
+[ 91%] Building CXX object CMakeFiles/nlopt.dir/src/algs/ags/solver.cc.o
+[ 93%] Building CXX object CMakeFiles/nlopt.dir/src/algs/ags/local_optimizer.cc.o
+[ 95%] Building CXX object CMakeFiles/nlopt.dir/src/algs/ags/ags.cc.o
+[ 97%] Linking CXX static library libnlopt.a
+[100%] Built target nlopt
+[  2%] Built target generate-cpp
+[100%] Built target nlopt
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt/lib64/pkgconfig/nlopt.pc
+-- Installing: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt/include/nlopt.h
+-- Installing: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt/include/nlopt.hpp
+-- Installing: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt/lib64/libnlopt.a
+-- Installing: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt/share/man/man3/nlopt.3
+-- Installing: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt/share/man/man3/nlopt_minimize.3
+-- Installing: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt/share/man/man3/nlopt_minimize_constrained.3
+-- Installing: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt/lib64/cmake/nlopt/NLoptLibraryDepends.cmake
+-- Installing: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt/lib64/cmake/nlopt/NLoptLibraryDepends-release.cmake
+-- Installing: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt/lib64/cmake/nlopt/NLoptConfig.cmake
+-- Installing: /tmp/RtmpS5rLL2/R.INSTALL1185fa3984d407/nloptr/src/nlopt/lib64/cmake/nlopt/NLoptConfigVersion.cmake
+Moving nlopt/lib64 to nlopt/lib
+Copying headers found in src/nlopt/include into inst/include
+configure: creating ./config.status
+config.status: creating src/Makevars
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Inlopt/include  -I/usr/local/include    -fpic  -g -O2   -c dummy.cpp -o dummy.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Inlopt/include  -I/usr/local/include    -fpic  -g -O2  -c init_nloptr.c -o init_nloptr.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Inlopt/include  -I/usr/local/include    -fpic  -g -O2  -c nloptr.c -o nloptr.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o nloptr.so dummy.o init_nloptr.o nloptr.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openblas-0.3.30-ymof5atpgk37dyb3nxfcsanao6bttjg4/lib -lopenblas -lgfortran -lm -lquadmath nlopt/lib/libnlopt.a -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+Note: ... may be used in an incorrect context 
+Note: ... may be used in an incorrect context 
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Matrix/include' -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include   -DNDEBUG -DEIGEN_DONT_VECTORIZE -fpic  -g -O2   -c external.cpp -o external.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Matrix/include' -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include   -DNDEBUG -DEIGEN_DONT_VECTORIZE -fpic  -g -O2   -c glmFamily.cpp -o glmFamily.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Matrix/include' -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include   -DNDEBUG -DEIGEN_DONT_VECTORIZE -fpic  -g -O2   -c optimizer.cpp -o optimizer.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Matrix/include' -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include   -DNDEBUG -DEIGEN_DONT_VECTORIZE -fpic  -g -O2   -c predModule.cpp -o predModule.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Matrix/include' -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include   -DNDEBUG -DEIGEN_DONT_VECTORIZE -fpic  -g -O2   -c respModule.cpp -o respModule.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o lme4.so external.o glmFamily.o optimizer.o predModule.o respModule.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR

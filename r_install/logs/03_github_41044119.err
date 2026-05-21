@@ -1,0 +1,65 @@
+Registered S3 method overwritten by 'SeuratDisk':
+  method            from  
+  as.sparse.H5Group Seurat
+Downloading GitHub repo cole-trapnell-lab/monocle3@HEAD
+Installing 2 packages: sf, spdep
+trying URL 'https://cloud.r-project.org/src/contrib/sf_1.1-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spdep_1.4-2.tar.gz'
+* installing *source* package ‘sf’ ...
+** this is package ‘sf’ version ‘1.1-1’
+** package ‘sf’ successfully unpacked and MD5 sums checked
+** using staged installation
+ERROR 1: PROJ: proj_create_from_database: Cannot find proj.db
+ERROR 1: PROJ: proj_create_from_database: Cannot find proj.db
+ERROR 1: PROJ: proj_create: unrecognized format / unknown name
+ERROR 1: PROJ: proj_create: unrecognized format / unknown name
+configure: error: OGRCoordinateTransformation() does not return a coord.trans: PROJ not available?
+ERROR: configuration failed for package ‘sf’
+* removing ‘/ref/rmlab/software/tyron/R-libs/sf’
+ERROR: dependency ‘sf’ is not available for package ‘spdep’
+Perhaps try a variation of:
+install.packages('sf')
+* removing ‘/ref/rmlab/software/tyron/R-libs/spdep’
+
+The downloaded source packages are in
+	‘/tmp/RtmpDOW7PJ/downloaded_packages’
+ERROR: dependencies ‘sf’, ‘spdep’ are not available for package ‘monocle3’
+Perhaps try a variation of:
+install.packages(c('sf', 'spdep'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/monocle3’
+Downloading GitHub repo cole-trapnell-lab/monocle3@HEAD
+Installing 2 packages: sf, spdep
+trying URL 'https://cloud.r-project.org/src/contrib/sf_1.1-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spdep_1.4-2.tar.gz'
+* installing *source* package ‘sf’ ...
+** this is package ‘sf’ version ‘1.1-1’
+** package ‘sf’ successfully unpacked and MD5 sums checked
+** using staged installation
+ERROR 1: PROJ: proj_create_from_database: Cannot find proj.db
+ERROR 1: PROJ: proj_create_from_database: Cannot find proj.db
+ERROR 1: PROJ: proj_create: unrecognized format / unknown name
+ERROR 1: PROJ: proj_create: unrecognized format / unknown name
+configure: error: OGRCoordinateTransformation() does not return a coord.trans: PROJ not available?
+ERROR: configuration failed for package ‘sf’
+* removing ‘/ref/rmlab/software/tyron/R-libs/sf’
+ERROR: dependency ‘sf’ is not available for package ‘spdep’
+Perhaps try a variation of:
+install.packages('sf')
+* removing ‘/ref/rmlab/software/tyron/R-libs/spdep’
+
+The downloaded source packages are in
+	‘/tmp/RtmpDOW7PJ/downloaded_packages’
+ERROR: dependencies ‘sf’, ‘spdep’ are not available for package ‘monocle3’
+Perhaps try a variation of:
+install.packages(c('sf', 'spdep'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/monocle3’
+Downloading GitHub repo cole-trapnell-lab/monocle3@HEAD
+Warning messages:
+1: In i.p(...) : installation of package ‘sf’ had non-zero exit status
+2: In i.p(...) : installation of package ‘spdep’ had non-zero exit status
+3: In i.p(...) :
+  installation of package ‘/tmp/RtmpDOW7PJ/file37018f7ddc1e93/monocle3_1.4.27.tar.gz’ had non-zero exit status
+4: In i.p(...) : installation of package ‘sf’ had non-zero exit status
+5: In i.p(...) : installation of package ‘spdep’ had non-zero exit status
+6: In i.p(...) :
+  installation of package ‘/tmp/RtmpDOW7PJ/file37018fa0a6675/monocle3_1.4.27.tar.gz’ had non-zero exit status

@@ -1,0 +1,61 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Rules
+
+Before responding to any request, read all files in `.claude/rules/` and apply their instructions. Rules take precedence over everything else.
+
+After reading the rule files, read `.claude/skills/grill-with-docs/CONTEXT.md` and apply grill-with-docs conventions for the rest of the session: challenge any term that conflicts with CONTEXT.md before proceeding, update CONTEXT.md inline when a term is resolved, and offer ADRs sparingly (only when hard to reverse, surprising without context, and the result of a real trade-off).
+
+**Auto-grill rule:** At the start of every session, immediately invoke the `grill-with-docs` skill (via the Skill tool) to probe whatever the user is working on — same as `nextflow-stage-report-agent` auto-runs. Ask questions one at a time about the current task or plan. If there is no plan yet (user just opened a session with no task), skip silently. The always-on conventions (term challenge, CONTEXT.md updates, ADR offers) apply throughout the entire session regardless.
+
+## Agent Routing
+
+When a task matches the table below, spawn a subagent using the `Agent` tool — do not do the work inline. Do not wait for the user to name an agent.
+
+| Task | Agent | Definition file |
+|------|-------|-----------------|
+| Edit or fix any `scripts/**/*.R` or `scripts/**/*.Rmd` file | `scrna-seq-script-agent` | `.claude/agents/scrna-seq-script-agent.md` |
+| Write or edit any `nextflow/**/*.nf` or `nextflow/nextflow.config` | `nextflow-script-agent` | `.claude/agents/nextflow-script-agent.md` |
+| Review any R or Nextflow script for correctness; troubleshoot and fix errors | `script-review-agent` | `.claude/agents/script-review-agent.md` |
+| Inspect Nextflow stage execution results (`.nextflow.log`, `work/`); produce success/failure report | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
+| Review clustering parameters, QC distributions, doublet rates, or expression plots for biological interpretability | `BIOLOGIST` | `.claude/agents/BIOLOGIST.md` |
+| User says the Nextflow pipeline has finished (e.g., "pipeline finished", "nextflow done", "run is complete") | `BIOLOGIST` | `.claude/agents/BIOLOGIST.md` |
+| User reports a SLURM job failure, pastes a SLURM/Nextflow error, or shares a log path from a failed run | `troubleshoot_agent` | `.claude/agents/troubleshoot_agent.md` |
+
+**How to spawn:**
+1. Announce in the terminal before spawning: `[Agent] <name> — triggered by: <task>`
+2. Log the invocation to `md_files/REPORT.md` (agent name, task, date)
+3. Call the `Agent` tool with `subagent_type: "claude"` and a self-contained prompt that includes:
+   - Instruction to read the agent definition file at `.claude/agents/<name>.md` first
+   - The specific task (files to write/edit, what to change and why)
+   - All relevant context the subagent needs (it starts cold with no conversation history)
+
+The subagent reads its own definition file and follows its session-start sequence independently.
+
+**Auto-review rule:** After every R or Nextflow script edit — regardless of size — spawn `script-review-agent` to review the changes before reporting the work as done. No exceptions. Small edits still require review.
+
+**Auto-BIOLOGIST rule:** BIOLOGIST is spawned automatically in two situations:
+1. **`nextflow-stage-report-agent` detects pipeline completion** — when all stages are `SUCCESS` or `CACHED`, `nextflow-stage-report-agent` collects all HTML report paths and spawns `BIOLOGIST` directly (no user signal needed).
+2. **User signals completion** — if the user says the pipeline finished (e.g., "pipeline done", "nextflow finished"), spawn `BIOLOGIST` immediately even if `nextflow-stage-report-agent` did not catch it.
+In both cases: pass paths to all HTML reports that exist on disk. BIOLOGIST reviews all stages in sequence, appends findings to `final_output/Biologist_Chat.md`, and produces a summary table.
+
+**Auto-pipeline-check rule:** At the start of every session, immediately spawn `nextflow-stage-report-agent` before responding to the user. It will:
+- Check if a Nextflow SLURM job is currently running (`squeue`)
+- Check if `.nextflow.log` exists with stage results
+- If running or finished: report per-stage status and hand failures to `troubleshoot_agent`
+- If nothing found: exit silently — do not mention it to the user
+
+## Project Overview
+
+This is a Nextflow snRNA-seq pipeline for **human induced sensory neurons (iSNs)** — iPSC-derived neurons that model dorsal root ganglion (DRG) sensory subtypes. Eight samples from experiment NR00 (timepoints: iPSC, Day7, Day13) are processed through four sequential stages:
+
+| Stage | Tool | Purpose |
+|-------|------|---------|
+| 01 / 01.2 | SoupX or DecontX | Ambient RNA removal |
+| 02 / 02.1 | scDblFinder | Doublet scoring and labeling |
+| 03 | Seurat | Cell QC filtering (mito %, nFeature, nCount, doublets) |
+| 04 | Seurat + Harmony | Integration, clustering, marker gene analysis |
+
+Two parallel tracks run from the same raw data: **SoupX** (01→02→03→04) and **DecontX** (01.2→02.1→03→04). Track is selected at pipeline launch via `--track soupx` or `--track decontx`. The pipeline ends at Stage 04; Stage 05 (public DRG atlas integration) is excluded from Nextflow and run manually.

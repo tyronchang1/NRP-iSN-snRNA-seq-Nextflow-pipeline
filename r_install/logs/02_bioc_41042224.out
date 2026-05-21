@@ -1,0 +1,247 @@
+=== Bioconductor Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Wed May 20 12:24:06 AM CDT 2026
+SKIP (already installed): multtest
+SKIP (already installed): ComplexHeatmap
+SKIP (already installed): DropletUtils
+
+=== Installing: AUCell ===
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+checking for xmlHashSize in -lxml2... yes
+Using built-in xmlHashSize
+Checking DTD parsing (presence of externalSubset)...
+checking for xmlHashSize in -lxml2... (cached) yes
+Found xmlHashSize
+checking for xmlOutputBufferCreateBuffer in -lxml2... yes
+have xmlOutputBufferCreateBuffer()
+checking for xmlDocDumpFormatMemoryEnc in -lxml2... yes
+checking for libxml/xmlversion.h... yes
+Expat:  FALSE
+Checking for return type of xmlHashScan element routine.
+No return value for xmlHashScan
+xmlNs has a context field
+Checking for cetype_t enumeration
+Using recent version of R with cetype_t enumeration type for encoding
+checking for xmlsec1-config... no
+nodegc default 
+xml-debug default 
+Version has XML_WITH_ZLIB
+Version has xmlHasFeature()
+
+****************************************
+Configuration information:
+
+Libxml settings
+
+libxml include directory: -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+libxml library directory: -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/lib -lxml2 -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/xz-5.6.3-2hto4bdxeyzcly6ezev4skpajs4j3qp7/lib -llzma -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/lib -liconv -lm -lz  -lxml2
+libxml 2:                 -DLIBXML2=1
+
+Compilation flags:         -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1 
+Link flags:               -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/lib -lxml2 -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/xz-5.6.3-2hto4bdxeyzcly6ezev4skpajs4j3qp7/lib -llzma -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/lib -liconv -lm -lz  -lxml2
+
+****************************************
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating R/supports.R
+config.status: creating inst/scripts/RSXML.csh
+config.status: creating inst/scripts/RSXML.bsh
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c DocParse.c -o DocParse.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c EventParse.c -o EventParse.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c ExpatParse.c -o ExpatParse.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c HTMLParse.c -o HTMLParse.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c NodeGC.c -o NodeGC.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c RUtils.c -o RUtils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c Rcatalog.c -o Rcatalog.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c Utils.c -o Utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c XMLEventParse.c -o XMLEventParse.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c XMLHashTree.c -o XMLHashTree.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c XMLTree.c -o XMLTree.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c fixNS.c -o fixNS.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c libxmlFeatures.c -o libxmlFeatures.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c schema.c -o schema.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c xmlsecurity.c -o xmlsecurity.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DLIBXML -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DNO_CHECKED_ENTITY_FIELD=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2  -c xpath.c -o xpath.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o XML.so DocParse.o EventParse.o ExpatParse.o HTMLParse.o NodeGC.o RUtils.o Rcatalog.o Utils.o XMLEventParse.o XMLHashTree.o XMLTree.o fixNS.o libxmlFeatures.o schema.o xmlsecurity.o xpath.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/lib -lxml2 -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/xz-5.6.3-2hto4bdxeyzcly6ezev4skpajs4j3qp7/lib -llzma -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/lib -liconv -lm -lz -lxml2 -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+Creating a generic function for ‘source’ from package ‘base’ in package ‘XML’
+in method for ‘xmlAttrsToDataFrame’ with signature ‘"AsIs"’: no definition for class “AsIs”
+in method for ‘readKeyValueDB’ with signature ‘"AsIs"’: no definition for class “AsIs”
+in method for ‘readSolrDoc’ with signature ‘"AsIs"’: no definition for class “AsIs”
+OK: AUCell
+SKIP (already installed): glmGamPoi
+
+=== Installing: scDblFinder ===
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c raggedListToDF.c -o raggedListToDF.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o restfulr.so init.o raggedListToDF.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+Creating a new generic function for ‘assign’ in package ‘restfulr’
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c Biostrings_stubs.c -o Biostrings_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c Biostrings_stubs.c -o Biostrings_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c Biostrings_stubs.c -o Biostrings_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+FAILED: scDblFinder
+SKIP (already installed): AnnotationDbi
+SKIP (already installed): clusterProfiler
+SKIP (already installed): ReactomePA
+SKIP (already installed): apeglm
+SKIP (already installed): DESeq2
+SKIP (already installed): zellkonverter
+
+=== Installing: miloR ===
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c computeMatrices.cpp -o computeMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitGeneticPLGlmm.cpp -o fitGeneticPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitPLGlmm.cpp -o fitPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c computeMatrices.cpp -o computeMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitGeneticPLGlmm.cpp -o fitGeneticPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitPLGlmm.cpp -o fitPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c computeMatrices.cpp -o computeMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitGeneticPLGlmm.cpp -o fitGeneticPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitPLGlmm.cpp -o fitPLGlmm.o
+FAILED: miloR
+SKIP (already installed): org.Mm.eg.db
+SKIP (already installed): org.Hs.eg.db
+SKIP (already installed): BiocGenerics
+SKIP (already installed): DelayedArray
+SKIP (already installed): DelayedMatrixStats
+SKIP (already installed): limma
+SKIP (already installed): S4Vectors
+SKIP (already installed): SingleCellExperiment
+SKIP (already installed): SummarizedExperiment
+SKIP (already installed): batchelor
+SKIP (already installed): HDF5Array
+SKIP (already installed): edgeR
+
+=== Installing: GSVA ===
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lMagick++-6.Q16 -lMagickWand-6.Q16 -lMagickCore-6.Q16
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the Magick++ library. Try installing:
+ - deb: libmagick++-dev (Debian, Ubuntu)
+ - rpm: ImageMagick-c++-devel (Fedora, CentOS, RHEL)
+ - brew: imagemagick or imagemagick@6 (MacOS)
+If Magick++ is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a Magick++.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: Magick++.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lMagick++-6.Q16 -lMagickWand-6.Q16 -lMagickCore-6.Q16
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the Magick++ library. Try installing:
+ - deb: libmagick++-dev (Debian, Ubuntu)
+ - rpm: ImageMagick-c++-devel (Fedora, CentOS, RHEL)
+ - brew: imagemagick or imagemagick@6 (MacOS)
+If Magick++ is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a Magick++.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: Magick++.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lMagick++-6.Q16 -lMagickWand-6.Q16 -lMagickCore-6.Q16
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the Magick++ library. Try installing:
+ - deb: libmagick++-dev (Debian, Ubuntu)
+ - rpm: ImageMagick-c++-devel (Fedora, CentOS, RHEL)
+ - brew: imagemagick or imagemagick@6 (MacOS)
+If Magick++ is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a Magick++.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: Magick++.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+FAILED: GSVA
+SKIP (already installed): Biobase
+SKIP (already installed): BiocParallel
+SKIP (already installed): TOAST
+SKIP (already installed): scater
+SKIP (already installed): scran
+SKIP (already installed): celda
+
+=== Installing: singleCellTK ===
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lMagick++-6.Q16 -lMagickWand-6.Q16 -lMagickCore-6.Q16
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the Magick++ library. Try installing:
+ - deb: libmagick++-dev (Debian, Ubuntu)
+ - rpm: ImageMagick-c++-devel (Fedora, CentOS, RHEL)
+ - brew: imagemagick or imagemagick@6 (MacOS)
+If Magick++ is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a Magick++.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: Magick++.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c Biostrings_stubs.c -o Biostrings_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2   -c half_range_mode.cpp -o half_range_mode.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c nd.c -o nd.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c pAUC.c -o pAUC.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rowPAUCs.c -o rowPAUCs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rowttests.c -o rowttests.o
+/usr/bin/gfortran  -fpic  -g -O2  -c ttest.f -o ttest.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o genefilter.so half_range_mode.o init.o nd.o pAUC.o rowPAUCs.o rowttests.o ttest.o -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for gcc... (cached) /usr/bin/gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether /usr/bin/gcc accepts -g... (cached) yes
+checking for /usr/bin/gcc option to accept ISO C89... (cached) none needed
+checking for pkg-config... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+
+fftwtools 0.9-10
+================
+
+compiler flags:  
+link argument:   
+
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c jointlevel_fft_twosided.cpp -o jointlevel_fft_twosided.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c sva.c -o sva.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o sva.so sva.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR

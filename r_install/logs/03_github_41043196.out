@@ -1,0 +1,163 @@
+=== GitHub Package Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Wed May 20 02:05:39 AM CDT 2026
+SKIP (already installed): DoubletFinder
+SKIP (already installed): BPCells
+
+=== Installing: SeuratDisk (mojaveazure/seurat-disk) ===
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for gawk... gawk
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for h5cc... /ref/rmlab/software/tyron/hdf5-devel/usr/bin/h5cc
+checking for HDF5 libraries... yes (version )
+checking for hdf5.h... yes
+checking for H5Fcreate in -lhdf5... no
+checking for hdf5_hl.h... yes
+checking for H5LTpath_valid in -lhdf5_hl... no
+checking for main in -lhdf5_hl... no
+checking for matching HDF5 Fortran wrapper... /ref/rmlab/software/tyron/hdf5-devel/usr/bin/h5fc
+Found hdf5 with version: 
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/Rtmp0PTLSz/remotes36b51b53c86a29/mojaveazure-seurat-disk-877d4e1/DESCRIPTION’ ... OK
+* preparing ‘SeuratDisk’:
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+Omitted ‘LazyData’ from DESCRIPTION
+* building ‘SeuratDisk_0.0.0.9021.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for gawk... gawk
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for h5cc... /ref/rmlab/software/tyron/hdf5-devel/usr/bin/h5cc
+checking for HDF5 libraries... yes (version )
+checking for hdf5.h... yes
+checking for H5Fcreate in -lhdf5... no
+checking for hdf5_hl.h... yes
+checking for H5LTpath_valid in -lhdf5_hl... no
+checking for main in -lhdf5_hl... no
+checking for matching HDF5 Fortran wrapper... /ref/rmlab/software/tyron/hdf5-devel/usr/bin/h5fc
+Found hdf5 with version: 
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/Rtmp0PTLSz/remotes36b51b48a93852/mojaveazure-seurat-disk-877d4e1/DESCRIPTION’ ... OK
+* preparing ‘SeuratDisk’:
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+Omitted ‘LazyData’ from DESCRIPTION
+* building ‘SeuratDisk_0.0.0.9021.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for gawk... gawk
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for h5cc... /ref/rmlab/software/tyron/hdf5-devel/usr/bin/h5cc
+checking for HDF5 libraries... yes (version 1.12.1)
+checking for hdf5.h... yes
+checking for H5Fcreate in -lhdf5... no
+checking for hdf5_hl.h... yes
+checking for H5LTpath_valid in -lhdf5_hl... no
+checking for main in -lhdf5_hl... no
+checking for matching HDF5 Fortran wrapper... /ref/rmlab/software/tyron/hdf5-devel/usr/bin/h5fc
+Found hdf5 with version: 1.12.1
+checking for ggrep... /usr/bin/grep
+checking whether /usr/bin/grep accepts -o... yes
+checking for ggrep... (cached) /usr/bin/grep
+checking whether /usr/bin/grep accepts -o... yes
+Using variables:
+HDF5_LIBS= -L/ref/rmlab/software/tyron/hdf5-devel/usr/lib64  -lhdf5_hl  -lhdf5  -L. -lhdf5_hl -lhdf5 -lz -lm
+HDF5_CFLAGS=
+HDF5_CPPFLAGS=-I/ref/rmlab/software/tyron/hdf5-devel/usr/include 
+configure: creating ./config.status
+config.status: creating src/Makevars
+cp 1_12_0/*.c 1_12_0/*.h .
+if [ "" != "" ]; then patch -p2 < patch_; fi
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c const_export.c -o const_export.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c datatype_export.c -o datatype_export.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5A.c -o Wrapper_auto_H5A.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5.c -o Wrapper_auto_H5.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5D.c -o Wrapper_auto_H5D.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5DS.c -o Wrapper_auto_H5DS.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5E.c -o Wrapper_auto_H5E.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5F.c -o Wrapper_auto_H5F.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5G.c -o Wrapper_auto_H5G.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5I.c -o Wrapper_auto_H5I.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5IM.c -o Wrapper_auto_H5IM.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5L.c -o Wrapper_auto_H5L.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5LT.c -o Wrapper_auto_H5LT.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5O.c -o Wrapper_auto_H5O.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5P.c -o Wrapper_auto_H5P.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5R.c -o Wrapper_auto_H5R.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5S.c -o Wrapper_auto_H5S.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5TB.c -o Wrapper_auto_H5TB.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5T.c -o Wrapper_auto_H5T.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5Z.c -o Wrapper_auto_H5Z.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5FDcore.c -o Wrapper_auto_H5FDcore.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5FDfamily.c -o Wrapper_auto_H5FDfamily.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5FDlog.c -o Wrapper_auto_H5FDlog.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5FDsec2.c -o Wrapper_auto_H5FDsec2.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_auto_H5FDstdio.c -o Wrapper_auto_H5FDstdio.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c convert.c -o convert.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c hdf5r_init.c -o hdf5r_init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c H5Error.c -o H5Error.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c H5ls.c -o H5ls.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/hdf5-devel/usr/include   -I/usr/local/include   -D__USE_MINGW_ANSI_STDIO -DH5_USE_110_API -fpic  -g -O2  -c Wrapper_manual_H5T.c -o Wrapper_manual_H5T.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o hdf5r.so const_export.o datatype_export.o Wrapper_auto_H5A.o Wrapper_auto_H5.o Wrapper_auto_H5D.o Wrapper_auto_H5DS.o Wrapper_auto_H5E.o Wrapper_auto_H5F.o Wrapper_auto_H5G.o Wrapper_auto_H5I.o Wrapper_auto_H5IM.o Wrapper_auto_H5L.o Wrapper_auto_H5LT.o Wrapper_auto_H5O.o Wrapper_auto_H5P.o Wrapper_auto_H5R.o Wrapper_auto_H5S.o Wrapper_auto_H5TB.o Wrapper_auto_H5T.o Wrapper_auto_H5Z.o Wrapper_auto_H5FDcore.o Wrapper_auto_H5FDfamily.o Wrapper_auto_H5FDlog.o Wrapper_auto_H5FDsec2.o Wrapper_auto_H5FDstdio.o convert.o hdf5r_init.o H5Error.o H5ls.o Wrapper_manual_H5T.o -L/ref/rmlab/software/tyron/hdf5-devel/usr/lib64 -lhdf5_hl -lhdf5 -L. -lhdf5_hl -lhdf5 -lz -lm -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR

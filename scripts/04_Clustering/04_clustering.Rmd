@@ -1,0 +1,852 @@
+---
+title: "Stage 04 — Clustering Report"
+subtitle: "iSN snRNA-seq Pipeline"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    theme: flatly
+    self_contained: true
+    dev: ragg_png
+knit: (function(input, ...) rmarkdown::render(input, output_dir = "clustering_output", ...))
+params:
+  project_root: "/scratch/rmlab/rmlab_shared3/tyron/Rscriptv2/iSN/iSN_claude"
+  gene_sets: ""
+  seed: 123
+  track: "decontx"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "center", dev = "ragg_png")
+knitr::opts_knit$set(root.dir = params$project_root)
+options(knitr.graphics.rel_path = FALSE)
+```
+
+```{r libraries}
+library(ggplot2)
+library(SeuratDisk)
+library(multtest)
+library(presto)
+library(dplyr)
+library(scales)
+library(AUCell)
+library(miloR)
+library(glmGamPoi)
+library(future)
+library(Seurat)
+library(harmony)
+library(tidyr)
+library(SingleCellExperiment)
+library(patchwork)
+library(ggrepel)
+library(Matrix)
+library(RSpectra)
+library(viridis)
+library(pheatmap)
+library(tictoc)
+library(scCustomize)
+library(scSHC)
+
+plan("multisession", workers = 4)
+options(future.globals.maxSize = 30000 * 1024^2, future.seed = TRUE)
+```
+
+```{r load-data}
+set.seed(params$seed)
+out_dir <- file.path(params$project_root, "scripts/04_Clustering/clustering_output")
+track_dir <- file.path(out_dir, params$track)
+dir.create(track_dir, recursive = TRUE, showWarnings = FALSE)
+nf <- 10000
+timepoint_colors <- c(Day13 = "#4E8FCA", Day7 = "#D73027", iPSC = "#F5A623")
+
+seu <- readRDS(file.path(out_dir, paste0("04_seu_clustered_", params$track, ".rds")))
+
+# Read markers CSV
+all_markers <- read.csv(file.path(track_dir, "04_all_markers_harmony_res0.2.csv"))
+```
+
+## Section 1: Sample Overview
+
+```{r sample-overview}
+# Cell counts per sample_group
+tbl_group <- as.data.frame(table(seu$sample_group))
+colnames(tbl_group) <- c("sample_group", "Cell Count")
+
+# Cell counts per sample (timepoint)
+tbl_sample <- as.data.frame(table(seu$sample))
+colnames(tbl_sample) <- c("Sample (Timepoint)", "Cell Count")
+
+knitr::kable(tbl_group,
+             caption = "Cell counts per sample_group",
+             row.names = FALSE)
+
+knitr::kable(tbl_sample,
+             caption = "Cell counts per timepoint (Day7 / Day13 / iPSC)",
+             row.names = FALSE)
+```
+
+## Section 2: UMAP — PCA Reduction
+
+```{r umap-pca, fig.width=16, fig.height=7}
+sweep_dir <- file.path(track_dir, paste0("nfeatures_", nf))
+dir.create(sweep_dir, recursive = TRUE, showWarnings = FALSE)
+
+centroids_pca_cl <- as.data.frame(Embeddings(seu, "umap.pca"))
+centroids_pca_cl$pca_res.0.2 <- seu$pca_res.0.2
+centroids_pca_cl <- aggregate(. ~ pca_res.0.2, centroids_pca_cl, mean)
+
+p_pca_clusters <- DimPlot(seu,
+                           reduction = "umap.pca",
+                           group.by  = "pca_res.0.2",
+                           label     = FALSE,
+                           pt.size   = 0.5) +
+  ggtitle(paste0("iSN PCA clusters (res 0.2, nf=", nf, ")")) +
+  xlab("UMAP 1") + ylab("UMAP 2") +
+  theme(
+    plot.title   = element_text(size = 15, face = "bold", hjust = 0.5),
+    axis.title   = element_text(size = 13, face = "bold"),
+    axis.text    = element_text(size = 13),
+    legend.title = element_text(size = 12),
+    legend.text  = element_text(size = 12)
+  ) +
+  scale_x_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+  scale_y_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+  geom_text_repel(
+    data = centroids_pca_cl,
+    aes(x = umappca_1, y = umappca_2, label = pca_res.0.2),
+    size = 5, color = "black", segment.color = "grey50",
+    box.padding = 0.8, max.overlaps = Inf
+  )
+
+centroids_pca_samp <- as.data.frame(Embeddings(seu, "umap.pca"))
+centroids_pca_samp$sample <- seu$sample
+centroids_pca_samp <- aggregate(. ~ sample, centroids_pca_samp, mean)
+
+p_pca_samples <- DimPlot(seu,
+                          reduction = "umap.pca",
+                          group.by  = "sample",
+                          label     = FALSE,
+                          pt.size   = 0.5) +
+  ggtitle(paste0("iSN PCA — sample (nf=", nf, ")")) +
+  xlab("UMAP 1") + ylab("UMAP 2") +
+  theme(
+    plot.title   = element_text(size = 15, face = "bold", hjust = 0.5),
+    axis.title   = element_text(size = 13, face = "bold"),
+    axis.text    = element_text(size = 13),
+    legend.title = element_text(size = 12),
+    legend.text  = element_text(size = 12)
+  ) +
+  scale_color_manual(values = timepoint_colors) +
+  scale_x_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+  scale_y_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+  geom_text_repel(
+    data = centroids_pca_samp,
+    aes(x = umappca_1, y = umappca_2, label = sample),
+    size = 5, color = "black", segment.color = "grey50",
+    box.padding = 0.8, max.overlaps = Inf
+  )
+
+patchwork_pca <- p_pca_clusters | p_pca_samples
+ggsave(file.path(sweep_dir, paste0("dimplot_pca_nf", nf, ".pdf")),
+       plot = patchwork_pca, width = 16, height = 7)
+patchwork_pca
+```
+
+## Section 3: UMAP — Harmony Reduction
+
+```{r umap-harmony, fig.width=16, fig.height=7}
+centroids_harm_cl <- as.data.frame(Embeddings(seu, "umap.harmony"))
+centroids_harm_cl$harmony_res.0.2 <- seu$harmony_res.0.2
+centroids_harm_cl <- aggregate(. ~ harmony_res.0.2, centroids_harm_cl, mean)
+
+p_harmony_clusters <- DimPlot(seu,
+                               reduction = "umap.harmony",
+                               group.by  = "harmony_res.0.2",
+                               label     = FALSE,
+                               pt.size   = 0.5) +
+  ggtitle(paste0("iSN Harmony clusters (res 0.2, nf=", nf, ")")) +
+  xlab("UMAP 1") + ylab("UMAP 2") +
+  theme(
+    plot.title   = element_text(size = 15, face = "bold", hjust = 0.5),
+    axis.title   = element_text(size = 13, face = "bold"),
+    axis.text    = element_text(size = 13),
+    legend.title = element_text(size = 12),
+    legend.text  = element_text(size = 12)
+  ) +
+  scale_x_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+  scale_y_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+  geom_text_repel(
+    data = centroids_harm_cl,
+    aes(x = umapharmony_1, y = umapharmony_2, label = harmony_res.0.2),
+    size = 5, color = "black", segment.color = "grey50",
+    box.padding = 0.8, max.overlaps = Inf
+  )
+
+centroids_harm_samp <- as.data.frame(Embeddings(seu, "umap.harmony"))
+centroids_harm_samp$sample <- seu$sample
+centroids_harm_samp <- aggregate(. ~ sample, centroids_harm_samp, mean)
+
+p_harmony_samples <- DimPlot(seu,
+                              reduction = "umap.harmony",
+                              group.by  = "sample",
+                              label     = FALSE,
+                              pt.size   = 0.5) +
+  ggtitle(paste0("iSN Harmony — sample (nf=", nf, ")")) +
+  xlab("UMAP 1") + ylab("UMAP 2") +
+  theme(
+    plot.title   = element_text(size = 15, face = "bold", hjust = 0.5),
+    axis.title   = element_text(size = 13, face = "bold"),
+    axis.text    = element_text(size = 13),
+    legend.title = element_text(size = 12),
+    legend.text  = element_text(size = 12)
+  ) +
+  scale_color_manual(values = timepoint_colors) +
+  scale_x_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+  scale_y_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+  geom_text_repel(
+    data = centroids_harm_samp,
+    aes(x = umapharmony_1, y = umapharmony_2, label = sample),
+    size = 5, color = "black", segment.color = "grey50",
+    box.padding = 0.8, max.overlaps = Inf
+  )
+
+patchwork_harmony <- p_harmony_clusters | p_harmony_samples
+ggsave(file.path(sweep_dir, paste0("dimplot_harmony_nf", nf, ".pdf")),
+       plot = patchwork_harmony, width = 16, height = 7)
+patchwork_harmony
+```
+
+## Section 4: scSHC vs Harmony Cluster Comparison
+
+```{r scshc-comparison, eval=FALSE, fig.width=16, fig.height=7}
+# scSHC disabled — OOM on 65k cells; scshc_clusters column not present
+# p_scshc <- DimPlot_scCustom(seu,
+#                              reduction = "umap.harmony",
+#                              group.by  = "scshc_clusters",
+#                              label     = TRUE,
+#                              pt.size   = 0.5) +
+#   ggtitle("scSHC clusters") +
+#   xlab("UMAP 1") + ylab("UMAP 2") +
+#   theme(
+#     plot.title   = element_text(size = 15, face = "bold", hjust = 0.5),
+#     axis.title   = element_text(size = 13, face = "bold"),
+#     axis.text    = element_text(size = 13),
+#     legend.title = element_text(size = 12),
+#     legend.text  = element_text(size = 12)
+#   ) +
+#   scale_x_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+#   scale_y_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4))
+#
+# p_seurat_res <- DimPlot_scCustom(seu,
+#                                   reduction = "umap.harmony",
+#                                   group.by  = "harmony_res.0.2",
+#                                   label     = TRUE,
+#                                   pt.size   = 0.5) +
+#   ggtitle("Seurat Harmony clusters (res 0.2)") +
+#   xlab("UMAP 1") + ylab("UMAP 2") +
+#   theme(
+#     plot.title   = element_text(size = 15, face = "bold", hjust = 0.5),
+#     axis.title   = element_text(size = 13, face = "bold"),
+#     axis.text    = element_text(size = 13),
+#     legend.title = element_text(size = 12),
+#     legend.text  = element_text(size = 12)
+#   ) +
+#   scale_x_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+#   scale_y_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4))
+#
+# p_compare <- p_scshc | p_seurat_res
+# ggsave(file.path(track_dir, "scshc_vs_harmony_res0.2.pdf"),
+#        plot = p_compare, width = 16, height = 7)
+# p_compare
+```
+
+## Section 5: Dimensionality Reduction Diagnostics
+
+```{r elbow-jackstraw, fig.width=12, fig.height=5}
+p_elbow_final <- ElbowPlot(seu, ndims = 80) + theme_bw()
+# p_jackstraw   <- JackStrawPlot(seu, dims = 1:80)  # JackStraw not run — disabled
+
+p_elbow_final
+# p_jackstraw
+```
+
+## Section 6: AUCell — Cell Cycle and G2M Gene Sets
+
+```{r aucell-run}
+cellcycle_genes <- c(
+  "TOP2A",
+  "MCM2",
+  "MCM3",
+  "MCM5",
+  "MCM6",
+  "MKI67"
+)
+
+g2m.genes <- c(
+  "ATF5",
+  "AURKA",
+  "AURKB",
+  "BARD1",
+  "BIRC5",
+  "BRCA2",
+  "BUB1",
+  "CCNA2",
+  "CCNB2",
+  "CCND1",
+  "CDC20",
+  "CDC45",
+  "CDC6",
+  "CDK1",
+  "CDK2",
+  "CDK4",
+  "CDKN3",
+  "CENPA",
+  "CENPE",
+  "CENPF",
+  "CHAF1A",
+  "CHEK1",
+  "CKS1B",
+  "CKS2",
+  "E2F1",
+  "E2F2",
+  "EGF",
+  "ESPL1",
+  "EXO1",
+  "FBXO5",
+  "GINS2",
+  "HMGN2",
+  "HMMR",
+  "KIF11",
+  "KIF15",
+  "KIF20B",
+  "KIF23",
+  "KIF2C",
+  "KIF4A",
+  "KNL1",
+  "LMNB1",
+  "MAD2L1",
+  "MAP3K20",
+  "MCM2",
+  "MCM3",
+  "MCM4",
+  "MCM5",
+  "MCM6",
+  "MKI67",
+  "MT2A",
+  "MYBL2",
+  "NDC80",
+  "NEK2",
+  "NOTCH2",
+  "NUSAP1",
+  "ORC6",
+  "PBK",
+  "PCNA",
+  "PLK1",
+  "PLK4",
+  "POLA2",
+  "POLQ",
+  "PTTG1",
+  "RAD54L",
+  "SMC4",
+  "STIL",
+  "TACC3",
+  "TOP2A",
+  "TPX2",
+  "TROAP",
+  "TTK",
+  "UBE2C"
+)
+
+DefaultLayer(seu[["RNA"]]) <- "data"
+exprMatrix <- as.matrix(seu[["RNA"]]$data)
+
+cells_rankings <- AUCell_buildRankings(exprMatrix, plotStats = FALSE)
+
+cells_AUC_cellcycle <- AUCell_calcAUC(cellcycle_genes, cells_rankings, aucMaxRank = 20000)
+cells_AUC_g2m       <- AUCell_calcAUC(g2m.genes,       cells_rankings, aucMaxRank = 20000)
+
+dir.create(file.path(track_dir, "aucell"), recursive = TRUE, showWarnings = FALSE)
+
+pdf(file.path(track_dir, "aucell", "aucell_thresholds_cellcycle.pdf"))
+cells_assignment_cellcycle <- AUCell_exploreThresholds(cells_AUC_cellcycle,
+                                                       plotHist = TRUE,
+                                                       assign   = TRUE)
+dev.off()
+
+pdf(file.path(track_dir, "aucell", "aucell_thresholds_g2m.pdf"))
+cells_assignment_g2m <- AUCell_exploreThresholds(cells_AUC_g2m,
+                                                 plotHist = TRUE,
+                                                 assign   = TRUE)
+dev.off()
+```
+
+_AUCell threshold histograms saved to `aucell/aucell_thresholds_cellcycle.pdf` and `aucell/aucell_thresholds_g2m.pdf`_
+
+```{r aucell-helpers}
+# ggplot2 AUCell scatter plot
+plot_aucell_simple <- function(seurat_obj, cells_AUC, cells_assignment,
+                               gene_set_name, reduction = "umap.harmony",
+                               only_passing = FALSE, only_failing = FALSE) {
+  emb <- as.data.frame(seurat_obj@reductions[[reduction]]@cell.embeddings)
+  umap_cols <- colnames(emb)
+  selectedThreshold <- unname(cells_assignment[[1]]$aucThr$selected)
+  auc_scores <- getAUC(cells_AUC)[1, ]
+  passThreshold <- auc_scores > selectedThreshold
+  n_passed <- sum(passThreshold)
+  emb$status <- ifelse(passThreshold[rownames(emb)], "Above threshold", "Below threshold")
+
+  if (only_passing) {
+    emb <- emb[emb$status == "Above threshold", , drop = FALSE]
+    subtitle <- paste0(n_passed, " cells above threshold")
+  } else if (only_failing) {
+    emb <- emb[emb$status == "Below threshold", , drop = FALSE]
+    subtitle <- paste0(ncol(seurat_obj) - n_passed, " cells below threshold")
+  } else {
+    subtitle <- paste0(n_passed, " cells above threshold (pink)")
+  }
+
+  ggplot(emb, aes(x = .data[[umap_cols[1]]], y = .data[[umap_cols[2]]], color = status)) +
+    geom_point(size = 0.5, alpha = 0.7) +
+    scale_color_manual(values = c("Above threshold" = "deeppink", "Below threshold" = "gray80"),
+                       drop = FALSE) +
+    scale_x_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+    scale_y_continuous(limits = c(-16, 16), breaks = seq(-16, 16, 4)) +
+    labs(title = gene_set_name, subtitle = subtitle,
+         x = "UMAP_1", y = "UMAP_2", color = "AUC Status") +
+    theme_classic() +
+    theme(plot.title = element_text(face = "bold", hjust = 0.5),
+          plot.subtitle = element_text(hjust = 0.5),
+          legend.position = "right")
+}
+
+# Bar chart of cells above/below AUC threshold per cluster
+plot_aucell_cluster_counts <- function(seurat_obj, cells_AUC, cells_assignment,
+                                       gene_set_name,
+                                       cluster_col = "harmony_res.0.2") {
+
+  selectedThreshold <- unname(cells_assignment[[1]]$aucThr$selected)
+  auc_scores        <- getAUC(cells_AUC)[1, ]
+  passThreshold     <- auc_scores > selectedThreshold
+
+  df <- data.frame(
+    cell    = names(auc_scores),
+    cluster = seurat_obj@meta.data[[cluster_col]][
+      match(names(auc_scores), rownames(seurat_obj@meta.data))
+    ],
+    status  = ifelse(passThreshold, "Above threshold", "Below threshold"),
+    stringsAsFactors = FALSE
+  ) %>%
+    filter(!is.na(cluster)) %>%
+    mutate(cluster = factor(cluster))
+
+  counts_df <- df %>%
+    group_by(cluster, status) %>%
+    summarise(n = n(), .groups = "drop")
+
+  fisher_results <- df %>%
+    group_by(cluster) %>%
+    do({
+      current_cluster <- unique(.$cluster)
+      a <- sum(.$status == "Above threshold")
+      b <- sum(.$status == "Below threshold")
+      others <- df %>% filter(cluster != current_cluster)
+      c <- sum(others$status == "Above threshold")
+      d <- sum(others$status == "Below threshold")
+      mat  <- matrix(c(a, b, c, d), nrow = 2)
+      pval <- fisher.test(mat)$p.value
+      data.frame(p = pval)
+    }) %>%
+    ungroup()
+
+  fisher_results$p_adj <- p.adjust(fisher_results$p, method = "BH")
+  fisher_results$stars <- cut(
+    fisher_results$p_adj,
+    breaks = c(-Inf, 0.001, 0.01, 0.05, Inf),
+    labels = c("***", "**", "*", "ns")
+  )
+
+  max_counts <- counts_df %>%
+    group_by(cluster) %>%
+    summarise(max_n = max(n), .groups = "drop")
+
+  fisher_results <- left_join(fisher_results, max_counts, by = "cluster")
+
+  global_max             <- max(counts_df$n)
+  counts_df$y_label      <- counts_df$n + global_max * 0.015
+  fisher_results$y_pos   <- fisher_results$max_n + global_max * 0.12
+
+  dodge <- position_dodge(width = 1)
+
+  p <- ggplot(counts_df, aes(x = cluster, y = n, fill = status)) +
+    geom_bar(stat = "identity", position = dodge, width = 0.8, alpha = 0.85) +
+    geom_text(aes(y = y_label, label = n),
+              position = dodge, size = 3, fontface = "bold") +
+    geom_text(data = fisher_results %>% filter(stars != "ns"),
+              aes(x = cluster, y = y_pos, label = stars),
+              inherit.aes = FALSE, size = 5, fontface = "bold") +
+    geom_text(data = fisher_results %>% filter(stars == "ns"),
+              aes(x = cluster, y = y_pos, label = stars),
+              inherit.aes = FALSE, size = 3.5, color = "gray40") +
+    scale_fill_manual(values = c("Above threshold" = "deeppink",
+                                 "Below threshold"  = "gray70")) +
+    scale_y_continuous(limits = c(0, global_max * 1.4),
+                       expand = expansion(mult = c(0, 0))) +
+    labs(title = paste0(gene_set_name,
+                        " — Cells Above/Below AUC Threshold per Cluster"),
+         x    = "Cluster", y = "Number of Cells", fill = "AUC Status") +
+    theme_classic() +
+    theme(axis.text.x     = element_text(angle = 45, hjust = 1),
+          legend.position  = "top",
+          plot.title       = element_text(face = "bold", hjust = 0.5))
+
+  return(p)
+}
+
+# Bar chart by timepoint
+make_aucell_timepoint_barchart <- function(cells_AUC, cells_assignment,
+                                            seurat_obj, timepoints, tp_colors,
+                                            title_label) {
+
+  auc_scores        <- getAUC(cells_AUC)[1, ]
+  selectedThreshold <- unname(cells_assignment[[1]]$aucThr$selected)
+
+  df_all <- data.frame(
+    cell      = names(auc_scores),
+    timepoint = seurat_obj@meta.data[
+      match(names(auc_scores), rownames(seurat_obj@meta.data)), "sample"
+    ],
+    status = ifelse(auc_scores > selectedThreshold, "Above threshold", "Below threshold"),
+    stringsAsFactors = FALSE
+  ) %>%
+    filter(timepoint %in% timepoints) %>%
+    mutate(timepoint = factor(timepoint, levels = timepoints))
+
+  counts_df <- df_all %>%
+    group_by(timepoint, status) %>%
+    summarise(n = n(), .groups = "drop")
+
+  fisher_results <- lapply(timepoints, function(tp) {
+    a <- sum(df_all$timepoint == tp & df_all$status == "Above threshold")
+    b <- sum(df_all$timepoint == tp & df_all$status == "Below threshold")
+    others <- df_all %>% filter(timepoint != tp)
+    c <- sum(others$status == "Above threshold")
+    d <- sum(others$status == "Below threshold")
+    mat  <- matrix(c(a, b, c, d), nrow = 2)
+    pval <- fisher.test(mat)$p.value
+    data.frame(timepoint = tp, p = pval)
+  }) %>% bind_rows()
+
+  fisher_results$p_adj <- p.adjust(fisher_results$p, method = "BH")
+  fisher_results$stars <- cut(
+    fisher_results$p_adj,
+    breaks = c(-Inf, 0.001, 0.01, 0.05, Inf),
+    labels = c("***", "**", "*", "ns")
+  )
+
+  global_max <- max(counts_df$n)
+
+  max_per_tp <- counts_df %>%
+    group_by(timepoint) %>%
+    summarise(max_n = max(n), .groups = "drop")
+
+  fisher_results <- left_join(fisher_results, max_per_tp, by = "timepoint")
+  fisher_results$y_pos <- fisher_results$max_n + global_max * 0.08
+  counts_df$y_label    <- counts_df$n + global_max * 0.01
+
+  dodge <- position_dodge(width = 0.8)
+
+  p <- ggplot(counts_df, aes(x = timepoint, y = n, fill = status)) +
+    geom_bar(stat = "identity", position = dodge, width = 0.7, alpha = 0.85) +
+    geom_text(aes(y = y_label, label = n),
+              position = dodge, size = 3, fontface = "bold") +
+    geom_text(data = fisher_results %>% filter(stars != "ns"),
+              aes(x = timepoint, y = y_pos, label = stars),
+              inherit.aes = FALSE, size = 5, fontface = "bold") +
+    geom_text(data = fisher_results %>% filter(stars == "ns"),
+              aes(x = timepoint, y = y_pos, label = stars),
+              inherit.aes = FALSE, size = 3.5, color = "gray40") +
+    scale_fill_manual(values = c("Above threshold" = "deeppink",
+                                 "Below threshold"  = "gray70")) +
+    scale_y_continuous(limits = c(0, global_max * 1.3),
+                       expand = expansion(mult = c(0, 0))) +
+    labs(title = title_label, x = "Timepoint",
+         y = "Number of Cells", fill = "AUC Status") +
+    theme_classic() +
+    theme(plot.title       = element_text(face = "bold", hjust = 0.5),
+          legend.position  = "top",
+          axis.text.x      = element_text(size = 12, face = "bold",
+                                          color = tp_colors[levels(counts_df$timepoint)]))
+
+  return(p)
+}
+```
+
+### AUCell: Cell Cycle — UMAP scatter plots
+
+```{r aucell-cellcycle-umap, fig.width=10, fig.height=8}
+plot_aucell_simple(seu, cells_AUC_cellcycle, cells_assignment_cellcycle,
+                   "CellCycle", reduction = "umap.harmony")
+
+plot_aucell_simple(seu, cells_AUC_cellcycle, cells_assignment_cellcycle,
+                   "CellCycle", reduction = "umap.harmony", only_passing = TRUE)
+
+plot_aucell_simple(seu, cells_AUC_cellcycle, cells_assignment_cellcycle,
+                   "CellCycle", reduction = "umap.harmony", only_failing  = TRUE)
+```
+
+### AUCell: G2M — UMAP scatter plots
+
+```{r aucell-g2m-umap, fig.width=10, fig.height=8}
+plot_aucell_simple(seu, cells_AUC_g2m, cells_assignment_g2m,
+                   "G2M", reduction = "umap.harmony")
+
+plot_aucell_simple(seu, cells_AUC_g2m, cells_assignment_g2m,
+                   "G2M", reduction = "umap.harmony", only_passing = TRUE)
+
+plot_aucell_simple(seu, cells_AUC_g2m, cells_assignment_g2m,
+                   "G2M", reduction = "umap.harmony", only_failing  = TRUE)
+```
+
+### AUCell: Cluster bar charts
+
+```{r aucell-cluster-barcharts, fig.width=10, fig.height=6}
+timepoints <- c("Day13", "Day7", "iPSC")
+tp_colors  <- timepoint_colors
+
+p_cc_clusters <- plot_aucell_cluster_counts(seu, cells_AUC_cellcycle,
+                                             cells_assignment_cellcycle,
+                                             gene_set_name = "CellCycle",
+                                             cluster_col   = "harmony_res.0.2")
+ggsave(file.path(track_dir, "aucell", "aucell_cellcycle_cluster_barchart.pdf"),
+       plot = p_cc_clusters, width = 10, height = 6)
+
+p_g2m_clusters <- plot_aucell_cluster_counts(seu, cells_AUC_g2m,
+                                              cells_assignment_g2m,
+                                              gene_set_name = "G2M",
+                                              cluster_col   = "harmony_res.0.2")
+ggsave(file.path(track_dir, "aucell", "aucell_g2m_cluster_barchart.pdf"),
+       plot = p_g2m_clusters, width = 10, height = 6)
+
+p_cc_clusters
+p_g2m_clusters
+```
+
+### AUCell: Timepoint bar charts
+
+```{r aucell-timepoint-barcharts, fig.width=8, fig.height=6}
+p_cc_tp <- make_aucell_timepoint_barchart(
+  cells_AUC_cellcycle, cells_assignment_cellcycle, seu, timepoints, tp_colors,
+  "Cell Cycle Gene Set — Cells Above/Below AUC Threshold by Timepoint"
+)
+ggsave(file.path(track_dir, "aucell", "aucell_cellcycle_sample_barchart.pdf"),
+       plot = p_cc_tp, width = 8, height = 6)
+
+p_g2m_tp <- make_aucell_timepoint_barchart(
+  cells_AUC_g2m, cells_assignment_g2m, seu, timepoints, tp_colors,
+  "G2M Gene Set — Cells Above/Below AUC Threshold by Timepoint"
+)
+ggsave(file.path(track_dir, "aucell", "aucell_g2m_sample_barchart.pdf"),
+       plot = p_g2m_tp, width = 8, height = 6)
+
+p_cc_tp
+p_g2m_tp
+```
+
+## Section 7: Marker Gene Expression
+
+```{r marker-featureplot, fig.width=16, fig.height=12}
+isN_markers <- c(
+  "TUBB3", "PRPH", "SNAP25",
+  "CALCA", "TRPV1",
+  "MRGPRD",
+  "NTRK2", "NTRK3",
+  "POU5F1", "SOX2", "NANOG"
+)
+
+p_feature_harmony <- FeaturePlot(seu, features = isN_markers,
+                                  reduction = "umap.harmony", ncol = 4) &
+  scale_color_viridis_c(option = "plasma")
+ggsave(file.path(track_dir, "featureplot_markers_harmony.pdf"),
+       plot = p_feature_harmony, width = 16, height = 12)
+p_feature_harmony
+```
+
+```{r marker-dotplot, fig.width=10, fig.height=6}
+p_dot <- DotPlot(seu, features = isN_markers, group.by = "harmony_res.0.2") +
+  RotatedAxis() +
+  scale_color_gradient(low = "white", high = "red",
+                       limits = c(-1, 3), oob = squish)
+ggsave(file.path(track_dir, "dotplot_isN_markers.pdf"),
+       plot = p_dot, width = 10, height = 6)
+p_dot
+```
+
+## Section 8: Module Scores (Hardcoded Gene Sets)
+
+```{r module-scores, fig.width=14, fig.height=9}
+score_features <- c("pan_neuronal_score1", "peptidergic_score1",
+                    "non_peptidergic_score1", "trkbc_score1", "ipsc_score1")
+
+p_scores <- FeaturePlot(seu, features = score_features,
+                        reduction = "umap.harmony", ncol = 3,
+                        min.cutoff = "q05", max.cutoff = "q95") &
+  scale_color_viridis_c(option = "plasma")
+ggsave(file.path(track_dir, "featureplot_module_scores.pdf"),
+       plot = p_scores, width = 14, height = 9)
+p_scores
+```
+
+### Section 8.1: User-Specified Gene Sets
+
+```{r user-gene-sets}
+args_gene_sets <- params$gene_sets
+if (!is.null(args_gene_sets) && nchar(args_gene_sets) > 0) {
+  sets_raw <- strsplit(args_gene_sets, ";")[[1]]
+  gene_set_list <- lapply(sets_raw, function(s) {
+    parts <- strsplit(s, "=")[[1]]
+    list(name = parts[1], genes = strsplit(parts[2], ",")[[1]])
+  })
+  for (gs in gene_set_list) {
+    set_name  <- gs$name
+    set_genes <- gs$genes
+    score_col <- paste0("score_", set_name)
+    seu_scored <- tryCatch(
+      AddModuleScore(seu, features = list(set_genes), name = score_col),
+      error = function(e) {
+        message("Skipping gene set '", set_name, "': ", conditionMessage(e))
+        NULL
+      }
+    )
+    if (is.null(seu_scored)) next
+    seu <- seu_scored
+    seu[[score_col]] <- seu[[paste0(score_col, "1")]]
+    seu[[paste0(score_col, "1")]] <- NULL
+    p_umap <- FeaturePlot(seu, features = score_col,
+                          reduction = "umap.harmony", pt.size = 0.3) +
+              scale_colour_viridis_c() +
+              ggtitle(paste("Module score:", set_name))
+    print(p_umap)
+    p_vln <- VlnPlot(seu, features = score_col,
+                     group.by = "harmony_res.0.2", pt.size = 0) +
+             ggtitle(paste("Module score:", set_name)) + NoLegend()
+    print(p_vln)
+  }
+}
+```
+
+## Section 9: Violin Plots (iSN Marker Genes)
+
+```{r violin-plots, fig.width=8, fig.height=5}
+iqr_summary <- function(x) {
+  data.frame(
+    y    = median(x),
+    ymin = quantile(x, 0.25),
+    ymax = quantile(x, 0.75)
+  )
+}
+
+violin_genes <- c(
+  "TUBB3", "PRPH", "SNAP25", "CALCA", "TRPV1", "MRGPRD",
+  "NTRK2", "NTRK3", "POU5F1", "SOX2", "NANOG",
+  "MKI67", "TOP2A", "MCM2"
+)
+
+Idents(seu) <- seu$harmony_res.0.2
+
+violin_genes_present <- intersect(violin_genes, rownames(seu[["RNA"]]))
+for (gene in violin_genes_present) {
+  df_vln <- FetchData(seu, vars = c(gene, "harmony_res.0.2"))
+  colnames(df_vln)[1] <- "expr"
+
+  p_vln <- ggplot(df_vln, aes(x = harmony_res.0.2, y = expr,
+                               fill = harmony_res.0.2)) +
+    geom_violin(scale = "width", trim = TRUE) +
+    stat_summary(fun.data = iqr_summary, geom = "crossbar",
+                 width = 0.3, color = "black") +
+    scale_fill_brewer(palette = "Set3") +
+    theme_classic() +
+    theme(legend.position = "none",
+          plot.title      = element_text(face = "bold", hjust = 0.5),
+          axis.text.x     = element_text(angle = 45, hjust = 1)) +
+    labs(title = gene, x = "Cluster (harmony_res.0.2)", y = "Expression")
+
+  ggsave(file.path(track_dir, paste0("violin_", gene, ".pdf")),
+         plot = p_vln, width = 8, height = 5)
+  print(p_vln)
+}
+```
+
+## Section 10: Sample Composition
+
+```{r pie-chart, fig.width=7, fig.height=7}
+group_df <- seu@meta.data %>%
+  group_by(sample) %>%
+  summarise(count = n(), .groups = "drop") %>%
+  mutate(percentage = count / sum(count) * 100)
+
+group_df$sample <- factor(group_df$sample, levels = c("iPSC", "Day7", "Day13"))
+
+group_df <- group_df %>%
+  arrange(sample) %>%
+  mutate(
+    label = paste0(round(percentage, 1), "%\n(n=", count, ")"),
+    csum  = rev(cumsum(rev(percentage))),
+    ypos  = percentage / 2 + lead(csum, default = 0)
+  )
+
+p_pie <- ggplot(group_df, aes(x = "", y = percentage, fill = sample)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  coord_polar("y", start = 0) +
+  theme_void() +
+  geom_text(aes(y = ypos, label = label),
+            fontface = "bold", size = 4, color = "black") +
+  scale_fill_manual(values = c("iPSC"  = "#F5A623",
+                               "Day7"  = "#D73027",
+                               "Day13" = "#4E8FCA")) +
+  ggtitle("iSN samples — Day7 / Day13 / iPSC") +
+  theme(plot.title      = element_text(hjust = 0.5, size = 18, face = "bold"),
+        legend.title    = element_blank(),
+        legend.text     = element_text(size = 12))
+
+ggsave(file.path(track_dir, "piechart_by_sample.pdf"),
+       plot = p_pie, width = 7, height = 7)
+p_pie
+```
+
+## Section 11: Top Marker Gene Heatmap
+
+```{r heatmap, fig.width=14, fig.height=10}
+Idents(seu) <- seu$harmony_res.0.2
+
+top5 <- all_markers %>%
+  group_by(cluster) %>%
+  slice_max(order_by = avg_log2FC, n = 5) %>%
+  ungroup()
+
+DefaultLayer(seu[["RNA"]]) <- "data"
+
+set.seed(params$seed)
+cells.use <- unlist(
+  lapply(split(Cells(seu), Idents(seu)),
+         function(x) sample(x, min(length(x), 100)))
+)
+
+p_heatmap <- DoHeatmap(seu,
+                       features  = unique(top5$gene),
+                       cells     = cells.use,
+                       group.by  = "harmony_res.0.2",
+                       raster    = TRUE) +
+  ggtitle("Top 5 Marker Genes per Cluster (Downsampled Heatmap)")
+
+ggsave(file.path(track_dir, "04_heatmap_top5_markers.pdf"),
+       plot = p_heatmap, width = 14, height = 10)
+p_heatmap
+```
+
+## Session Info
+
+```{r session-info}
+sessionInfo()
+```

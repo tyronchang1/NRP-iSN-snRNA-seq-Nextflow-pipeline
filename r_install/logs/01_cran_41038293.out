@@ -1,0 +1,76 @@
+=== R CRAN Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Tue May 19 08:53:18 PM CDT 2026
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfontconfig -lfreetype
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the fontconfig freetype2 library. Try installing:
+ * deb: libfontconfig1-dev (Debian, Ubuntu, etc)
+ * rpm: fontconfig-devel (Fedora, EPEL)
+ * csw: fontconfig_dev (Solaris)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: freetype (OSX)
+If fontconfig freetype2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a fontconfig freetype2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: fontconfig/fontconfig.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+SKIP (already installed): BiocManager
+SKIP (already installed): remotes
+
+=== Installing: devtools ===
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfontconfig -lfreetype
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the fontconfig freetype2 library. Try installing:
+ * deb: libfontconfig1-dev (Debian, Ubuntu, etc)
+ * rpm: fontconfig-devel (Fedora, EPEL)
+ * csw: fontconfig_dev (Solaris)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: freetype (OSX)
+If fontconfig freetype2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a fontconfig freetype2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: fontconfig/fontconfig.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfontconfig -lfreetype
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the fontconfig freetype2 library. Try installing:
+ * deb: libfontconfig1-dev (Debian, Ubuntu, etc)
+ * rpm: fontconfig-devel (Fedora, EPEL)
+ * csw: fontconfig_dev (Solaris)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: freetype (OSX)
+If fontconfig freetype2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a fontconfig freetype2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: fontconfig/fontconfig.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfontconfig -lfreetype
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the fontconfig freetype2 library. Try installing:
+ * deb: libfontconfig1-dev (Debian, Ubuntu, etc)
+ * rpm: fontconfig-devel (Fedora, EPEL)
+ * csw: fontconfig_dev (Solaris)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: freetype (OSX)
+If fontconfig freetype2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a fontconfig freetype2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: fontconfig/fontconfig.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------

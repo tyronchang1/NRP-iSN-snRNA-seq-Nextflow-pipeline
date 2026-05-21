@@ -1,0 +1,96 @@
+---
+title: "Stage 01 — Ambient RNA Removal (SoupX)"
+subtitle: "iSN snRNA-seq Pipeline"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    theme: flatly
+    self_contained: true
+knit: (function(input, ...) rmarkdown::render(input, output_dir = "SoupX_dir_out", ...))
+params:
+  project_root: "/scratch/rmlab/rmlab_shared3/tyron/Rscriptv2/iSN/iSN_claude"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "center")
+knitr::opts_knit$set(root.dir = params$project_root)
+```
+
+```{r libraries}
+library(Seurat)
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+library(knitr)
+```
+
+```{r load}
+dirs <- c(
+  file.path(params$project_root, "scripts/01_SoupX/SoupX_dir_out/NR00_Day13_1Counts"),
+  file.path(params$project_root, "scripts/01_SoupX/SoupX_dir_out/NR00_Day13_1_dupCounts"),
+  file.path(params$project_root, "scripts/01_SoupX/SoupX_dir_out/NR00_Day13_2Counts"),
+  file.path(params$project_root, "scripts/01_SoupX/SoupX_dir_out/NR00_Day13_2_dupCounts"),
+  file.path(params$project_root, "scripts/01_SoupX/SoupX_dir_out/NR00_Day7_1Counts"),
+  file.path(params$project_root, "scripts/01_SoupX/SoupX_dir_out/NR00_Day7_2Counts"),
+  file.path(params$project_root, "scripts/01_SoupX/SoupX_dir_out/NR00_iPSC_1Counts"),
+  file.path(params$project_root, "scripts/01_SoupX/SoupX_dir_out/NR00_iPSC_2Counts")
+)
+cts <- Read10X(data.dir = dirs)
+seu <- CreateSeuratObject(counts = cts)
+
+desired_order <- c("NR00_Day13_1", "NR00_Day13_1_dup", "NR00_Day13_2", "NR00_Day13_2_dup",
+                   "NR00_Day7_1", "NR00_Day7_2", "NR00_iPSC_1", "NR00_iPSC_2")
+sample_mapping <- data.frame(orig_ident = as.character(1:8), sample_group = desired_order)
+barcodes <- rownames(seu@meta.data)
+meta <- seu@meta.data %>%
+  dplyr::left_join(sample_mapping, by = c("orig.ident" = "orig_ident"))
+rownames(meta) <- barcodes
+seu <- AddMetaData(seu, metadata = meta["sample_group"])
+seu <- NormalizeData(seu)
+```
+
+## Cell counts per sample
+
+```{r cell-counts}
+knitr::kable(as.data.frame(table(seu$sample_group)), col.names = c("Sample", "Cells"),
+             caption = "Post-SoupX cell counts")
+```
+
+## UMI count distribution
+
+```{r umi-dist, fig.width=10, fig.height=5}
+VlnPlot(seu, features = "nCount_RNA", group.by = "sample_group", pt.size = 0) +
+  NoLegend() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Gene count distribution
+
+```{r gene-dist, fig.width=10, fig.height=5}
+VlnPlot(seu, features = "nFeature_RNA", group.by = "sample_group", pt.size = 0) +
+  NoLegend() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Marker gene expression (post-correction)
+
+```{r markers, fig.width=12, fig.height=10}
+VlnPlot(seu,
+        features = c("TUBB3", "PRPH", "SNAP25", "CALCA", "TRPV1",
+                     "MRGPRD", "NTRK2", "NTRK3", "POU5F1", "SOX2", "NANOG"),
+        group.by = "sample_group", pt.size = 0, ncol = 3) &
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Contamination fraction (rho)
+
+_Note: Contamination fraction (rho) values are not saved by the per-sample SoupX scripts. They are printed to console during execution. To inspect rho values, re-run the per-sample .R scripts in RStudio._
+
+## Session info
+
+```{r session-info}
+sessionInfo()
+```

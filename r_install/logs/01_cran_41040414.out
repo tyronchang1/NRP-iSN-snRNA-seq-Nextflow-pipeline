@@ -1,0 +1,322 @@
+=== R CRAN Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Tue May 19 10:18:45 PM CDT 2026
+SKIP (already installed): BiocManager
+SKIP (already installed): remotes
+SKIP (already installed): pak
+SKIP (already installed): ggplot2
+SKIP (already installed): dplyr
+SKIP (already installed): tidyr
+SKIP (already installed): readr
+SKIP (already installed): purrr
+SKIP (already installed): tibble
+SKIP (already installed): stringr
+SKIP (already installed): forcats
+SKIP (already installed): lubridate
+SKIP (already installed): scales
+SKIP (already installed): broom
+SKIP (already installed): knitr
+SKIP (already installed): lintr
+SKIP (already installed): styler
+SKIP (already installed): here
+SKIP (already installed): markdown
+SKIP (already installed): rmarkdown
+SKIP (already installed): Seurat
+SKIP (already installed): SoupX
+SKIP (already installed): cowplot
+
+=== Installing: scCustomize ===
+Found pkg-config cflags and libs!
+Using PKG_CFLAGS=-I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP 
+Using PKG_LIBS=-lfontconfig -lfreetype 
+rm -f systemfonts.so caches.o cpp11.o dev_metrics.o font_matching.o font_local.o font_variation.o font_registry.o ft_cache.o string_shape.o font_metrics.o font_outlines.o font_fallback.o string_metrics.o emoji.o cache_store.o init.o unix/FontManagerLinux.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c caches.cpp -o caches.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c cpp11.cpp -o cpp11.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c dev_metrics.cpp -o dev_metrics.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c font_matching.cpp -o font_matching.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c font_local.cpp -o font_local.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c font_variation.cpp -o font_variation.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c font_registry.cpp -o font_registry.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c ft_cache.cpp -o ft_cache.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c string_shape.cpp -o string_shape.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c font_metrics.cpp -o font_metrics.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c font_outlines.cpp -o font_outlines.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c font_fallback.cpp -o font_fallback.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c string_metrics.cpp -o string_metrics.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c emoji.cpp -o emoji.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c cache_store.cpp -o cache_store.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c init.cpp -o init.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c unix/FontManagerLinux.cpp -o unix/FontManagerLinux.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o systemfonts.so caches.o cpp11.o dev_metrics.o font_matching.o font_local.o font_variation.o font_registry.o ft_cache.o string_shape.o font_metrics.o font_outlines.o font_fallback.o string_metrics.o emoji.o cache_store.o init.o unix/FontManagerLinux.o -lfontconfig -lfreetype -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for string.h... (cached) yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking whether pkg-config knows about cairo... yes
+checking for configurable backends... cairo
+checking whether --static is needed... no
+configure: CAIRO_CFLAGS=-I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo 
+checking if R was compiled with the RConn patch... no
+checking for cairo.h... yes
+checking for PNG support in Cairo... yes
+checking for ATS font support in Cairo... no
+configure: CAIRO_LIBS=-lcairo 
+checking for library containing deflate... -lz
+checking whether Cairo programs can be compiled... yes
+checking for /usr/bin/gcc options needed to detect all undeclared functions... none needed
+checking whether cairo_image_surface_get_format is declared... no
+checking whether FreeType support is desired... auto
+checking for FreeType support in cairo... yes
+checking whether FreeType needs additional flags... yes
+checking whether pkg-config knows about fontconfig or freetype2... yes
+checking whether additional flags work... yes
+checking whether pkg-config knows about Xt... yes
+checking whether libjpeg works... no
+checking whether Harfbuzz layout is desired... auto
+checking whether Harfbuzz + ICU works... no
+checking whether libtiff works... no
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating src/cconfig.h
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c cairobem.c -o cairobem.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c cairogd.c -o cairogd.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c cairotalk.c -o cairotalk.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c coreutil.c -o coreutil.o
+Using PKG_CFLAGS=-I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/glib-2.0 -I/usr/include/fribidi
+Using PKG_LIBS=-lfreetype -lharfbuzz -lfribidi -lpng
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the harfbuzz freetype2 fribidi library. Try installing:
+ * deb: libharfbuzz-dev libfribidi-dev (Debian, Ubuntu, etc)
+ * rpm: harfbuzz-devel fribidi-devel (Fedora, EPEL)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: harfbuzz fribidi (OSX)
+If harfbuzz freetype2 fribidi is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a harfbuzz freetype2 fribidi.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: hb-ft.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+Using PKG_CFLAGS=-I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/glib-2.0 -I/usr/include/fribidi
+Using PKG_LIBS=-lfreetype -lharfbuzz -lfribidi -lpng
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the harfbuzz freetype2 fribidi library. Try installing:
+ * deb: libharfbuzz-dev libfribidi-dev (Debian, Ubuntu, etc)
+ * rpm: harfbuzz-devel fribidi-devel (Fedora, EPEL)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: harfbuzz fribidi (OSX)
+If harfbuzz freetype2 fribidi is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a harfbuzz freetype2 fribidi.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: hb-ft.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for string.h... (cached) yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking whether pkg-config knows about cairo... yes
+checking for configurable backends... cairo
+checking whether --static is needed... no
+configure: CAIRO_CFLAGS=-I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo 
+checking if R was compiled with the RConn patch... no
+checking for cairo.h... yes
+checking for PNG support in Cairo... yes
+checking for ATS font support in Cairo... no
+configure: CAIRO_LIBS=-lcairo 
+checking for library containing deflate... -lz
+checking whether Cairo programs can be compiled... yes
+checking for /usr/bin/gcc options needed to detect all undeclared functions... none needed
+checking whether cairo_image_surface_get_format is declared... no
+checking whether FreeType support is desired... auto
+checking for FreeType support in cairo... yes
+checking whether FreeType needs additional flags... yes
+checking whether pkg-config knows about fontconfig or freetype2... yes
+checking whether additional flags work... yes
+checking whether pkg-config knows about Xt... yes
+checking whether libjpeg works... no
+checking whether Harfbuzz layout is desired... auto
+checking whether Harfbuzz + ICU works... no
+checking whether libtiff works... no
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating src/cconfig.h
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c cairobem.c -o cairobem.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c cairogd.c -o cairogd.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c cairotalk.c -o cairotalk.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c coreutil.c -o coreutil.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c img-backend.c -o img-backend.o
+Using PKG_CFLAGS=-I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/glib-2.0 -I/usr/include/fribidi
+Using PKG_LIBS=-lfreetype -lharfbuzz -lfribidi -lpng
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the harfbuzz freetype2 fribidi library. Try installing:
+ * deb: libharfbuzz-dev libfribidi-dev (Debian, Ubuntu, etc)
+ * rpm: harfbuzz-devel fribidi-devel (Fedora, EPEL)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: harfbuzz fribidi (OSX)
+If harfbuzz freetype2 fribidi is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a harfbuzz freetype2 fribidi.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: hb-ft.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for string.h... (cached) yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking whether pkg-config knows about cairo... yes
+checking for configurable backends... cairo
+checking whether --static is needed... no
+configure: CAIRO_CFLAGS=-I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo 
+checking if R was compiled with the RConn patch... no
+checking for cairo.h... yes
+checking for PNG support in Cairo... yes
+checking for ATS font support in Cairo... no
+configure: CAIRO_LIBS=-lcairo 
+checking for library containing deflate... -lz
+checking whether Cairo programs can be compiled... yes
+checking for /usr/bin/gcc options needed to detect all undeclared functions... none needed
+checking whether cairo_image_surface_get_format is declared... no
+checking whether FreeType support is desired... auto
+checking for FreeType support in cairo... yes
+checking whether FreeType needs additional flags... yes
+checking whether pkg-config knows about fontconfig or freetype2... yes
+checking whether additional flags work... yes
+checking whether pkg-config knows about Xt... yes
+checking whether libjpeg works... no
+checking whether Harfbuzz layout is desired... auto
+checking whether Harfbuzz + ICU works... no
+checking whether libtiff works... no
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating src/cconfig.h
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c cairobem.c -o cairobem.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c cairogd.c -o cairogd.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c cairotalk.c -o cairotalk.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c coreutil.c -o coreutil.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/tyron/cairo-devel/usr/include/cairo  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/freetype-2.14.1-6pybd3weqnptd6at6uik2b2l44nrg6m7/include/freetype2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/bzip2-1.0.8-nfdr23txh3g62vraf3xriq4rhyp52onw/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/include/libpng16 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP    -I. -Iinclude  -I/usr/local/include   -g -O2 -fpic  -g -O2  -c img-backend.c -o img-backend.o
+FAILED: scCustomize
+SKIP (already installed): viridis
+SKIP (already installed): ggpubr
+
+=== Installing: clustree ===
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c bSpline.cpp -o bSpline.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c bezier.cpp -o bezier.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c concaveman.cpp -o concaveman.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c cpp11.cpp -o cpp11.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c deBoor.cpp -o deBoor.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c ellipseEnclose.cpp -o ellipseEnclose.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c enclose.cpp -o enclose.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c pointPath.cpp -o pointPath.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o ggforce.so bSpline.o bezier.o concaveman.o cpp11.o deBoor.o ellipseEnclose.o enclose.o pointPath.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c cactusTree.cpp -o cactusTree.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c circlePack.cpp -o circlePack.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c cpp11.cpp -o cpp11.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c dendrogram.cpp -o dendrogram.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c forceBundle.cpp -o forceBundle.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c hTree.cpp -o hTree.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c iciclePlot.cpp -o iciclePlot.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c lineCutter.cpp -o lineCutter.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c nodes.cpp -o nodes.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c pathAttr.cpp -o pathAttr.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c treemap.cpp -o treemap.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c unrooted.cpp -o unrooted.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o ggraph.so cactusTree.o circlePack.o cpp11.o dendrogram.o forceBundle.o hTree.o iciclePlot.o lineCutter.o nodes.o pathAttr.o treemap.o unrooted.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+OK: clustree
+SKIP (already installed): randomcoloR
+SKIP (already installed): gt
+SKIP (already installed): pheatmap
+SKIP (already installed): msigdbr
+SKIP (already installed): RobustRankAggreg
+SKIP (already installed): shiny
+SKIP (already installed): reticulate
+SKIP (already installed): data.table
+SKIP (already installed): Matrix
+SKIP (already installed): DT
+SKIP (already installed): magrittr
+SKIP (already installed): ggrepel
+SKIP (already installed): ggdendro
+SKIP (already installed): gridExtra
+SKIP (already installed): glue
+SKIP (already installed): readr
+SKIP (already installed): future
+SKIP (already installed): RColorBrewer
+SKIP (already installed): R.utils
+SKIP (already installed): patchwork
+
+=== Installing: tictoc ===
+OK: tictoc
+
+=== Installing: callback ===
+OK: callback
+SKIP (already installed): RSpectra
+
+--- FAILED PACKAGES ---
+scCustomize 
+End: Tue May 19 10:23:41 PM CDT 2026

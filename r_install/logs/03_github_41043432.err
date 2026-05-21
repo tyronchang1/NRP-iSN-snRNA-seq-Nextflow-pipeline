@@ -1,0 +1,395 @@
+Registered S3 method overwritten by 'SeuratDisk':
+  method            from  
+  as.sparse.H5Group Seurat
+Downloading GitHub repo cole-trapnell-lab/monocle3@HEAD
+Installing 8 packages: units, sf, slider, furrr, spdep, rsample, pscl, ggdist
+trying URL 'https://cloud.r-project.org/src/contrib/units_1.0-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/sf_1.1-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/slider_0.3.3.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/furrr_0.4.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spdep_1.4-2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/rsample_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/pscl_1.5.9.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggdist_3.3.3.tar.gz'
+* installing *source* package ‘units’ ...
+** this is package ‘units’ version ‘1.0-1’
+** package ‘units’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: error: in '/tmp/RtmpDRsdUi/R.INSTALL36c7a7bc65b07/units':
+configure: error: 
+--------------------------------------------------------------------------------
+  Configuration failed because libudunits2.so was not found. Try installing:
+    * deb: libudunits2-dev (Debian, Ubuntu, ...)
+    * rpm: udunits2-devel (Fedora, EPEL, ...)
+    * brew: udunits (OSX)
+  If udunits2 is already installed in a non-standard location, use:
+    --configure-args='--with-udunits2-lib=/usr/local/lib'
+  if the library was not found, and/or:
+    --configure-args='--with-udunits2-include=/usr/include/udunits2'
+  if the header was not found, replacing paths with appropriate values.
+  You can alternatively set UDUNITS2_INCLUDE and UDUNITS2_LIBS manually.
+--------------------------------------------------------------------------------
+
+See 'config.log' for more details
+ERROR: configuration failed for package ‘units’
+* removing ‘/ref/rmlab/software/tyron/R-libs/units’
+* installing *source* package ‘slider’ ...
+** this is package ‘slider’ version ‘0.3.3’
+** package ‘slider’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-slider/00new/slider/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /usr/lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (slider)
+* installing *source* package ‘furrr’ ...
+** this is package ‘furrr’ version ‘0.4.0’
+** package ‘furrr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (furrr)
+* installing *source* package ‘pscl’ ...
+** this is package ‘pscl’ version ‘1.5.9’
+** package ‘pscl’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-pscl/00new/pscl/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /usr/lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (pscl)
+* installing *source* package ‘ggdist’ ...
+** this is package ‘ggdist’ version ‘3.3.3’
+** package ‘ggdist’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-ggdist/00new/ggdist/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /usr/lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (ggdist)
+ERROR: dependency ‘units’ is not available for package ‘sf’
+Perhaps try a variation of:
+install.packages('units')
+* removing ‘/ref/rmlab/software/tyron/R-libs/sf’
+* installing *source* package ‘rsample’ ...
+** this is package ‘rsample’ version ‘1.3.2’
+** package ‘rsample’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (rsample)
+ERROR: dependencies ‘sf’, ‘units’ are not available for package ‘spdep’
+Perhaps try a variation of:
+install.packages(c('sf', 'units'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/spdep’
+
+The downloaded source packages are in
+	‘/tmp/RtmpBOdu7U/downloaded_packages’
+ERROR: dependencies ‘sf’, ‘spdep’ are not available for package ‘monocle3’
+Perhaps try a variation of:
+install.packages(c('sf', 'spdep'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/monocle3’
+Downloading GitHub repo cole-trapnell-lab/monocle3@HEAD
+Installing 3 packages: units, sf, spdep
+trying URL 'https://cloud.r-project.org/src/contrib/units_1.0-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/sf_1.1-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spdep_1.4-2.tar.gz'
+* installing *source* package ‘units’ ...
+** this is package ‘units’ version ‘1.0-1’
+** package ‘units’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: error: in '/tmp/RtmpMRRle5/R.INSTALL36ccaf1be52ca6/units':
+configure: error: 
+--------------------------------------------------------------------------------
+  Configuration failed because libudunits2.so was not found. Try installing:
+    * deb: libudunits2-dev (Debian, Ubuntu, ...)
+    * rpm: udunits2-devel (Fedora, EPEL, ...)
+    * brew: udunits (OSX)
+  If udunits2 is already installed in a non-standard location, use:
+    --configure-args='--with-udunits2-lib=/usr/local/lib'
+  if the library was not found, and/or:
+    --configure-args='--with-udunits2-include=/usr/include/udunits2'
+  if the header was not found, replacing paths with appropriate values.
+  You can alternatively set UDUNITS2_INCLUDE and UDUNITS2_LIBS manually.
+--------------------------------------------------------------------------------
+
+See 'config.log' for more details
+ERROR: configuration failed for package ‘units’
+* removing ‘/ref/rmlab/software/tyron/R-libs/units’
+ERROR: dependency ‘units’ is not available for package ‘sf’
+Perhaps try a variation of:
+install.packages('units')
+* removing ‘/ref/rmlab/software/tyron/R-libs/sf’
+ERROR: dependencies ‘sf’, ‘units’ are not available for package ‘spdep’
+Perhaps try a variation of:
+install.packages(c('sf', 'units'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/spdep’
+
+The downloaded source packages are in
+	‘/tmp/RtmpBOdu7U/downloaded_packages’
+ERROR: dependencies ‘sf’, ‘spdep’ are not available for package ‘monocle3’
+Perhaps try a variation of:
+install.packages(c('sf', 'spdep'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/monocle3’
+Downloading GitHub repo cole-trapnell-lab/monocle3@HEAD
+Installing 3 packages: units, sf, spdep
+trying URL 'https://cloud.r-project.org/src/contrib/units_1.0-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/sf_1.1-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spdep_1.4-2.tar.gz'
+* installing *source* package ‘units’ ...
+** this is package ‘units’ version ‘1.0-1’
+** package ‘units’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: error: in '/tmp/Rtmpm3L9T5/R.INSTALL36cfde19c8c22a/units':
+configure: error: 
+--------------------------------------------------------------------------------
+  Configuration failed because libudunits2.so was not found. Try installing:
+    * deb: libudunits2-dev (Debian, Ubuntu, ...)
+    * rpm: udunits2-devel (Fedora, EPEL, ...)
+    * brew: udunits (OSX)
+  If udunits2 is already installed in a non-standard location, use:
+    --configure-args='--with-udunits2-lib=/usr/local/lib'
+  if the library was not found, and/or:
+    --configure-args='--with-udunits2-include=/usr/include/udunits2'
+  if the header was not found, replacing paths with appropriate values.
+  You can alternatively set UDUNITS2_INCLUDE and UDUNITS2_LIBS manually.
+--------------------------------------------------------------------------------
+
+See 'config.log' for more details
+ERROR: configuration failed for package ‘units’
+* removing ‘/ref/rmlab/software/tyron/R-libs/units’
+ERROR: dependency ‘units’ is not available for package ‘sf’
+Perhaps try a variation of:
+install.packages('units')
+* removing ‘/ref/rmlab/software/tyron/R-libs/sf’
+ERROR: dependencies ‘sf’, ‘units’ are not available for package ‘spdep’
+Perhaps try a variation of:
+install.packages(c('sf', 'units'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/spdep’
+
+The downloaded source packages are in
+	‘/tmp/RtmpBOdu7U/downloaded_packages’
+ERROR: dependencies ‘sf’, ‘spdep’ are not available for package ‘monocle3’
+Perhaps try a variation of:
+install.packages(c('sf', 'spdep'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/monocle3’
+Downloading GitHub repo satijalab/seurat-wrappers@HEAD
+* installing *source* package ‘SeuratWrappers’ ...
+** this is package ‘SeuratWrappers’ version ‘0.4.0’
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (SeuratWrappers)
+Downloading GitHub repo satijalab/seurat-data@HEAD
+* installing *source* package ‘SeuratData’ ...
+** this is package ‘SeuratData’ version ‘0.2.2.9002’
+** using staged installation
+** R
+** exec
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (SeuratData)
+Downloading GitHub repo igrabski/sc-SHC@HEAD
+Installing 1 packages: fastcluster
+trying URL 'https://cloud.r-project.org/src/contrib/fastcluster_1.3.0.tar.gz'
+Content type 'application/x-gzip' length 203457 bytes (198 KB)
+==================================================
+downloaded 198 KB
+
+* installing *source* package ‘fastcluster’ ...
+** this is package ‘fastcluster’ version ‘1.3.0’
+** package ‘fastcluster’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+In file included from fastcluster_R.cpp:24:
+fastcluster.cpp:53:35: note: ‘#pragma message: Use fenv header.’
+   53 | #pragma message("Use fenv header.")
+      |                                   ^
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-fastcluster/00new/fastcluster/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /usr/lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (fastcluster)
+
+The downloaded source packages are in
+	‘/tmp/RtmpBOdu7U/downloaded_packages’
+* installing *source* package ‘scSHC’ ...
+** this is package ‘scSHC’ version ‘0.1.0’
+** using staged installation
+Warning in person1(given = given[[i]], family = family[[i]], middle = middle[[i]],  :
+  It is recommended to use ‘given’ instead of ‘middle’.
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (scSHC)
+Downloading GitHub repo crazyhottommy/scclusteval@HEAD
+* installing *source* package ‘scclusteval’ ...
+** this is package ‘scclusteval’ version ‘0.0.0.9000’
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (scclusteval)
+Downloading GitHub repo renozao/xbioc@HEAD
+Downloading GitHub repo renozao/pkgmaker@develop
+Installing 1 packages: registry
+trying URL 'https://cloud.r-project.org/src/contrib/registry_0.5-1.tar.gz'
+Content type 'application/x-gzip' length 170969 bytes (166 KB)
+==================================================
+downloaded 166 KB
+
+* installing *source* package ‘registry’ ...
+** this is package ‘registry’ version ‘0.5-1’
+** package ‘registry’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (registry)
+
+The downloaded source packages are in
+	‘/tmp/RtmpBOdu7U/downloaded_packages’
+* installing *source* package ‘pkgmaker’ ...
+** this is package ‘pkgmaker’ version ‘0.32.8’
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (pkgmaker)
+Skipping install of 'pkgmaker' from a github remote, the SHA1 (e9dbb825) has not changed since last install.
+  Use `force = TRUE` to force installation
+* installing *source* package ‘xbioc’ ...
+** this is package ‘xbioc’ version ‘0.1.19’
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (xbioc)
+Downloading GitHub repo Jiaxin-Fan/MuSiC2@HEAD
+* installing *source* package ‘MuSiC2’ ...
+** this is package ‘MuSiC2’ version ‘0.1.0’
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (MuSiC2)
+There were 12 warnings (use warnings() to see them)

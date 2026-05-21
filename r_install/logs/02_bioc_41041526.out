@@ -1,0 +1,433 @@
+=== Bioconductor Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Tue May 19 11:37:40 PM CDT 2026
+SKIP (already installed): multtest
+SKIP (already installed): ComplexHeatmap
+SKIP (already installed): DropletUtils
+
+=== Installing: AUCell ===
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+FAILED: AUCell
+SKIP (already installed): glmGamPoi
+
+=== Installing: scDblFinder ===
+cd "htslib-1.18" && make -f "Makefile.Rhtslib"
+mkdir -p "/ref/rmlab/software/tyron/R-libs/Rhtslib/include/htslib"
+mkdir -p "/ref/rmlab/software/tyron/R-libs/Rhtslib/usrlib"
+make[1]: Entering directory '/tmp/Rtmptn29lH/R.INSTALL35dbab61a98a44/Rhtslib/src/htslib-1.18'
+mkdir -p "/ref/rmlab/software/tyron/R-libs/Rhtslib/testdata/tabix"
+cd "htslib-1.18/test" && (cp *.sam *.bam *.vcf *.bcf *.cram *.fa *.fa.fai *.gff *.bed "/ref/rmlab/software/tyron/R-libs/Rhtslib/testdata" 2>/dev/null || true) && cd tabix && (cp *.sam *.bam *.vcf *.bcf *.cram *.fa *.fa.fai *.gff *.bed "/ref/rmlab/software/tyron/R-libs/Rhtslib/testdata/tabix" 2>/dev/null || true)
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o kfunc.o kfunc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o kstring.o kstring.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o bcf_sr_sort.o bcf_sr_sort.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o bgzf.o bgzf.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o errmod.o errmod.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o faidx.o faidx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o header.o header.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hfile.o hfile.c
+echo '#define HTS_VERSION_TEXT "1.18"' > version.h
+printf '#define HTS_CC "%s"\n#define HTS_CPPFLAGS "%s"\n#define HTS_CFLAGS "%s"\n#define HTS_LDFLAGS "%s"\n#define HTS_LIBS "%s"\n' \
+'/usr/bin/gcc' \
+'-I/usr/local/include -D_FILE_OFFSET_BITS=64' \
+'-g -O2 -fpic -fvisibility=hidden' \
+'-Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -fvisibility=hidden' \
+'-lz -lm -lbz2 -llzma -lcurl' > config_vars.h
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hts_expr.o hts_expr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hts_os.o hts_os.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o md5.o md5.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o multipart.o multipart.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o probaln.o probaln.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o realn.o realn.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o regidx.o regidx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o region.o region.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o sam.o sam.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o sam_mods.o sam_mods.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o synced_bcf_reader.o synced_bcf_reader.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcf_sweep.o vcf_sweep.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o tbx.o tbx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o textutils.o textutils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o thread_pool.o thread_pool.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcf.o vcf.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcfutils.o vcfutils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_codecs.o cram/cram_codecs.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_decode.o cram/cram_decode.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_encode.o cram/cram_encode.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_external.o cram/cram_external.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_index.o cram/cram_index.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_io.o cram/cram_io.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_stats.o cram/cram_stats.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/mFILE.o cram/mFILE.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/open_trace_file.o cram/open_trace_file.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/pooled_alloc.o cram/pooled_alloc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/string_alloc.o cram/string_alloc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/arith_dynamic.o htscodecs/htscodecs/arith_dynamic.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/fqzcomp_qual.o htscodecs/htscodecs/fqzcomp_qual.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/htscodecs.o htscodecs/htscodecs/htscodecs.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/pack.o htscodecs/htscodecs/pack.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static4x16pr.o htscodecs/htscodecs/rANS_static4x16pr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static32x16pr_avx2.o htscodecs/htscodecs/rANS_static32x16pr_avx2.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static32x16pr_avx512.o htscodecs/htscodecs/rANS_static32x16pr_avx512.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static32x16pr_sse4.o htscodecs/htscodecs/rANS_static32x16pr_sse4.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static32x16pr_neon.o htscodecs/htscodecs/rANS_static32x16pr_neon.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static32x16pr.o htscodecs/htscodecs/rANS_static32x16pr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static.o htscodecs/htscodecs/rANS_static.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rle.o htscodecs/htscodecs/rle.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/tokenise_name3.o htscodecs/htscodecs/tokenise_name3.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/utils.o htscodecs/htscodecs/utils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hfile_libcurl.o hfile_libcurl.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o kfunc.pico kfunc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o kstring.pico kstring.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o bcf_sr_sort.pico bcf_sr_sort.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o bgzf.pico bgzf.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o errmod.pico errmod.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o faidx.pico faidx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o header.pico header.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o hfile.pico hfile.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o hts.pico hts.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o hts_expr.pico hts_expr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o hts_os.pico hts_os.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o md5.pico md5.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o multipart.pico multipart.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o probaln.pico probaln.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o realn.pico realn.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o regidx.pico regidx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o region.pico region.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o sam.pico sam.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o sam_mods.pico sam_mods.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o synced_bcf_reader.pico synced_bcf_reader.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o vcf_sweep.pico vcf_sweep.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o tbx.pico tbx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o textutils.pico textutils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o thread_pool.pico thread_pool.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o vcf.pico vcf.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o vcfutils.pico vcfutils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_codecs.pico cram/cram_codecs.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_decode.pico cram/cram_decode.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_encode.pico cram/cram_encode.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_external.pico cram/cram_external.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_index.pico cram/cram_index.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_io.pico cram/cram_io.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_stats.pico cram/cram_stats.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/mFILE.pico cram/mFILE.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/open_trace_file.pico cram/open_trace_file.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/pooled_alloc.pico cram/pooled_alloc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/string_alloc.pico cram/string_alloc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/arith_dynamic.pico htscodecs/htscodecs/arith_dynamic.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/fqzcomp_qual.pico htscodecs/htscodecs/fqzcomp_qual.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/htscodecs.pico htscodecs/htscodecs/htscodecs.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/pack.pico htscodecs/htscodecs/pack.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static4x16pr.pico htscodecs/htscodecs/rANS_static4x16pr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static32x16pr_avx2.pico htscodecs/htscodecs/rANS_static32x16pr_avx2.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static32x16pr_avx512.pico htscodecs/htscodecs/rANS_static32x16pr_avx512.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static32x16pr_sse4.pico htscodecs/htscodecs/rANS_static32x16pr_sse4.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static32x16pr_neon.pico htscodecs/htscodecs/rANS_static32x16pr_neon.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static32x16pr.pico htscodecs/htscodecs/rANS_static32x16pr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static.pico htscodecs/htscodecs/rANS_static.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rle.pico htscodecs/htscodecs/rle.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/tokenise_name3.pico htscodecs/htscodecs/tokenise_name3.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/utils.pico htscodecs/htscodecs/utils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o hfile_libcurl.pico hfile_libcurl.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hts.o hts.c
+/usr/bin/gcc -shared -Wl,-soname,libhts.so.3 -Wl,-version-script,htslib.map -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -fvisibility=hidden -o libhts.so kfunc.pico kstring.pico bcf_sr_sort.pico bgzf.pico errmod.pico faidx.pico header.pico hfile.pico hts.pico hts_expr.pico hts_os.pico md5.pico multipart.pico probaln.pico realn.pico regidx.pico region.pico sam.pico sam_mods.pico synced_bcf_reader.pico vcf_sweep.pico tbx.pico textutils.pico thread_pool.pico vcf.pico vcfutils.pico cram/cram_codecs.pico cram/cram_decode.pico cram/cram_encode.pico cram/cram_external.pico cram/cram_index.pico cram/cram_io.pico cram/cram_stats.pico cram/mFILE.pico cram/open_trace_file.pico cram/pooled_alloc.pico cram/string_alloc.pico htscodecs/htscodecs/arith_dynamic.pico htscodecs/htscodecs/fqzcomp_qual.pico htscodecs/htscodecs/htscodecs.pico htscodecs/htscodecs/pack.pico htscodecs/htscodecs/rANS_static4x16pr.pico htscodecs/htscodecs/rANS_static32x16pr_avx2.pico htscodecs/htscodecs/rANS_static32x16pr_avx512.pico htscodecs/htscodecs/rANS_static32x16pr_sse4.pico htscodecs/htscodecs/rANS_static32x16pr_neon.pico htscodecs/htscodecs/rANS_static32x16pr.pico htscodecs/htscodecs/rANS_static.pico htscodecs/htscodecs/rle.pico htscodecs/htscodecs/tokenise_name3.pico htscodecs/htscodecs/utils.pico hfile_libcurl.pico -lz -lm -lbz2 -llzma -lcurl -lpthread
+make[1]: Leaving directory '/tmp/Rtmptn29lH/R.INSTALL35dbab61a98a44/Rhtslib/src/htslib-1.18'
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+cd "htslib-1.18" && make -f "Makefile.Rhtslib"
+mkdir -p "/ref/rmlab/software/tyron/R-libs/Rhtslib/include/htslib"
+mkdir -p "/ref/rmlab/software/tyron/R-libs/Rhtslib/usrlib"
+make[1]: Entering directory '/tmp/RtmpApwsTU/R.INSTALL35dfff1af39f20/Rhtslib/src/htslib-1.18'
+mkdir -p "/ref/rmlab/software/tyron/R-libs/Rhtslib/testdata/tabix"
+cd "htslib-1.18/test" && (cp *.sam *.bam *.vcf *.bcf *.cram *.fa *.fa.fai *.gff *.bed "/ref/rmlab/software/tyron/R-libs/Rhtslib/testdata" 2>/dev/null || true) && cd tabix && (cp *.sam *.bam *.vcf *.bcf *.cram *.fa *.fa.fai *.gff *.bed "/ref/rmlab/software/tyron/R-libs/Rhtslib/testdata/tabix" 2>/dev/null || true)
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o kfunc.o kfunc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o kstring.o kstring.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o bcf_sr_sort.o bcf_sr_sort.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o bgzf.o bgzf.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o errmod.o errmod.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o faidx.o faidx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o header.o header.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hfile.o hfile.c
+echo '#define HTS_VERSION_TEXT "1.18"' > version.h
+printf '#define HTS_CC "%s"\n#define HTS_CPPFLAGS "%s"\n#define HTS_CFLAGS "%s"\n#define HTS_LDFLAGS "%s"\n#define HTS_LIBS "%s"\n' \
+'/usr/bin/gcc' \
+'-I/usr/local/include -D_FILE_OFFSET_BITS=64' \
+'-g -O2 -fpic -fvisibility=hidden' \
+'-Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -fvisibility=hidden' \
+'-lz -lm -lbz2 -llzma -lcurl' > config_vars.h
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hts_expr.o hts_expr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hts_os.o hts_os.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o md5.o md5.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o multipart.o multipart.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o probaln.o probaln.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o realn.o realn.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o regidx.o regidx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o region.o region.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o sam.o sam.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o sam_mods.o sam_mods.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o synced_bcf_reader.o synced_bcf_reader.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcf_sweep.o vcf_sweep.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o tbx.o tbx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o textutils.o textutils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o thread_pool.o thread_pool.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcf.o vcf.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcfutils.o vcfutils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_codecs.o cram/cram_codecs.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_decode.o cram/cram_decode.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_encode.o cram/cram_encode.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_external.o cram/cram_external.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_index.o cram/cram_index.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_io.o cram/cram_io.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_stats.o cram/cram_stats.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/mFILE.o cram/mFILE.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/open_trace_file.o cram/open_trace_file.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/pooled_alloc.o cram/pooled_alloc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/string_alloc.o cram/string_alloc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/arith_dynamic.o htscodecs/htscodecs/arith_dynamic.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/fqzcomp_qual.o htscodecs/htscodecs/fqzcomp_qual.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/htscodecs.o htscodecs/htscodecs/htscodecs.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/pack.o htscodecs/htscodecs/pack.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static4x16pr.o htscodecs/htscodecs/rANS_static4x16pr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static32x16pr_avx2.o htscodecs/htscodecs/rANS_static32x16pr_avx2.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static32x16pr_avx512.o htscodecs/htscodecs/rANS_static32x16pr_avx512.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static32x16pr_sse4.o htscodecs/htscodecs/rANS_static32x16pr_sse4.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static32x16pr_neon.o htscodecs/htscodecs/rANS_static32x16pr_neon.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static32x16pr.o htscodecs/htscodecs/rANS_static32x16pr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rANS_static.o htscodecs/htscodecs/rANS_static.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/rle.o htscodecs/htscodecs/rle.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/tokenise_name3.o htscodecs/htscodecs/tokenise_name3.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/utils.o htscodecs/htscodecs/utils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hfile_libcurl.o hfile_libcurl.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o kfunc.pico kfunc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o kstring.pico kstring.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o bcf_sr_sort.pico bcf_sr_sort.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o bgzf.pico bgzf.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o errmod.pico errmod.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o faidx.pico faidx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o header.pico header.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o hfile.pico hfile.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o hts.pico hts.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o hts_expr.pico hts_expr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o hts_os.pico hts_os.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o md5.pico md5.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o multipart.pico multipart.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o probaln.pico probaln.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o realn.pico realn.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o regidx.pico regidx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o region.pico region.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o sam.pico sam.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o sam_mods.pico sam_mods.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o synced_bcf_reader.pico synced_bcf_reader.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o vcf_sweep.pico vcf_sweep.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o tbx.pico tbx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o textutils.pico textutils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o thread_pool.pico thread_pool.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o vcf.pico vcf.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o vcfutils.pico vcfutils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_codecs.pico cram/cram_codecs.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_decode.pico cram/cram_decode.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_encode.pico cram/cram_encode.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_external.pico cram/cram_external.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_index.pico cram/cram_index.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_io.pico cram/cram_io.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/cram_stats.pico cram/cram_stats.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/mFILE.pico cram/mFILE.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/open_trace_file.pico cram/open_trace_file.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/pooled_alloc.pico cram/pooled_alloc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o cram/string_alloc.pico cram/string_alloc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/arith_dynamic.pico htscodecs/htscodecs/arith_dynamic.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/fqzcomp_qual.pico htscodecs/htscodecs/fqzcomp_qual.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/htscodecs.pico htscodecs/htscodecs/htscodecs.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/pack.pico htscodecs/htscodecs/pack.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static4x16pr.pico htscodecs/htscodecs/rANS_static4x16pr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static32x16pr_avx2.pico htscodecs/htscodecs/rANS_static32x16pr_avx2.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static32x16pr_avx512.pico htscodecs/htscodecs/rANS_static32x16pr_avx512.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static32x16pr_sse4.pico htscodecs/htscodecs/rANS_static32x16pr_sse4.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static32x16pr_neon.pico htscodecs/htscodecs/rANS_static32x16pr_neon.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static32x16pr.pico htscodecs/htscodecs/rANS_static32x16pr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rANS_static.pico htscodecs/htscodecs/rANS_static.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/rle.pico htscodecs/htscodecs/rle.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/tokenise_name3.pico htscodecs/htscodecs/tokenise_name3.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o htscodecs/htscodecs/utils.pico htscodecs/htscodecs/utils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64  -c -o hfile_libcurl.pico hfile_libcurl.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hts.o hts.c
+/usr/bin/gcc -shared -Wl,-soname,libhts.so.3 -Wl,-version-script,htslib.map -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -fvisibility=hidden -o libhts.so kfunc.pico kstring.pico bcf_sr_sort.pico bgzf.pico errmod.pico faidx.pico header.pico hfile.pico hts.pico hts_expr.pico hts_os.pico md5.pico multipart.pico probaln.pico realn.pico regidx.pico region.pico sam.pico sam_mods.pico synced_bcf_reader.pico vcf_sweep.pico tbx.pico textutils.pico thread_pool.pico vcf.pico vcfutils.pico cram/cram_codecs.pico cram/cram_decode.pico cram/cram_encode.pico cram/cram_external.pico cram/cram_index.pico cram/cram_io.pico cram/cram_stats.pico cram/mFILE.pico cram/open_trace_file.pico cram/pooled_alloc.pico cram/string_alloc.pico htscodecs/htscodecs/arith_dynamic.pico htscodecs/htscodecs/fqzcomp_qual.pico htscodecs/htscodecs/htscodecs.pico htscodecs/htscodecs/pack.pico htscodecs/htscodecs/rANS_static4x16pr.pico htscodecs/htscodecs/rANS_static32x16pr_avx2.pico htscodecs/htscodecs/rANS_static32x16pr_avx512.pico htscodecs/htscodecs/rANS_static32x16pr_sse4.pico htscodecs/htscodecs/rANS_static32x16pr_neon.pico htscodecs/htscodecs/rANS_static32x16pr.pico htscodecs/htscodecs/rANS_static.pico htscodecs/htscodecs/rle.pico htscodecs/htscodecs/tokenise_name3.pico htscodecs/htscodecs/utils.pico hfile_libcurl.pico -lz -lm -lbz2 -llzma -lcurl -lpthread
+make[1]: Leaving directory '/tmp/RtmpApwsTU/R.INSTALL35dfff1af39f20/Rhtslib/src/htslib-1.18'
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+cd "htslib-1.18" && make -f "Makefile.Rhtslib"
+mkdir -p "/ref/rmlab/software/tyron/R-libs/Rhtslib/include/htslib"
+mkdir -p "/ref/rmlab/software/tyron/R-libs/Rhtslib/usrlib"
+make[1]: Entering directory '/tmp/Rtmp4vGg12/R.INSTALL35e3ec3ea8973d/Rhtslib/src/htslib-1.18'
+mkdir -p "/ref/rmlab/software/tyron/R-libs/Rhtslib/testdata/tabix"
+cd "htslib-1.18/test" && (cp *.sam *.bam *.vcf *.bcf *.cram *.fa *.fa.fai *.gff *.bed "/ref/rmlab/software/tyron/R-libs/Rhtslib/testdata" 2>/dev/null || true) && cd tabix && (cp *.sam *.bam *.vcf *.bcf *.cram *.fa *.fa.fai *.gff *.bed "/ref/rmlab/software/tyron/R-libs/Rhtslib/testdata/tabix" 2>/dev/null || true)
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o kfunc.o kfunc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o kstring.o kstring.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o bcf_sr_sort.o bcf_sr_sort.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o bgzf.o bgzf.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o errmod.o errmod.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o faidx.o faidx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o header.o header.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hfile.o hfile.c
+echo '#define HTS_VERSION_TEXT "1.18"' > version.h
+printf '#define HTS_CC "%s"\n#define HTS_CPPFLAGS "%s"\n#define HTS_CFLAGS "%s"\n#define HTS_LDFLAGS "%s"\n#define HTS_LIBS "%s"\n' \
+'/usr/bin/gcc' \
+'-I/usr/local/include -D_FILE_OFFSET_BITS=64' \
+'-g -O2 -fpic -fvisibility=hidden' \
+'-Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -fvisibility=hidden' \
+'-lz -lm -lbz2 -llzma -lcurl' > config_vars.h
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hts_expr.o hts_expr.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o hts_os.o hts_os.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o md5.o md5.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o multipart.o multipart.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o probaln.o probaln.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o realn.o realn.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o regidx.o regidx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o region.o region.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o sam.o sam.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o sam_mods.o sam_mods.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o synced_bcf_reader.o synced_bcf_reader.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcf_sweep.o vcf_sweep.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o tbx.o tbx.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o textutils.o textutils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o thread_pool.o thread_pool.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcf.o vcf.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o vcfutils.o vcfutils.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_codecs.o cram/cram_codecs.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_decode.o cram/cram_decode.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_encode.o cram/cram_encode.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_external.o cram/cram_external.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_index.o cram/cram_index.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_io.o cram/cram_io.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/cram_stats.o cram/cram_stats.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/mFILE.o cram/mFILE.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/open_trace_file.o cram/open_trace_file.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/pooled_alloc.o cram/pooled_alloc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o cram/string_alloc.o cram/string_alloc.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/arith_dynamic.o htscodecs/htscodecs/arith_dynamic.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/fqzcomp_qual.o htscodecs/htscodecs/fqzcomp_qual.c
+/usr/bin/gcc -g -O2 -fpic -fvisibility=hidden  -I. -I/usr/local/include -D_FILE_OFFSET_BITS=64 -c -o htscodecs/htscodecs/htscodecs.o htscodecs/htscodecs/htscodecs.c

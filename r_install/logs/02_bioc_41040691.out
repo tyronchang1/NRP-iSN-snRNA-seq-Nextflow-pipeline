@@ -1,0 +1,820 @@
+=== Bioconductor Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Tue May 19 10:33:25 PM CDT 2026
+SKIP (already installed): multtest
+SKIP (already installed): ComplexHeatmap
+
+=== Installing: DropletUtils ===
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c SparseMatrixView.cpp -o SparseMatrixView.o
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c methods.cpp -o methods.o
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c row_methods.cpp -o row_methods.o
+/usr/bin/g++ -std=gnu++11 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o sparseMatrixStats.so RcppExports.o SparseMatrixView.o methods.o row_methods.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c normexp.c -o normexp.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weighted_lowess.c -o weighted_lowess.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o limma.so init.o normexp.o weighted_lowess.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c IRanges_stubs.c -o IRanges_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c R_init_GenomicRanges.c -o R_init_GenomicRanges.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c S4Vectors_stubs.c -o S4Vectors_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c transcript_utils.c -o transcript_utils.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o GenomicRanges.so IRanges_stubs.o R_init_GenomicRanges.o S4Vectors_stubs.o transcript_utils.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether /usr/bin/g++ -std=gnu++17 accepts -g... yes
+checking for /usr/bin/g++ -std=gnu++17 option to enable C++11 features... none needed
+checking for library containing shm_open... none required
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for sys/mman.h... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I"./" -I'/ref/rmlab/software/tyron/R-libs/BH/include' -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c cpp11.cpp -o cpp11.o
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I"./" -I'/ref/rmlab/software/tyron/R-libs/BH/include' -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c ipcmutex.cpp -o ipcmutex.o
+/usr/bin/g++ -std=gnu++11 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o BiocParallel.so cpp11.o ipcmutex.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c ExtendableJaggedArray.c -o ExtendableJaggedArray.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c IRanges_stubs.c -o IRanges_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c OPBufTree.c -o OPBufTree.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c R_init_SparseArray.c -o R_init_SparseArray.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c Rvector_summarization.c -o Rvector_summarization.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c Rvector_utils.c -o Rvector_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c S4Vectors_stubs.c -o S4Vectors_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SBT_utils.c -o SBT_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SVT_SparseArray_class.c -o SVT_SparseArray_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_Arith_methods.c -o SparseArray_Arith_methods.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_Compare_methods.c -o SparseArray_Compare_methods.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_Complex_methods.c -o SparseArray_Complex_methods.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_Logic_methods.c -o SparseArray_Logic_methods.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_Math_methods.c -o SparseArray_Math_methods.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_abind.c -o SparseArray_abind.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_aperm.c -o SparseArray_aperm.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_dim_tuning.c -o SparseArray_dim_tuning.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_matrixStats.c -o SparseArray_matrixStats.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_misc_methods.c -o SparseArray_misc_methods.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_subassignment.c -o SparseArray_subassignment.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_subsetting.c -o SparseArray_subsetting.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseArray_summarization.c -o SparseArray_summarization.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseMatrix_mult.c -o SparseMatrix_mult.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseVec.c -o SparseVec.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseVec_Arith.c -o SparseVec_Arith.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseVec_Compare.c -o SparseVec_Compare.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseVec_Logic.c -o SparseVec_Logic.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseVec_Math.c -o SparseVec_Math.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseVec_dotprod.c -o SparseVec_dotprod.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseVec_subassignment.c -o SparseVec_subassignment.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SparseVec_subsetting.c -o SparseVec_subsetting.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c XVector_stubs.c -o XVector_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c argcheck_utils.c -o argcheck_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c coerceVector2.c -o coerceVector2.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c leaf_utils.c -o leaf_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c misc_utils.c -o misc_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c randomSparseArray.c -o randomSparseArray.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c readSparseCSV.c -o readSparseCSV.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c rowsum_methods.c -o rowsum_methods.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c sparseMatrix_utils.c -o sparseMatrix_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c test.c -o test.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c thread_control.c -o thread_control.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o SparseArray.so ExtendableJaggedArray.o IRanges_stubs.o OPBufTree.o R_init_SparseArray.o Rvector_summarization.o Rvector_utils.o S4Vectors_stubs.o SBT_utils.o SVT_SparseArray_class.o SparseArray_Arith_methods.o SparseArray_Compare_methods.o SparseArray_Complex_methods.o SparseArray_Logic_methods.o SparseArray_Math_methods.o SparseArray_abind.o SparseArray_aperm.o SparseArray_dim_tuning.o SparseArray_matrixStats.o SparseArray_misc_methods.o SparseArray_subassignment.o SparseArray_subsetting.o SparseArray_summarization.o SparseMatrix_mult.o SparseVec.o SparseVec_Arith.o SparseVec_Compare.o SparseVec_Logic.o SparseVec_Math.o SparseVec_dotprod.o SparseVec_subassignment.o SparseVec_subsetting.o XVector_stubs.o argcheck_utils.o coerceVector2.o leaf_utils.o misc_utils.o randomSparseArray.o readSparseCSV.o rowsum_methods.o sparseMatrix_utils.o test.o thread_control.o -fopenmp -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking whether the compiler supports GNU C++... yes
+checking whether /usr/bin/g++ -std=gnu++17 accepts -g... yes
+checking for /usr/bin/g++ -std=gnu++17 option to enable C++11 features... none needed
+COMPILER = /usr/bin/gcc
+checking whether C compiler accepts -w... yes
+checking whether to use -Wl,-rpath setting... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for zlib.h... yes
+ON_BUILDER=false
+ON_BUILDER=false
+checking for szlib.h... no
+checking for libaec.h... no
+checking for curl/curl.h... yes
+checking for openssl/evp.h... yes
+checking for openssl/hmac.h... yes
+checking for openssl/sha.h... yes
+checking for curl_global_init in -lcurl... yes
+checking for EVP_sha256 in -lcrypto... no
+S3_VFD=--enable-ros3-vfd=no
+configure: creating ./config.status
+config.status: creating src/Makevars
+gunzip -dc hdf5small_cxx_hl_1.10.7.tar.gz | tar xf -;
+cd hdf5/libaec-1.0.4/build; \
+../configure --with-pic --enable-shared=no --prefix=/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip --libdir=/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib \
+CC='/usr/bin/gcc' CXX='/usr/bin/g++ -std=gnu++17' \
+CPPFLAGS='-I/usr/local/include' \
+CFLAGS='-g -O2 -w -fpic' \
+AR='ar' RANLIB='ranlib'; \
+make; \
+make install
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking whether /usr/bin/gcc understands -c and -o together... yes
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 4718592
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... gawk
+checking command to parse /usr/bin/nm -B output from /usr/bin/gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /usr/bin/gcc supports -fno-rtti -fno-exceptions... yes
+checking for /usr/bin/gcc option to produce PIC... -fPIC -DPIC
+checking if /usr/bin/gcc PIC flag -fPIC -DPIC works... yes
+checking if /usr/bin/gcc static flag -static works... no
+checking if /usr/bin/gcc supports -c -o file.o... yes
+checking if /usr/bin/gcc supports -c -o file.o... (cached) yes
+checking whether the /usr/bin/gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking whether the -Werror option is usable... yes
+checking for simple visibility declarations... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking dependency style of /usr/bin/gcc... gcc3
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking for /usr/bin/gcc option to accept ISO C99... none needed
+checking for ANSI C header files... (cached) yes
+checking whether byte ordering is bigendian... no
+checking for inline... inline
+checking for int64_t... yes
+checking for size_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for uint8_t... yes
+checking for inline... (cached) inline
+checking for C/C++ restrict keyword... __restrict
+checking for memset... yes
+checking for strstr... yes
+checking for snprintf... yes
+checking whether __builtin_clzll is declared... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating config/config.h
+config.status: executing libtool commands
+config.status: executing depfiles commands
+make[1]: Entering directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build'
+Making all in src
+make[2]: Entering directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/src'
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src -I../config  -DBUILDING_LIBAEC -I/usr/local/include -fvisibility=hidden -g -O2 -w -fpic -MT aec.o -MD -MP -MF .deps/aec.Tpo -c -o aec.o ../../src/aec.c
+mv -f .deps/aec.Tpo .deps/aec.Po
+/bin/sh ../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src -I../config  -DBUILDING_LIBAEC -I/usr/local/include -fvisibility=hidden -g -O2 -w -fpic -MT encode.lo -MD -MP -MF .deps/encode.Tpo -c -o encode.lo ../../src/encode.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src -I../config -DBUILDING_LIBAEC -I/usr/local/include -fvisibility=hidden -g -O2 -w -fpic -MT encode.lo -MD -MP -MF .deps/encode.Tpo -c ../../src/encode.c  -fPIC -DPIC -o encode.o
+mv -f .deps/encode.Tpo .deps/encode.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src -I../config  -DBUILDING_LIBAEC -I/usr/local/include -fvisibility=hidden -g -O2 -w -fpic -MT encode_accessors.lo -MD -MP -MF .deps/encode_accessors.Tpo -c -o encode_accessors.lo ../../src/encode_accessors.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src -I../config -DBUILDING_LIBAEC -I/usr/local/include -fvisibility=hidden -g -O2 -w -fpic -MT encode_accessors.lo -MD -MP -MF .deps/encode_accessors.Tpo -c ../../src/encode_accessors.c  -fPIC -DPIC -o encode_accessors.o
+mv -f .deps/encode_accessors.Tpo .deps/encode_accessors.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src -I../config  -DBUILDING_LIBAEC -I/usr/local/include -fvisibility=hidden -g -O2 -w -fpic -MT decode.lo -MD -MP -MF .deps/decode.Tpo -c -o decode.lo ../../src/decode.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src -I../config -DBUILDING_LIBAEC -I/usr/local/include -fvisibility=hidden -g -O2 -w -fpic -MT decode.lo -MD -MP -MF .deps/decode.Tpo -c ../../src/decode.c  -fPIC -DPIC -o decode.o
+mv -f .deps/decode.Tpo .deps/decode.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link /usr/bin/gcc -fvisibility=hidden -g -O2 -w -fpic -version-info 0:10:0 -no-undefined -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o libaec.la -rpath /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib encode.lo encode_accessors.lo decode.lo  
+libtool: link: ar cr .libs/libaec.a  encode.o encode_accessors.o decode.o
+libtool: link: ranlib .libs/libaec.a
+libtool: link: ( cd ".libs" && rm -f "libaec.la" && ln -s "../libaec.la" "libaec.la" )
+/bin/sh ../libtool  --tag=CC   --mode=link /usr/bin/gcc -fvisibility=hidden -g -O2 -w -fpic  -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o aec aec.o libaec.la 
+libtool: link: /usr/bin/gcc -fvisibility=hidden -g -O2 -w -fpic -Wl,-rpath -Wl,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o aec aec.o  ./.libs/libaec.a
+/usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src -I../config  -DBUILDING_LIBAEC -I/usr/local/include -fvisibility=hidden -g -O2 -w -fpic -MT utime.o -MD -MP -MF .deps/utime.Tpo -c -o utime.o ../../src/utime.c
+mv -f .deps/utime.Tpo .deps/utime.Po
+/bin/sh ../libtool  --tag=CC   --mode=link /usr/bin/gcc -fvisibility=hidden -g -O2 -w -fpic  -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o utime utime.o  
+libtool: link: /usr/bin/gcc -fvisibility=hidden -g -O2 -w -fpic -Wl,-rpath -Wl,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o utime utime.o 
+/bin/sh ../libtool  --tag=CC   --mode=compile /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src -I../config  -DBUILDING_LIBAEC -I/usr/local/include -fvisibility=hidden -g -O2 -w -fpic -MT sz_compat.lo -MD -MP -MF .deps/sz_compat.Tpo -c -o sz_compat.lo ../../src/sz_compat.c
+libtool: compile:  /usr/bin/gcc -DHAVE_CONFIG_H -I. -I../../src -I../config -DBUILDING_LIBAEC -I/usr/local/include -fvisibility=hidden -g -O2 -w -fpic -MT sz_compat.lo -MD -MP -MF .deps/sz_compat.Tpo -c ../../src/sz_compat.c  -fPIC -DPIC -o sz_compat.o
+mv -f .deps/sz_compat.Tpo .deps/sz_compat.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link /usr/bin/gcc -fvisibility=hidden -g -O2 -w -fpic -version-info 2:1:0 -no-undefined -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o libsz.la -rpath /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib sz_compat.lo libaec.la 
+libtool: link: ar cr .libs/libsz.a  sz_compat.o
+libtool: link: ranlib .libs/libsz.a
+libtool: link: ( cd ".libs" && rm -f "libsz.la" && ln -s "../libsz.la" "libsz.la" )
+make[2]: Leaving directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/src'
+make[2]: Entering directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build'
+make[1]: Leaving directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build'
+make[1]: Entering directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build'
+Making install in src
+make[2]: Entering directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/src'
+make[3]: Entering directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/src'
+ /usr/bin/mkdir -p '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libaec.la libsz.la '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib'
+libtool: install: /usr/bin/install -c .libs/libaec.lai /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib/libaec.la
+libtool: install: /usr/bin/install -c .libs/libsz.lai /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib/libsz.la
+libtool: install: /usr/bin/install -c .libs/libaec.a /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib/libaec.a
+libtool: install: chmod 644 /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib/libaec.a
+libtool: install: ranlib /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib/libaec.a
+libtool: install: /usr/bin/install -c .libs/libsz.a /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib/libsz.a
+libtool: install: chmod 644 /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib/libsz.a
+libtool: install: ranlib /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib/libsz.a
+libtool: finish: PATH="/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/cmake-3.31.9-znxjxuyx64bqio4s3wc5izrggrpljbvn/bin:/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/bin:/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libpng-1.6.47-ycrxqoudmaryqgkmx6hwjkfkvre752hh/bin:/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/bin:/ref/rmlab/software/tyron/node/bin:/ref/rmlab/software/tyron/node/bin:/ref/rmlab/software/tyron/node/bin:/home/tyron/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/tyron/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/tyron/.vscode-server/cli/servers/Stable-10c8e557c8b9f9ed0a87f61f1c9a44bde731c409/server/bin/remote-cli:/ref/rmlab/software/tyron/node/bin:/ref/rmlab/software/tyron/node/bin:/home/tyron/miniconda3/condabin:/home/tyron/.local/bin:/home/tyron/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/ref/rmlab/software/spack/bin:/sbin" ldconfig -n /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /usr/bin/mkdir -p '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/bin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c aec '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/bin'
+libtool: install: /usr/bin/install -c aec /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/bin/aec
+ /usr/bin/mkdir -p '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/include'
+ /usr/bin/install -c -m 644 ../../src/libaec.h ../../src/szlib.h '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/include'
+ /usr/bin/mkdir -p '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/share/man/man1'
+ /usr/bin/install -c -m 644 ../../src/aec.1 '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/share/man/man1'
+make[3]: Leaving directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/src'
+make[2]: Leaving directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/src'
+make[2]: Entering directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build'
+make[3]: Entering directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build'
+make[2]: Leaving directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build'
+make[1]: Leaving directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build'
+cd hdf5; \
+./configure --with-pic --enable-shared=no --enable-cxx --enable-hl \
+--enable-tests=no --enable-tools=no \
+--with-szlib=/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip --with-zlib=yes \
+--enable-ros3-vfd=no \
+--enable-sharedlib-rpath \
+CC='/usr/bin/gcc' CXX='/usr/bin/g++ -std=gnu++17' \
+CPPFLAGS='-I/usr/local/include' \
+CFLAGS='-g -O2 -w -fpic' \
+CXXFLAGS='-w -g -O2 -fpic' \
+AR='ar' RANLIB='ranlib' \
+LDFLAGS='-Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib'; \
+make lib
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking shell variables initial values... done
+checking if basename works... yes
+checking if xargs works... yes
+checking for cached host... none
+checking for config x86_64-pc-linux-gnu... no
+checking for config x86_64-pc-linux-gnu... no
+checking for config pc-linux-gnu... no
+checking for config pc-linux-gnu... no
+checking for config x86_64-linux-gnu... no
+checking for config x86_64-linux-gnu... no
+checking for config x86_64-pc... no
+checking for config linux-gnu... found
+compiler '/usr/bin/gcc' is GNU gcc-11.5.0
+compiler 'gfortran' is GNU gfortran-11.5.0
+compiler '/usr/bin/g++ -std=gnu++17' is GNU g++-11.5.0
+checking for config ./config/site-specific/host-n193... no
+checking for clang sanitizer checks... checking build mode... production
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking whether /usr/bin/gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of /usr/bin/gcc... gcc3
+checking if unsupported combinations of configure options are allowed... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for sys/time.h... yes
+checking for off_t... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for ptrdiff_t... yes
+checking whether byte ordering is bigendian... no
+checking size of char... 1
+checking size of short... 2
+checking size of int... 4
+checking size of unsigned... 4
+checking size of long... 8
+checking size of long long... 8
+checking size of __int64... 0
+checking size of float... 4
+checking size of double... 8
+checking size of long double... 16
+checking size of __float128... 16
+checking size of _Quad... 0
+checking for quadmath.h... yes
+checking maximum decimal precision for C... 33
+checking if Fortran interface enabled... no
+checking whether the compiler supports GNU C++... yes
+checking whether /usr/bin/g++ -std=gnu++17 accepts -g... yes
+checking for /usr/bin/g++ -std=gnu++17 option to enable C++11 features... none needed
+checking dependency style of /usr/bin/g++ -std=gnu++17... gcc3
+checking how to run the C++ preprocessor... /usr/bin/g++ -std=gnu++17 -E
+checking if c++ interface enabled... yes
+checking if /usr/bin/g++ -std=gnu++17 needs old style header files in includes... no
+checking if /usr/bin/g++ -std=gnu++17 can handle namespaces... yes
+checking if /usr/bin/g++ -std=gnu++17 can handle static cast... yes
+checking if /usr/bin/g++ -std=gnu++17 has offsetof extension... yes
+checking if the high-level library is enabled... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for tr... /usr/bin/tr
+checking if srcdir= and time commands work together... no
+checking if Java JNI interface enabled... no
+checking if building tests is disabled... Building HDF5 tests is disabled
+checking if building tools is disabled... Building HDF5 tools is disabled
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 4718592
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from /usr/bin/gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if /usr/bin/gcc supports -fno-rtti -fno-exceptions... yes
+checking for /usr/bin/gcc option to produce PIC... -fPIC -DPIC
+checking if /usr/bin/gcc PIC flag -fPIC -DPIC works... yes
+checking if /usr/bin/gcc static flag -static works... no
+checking if /usr/bin/gcc supports -c -o file.o... yes
+checking if /usr/bin/gcc supports -c -o file.o... (cached) yes
+checking whether the /usr/bin/gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... yes
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... /usr/bin/g++ -std=gnu++17 -E
+checking for ld used by /usr/bin/g++ -std=gnu++17... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the /usr/bin/g++ -std=gnu++17 linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for /usr/bin/g++ -std=gnu++17 option to produce PIC... -fPIC -DPIC
+checking if /usr/bin/g++ -std=gnu++17 PIC flag -fPIC -DPIC works... yes
+checking if /usr/bin/g++ -std=gnu++17 static flag -static works... no
+checking if /usr/bin/g++ -std=gnu++17 supports -c -o file.o... yes
+checking if /usr/bin/g++ -std=gnu++17 supports -c -o file.o... (cached) yes
+checking whether the /usr/bin/g++ -std=gnu++17 linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking if we should install only statically linked executables... no
+checking if -Wl,-rpath should be used to link shared libs in nondefault directories... yes
+checking for ceil in -lm... yes
+checking for dlopen in -ldl... yes
+checking for egrep... (cached) /usr/bin/grep -E
+checking for sys/resource.h... yes
+checking for sys/time.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/ioctl.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/socket.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/file.h... yes
+checking for stddef.h... yes
+checking for setjmp.h... yes
+checking for features.h... yes
+checking for dirent.h... yes
+checking for stdint.h... (cached) yes
+checking for stdbool.h... yes
+checking for netdb.h... yes
+checking for netinet/in.h... yes
+checking for arpa/inet.h... yes
+checking for io.h... no
+checking for winsock2.h... no
+checking for sys/timeb.h... yes
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking size of int8_t... 1
+checking size of uint8_t... 1
+checking size of int_least8_t... 1
+checking size of uint_least8_t... 1
+checking size of int_fast8_t... 1
+checking size of uint_fast8_t... 1
+checking size of int16_t... 2
+checking size of uint16_t... 2
+checking size of int_least16_t... 2
+checking size of uint_least16_t... 2
+checking size of int_fast16_t... 8
+checking size of uint_fast16_t... 8
+checking size of int32_t... 4
+checking size of uint32_t... 4
+checking size of int_least32_t... 4
+checking size of uint_least32_t... 4
+checking size of int_fast32_t... 8
+checking size of uint_fast32_t... 8
+checking size of int64_t... 8
+checking size of uint64_t... 8
+checking size of int_least64_t... 8
+checking size of uint_least64_t... 8
+checking size of int_fast64_t... 8
+checking size of uint_fast64_t... 8
+checking size of size_t... 8
+checking size of ssize_t... 8
+checking size of ptrdiff_t... 8
+checking size of off_t... 8
+checking size of bool... 1
+checking size of time_t... 8
+checking if dev_t is scalar... yes
+checking for dmalloc library... suppressed
+checking for zlib.h... yes
+checking for compress2 in -lz... yes
+checking for compress2... yes
+configure: testing for aec and szip
+checking for aec_encode in -laec... yes
+checking for SZ_BufftoBuffCompress in -lsz... yes
+checking for libaec.h... yes
+checking for szlib.h... yes
+checking for szlib encoder... yes
+checking for thread safe support... no
+checking for /usr/bin/gcc options needed to detect all undeclared functions... none needed
+checking whether CLOCK_MONOTONIC is declared... yes
+checking for tm_gmtoff in struct tm... yes
+checking for global timezone variable... yes
+checking for st_blocks in struct stat... no
+checking for _getvideoconfig... no
+checking for gettextinfo... no
+checking for GetConsoleScreenBufferInfo... no
+checking for getpwuid... yes
+checking for _scrsize... no
+checking for ioctl... yes
+checking for struct videoconfig... no
+checking for struct text_info... no
+checking for TIOCGWINSZ... yes
+checking for TIOCGETD... yes
+checking for library containing clock_gettime... none required
+checking for alarm... yes
+checking for clock_gettime... yes
+checking for difftime... yes
+checking for fcntl... yes
+checking for flock... yes
+checking for fork... yes
+checking for frexpf... yes
+checking for frexpl... yes
+checking for gethostname... yes
+checking for getrusage... yes
+checking for gettimeofday... yes
+checking for lstat... yes
+checking for rand_r... yes
+checking for random... yes
+checking for setsysinfo... no
+checking for signal... yes
+checking for longjmp... yes
+checking for setjmp... yes
+checking for siglongjmp... yes
+checking for sigsetjmp... no
+checking for sigprocmask... yes
+checking for snprintf... yes
+checking for srandom... yes
+checking for strdup... yes
+checking for symlink... yes
+checking for system... yes
+checking for strtoll... yes
+checking for strtoull... yes
+checking for tmpfile... yes
+checking for asprintf... yes
+checking for vasprintf... yes
+checking for vsnprintf... yes
+checking for waitpid... yes
+checking for roundf... yes
+checking for lroundf... yes
+checking for llroundf... yes
+checking for round... yes
+checking for lround... yes
+checking for llround... yes
+checking for an ANSI C-conforming const... yes
+checking if the compiler understands  __inline__... yes
+checking if the compiler understands __inline... yes
+checking if the compiler understands inline... yes
+checking for __attribute__ extension... yes
+checking for __func__ extension... yes
+checking for __FUNCTION__ extension... yes
+checking for C99 designated initialization support... yes
+checking how to print long long... %ld and %lu
+checking enable debugging symbols... no
+checking enable asserts... no
+checking enable developer warnings... no
+checking profiling... no
+checking optimization level... high
+checking enable file locking... best-effort
+checking for internal debug output... none
+checking whether function stack tracking is enabled... no
+checking for API tracing... no
+checking whether a memory checking tool will be used... no
+checking whether internal memory allocation sanity checking is used... no
+checking for parallel support files... skipped
+checking whether O_DIRECT is declared... yes
+checking for posix_memalign... yes
+checking if the direct I/O virtual file driver (VFD) is enabled... no
+checking if the Mirror virtual file driver (VFD) is enabled... no
+checking if the Read-Only S3 virtual file driver (VFD) is enabled... no
+checking for libhdfs... suppressed
+checking for custom examples path definition... ${prefix}/share/hdf5_examples
+checking for custom plugin default path definition... /usr/local/hdf5/lib/plugin
+checking whether exception handling functions is checked during data conversions... yes
+checking whether data accuracy is guaranteed during data conversions... yes
+checking if the machine has window style path name... no
+checking if using special algorithm to convert long double to (unsigned) long values... no
+checking if using special algorithm to convert (unsigned) long to long double values... no
+checking if correctly converting long double to (unsigned) long long values... yes
+checking if correctly converting (unsigned) long long to long double values... yes
+checking if the system is IBM ppc64le and cannot correctly convert some long double values... no
+checking additional programs should be built... no
+checking if deprecated public symbols are available... yes
+checking which version of public symbols to use by default... v110
+checking whether to perform strict file format checks... no
+checking for pread... yes
+checking for pwrite... yes
+checking whether to use pread/pwrite instead of read/write in certain VFDs... yes
+checking whether to have library information embedded in the executables... yes
+checking if alignment restrictions are strictly enforced... no
+configure: creating ./config.lt
+config.lt: creating libtool
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating src/libhdf5.settings
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating utils/Makefile
+config.status: creating utils/mirror_vfd/Makefile
+config.status: creating bin/h5cc
+config.status: creating bin/Makefile
+config.status: creating c++/Makefile
+config.status: creating c++/src/Makefile
+config.status: creating c++/src/h5c++
+config.status: creating hl/Makefile
+config.status: creating hl/src/Makefile
+config.status: creating hl/c++/Makefile
+config.status: creating hl/c++/src/Makefile
+config.status: creating src/H5config.h
+config.status: executing pubconf commands
+creating src/H5pubconf.h
+Post process src/libhdf5.settings
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing .classes commands
+	    SUMMARY OF THE HDF5 CONFIGURATION
+	    =================================
+
+General Information:
+-------------------
+                   HDF5 Version: 1.10.7
+                  Configured on: Tue May 19 22:38:42 CDT 2026
+                  Configured by: tyron@n193
+                    Host system: x86_64-pc-linux-gnu
+              Uname information: Linux n193 6.12.11-1.el9.x86_64 #1 SMP PREEMPT_DYNAMIC Wed Mar  4 18:53:02 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+                       Byte sex: little-endian
+             Installation point: /tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/hdf5
+
+Compiling Options:
+------------------
+                     Build Mode: production
+              Debugging Symbols: no
+                        Asserts: no
+                      Profiling: no
+             Optimization Level: high
+
+Linking Options:
+----------------
+                      Libraries: static
+  Statically Linked Executables: 
+                        LDFLAGS: -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib
+                     H5_LDFLAGS: 
+                     AM_LDFLAGS:  -L/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib
+                Extra libraries: -lsz -laec -lz -ldl -lm 
+                       Archiver: ar
+                       AR_FLAGS: cr
+                         Ranlib: ranlib
+
+Languages:
+----------
+                              C: yes
+                     C Compiler: /usr/bin/gcc ( gcc (GCC) 11.5.0 20240719 )
+                       CPPFLAGS: -I/usr/local/include
+                    H5_CPPFLAGS: -D_GNU_SOURCE -D_POSIX_C_SOURCE=200809L   -DNDEBUG -UH5_DEBUG_API
+                    AM_CPPFLAGS:  -I/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/include
+                        C Flags: -g -O2 -w -fpic
+                     H5 C Flags:  -std=c99  -Wno-c++-compat -Wno-format-nonliteral -Wshadow -Wundef -Wwrite-strings -Wlarger-than=2560 -Wlogical-op -Wframe-larger-than=16384 -Wpacked-bitfield-compat -Wsync-nand -Wdouble-promotion -Wtrampolines -Wstack-usage=8192 -Wmaybe-uninitialized -Wdate-time -Warray-bounds=2 -Wc99-c11-compat -Wduplicated-cond -Whsa -Wnormalized -Wunused-const-variable -Walloca -Walloc-zero -Wduplicated-branches -Wimplicit-fallthrough=5 -Wrestrict -Wattribute-alias -Wshift-overflow=2 -Wattribute-alias=2 -Wmissing-profile -fstdarg-opt -s -Wno-aggregate-return -Wno-inline -Wno-missing-format-attribute -Wno-missing-noreturn -Wno-overlength-strings -Wno-jump-misses-init -Wno-suggest-attribute=const -Wno-suggest-attribute=noreturn -Wno-suggest-attribute=pure -Wno-suggest-attribute=format -Wno-suggest-attribute=cold -Wno-suggest-attribute=malloc -O3  -Werror=bad-function-cast -Werror=declaration-after-statement -Werror=implicit-function-declaration -Werror=missing-declarations -Werror=missing-prototypes -Werror=nested-externs -Werror=old-style-definition -Werror=packed -Werror=pointer-sign -Werror=pointer-to-int-cast -Werror=redundant-decls -Werror=strict-prototypes -Werror=switch -Wunused-function -Wformat -Werror=incompatible-pointer-types -Werror=shadow -Wcast-function-type -Wmaybe-uninitialized
+                     AM C Flags: 
+               Shared C Library: no
+               Static C Library: yes
+
+
+                        Fortran: no
+
+                            C++: yes
+                   C++ Compiler: /usr/bin/g++ -std=gnu++17 ( g++ (GCC) 11.5.0 20240719 )
+                      C++ Flags: -w -g -O2 -fpic
+                   H5 C++ Flags:   -Wall -Wconversion -Wctor-dtor-privacy -Wextra -Wfloat-equal -Wformat=2 -Winit-self -Winvalid-pch -Wmissing-include-dirs -Wno-format-nonliteral -Wnon-virtual-dtor -Woverloaded-virtual -Wreorder -Wshadow -Wsign-promo -Wundef -Wwrite-strings -pedantic -Wlarger-than=2560 -Wlogical-op -Wframe-larger-than=16384 -Wpacked-bitfield-compat -Wsync-nand -Wdouble-promotion -Wtrampolines -Wstack-usage=8192 -Wmaybe-uninitialized -Wdate-time -Wopenmp-simd -Warray-bounds=2 -Wduplicated-cond -Whsa -Wnormalized -Wunused-const-variable -Walloca -Walloc-zero -Wduplicated-branches -Wimplicit-fallthrough=5 -Wrestrict -Wattribute-alias -Wshift-overflow=2 -Wattribute-alias=2 -Wmissing-profile -fstdarg-opt -s -O3  -Wcast-align -Wmissing-declarations -Werror=packed -Werror=redundant-decls -Werror=switch -Wunused-but-set-variable -Werror=unused-function -Werror=unused-variable -Wunused-parameter -Werror=shadow
+                   AM C++ Flags: 
+             Shared C++ Library: no
+             Static C++ Library: yes
+
+                           Java: no
+
+
+Features:
+---------
+                   Parallel HDF5: no
+Parallel Filtered Dataset Writes: no
+              Large Parallel I/O: no
+              High-level library: yes
+                Build HDF5 Tests: no
+                Build HDF5 Tools: no
+                    Threadsafety: no
+             Default API mapping: v110
+  With deprecated public symbols: yes
+          I/O filters (external): deflate(zlib),szip(encoder)
+                             MPE: no
+                      Direct VFD: no
+                      Mirror VFD: no
+              (Read-Only) S3 VFD: no
+            (Read-Only) HDFS VFD: no
+                         dmalloc: no
+  Packages w/ extra debug output: none
+                     API tracing: no
+            Using memory checker: no
+ Memory allocation sanity checks: no
+          Function stack tracing: no
+                Use file locking: best-effort
+       Strict file format checks: no
+    Optimization instrumentation: no
+make[1]: Entering directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5'
+for d in src . c++ hl; do                                \
+  if test $d != .; then                                        \
+   (cd $d && make  lib) || exit 1;            \
+  fi;                                                           \
+done
+make[2]: Entering directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/src'
+make[3]: Entering directory '/tmp/RtmponMtX9/R.INSTALL106e1474cbc594/Rhdf5lib/src/hdf5/src'
+  CC       H5.lo
+  CC       H5checksum.lo
+  CC       H5dbg.lo
+  CC       H5system.lo
+  CC       H5timer.lo
+  CC       H5trace.lo
+  CC       H5A.lo
+  CC       H5Abtree2.lo
+  CC       H5Adense.lo
+  CC       H5Adeprec.lo
+  CC       H5Aint.lo
+  CC       H5Atest.lo
+  CC       H5AC.lo
+  CC       H5ACdbg.lo
+  CC       H5ACproxy_entry.lo
+  CC       H5B.lo
+  CC       H5Bcache.lo
+  CC       H5Bdbg.lo
+  CC       H5B2.lo
+  CC       H5B2cache.lo
+  CC       H5B2dbg.lo
+  CC       H5B2hdr.lo
+  CC       H5B2int.lo
+  CC       H5B2internal.lo
+  CC       H5B2leaf.lo
+  CC       H5B2stat.lo
+  CC       H5B2test.lo
+  CC       H5C.lo
+  CC       H5Cdbg.lo
+  CC       H5Cepoch.lo
+  CC       H5Cimage.lo
+  CC       H5Clog.lo
+  CC       H5Clog_json.lo
+  CC       H5Clog_trace.lo
+  CC       H5Cprefetched.lo
+  CC       H5Cquery.lo
+  CC       H5Ctag.lo
+  CC       H5Ctest.lo
+  CC       H5CS.lo
+  CC       H5CX.lo
+  CC       H5D.lo
+  CC       H5Dbtree.lo
+  CC       H5Dbtree2.lo
+  CC       H5Dchunk.lo
+  CC       H5Dcompact.lo
+  CC       H5Dcontig.lo
+  CC       H5Ddbg.lo
+  CC       H5Ddeprec.lo
+  CC       H5Dearray.lo
+  CC       H5Defl.lo
+  CC       H5Dfarray.lo
+  CC       H5Dfill.lo
+  CC       H5Dint.lo
+  CC       H5Dio.lo

@@ -1,0 +1,167 @@
+=== GitHub Package Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Wed May 20 01:11:05 AM CDT 2026
+SKIP (already installed): DoubletFinder
+
+=== Installing: BPCells (bnprks/BPCells/r) ===
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/RtmpPjS41R/remotes3653663c75a6a9/bnprks-BPCells-adc4a3c/r/DESCRIPTION’ ... OK
+* preparing ‘BPCells’:
+* checking DESCRIPTION meta-information ... OK
+* cleaning src
+* running ‘cleanup’
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+* building ‘BPCells_0.3.1.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+Recording install count metrics
+Testing hdf5 by compiling example program...
+
+
+Retrying with pkg-config flags...
+Error running 'pkg-config hdf5 --cflags --libs'
+
+
+Searching for config information with h5cc -showconfig and h5cc -show...
+Failure running either 'h5cc -show' or: 'h5cc -showconfig | awk -F: '/FLAGS|Extra libraries:/ {printf("%s ", $2)}'
+
+
+Searching for hdf5 in a conda env...
+no conda environment found in '$CONDA_PREFIX'
+
+
+Unable to locate libhdf5. Please install manually or edit compiler flags.
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/RtmpPjS41R/remotes365366161fbec0/bnprks-BPCells-adc4a3c/r/DESCRIPTION’ ... OK
+* preparing ‘BPCells’:
+* checking DESCRIPTION meta-information ... OK
+* cleaning src
+* running ‘cleanup’
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+* building ‘BPCells_0.3.1.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+Recording install count metrics
+Testing hdf5 by compiling example program...
+
+
+Retrying with pkg-config flags...
+Error running 'pkg-config hdf5 --cflags --libs'
+
+
+Searching for config information with h5cc -showconfig and h5cc -show...
+Failure running either 'h5cc -show' or: 'h5cc -showconfig | awk -F: '/FLAGS|Extra libraries:/ {printf("%s ", $2)}'
+
+
+Searching for hdf5 in a conda env...
+no conda environment found in '$CONDA_PREFIX'
+
+
+Unable to locate libhdf5. Please install manually or edit compiler flags.
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/RtmpPjS41R/remotes36536642d67ed/bnprks-BPCells-adc4a3c/r/DESCRIPTION’ ... OK
+* preparing ‘BPCells’:
+* checking DESCRIPTION meta-information ... OK
+* cleaning src
+* running ‘cleanup’
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+* building ‘BPCells_0.3.1.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+Recording install count metrics
+Testing hdf5 by compiling example program...
+
+
+Retrying with pkg-config flags...
+Error running 'pkg-config hdf5 --cflags --libs'
+
+
+Searching for config information with h5cc -showconfig and h5cc -show...
+Failure running either 'h5cc -show' or: 'h5cc -showconfig | awk -F: '/FLAGS|Extra libraries:/ {printf("%s ", $2)}'
+
+
+Searching for hdf5 in a conda env...
+no conda environment found in '$CONDA_PREFIX'
+
+
+Unable to locate libhdf5. Please install manually or edit compiler flags.
+FAILED: bnprks/BPCells/r
+
+=== Installing: SeuratDisk (mojaveazure/seurat-disk) ===
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for gawk... gawk
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for h5cc... no
+checking for h5pcc... no
+checking for HDF5 libraries... no
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/RtmpPjS41R/remotes365366201472d1/mojaveazure-seurat-disk-877d4e1/DESCRIPTION’ ... OK
+* preparing ‘SeuratDisk’:
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+Omitted ‘LazyData’ from DESCRIPTION
+* building ‘SeuratDisk_0.0.0.9021.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for gawk... gawk
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for h5cc... no
+checking for h5pcc... no
+checking for HDF5 libraries... no
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/RtmpPjS41R/remotes365366697c6e76/mojaveazure-seurat-disk-877d4e1/DESCRIPTION’ ... OK
+* preparing ‘SeuratDisk’:
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+Omitted ‘LazyData’ from DESCRIPTION
+* building ‘SeuratDisk_0.0.0.9021.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+

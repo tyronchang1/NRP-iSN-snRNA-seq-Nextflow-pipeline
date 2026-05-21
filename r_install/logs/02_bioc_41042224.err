@@ -1,0 +1,1709 @@
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'AUCell'
+also installing the dependencies ‘annotate’, ‘XML’, ‘GSEABase’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/annotate_1.88.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/XML_3.99-0.23.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSEABase_1.72.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/AUCell_1.32.0.tar.gz'
+* installing *source* package ‘XML’ ...
+** this is package ‘XML’ version ‘3.99-0.23’
+** package ‘XML’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-XML/00new/XML/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (XML)
+* installing *source* package ‘annotate’ ...
+** this is package ‘annotate’ version ‘1.88.0’
+** package ‘annotate’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (annotate)
+* installing *source* package ‘GSEABase’ ...
+** this is package ‘GSEABase’ version ‘1.72.0’
+** package ‘GSEABase’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (GSEABase)
+* installing *source* package ‘AUCell’ ...
+** this is package ‘AUCell’ version ‘1.32.0’
+** package ‘AUCell’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (AUCell)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp7KJbkB/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'scDblFinder'
+also installing the dependencies ‘GenomicAlignments’, ‘restfulr’, ‘Rsamtools’, ‘rtracklayer’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GenomicAlignments_1.46.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/restfulr_0.0.16.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rsamtools_2.26.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/rtracklayer_1.70.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/scDblFinder_1.24.10.tar.gz'
+* installing *source* package ‘restfulr’ ...
+** this is package ‘restfulr’ version ‘0.0.16’
+** package ‘restfulr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-restfulr/00new/restfulr/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (restfulr)
+* installing *source* package ‘Rsamtools’ ...
+** this is package ‘Rsamtools’ version ‘2.26.0’
+** package ‘Rsamtools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+In file included from COMPAT_bcf_hdr_read.c:1:
+COMPAT_bcf_hdr_read.h:4:10: fatal error: htslib/hts.h: No such file or directory
+    4 | #include <htslib/hts.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:202: COMPAT_bcf_hdr_read.o] Error 1
+ERROR: compilation failed for package ‘Rsamtools’
+* removing ‘/ref/rmlab/software/tyron/R-libs/Rsamtools’
+ERROR: dependency ‘Rsamtools’ is not available for package ‘GenomicAlignments’
+Perhaps try a variation of:
+install.packages('Rsamtools')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GenomicAlignments’
+ERROR: dependencies ‘Rsamtools’, ‘GenomicAlignments’ are not available for package ‘rtracklayer’
+Perhaps try a variation of:
+install.packages(c('Rsamtools', 'GenomicAlignments'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/rtracklayer’
+ERROR: dependencies ‘Rsamtools’, ‘rtracklayer’ are not available for package ‘scDblFinder’
+Perhaps try a variation of:
+install.packages(c('Rsamtools', 'rtracklayer'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/scDblFinder’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp7KJbkB/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'scDblFinder'
+also installing the dependencies ‘GenomicAlignments’, ‘Rsamtools’, ‘rtracklayer’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GenomicAlignments_1.46.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rsamtools_2.26.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/rtracklayer_1.70.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/scDblFinder_1.24.10.tar.gz'
+* installing *source* package ‘Rsamtools’ ...
+** this is package ‘Rsamtools’ version ‘2.26.0’
+** package ‘Rsamtools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+In file included from COMPAT_bcf_hdr_read.c:1:
+COMPAT_bcf_hdr_read.h:4:10: fatal error: htslib/hts.h: No such file or directory
+    4 | #include <htslib/hts.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:202: COMPAT_bcf_hdr_read.o] Error 1
+ERROR: compilation failed for package ‘Rsamtools’
+* removing ‘/ref/rmlab/software/tyron/R-libs/Rsamtools’
+ERROR: dependency ‘Rsamtools’ is not available for package ‘GenomicAlignments’
+Perhaps try a variation of:
+install.packages('Rsamtools')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GenomicAlignments’
+ERROR: dependencies ‘Rsamtools’, ‘GenomicAlignments’ are not available for package ‘rtracklayer’
+Perhaps try a variation of:
+install.packages(c('Rsamtools', 'GenomicAlignments'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/rtracklayer’
+ERROR: dependencies ‘Rsamtools’, ‘rtracklayer’ are not available for package ‘scDblFinder’
+Perhaps try a variation of:
+install.packages(c('Rsamtools', 'rtracklayer'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/scDblFinder’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp7KJbkB/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'scDblFinder'
+also installing the dependencies ‘GenomicAlignments’, ‘Rsamtools’, ‘rtracklayer’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GenomicAlignments_1.46.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rsamtools_2.26.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/rtracklayer_1.70.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/scDblFinder_1.24.10.tar.gz'
+* installing *source* package ‘Rsamtools’ ...
+** this is package ‘Rsamtools’ version ‘2.26.0’
+** package ‘Rsamtools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+In file included from COMPAT_bcf_hdr_read.c:1:
+COMPAT_bcf_hdr_read.h:4:10: fatal error: htslib/hts.h: No such file or directory
+    4 | #include <htslib/hts.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:202: COMPAT_bcf_hdr_read.o] Error 1
+ERROR: compilation failed for package ‘Rsamtools’
+* removing ‘/ref/rmlab/software/tyron/R-libs/Rsamtools’
+ERROR: dependency ‘Rsamtools’ is not available for package ‘GenomicAlignments’
+Perhaps try a variation of:
+install.packages('Rsamtools')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GenomicAlignments’
+ERROR: dependencies ‘Rsamtools’, ‘GenomicAlignments’ are not available for package ‘rtracklayer’
+Perhaps try a variation of:
+install.packages(c('Rsamtools', 'GenomicAlignments'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/rtracklayer’
+ERROR: dependencies ‘Rsamtools’, ‘rtracklayer’ are not available for package ‘scDblFinder’
+Perhaps try a variation of:
+install.packages(c('Rsamtools', 'rtracklayer'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/scDblFinder’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp7KJbkB/downloaded_packages’
+
+Registered S3 method overwritten by 'zellkonverter':
+  method                                             from      
+  py_to_r.pandas.core.arrays.categorical.Categorical reticulate
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'miloR'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/miloR_2.6.0.tar.gz'
+Content type 'application/gzip' length 7389201 bytes (7.0 MB)
+==================================================
+downloaded 7.0 MB
+
+* installing *source* package ‘miloR’ ...
+** this is package ‘miloR’ version ‘2.6.0’
+** package ‘miloR’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from RcppExports.cpp:4:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from RcppExports.cpp:4:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:205,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:46:40: warning: ignoring attributes on template argument ‘__m128i’ [-Wignored-attributes]
+   46 | typedef eigen_packet_wrapper<__m128i, 0> Packet4i;
+      |                                        ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:47:40: warning: ignoring attributes on template argument ‘__m128i’ [-Wignored-attributes]
+   47 | typedef eigen_packet_wrapper<__m128i, 1> Packet16b;
+      |                                        ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:49:39: warning: ignoring attributes on template argument ‘__m128’ [-Wignored-attributes]
+   49 | template<> struct is_arithmetic<__m128>  { enum { value = true }; };
+      |                                       ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:50:40: warning: ignoring attributes on template argument ‘__m128i’ [-Wignored-attributes]
+   50 | template<> struct is_arithmetic<__m128i> { enum { value = true }; };
+      |                                        ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:51:40: warning: ignoring attributes on template argument ‘__m128d’ [-Wignored-attributes]
+   51 | template<> struct is_arithmetic<__m128d> { enum { value = true }; };
+      |                                        ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:222:43: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+  222 | template<> struct unpacket_traits<Packet4f> {
+      |                                           ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:228:43: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+  228 | template<> struct unpacket_traits<Packet2d> {
+      |                                           ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7934:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double; arma::uword = unsigned int]’
+fitPLGlmm.cpp:115:40:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:77:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   77 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:226:88:   required from ‘const double arma::Datum<double>::inf’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_rcond_meat.hpp:53:39:   required from ‘static typename T1::pod_type arma::op_rcond::apply(const arma::Base<typename T1::elem_type, T1>&) [with T1 = arma::Mat<double>; typename T1::pod_type = double; typename T1::elem_type = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_cond_rcond.hpp:73:25:   required from ‘typename arma::enable_if2<arma::is_blas_type<typename T1::elem_type>::value, typename T1::pod_type>::result arma::rcond(const arma::Base<typename T1::elem_type, T1>&) [with T1 = arma::Mat<double>; typename arma::enable_if2<arma::is_blas_type<typename T1::elem_type>::value, typename T1::pod_type>::result = double; typename T1::pod_type = double; typename T1::elem_type = double; typename T1::elem_type = double]’
+fitGeneticPLGlmm.cpp:184:32:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:77:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   77 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7934:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double; arma::uword = unsigned int]’
+computeMatrices.cpp:206:49:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:77:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   77 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:1124:34: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+ 1124 | ptranspose(PacketBlock<Packet4f,4>& kernel) {
+      |                                  ^
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7935:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double; arma::uword = unsigned int]’
+fitPLGlmm.cpp:115:40:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:118:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+  118 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7935:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double; arma::uword = unsigned int]’
+computeMatrices.cpp:206:49:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:118:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+  118 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7935:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Col_meat.hpp:171:15:   required from ‘arma::Col<eT>::Col(arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double; arma::uword = unsigned int]’
+fitGeneticPLGlmm.cpp:251:58:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:118:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+  118 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:1129:34: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+ 1129 | ptranspose(PacketBlock<Packet2d,2>& kernel) {
+      |                                  ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:174,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:16:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+   16 |   struct conj_helper<PACKET_REAL, PACKET_CPLX, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:173:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  173 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet2cf,Packet4f)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:29:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+   29 |   struct conj_helper<PACKET_CPLX, PACKET_REAL, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:173:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  173 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet2cf,Packet4f)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:16:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+   16 |   struct conj_helper<PACKET_REAL, PACKET_CPLX, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:298:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  298 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet1cd,Packet2d)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:29:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+   29 |   struct conj_helper<PACKET_CPLX, PACKET_REAL, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:298:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  298 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet1cd,Packet2d)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: fitGeneticPLGlmm.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: fitPLGlmm.o] Error 1
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:165,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of ‘struct Eigen::internal::find_best_packet<float, 4>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from ‘struct Eigen::internal::traits<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:266:49:   required from ‘struct Eigen::internal::traits<Eigen::Quaternion<float> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:24:46:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: computeMatrices.o] Error 1
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::unpacket_traits<__vector(4) float>::half’ {aka ‘__m128’} [-Wignored-attributes]
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:271,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 0>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 3>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from ‘class Eigen::DenseBase<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from ‘class Eigen::MatrixBase<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from ‘class Eigen::PlainObjectBase<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from ‘class Eigen::Matrix<float, 4, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:46:50:   required from ‘class Eigen::QuaternionBase<Eigen::Quaternion<float> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:273:7:   required from ‘class Eigen::Quaternion<float>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:27:3:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:165,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of ‘struct Eigen::internal::find_best_packet<double, 4>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from ‘struct Eigen::internal::traits<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:266:49:   required from ‘struct Eigen::internal::traits<Eigen::Quaternion<double> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:98:47:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::unpacket_traits<__vector(2) double>::half’ {aka ‘__m128d’} [-Wignored-attributes]
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:271,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 0>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 3>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from ‘class Eigen::DenseBase<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from ‘class Eigen::MatrixBase<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from ‘class Eigen::PlainObjectBase<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from ‘class Eigen::Matrix<double, 4, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:46:50:   required from ‘class Eigen::QuaternionBase<Eigen::Quaternion<double> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:273:7:   required from ‘class Eigen::Quaternion<double>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:102:3:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/SparseCore:37,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Sparse:26,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:29,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h: In instantiation of ‘class Eigen::SparseMatrixBase<Eigen::SparseMatrix<double, 0, int> >’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseCompressedBase.h:36:7:   required from ‘class Eigen::SparseCompressedBase<Eigen::SparseMatrix<double, 0, int> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:96:7:   required from ‘class Eigen::SparseMatrix<double, 0, int>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/unsupported/Eigen/src/IterativeSolvers/ConstrainedConjGrad.h:61:25:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h:47:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+   47 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from RcppExports.cpp:4:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: RcppExports.o] Error 1
+ERROR: compilation failed for package ‘miloR’
+* removing ‘/ref/rmlab/software/tyron/R-libs/miloR’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp7KJbkB/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'miloR'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/miloR_2.6.0.tar.gz'
+Content type 'application/gzip' length 7389201 bytes (7.0 MB)
+==================================================
+downloaded 7.0 MB
+
+* installing *source* package ‘miloR’ ...
+** this is package ‘miloR’ version ‘2.6.0’
+** package ‘miloR’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from RcppExports.cpp:4:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from RcppExports.cpp:4:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:205,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:46:40: warning: ignoring attributes on template argument ‘__m128i’ [-Wignored-attributes]
+   46 | typedef eigen_packet_wrapper<__m128i, 0> Packet4i;
+      |                                        ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:47:40: warning: ignoring attributes on template argument ‘__m128i’ [-Wignored-attributes]
+   47 | typedef eigen_packet_wrapper<__m128i, 1> Packet16b;
+      |                                        ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:49:39: warning: ignoring attributes on template argument ‘__m128’ [-Wignored-attributes]
+   49 | template<> struct is_arithmetic<__m128>  { enum { value = true }; };
+      |                                       ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:50:40: warning: ignoring attributes on template argument ‘__m128i’ [-Wignored-attributes]
+   50 | template<> struct is_arithmetic<__m128i> { enum { value = true }; };
+      |                                        ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:51:40: warning: ignoring attributes on template argument ‘__m128d’ [-Wignored-attributes]
+   51 | template<> struct is_arithmetic<__m128d> { enum { value = true }; };
+      |                                        ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:222:43: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+  222 | template<> struct unpacket_traits<Packet4f> {
+      |                                           ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:228:43: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+  228 | template<> struct unpacket_traits<Packet2d> {
+      |                                           ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:1124:34: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+ 1124 | ptranspose(PacketBlock<Packet4f,4>& kernel) {
+      |                                  ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:1129:34: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+ 1129 | ptranspose(PacketBlock<Packet2d,2>& kernel) {
+      |                                  ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:174,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:16:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+   16 |   struct conj_helper<PACKET_REAL, PACKET_CPLX, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:173:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  173 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet2cf,Packet4f)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:29:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+   29 |   struct conj_helper<PACKET_CPLX, PACKET_REAL, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:173:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  173 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet2cf,Packet4f)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:16:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+   16 |   struct conj_helper<PACKET_REAL, PACKET_CPLX, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:298:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  298 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet1cd,Packet2d)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:29:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+   29 |   struct conj_helper<PACKET_CPLX, PACKET_REAL, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:298:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  298 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet1cd,Packet2d)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7934:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double; arma::uword = unsigned int]’
+fitPLGlmm.cpp:115:40:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:77:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   77 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:165,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of ‘struct Eigen::internal::find_best_packet<float, 4>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from ‘struct Eigen::internal::traits<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:266:49:   required from ‘struct Eigen::internal::traits<Eigen::Quaternion<float> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:24:46:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7935:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double; arma::uword = unsigned int]’
+fitPLGlmm.cpp:115:40:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:118:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+  118 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::unpacket_traits<__vector(4) float>::half’ {aka ‘__m128’} [-Wignored-attributes]
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:271,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 0>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 3>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from ‘class Eigen::DenseBase<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from ‘class Eigen::MatrixBase<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from ‘class Eigen::PlainObjectBase<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from ‘class Eigen::Matrix<float, 4, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:46:50:   required from ‘class Eigen::QuaternionBase<Eigen::Quaternion<float> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:273:7:   required from ‘class Eigen::Quaternion<float>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:27:3:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:165,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of ‘struct Eigen::internal::find_best_packet<double, 4>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from ‘struct Eigen::internal::traits<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:266:49:   required from ‘struct Eigen::internal::traits<Eigen::Quaternion<double> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:98:47:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:226:88:   required from ‘const double arma::Datum<double>::inf’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_rcond_meat.hpp:53:39:   required from ‘static typename T1::pod_type arma::op_rcond::apply(const arma::Base<typename T1::elem_type, T1>&) [with T1 = arma::Mat<double>; typename T1::pod_type = double; typename T1::elem_type = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_cond_rcond.hpp:73:25:   required from ‘typename arma::enable_if2<arma::is_blas_type<typename T1::elem_type>::value, typename T1::pod_type>::result arma::rcond(const arma::Base<typename T1::elem_type, T1>&) [with T1 = arma::Mat<double>; typename arma::enable_if2<arma::is_blas_type<typename T1::elem_type>::value, typename T1::pod_type>::result = double; typename T1::pod_type = double; typename T1::elem_type = double; typename T1::elem_type = double]’
+fitGeneticPLGlmm.cpp:184:32:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:77:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   77 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7934:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double; arma::uword = unsigned int]’
+computeMatrices.cpp:206:49:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:77:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   77 |       }
+      |       ^
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: fitPLGlmm.o] Error 1
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7935:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Col_meat.hpp:171:15:   required from ‘arma::Col<eT>::Col(arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double; arma::uword = unsigned int]’
+fitGeneticPLGlmm.cpp:251:58:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:118:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+  118 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7935:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double; arma::uword = unsigned int]’
+computeMatrices.cpp:206:49:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:118:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+  118 |       }
+      |       ^
+make: *** Waiting for unfinished jobs....
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::unpacket_traits<__vector(2) double>::half’ {aka ‘__m128d’} [-Wignored-attributes]
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:271,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 0>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 3>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from ‘class Eigen::DenseBase<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from ‘class Eigen::MatrixBase<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from ‘class Eigen::PlainObjectBase<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from ‘class Eigen::Matrix<double, 4, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:46:50:   required from ‘class Eigen::QuaternionBase<Eigen::Quaternion<double> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:273:7:   required from ‘class Eigen::Quaternion<double>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:102:3:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/SparseCore:37,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Sparse:26,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:29,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h: In instantiation of ‘class Eigen::SparseMatrixBase<Eigen::SparseMatrix<double, 0, int> >’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseCompressedBase.h:36:7:   required from ‘class Eigen::SparseCompressedBase<Eigen::SparseMatrix<double, 0, int> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:96:7:   required from ‘class Eigen::SparseMatrix<double, 0, int>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/unsupported/Eigen/src/IterativeSolvers/ConstrainedConjGrad.h:61:25:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h:47:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+   47 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: fitGeneticPLGlmm.o] Error 1
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: computeMatrices.o] Error 1
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from RcppExports.cpp:4:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: RcppExports.o] Error 1
+ERROR: compilation failed for package ‘miloR’
+* removing ‘/ref/rmlab/software/tyron/R-libs/miloR’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp7KJbkB/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'miloR'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/miloR_2.6.0.tar.gz'
+Content type 'application/gzip' length 7389201 bytes (7.0 MB)
+==================================================
+downloaded 7.0 MB
+
+* installing *source* package ‘miloR’ ...
+** this is package ‘miloR’ version ‘2.6.0’
+** package ‘miloR’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from RcppExports.cpp:4:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:27,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/compiler_check.hpp:82:4: error: #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+   82 |   #error "*** C++14 compiler required; enable C++14 mode in your compiler, or use an earlier version of Armadillo"
+      |    ^~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:501,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from RcppExports.cpp:4:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   27 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:27:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   42 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:42:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: error: ‘accu’ function uses ‘auto’ type specifier without trailing return type
+   57 | auto
+      | ^~~~
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_accu.hpp:57:1: note: deduced return type only available with ‘-std=c++14’ or ‘-std=gnu++14’
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:205,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:46:40: warning: ignoring attributes on template argument ‘__m128i’ [-Wignored-attributes]
+   46 | typedef eigen_packet_wrapper<__m128i, 0> Packet4i;
+      |                                        ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:47:40: warning: ignoring attributes on template argument ‘__m128i’ [-Wignored-attributes]
+   47 | typedef eigen_packet_wrapper<__m128i, 1> Packet16b;
+      |                                        ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:49:39: warning: ignoring attributes on template argument ‘__m128’ [-Wignored-attributes]
+   49 | template<> struct is_arithmetic<__m128>  { enum { value = true }; };
+      |                                       ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:50:40: warning: ignoring attributes on template argument ‘__m128i’ [-Wignored-attributes]
+   50 | template<> struct is_arithmetic<__m128i> { enum { value = true }; };
+      |                                        ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:51:40: warning: ignoring attributes on template argument ‘__m128d’ [-Wignored-attributes]
+   51 | template<> struct is_arithmetic<__m128d> { enum { value = true }; };
+      |                                        ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:222:43: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+  222 | template<> struct unpacket_traits<Packet4f> {
+      |                                           ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:228:43: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+  228 | template<> struct unpacket_traits<Packet2d> {
+      |                                           ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:1124:34: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+ 1124 | ptranspose(PacketBlock<Packet4f,4>& kernel) {
+      |                                  ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/PacketMath.h:1129:34: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+ 1129 | ptranspose(PacketBlock<Packet2d,2>& kernel) {
+      |                                  ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:174,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:16:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+   16 |   struct conj_helper<PACKET_REAL, PACKET_CPLX, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:173:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  173 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet2cf,Packet4f)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:29:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet4f’ {aka ‘__m128’} [-Wignored-attributes]
+   29 |   struct conj_helper<PACKET_CPLX, PACKET_REAL, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:173:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  173 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet2cf,Packet4f)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:16:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+   16 |   struct conj_helper<PACKET_REAL, PACKET_CPLX, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:298:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  298 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet1cd,Packet2d)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/Default/ConjHelper.h:29:60: warning: ignoring attributes on template argument ‘Eigen::internal::Packet2d’ {aka ‘__m128d’} [-Wignored-attributes]
+   29 |   struct conj_helper<PACKET_CPLX, PACKET_REAL, false, false> {          \
+      |                                                            ^
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/arch/SSE/Complex.h:298:1: note: in expansion of macro ‘EIGEN_MAKE_CONJ_HELPER_CPLX_REAL’
+  298 | EIGEN_MAKE_CONJ_HELPER_CPLX_REAL(Packet1cd,Packet2d)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7934:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double; arma::uword = unsigned int]’
+fitPLGlmm.cpp:115:40:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:77:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   77 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from fitGeneticPLGlmm.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:226:88:   required from ‘const double arma::Datum<double>::inf’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_rcond_meat.hpp:53:39:   required from ‘static typename T1::pod_type arma::op_rcond::apply(const arma::Base<typename T1::elem_type, T1>&) [with T1 = arma::Mat<double>; typename T1::pod_type = double; typename T1::elem_type = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_cond_rcond.hpp:73:25:   required from ‘typename arma::enable_if2<arma::is_blas_type<typename T1::elem_type>::value, typename T1::pod_type>::result arma::rcond(const arma::Base<typename T1::elem_type, T1>&) [with T1 = arma::Mat<double>; typename arma::enable_if2<arma::is_blas_type<typename T1::elem_type>::value, typename T1::pod_type>::result = double; typename T1::pod_type = double; typename T1::elem_type = double; typename T1::elem_type = double]’
+fitGeneticPLGlmm.cpp:184:32:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:77:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   77 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7935:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double; arma::uword = unsigned int]’
+fitPLGlmm.cpp:115:40:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:118:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+  118 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from computeMatrices.h:4,
+                 from computeMatrices.cpp:1:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7934:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double; arma::uword = unsigned int]’
+computeMatrices.cpp:206:49:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:77:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::pos_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   77 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7935:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Col_meat.hpp:171:15:   required from ‘arma::Col<eT>::Col(arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_zeros; eT = double; arma::uword = unsigned int]’
+fitGeneticPLGlmm.cpp:251:58:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:118:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+  118 |       }
+      |       ^
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:7935:104:   required from ‘arma::Mat<eT>& arma::Mat<eT>::fill(const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/Mat_meat.hpp:181:15:   required from ‘arma::Mat<eT>::Mat(arma::uword, arma::uword, const arma::fill::fill_class<fill_type>&) [with fill_type = arma::fill::fill_eye; eT = double; arma::uword = unsigned int]’
+computeMatrices.cpp:206:49:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:118:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::neg_inf(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+  118 |       }
+      |       ^
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:165,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of ‘struct Eigen::internal::find_best_packet<float, 4>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from ‘struct Eigen::internal::traits<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:266:49:   required from ‘struct Eigen::internal::traits<Eigen::Quaternion<float> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:24:46:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::unpacket_traits<__vector(4) float>::half’ {aka ‘__m128’} [-Wignored-attributes]
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: fitPLGlmm.o] Error 1
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:271,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 0>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<float, 4, 1>, 3>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from ‘class Eigen::DenseBase<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from ‘class Eigen::MatrixBase<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from ‘class Eigen::PlainObjectBase<Eigen::Matrix<float, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from ‘class Eigen::Matrix<float, 4, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:46:50:   required from ‘class Eigen::QuaternionBase<Eigen::Quaternion<float> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:273:7:   required from ‘class Eigen::Quaternion<float>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:27:3:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<float>::type’ {aka ‘__m128’} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+make: *** Waiting for unfinished jobs....
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: computeMatrices.o] Error 1
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: fitGeneticPLGlmm.o] Error 1
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:165,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h: In instantiation of ‘struct Eigen::internal::find_best_packet<double, 4>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:22:57:   required from ‘struct Eigen::internal::traits<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:266:49:   required from ‘struct Eigen::internal::traits<Eigen::Quaternion<double> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:98:47:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:44: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                                       ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+  190 |          bool Stop = Size==Dynamic || (Size%unpacket_traits<PacketType>::size)==0 || is_same<PacketType,typename unpacket_traits<PacketType>::half>::value>
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:190:83: warning: ignoring attributes on template argument ‘Eigen::internal::unpacket_traits<__vector(2) double>::half’ {aka ‘__m128d’} [-Wignored-attributes]
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/util/XprHelper.h:208:88: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+  208 |   typedef typename find_best_packet_helper<Size,typename packet_traits<T>::type>::type type;
+      |                                                                                        ^~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Core:271,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Dense:1,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:28,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 0>’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:302:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:555:7:   required from ‘class Eigen::DenseCoeffsBase<Eigen::Matrix<double, 4, 1>, 3>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseBase.h:41:34:   required from ‘class Eigen::DenseBase<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/MatrixBase.h:48:34:   required from ‘class Eigen::MatrixBase<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/PlainObjectBase.h:98:7:   required from ‘class Eigen::PlainObjectBase<Eigen::Matrix<double, 4, 1> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/Matrix.h:178:7:   required from ‘class Eigen::Matrix<double, 4, 1>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:46:50:   required from ‘class Eigen::QuaternionBase<Eigen::Quaternion<double> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/Quaternion.h:273:7:   required from ‘class Eigen::Quaternion<double>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Geometry/arch/Geometry_SIMD.h:102:3:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/Core/DenseCoeffsBase.h:56:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+   56 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/SparseCore:37,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/Sparse:26,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigenForward.h:29,
+                 from /ref/rmlab/software/tyron/R-libs/RcppEigen/include/RcppEigen.h:25,
+                 from RcppExports.cpp:5:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h: In instantiation of ‘class Eigen::SparseMatrixBase<Eigen::SparseMatrix<double, 0, int> >’:
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseCompressedBase.h:36:7:   required from ‘class Eigen::SparseCompressedBase<Eigen::SparseMatrix<double, 0, int> >’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseMatrix.h:96:7:   required from ‘class Eigen::SparseMatrix<double, 0, int>’
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/unsupported/Eigen/src/IterativeSolvers/ConstrainedConjGrad.h:61:25:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppEigen/include/Eigen/src/SparseCore/SparseMatrixBase.h:47:30: warning: ignoring attributes on template argument ‘Eigen::internal::packet_traits<double>::type’ {aka ‘__m128d’} [-Wignored-attributes]
+   47 |                      >::type PacketReturnType;
+      |                              ^~~~~~~~~~~~~~~~
+In file included from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo:157,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:51,
+                 from /ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from RcppExports.cpp:4:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp: In instantiation of ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’:
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:225:84:   required from ‘const double arma::Datum<double>::nan’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/op_chi2rnd_meat.hpp:173:23:   required from ‘eT arma::op_chi2rnd_varying_df<eT>::operator()(eT) [with eT = double]’
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/fn_chi2rnd.hpp:33:19:   required from here
+/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include/armadillo_bits/constants.hpp:36:7: error: body of ‘constexpr’ function ‘static constexpr typename arma::arma_real_only<T>::result arma::priv::Datum_helper::nan(typename arma::arma_real_only<eT>::result*) [with eT = double; typename arma::arma_real_only<T>::result = double; typename arma::arma_real_only<eT>::result = double]’ not a return-statement
+   36 |       }
+      |       ^
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: RcppExports.o] Error 1
+ERROR: compilation failed for package ‘miloR’
+* removing ‘/ref/rmlab/software/tyron/R-libs/miloR’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp7KJbkB/downloaded_packages’
+
+
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'GSVA'
+also installing the dependencies ‘magick’, ‘SpatialExperiment’
+
+trying URL 'https://cloud.r-project.org/src/contrib/magick_2.9.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SpatialExperiment_1.20.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSVA_2.4.9.tar.gz'
+* installing *source* package ‘magick’ ...
+** this is package ‘magick’ version ‘2.9.1’
+** package ‘magick’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package Magick++ was not found in the pkg-config search path.
+Perhaps you should add the directory containing `Magick++.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'Magick++', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘magick’
+* removing ‘/ref/rmlab/software/tyron/R-libs/magick’
+ERROR: dependency ‘magick’ is not available for package ‘SpatialExperiment’
+Perhaps try a variation of:
+install.packages('magick')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SpatialExperiment’
+ERROR: dependency ‘SpatialExperiment’ is not available for package ‘GSVA’
+Perhaps try a variation of:
+install.packages('SpatialExperiment')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSVA’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp7KJbkB/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'GSVA'
+also installing the dependencies ‘magick’, ‘SpatialExperiment’
+
+trying URL 'https://cloud.r-project.org/src/contrib/magick_2.9.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SpatialExperiment_1.20.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSVA_2.4.9.tar.gz'
+* installing *source* package ‘magick’ ...
+** this is package ‘magick’ version ‘2.9.1’
+** package ‘magick’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package Magick++ was not found in the pkg-config search path.
+Perhaps you should add the directory containing `Magick++.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'Magick++', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘magick’
+* removing ‘/ref/rmlab/software/tyron/R-libs/magick’
+ERROR: dependency ‘magick’ is not available for package ‘SpatialExperiment’
+Perhaps try a variation of:
+install.packages('magick')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SpatialExperiment’
+ERROR: dependency ‘SpatialExperiment’ is not available for package ‘GSVA’
+Perhaps try a variation of:
+install.packages('SpatialExperiment')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSVA’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp7KJbkB/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'GSVA'
+also installing the dependencies ‘magick’, ‘SpatialExperiment’
+
+trying URL 'https://cloud.r-project.org/src/contrib/magick_2.9.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SpatialExperiment_1.20.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSVA_2.4.9.tar.gz'
+* installing *source* package ‘magick’ ...
+** this is package ‘magick’ version ‘2.9.1’
+** package ‘magick’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package Magick++ was not found in the pkg-config search path.
+Perhaps you should add the directory containing `Magick++.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'Magick++', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘magick’
+* removing ‘/ref/rmlab/software/tyron/R-libs/magick’
+ERROR: dependency ‘magick’ is not available for package ‘SpatialExperiment’
+Perhaps try a variation of:
+install.packages('magick')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SpatialExperiment’
+ERROR: dependency ‘SpatialExperiment’ is not available for package ‘GSVA’
+Perhaps try a variation of:
+install.packages('SpatialExperiment')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSVA’
+
+The downloaded source packages are in
+	‘/tmp/Rtmp7KJbkB/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'singleCellTK'
+also installing the dependencies ‘GenomicAlignments’, ‘magick’, ‘GenomicFeatures’, ‘rtracklayer’, ‘Rsamtools’, ‘SpatialExperiment’, ‘M3Drop’, ‘genefilter’, ‘alabaster.sce’, ‘qqconf’, ‘celldex’, ‘ensembldb’, ‘GSVA’, ‘GSVAdata’, ‘scMerge’, ‘sva’, ‘zinbwave’, ‘scRNAseq’, ‘TENxPBMCData’, ‘scDblFinder’, ‘metap’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GenomicAlignments_1.46.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/magick_2.9.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GenomicFeatures_1.62.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/rtracklayer_1.70.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rsamtools_2.26.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SpatialExperiment_1.20.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/M3Drop_1.36.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/genefilter_1.92.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/alabaster.sce_1.10.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/qqconf_1.3.2.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/data/experiment/src/contrib/celldex_1.20.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/ensembldb_2.34.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSVA_2.4.9.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/data/experiment/src/contrib/GSVAdata_1.46.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/scMerge_1.26.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/sva_3.58.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/zinbwave_1.32.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/data/experiment/src/contrib/scRNAseq_2.24.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/data/experiment/src/contrib/TENxPBMCData_1.28.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/scDblFinder_1.24.10.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/metap_1.14.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/singleCellTK_2.20.1.tar.gz'
+* installing *source* package ‘magick’ ...
+** this is package ‘magick’ version ‘2.9.1’
+** package ‘magick’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package Magick++ was not found in the pkg-config search path.
+Perhaps you should add the directory containing `Magick++.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'Magick++', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘magick’
+* removing ‘/ref/rmlab/software/tyron/R-libs/magick’
+* installing *source* package ‘Rsamtools’ ...
+** this is package ‘Rsamtools’ version ‘2.26.0’
+** package ‘Rsamtools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+In file included from COMPAT_bcf_hdr_read.c:1:
+COMPAT_bcf_hdr_read.h:4:10: fatal error: htslib/hts.h: No such file or directory
+    4 | #include <htslib/hts.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Rhtslib.so’ not found
+Calls: loadNamespace -> library.dynam
+Execution halted
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:202: COMPAT_bcf_hdr_read.o] Error 1
+ERROR: compilation failed for package ‘Rsamtools’
+* removing ‘/ref/rmlab/software/tyron/R-libs/Rsamtools’
+* installing *source* package ‘M3Drop’ ...
+** this is package ‘M3Drop’ version ‘1.36.0’
+** package ‘M3Drop’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (M3Drop)
+* installing *source* package ‘genefilter’ ...
+** this is package ‘genefilter’ version ‘1.92.0’
+** package ‘genefilter’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using Fortran compiler: ‘GNU Fortran (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-genefilter/00new/genefilter/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (genefilter)
+* installing *source* package ‘alabaster.sce’ ...
+** this is package ‘alabaster.sce’ version ‘1.10.0’
+** package ‘alabaster.sce’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (alabaster.sce)
+* installing *source* package ‘qqconf’ ...
+** this is package ‘qqconf’ version ‘1.3.2’
+** package ‘qqconf’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fftw3 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fftw3.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fftw3', required by 'virtual:world', not found
+Package fftw3 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fftw3.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fftw3', required by 'virtual:world', not found
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+jointlevel_fft_twosided.cpp:10:10: fatal error: fftw3.h: No such file or directory
+   10 | #include <fftw3.h>
+      |          ^~~~~~~~~
+compilation terminated.
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: jointlevel_fft_twosided.o] Error 1
+make: *** Waiting for unfinished jobs....
+ERROR: compilation failed for package ‘qqconf’
+* removing ‘/ref/rmlab/software/tyron/R-libs/qqconf’
+* installing *source* package ‘celldex’ ...
+** this is package ‘celldex’ version ‘1.20.0’
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (celldex)
+* installing *source* package ‘GSVAdata’ ...
+** this is package ‘GSVAdata’ version ‘1.46.0’
+** using staged installation
+** data
+** inst
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (GSVAdata)
+* installing *source* package ‘TENxPBMCData’ ...
+** this is package ‘TENxPBMCData’ version ‘1.28.0’
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (TENxPBMCData)
+ERROR: dependency ‘Rsamtools’ is not available for package ‘GenomicAlignments’
+Perhaps try a variation of:
+install.packages('Rsamtools')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GenomicAlignments’
+ERROR: dependency ‘magick’ is not available for package ‘SpatialExperiment’
+Perhaps try a variation of:
+install.packages('magick')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SpatialExperiment’
+* installing *source* package ‘scMerge’ ...
+** this is package ‘scMerge’ version ‘1.26.0’
+** package ‘scMerge’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (scMerge)
+* installing *source* package ‘sva’ ...
+** this is package ‘sva’ version ‘3.58.0’
+** package ‘sva’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-sva/00new/sva/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (sva)
+* installing *source* package ‘zinbwave’ ...
+** this is package ‘zinbwave’ version ‘1.32.0’
+** package ‘zinbwave’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (zinbwave)
+ERROR: dependency ‘qqconf’ is not available for package ‘metap’
+Perhaps try a variation of:
+install.packages('qqconf')
+* removing ‘/ref/rmlab/software/tyron/R-libs/metap’
+ERROR: dependencies ‘Rsamtools’, ‘GenomicAlignments’ are not available for package ‘rtracklayer’
+Perhaps try a variation of:
+install.packages(c('Rsamtools', 'GenomicAlignments'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/rtracklayer’
+ERROR: dependency ‘SpatialExperiment’ is not available for package ‘GSVA’
+Perhaps try a variation of:
+install.packages('SpatialExperiment')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSVA’
+ERROR: dependency ‘rtracklayer’ is not available for package ‘GenomicFeatures’
+Perhaps try a variation of:
+install.packages('rtracklayer')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GenomicFeatures’
+ERROR: dependencies ‘Rsamtools’, ‘rtracklayer’ are not available for package ‘scDblFinder’
+Perhaps try a variation of:
+install.packages(c('Rsamtools', 'rtracklayer'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/scDblFinder’
+ERROR: dependencies ‘GenomicFeatures’, ‘rtracklayer’, ‘Rsamtools’ are not available for package ‘ensembldb’
+Perhaps try a variation of:
+install.packages(c('GenomicFeatures', 'rtracklayer', 'Rsamtools'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ensembldb’
+ERROR: dependencies ‘ensembldb’, ‘GenomicFeatures’ are not available for package ‘scRNAseq’
+Perhaps try a variation of:
+install.packages(c('ensembldb', 'GenomicFeatures'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/scRNAseq’
+[2026-05-20T00:36:55.543] error: *** JOB 41042224 ON n224 CANCELLED AT 2026-05-20T00:36:55 DUE to SIGNAL Terminated ***
+ERROR: dependencies ‘ensembldb’, ‘GSVA’, ‘scRNAseq’, ‘scDblFinder’, ‘metap’ are not available for package ‘singleCellTK’
+Perhaps try a variation of:
+install.packages(c('ensembldb', 'GSVA', 'scRNAseq', 'scDblFinder', 'metap'))

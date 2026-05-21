@@ -1,0 +1,392 @@
+=== Bioconductor Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Tue May 19 11:42:33 PM CDT 2026
+SKIP (already installed): multtest
+SKIP (already installed): ComplexHeatmap
+SKIP (already installed): DropletUtils
+
+=== Installing: AUCell ===
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+FAILED: AUCell
+SKIP (already installed): glmGamPoi
+
+=== Installing: scDblFinder ===
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c Biostrings_stubs.c -o Biostrings_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c Biostrings_stubs.c -o Biostrings_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c Biostrings_stubs.c -o Biostrings_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+FAILED: scDblFinder
+SKIP (already installed): AnnotationDbi
+SKIP (already installed): clusterProfiler
+SKIP (already installed): ReactomePA
+SKIP (already installed): apeglm
+SKIP (already installed): DESeq2
+SKIP (already installed): zellkonverter
+
+=== Installing: miloR ===
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c computeMatrices.cpp -o computeMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitGeneticPLGlmm.cpp -o fitGeneticPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitPLGlmm.cpp -o fitPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c computeMatrices.cpp -o computeMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitGeneticPLGlmm.cpp -o fitGeneticPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitPLGlmm.cpp -o fitPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c computeMatrices.cpp -o computeMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitGeneticPLGlmm.cpp -o fitGeneticPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitPLGlmm.cpp -o fitPLGlmm.o
+FAILED: miloR
+SKIP (already installed): org.Mm.eg.db
+SKIP (already installed): org.Hs.eg.db
+SKIP (already installed): BiocGenerics
+SKIP (already installed): DelayedArray
+SKIP (already installed): DelayedMatrixStats
+SKIP (already installed): limma
+SKIP (already installed): S4Vectors
+SKIP (already installed): SingleCellExperiment
+SKIP (already installed): SummarizedExperiment
+
+=== Installing: batchelor ===
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c adjust_shift_variance.cpp -o adjust_shift_variance.o
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c find_mutual_nns.cpp -o find_mutual_nns.o
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c smooth_gaussian_kernel.cpp -o smooth_gaussian_kernel.o
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c utils.cpp -o utils.o
+/usr/bin/g++ -std=gnu++11 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o batchelor.so RcppExports.o adjust_shift_variance.o find_mutual_nns.o smooth_gaussian_kernel.o utils.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+OK: batchelor
+SKIP (already installed): HDF5Array
+SKIP (already installed): edgeR
+
+=== Installing: GSVA ===
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lMagick++-6.Q16 -lMagickWand-6.Q16 -lMagickCore-6.Q16
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the Magick++ library. Try installing:
+ - deb: libmagick++-dev (Debian, Ubuntu)
+ - rpm: ImageMagick-c++-devel (Fedora, CentOS, RHEL)
+ - brew: imagemagick or imagemagick@6 (MacOS)
+If Magick++ is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a Magick++.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: Magick++.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for features.h... yes
+configure: creating ./config.status
+config.status: creating src/meminfo/src/conf.h
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/RNACI  -I/usr/local/include    -fpic  -g -O2  -c meminfo/src/cacheinfo.c -o meminfo/src/cacheinfo.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/RNACI  -I/usr/local/include    -fpic  -g -O2  -c meminfo/src/fileinfo.c -o meminfo/src/fileinfo.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/RNACI  -I/usr/local/include    -fpic  -g -O2  -c meminfo/src/platform.c -o meminfo/src/platform.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/RNACI  -I/usr/local/include    -fpic  -g -O2  -c meminfo/src/procinfo.c -o meminfo/src/procinfo.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/RNACI  -I/usr/local/include    -fpic  -g -O2  -c meminfo/src/raminfo.c -o meminfo/src/raminfo.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/RNACI  -I/usr/local/include    -fpic  -g -O2  -c meminfo/src/swapinfo.c -o meminfo/src/swapinfo.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/RNACI  -I/usr/local/include    -fpic  -g -O2  -c wrappers.c -o wrappers.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/RNACI  -I/usr/local/include    -fpic  -g -O2  -c memuse_native.c -o memuse_native.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o memuse.so meminfo/src/cacheinfo.o meminfo/src/fileinfo.o meminfo/src/platform.o meminfo/src/procinfo.o meminfo/src/raminfo.o meminfo/src/swapinfo.o wrappers.o memuse_native.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lMagick++-6.Q16 -lMagickWand-6.Q16 -lMagickCore-6.Q16
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the Magick++ library. Try installing:
+ - deb: libmagick++-dev (Debian, Ubuntu)
+ - rpm: ImageMagick-c++-devel (Fedora, CentOS, RHEL)
+ - brew: imagemagick or imagemagick@6 (MacOS)
+If Magick++ is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a Magick++.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: Magick++.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 13, Patch 5 for 2.13.5
+Located parser file -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include/parser.h
+Checking for 1.8:  -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+You are trying to use a version 2.* edition of libxml
+but an incompatible library. The header files and library seem to be
+mismatched. If you have specified LIBXML_INCDIR, make certain to also
+specify an appropriate LIBXML_LIBDIR if the libxml2 library is not in the default
+directories.
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lMagick++-6.Q16 -lMagickWand-6.Q16 -lMagickCore-6.Q16
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the Magick++ library. Try installing:
+ - deb: libmagick++-dev (Debian, Ubuntu)
+ - rpm: ImageMagick-c++-devel (Fedora, CentOS, RHEL)
+ - brew: imagemagick or imagemagick@6 (MacOS)
+If Magick++ is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a Magick++.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: Magick++.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+FAILED: GSVA
+SKIP (already installed): Biobase
+SKIP (already installed): BiocParallel
+
+=== Installing: TOAST ===
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gfortran  -fpic  -g -O2  -c lawson_hanson_nnls.f -o lawson_hanson_nnls.o
+/usr/bin/gfortran  -fpic  -g -O2  -c nnnpls.f -o nnnpls.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o nnls.so init.o lawson_hanson_nnls.o nnnpls.o -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gfortran  -fvisibility=hidden -fpic -g -O2 -msse2 -mfpmath=sse   -fpic  -g -O2  -c aind.f -o aind.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gfortran  -fvisibility=hidden -fpic -g -O2 -msse2 -mfpmath=sse   -fpic  -g -O2  -c solve.QP.compact.f -o solve.QP.compact.o
+/usr/bin/gfortran  -fvisibility=hidden -fpic -g -O2 -msse2 -mfpmath=sse   -fpic  -g -O2  -c solve.QP.f -o solve.QP.o
+/usr/bin/gfortran  -fvisibility=hidden -fpic -g -O2 -msse2 -mfpmath=sse   -fpic  -g -O2  -c util.f -o util.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o quadprog.so aind.o init.o solve.QP.compact.o solve.QP.o util.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openblas-0.3.30-ymof5atpgk37dyb3nxfcsanao6bttjg4/lib -lopenblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+OK: TOAST
+SKIP (already installed): scater
+SKIP (already installed): scran
+
+=== Installing: celda ===

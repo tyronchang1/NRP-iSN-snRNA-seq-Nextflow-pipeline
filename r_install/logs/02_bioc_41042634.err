@@ -1,0 +1,316 @@
+
+Registered S3 method overwritten by 'zellkonverter':
+  method                                             from      
+  py_to_r.pandas.core.arrays.categorical.Categorical reticulate
+
+
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'GSVA'
+also installing the dependencies ‘magick’, ‘SpatialExperiment’
+
+trying URL 'https://cloud.r-project.org/src/contrib/magick_2.9.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SpatialExperiment_1.20.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSVA_2.4.9.tar.gz'
+* installing *source* package ‘magick’ ...
+** this is package ‘magick’ version ‘2.9.1’
+** package ‘magick’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-magick/00new/magick/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+ERROR: loading failed
+* removing ‘/ref/rmlab/software/tyron/R-libs/magick’
+ERROR: dependency ‘magick’ is not available for package ‘SpatialExperiment’
+Perhaps try a variation of:
+install.packages('magick')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SpatialExperiment’
+ERROR: dependency ‘SpatialExperiment’ is not available for package ‘GSVA’
+Perhaps try a variation of:
+install.packages('SpatialExperiment')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSVA’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpeaskdc/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'GSVA'
+also installing the dependencies ‘magick’, ‘SpatialExperiment’
+
+trying URL 'https://cloud.r-project.org/src/contrib/magick_2.9.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SpatialExperiment_1.20.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSVA_2.4.9.tar.gz'
+* installing *source* package ‘magick’ ...
+** this is package ‘magick’ version ‘2.9.1’
+** package ‘magick’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-magick/00new/magick/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+ERROR: loading failed
+* removing ‘/ref/rmlab/software/tyron/R-libs/magick’
+ERROR: dependency ‘magick’ is not available for package ‘SpatialExperiment’
+Perhaps try a variation of:
+install.packages('magick')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SpatialExperiment’
+ERROR: dependency ‘SpatialExperiment’ is not available for package ‘GSVA’
+Perhaps try a variation of:
+install.packages('SpatialExperiment')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSVA’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpeaskdc/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'GSVA'
+also installing the dependencies ‘magick’, ‘SpatialExperiment’
+
+trying URL 'https://cloud.r-project.org/src/contrib/magick_2.9.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SpatialExperiment_1.20.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSVA_2.4.9.tar.gz'
+* installing *source* package ‘magick’ ...
+** this is package ‘magick’ version ‘2.9.1’
+** package ‘magick’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-magick/00new/magick/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+ERROR: loading failed
+* removing ‘/ref/rmlab/software/tyron/R-libs/magick’
+ERROR: dependency ‘magick’ is not available for package ‘SpatialExperiment’
+Perhaps try a variation of:
+install.packages('magick')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SpatialExperiment’
+ERROR: dependency ‘SpatialExperiment’ is not available for package ‘GSVA’
+Perhaps try a variation of:
+install.packages('SpatialExperiment')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSVA’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpeaskdc/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'singleCellTK'
+also installing the dependencies ‘magick’, ‘SpatialExperiment’, ‘qqconf’, ‘GSVA’, ‘metap’
+
+trying URL 'https://cloud.r-project.org/src/contrib/magick_2.9.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SpatialExperiment_1.20.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/qqconf_1.3.2.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSVA_2.4.9.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/metap_1.14.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/singleCellTK_2.20.1.tar.gz'
+* installing *source* package ‘magick’ ...
+** this is package ‘magick’ version ‘2.9.1’
+** package ‘magick’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-magick/00new/magick/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+ERROR: loading failed
+* removing ‘/ref/rmlab/software/tyron/R-libs/magick’
+* installing *source* package ‘qqconf’ ...
+** this is package ‘qqconf’ version ‘1.3.2’
+** package ‘qqconf’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fftw3 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fftw3.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fftw3', required by 'virtual:world', not found
+Package fftw3 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fftw3.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fftw3', required by 'virtual:world', not found
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+jointlevel_fft_twosided.cpp:10:10: fatal error: fftw3.h: No such file or directory
+   10 | #include <fftw3.h>
+      |          ^~~~~~~~~
+compilation terminated.
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: jointlevel_fft_twosided.o] Error 1
+make: *** Waiting for unfinished jobs....
+ERROR: compilation failed for package ‘qqconf’
+* removing ‘/ref/rmlab/software/tyron/R-libs/qqconf’
+ERROR: dependency ‘magick’ is not available for package ‘SpatialExperiment’
+Perhaps try a variation of:
+install.packages('magick')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SpatialExperiment’
+ERROR: dependency ‘qqconf’ is not available for package ‘metap’
+Perhaps try a variation of:
+install.packages('qqconf')
+* removing ‘/ref/rmlab/software/tyron/R-libs/metap’
+ERROR: dependency ‘SpatialExperiment’ is not available for package ‘GSVA’
+Perhaps try a variation of:
+install.packages('SpatialExperiment')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSVA’
+ERROR: dependencies ‘GSVA’, ‘metap’ are not available for package ‘singleCellTK’
+Perhaps try a variation of:
+install.packages(c('GSVA', 'metap'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/singleCellTK’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpeaskdc/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'singleCellTK'
+also installing the dependencies ‘magick’, ‘SpatialExperiment’, ‘qqconf’, ‘GSVA’, ‘metap’
+
+trying URL 'https://cloud.r-project.org/src/contrib/magick_2.9.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SpatialExperiment_1.20.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/qqconf_1.3.2.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSVA_2.4.9.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/metap_1.14.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/singleCellTK_2.20.1.tar.gz'
+* installing *source* package ‘magick’ ...
+** this is package ‘magick’ version ‘2.9.1’
+** package ‘magick’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-magick/00new/magick/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+ERROR: loading failed
+* removing ‘/ref/rmlab/software/tyron/R-libs/magick’
+* installing *source* package ‘qqconf’ ...
+** this is package ‘qqconf’ version ‘1.3.2’
+** package ‘qqconf’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fftw3 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fftw3.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fftw3', required by 'virtual:world', not found
+Package fftw3 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fftw3.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fftw3', required by 'virtual:world', not found
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+jointlevel_fft_twosided.cpp:10:10: fatal error: fftw3.h: No such file or directory
+   10 | #include <fftw3.h>
+      |          ^~~~~~~~~
+compilation terminated.
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: jointlevel_fft_twosided.o] Error 1
+make: *** Waiting for unfinished jobs....
+ERROR: compilation failed for package ‘qqconf’
+* removing ‘/ref/rmlab/software/tyron/R-libs/qqconf’
+ERROR: dependency ‘magick’ is not available for package ‘SpatialExperiment’
+Perhaps try a variation of:
+install.packages('magick')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SpatialExperiment’
+ERROR: dependency ‘qqconf’ is not available for package ‘metap’
+Perhaps try a variation of:
+install.packages('qqconf')
+* removing ‘/ref/rmlab/software/tyron/R-libs/metap’
+ERROR: dependency ‘SpatialExperiment’ is not available for package ‘GSVA’
+Perhaps try a variation of:
+install.packages('SpatialExperiment')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSVA’
+ERROR: dependencies ‘GSVA’, ‘metap’ are not available for package ‘singleCellTK’
+Perhaps try a variation of:
+install.packages(c('GSVA', 'metap'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/singleCellTK’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpeaskdc/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'singleCellTK'
+also installing the dependencies ‘magick’, ‘SpatialExperiment’, ‘qqconf’, ‘GSVA’, ‘metap’
+
+trying URL 'https://cloud.r-project.org/src/contrib/magick_2.9.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SpatialExperiment_1.20.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/qqconf_1.3.2.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSVA_2.4.9.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/metap_1.14.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/singleCellTK_2.20.1.tar.gz'
+* installing *source* package ‘magick’ ...
+** this is package ‘magick’ version ‘2.9.1’
+** package ‘magick’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-magick/00new/magick/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+ERROR: loading failed
+* removing ‘/ref/rmlab/software/tyron/R-libs/magick’
+* installing *source* package ‘qqconf’ ...
+** this is package ‘qqconf’ version ‘1.3.2’
+** package ‘qqconf’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fftw3 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fftw3.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fftw3', required by 'virtual:world', not found
+Package fftw3 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fftw3.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fftw3', required by 'virtual:world', not found
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+jointlevel_fft_twosided.cpp:10:10: fatal error: fftw3.h: No such file or directory
+   10 | #include <fftw3.h>
+      |          ^~~~~~~~~
+compilation terminated.
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/etc/Makeconf:211: jointlevel_fft_twosided.o] Error 1
+make: *** Waiting for unfinished jobs....
+ERROR: compilation failed for package ‘qqconf’
+* removing ‘/ref/rmlab/software/tyron/R-libs/qqconf’
+ERROR: dependency ‘magick’ is not available for package ‘SpatialExperiment’
+Perhaps try a variation of:
+install.packages('magick')
+* removing ‘/ref/rmlab/software/tyron/R-libs/SpatialExperiment’
+ERROR: dependency ‘qqconf’ is not available for package ‘metap’
+Perhaps try a variation of:
+install.packages('qqconf')
+* removing ‘/ref/rmlab/software/tyron/R-libs/metap’
+ERROR: dependency ‘SpatialExperiment’ is not available for package ‘GSVA’
+Perhaps try a variation of:
+install.packages('SpatialExperiment')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSVA’
+ERROR: dependencies ‘GSVA’, ‘metap’ are not available for package ‘singleCellTK’
+Perhaps try a variation of:
+install.packages(c('GSVA', 'metap'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/singleCellTK’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpeaskdc/downloaded_packages’
+There were 27 warnings (use warnings() to see them)

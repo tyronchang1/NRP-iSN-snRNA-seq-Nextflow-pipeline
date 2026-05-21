@@ -1,0 +1,554 @@
+=== R CRAN Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Tue May 19 08:41:08 PM CDT 2026
+SKIP (already installed): BiocManager
+SKIP (already installed): remotes
+
+=== Installing: devtools ===
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfontconfig -lfreetype
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the fontconfig freetype2 library. Try installing:
+ * deb: libfontconfig1-dev (Debian, Ubuntu, etc)
+ * rpm: fontconfig-devel (Fedora, EPEL)
+ * csw: fontconfig_dev (Solaris)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: freetype (OSX)
+If fontconfig freetype2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a fontconfig freetype2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: fontconfig/fontconfig.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+** Running ./configure
+Current platform: x86_64-pc-linux-gnu 
+Build platform:   
+Target platform:   
+
+Compiling R6 
+
+Compiling cli 
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/cli/src'
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c ansi.c -o ansi.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c cleancall.c -o cleancall.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c diff.c -o diff.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c errors.c -o errors.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c glue.c -o glue.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c inst.c -o inst.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c keypress-unix.c -o keypress-unix.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c keypress-win.c -o keypress-win.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c keypress.c -o keypress.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c md5.c -o md5.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c progress-altrep.c -o progress-altrep.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c progress.c -o progress.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c sha1.c -o sha1.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c sha256.c -o sha256.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c thread.c -o thread.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c tty.c -o tty.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c utf8.c -o utf8.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c utils.c -o utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c vt.c -o vt.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c vtparse.c -o vtparse.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c vtparse_table.c -o vtparse_table.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c win-utf8.c -o win-utf8.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c winfiles.c -o winfiles.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c xxhash.c -o xxhash.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c xxhash2.c -o xxhash2.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o cli.so ansi.o cleancall.o diff.o errors.o glue.o init.o inst.o keypress-unix.o keypress-win.o keypress.o md5.o progress-altrep.o progress.o sha1.o sha256.o thread.o tty.o utf8.o utils.o vt.o vtparse.o vtparse_table.o win-utf8.o winfiles.o xxhash.o xxhash2.o -lpthread -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/cli/src'
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/cli/libs
+
+Compiling curl 
+Found pkg-config cflags and libs!
+Using PKG_CFLAGS=-I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP 
+Using PKG_LIBS=-lcurl 
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/curl/src'
+rm -f curl.so callbacks.o curl.o download.o escape.o fetch.o findport.o form.o getdate.o handle.o ieproxy.o init.o interrupt.o multi.o nslookup.o options.o reflist.o split.o ssl.o typechecking.o utils.o version.o winidn.o writer.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c callbacks.c -o callbacks.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c curl.c -o curl.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c download.c -o download.o
+In file included from curl-common.h:6,
+                 from download.c:4:
+download.c: In function ‘R_download_curl’:
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/typecheck-gcc.h:50:15: warning: call to ‘_curl_easy_setopt_err_long’ declared with attribute warning: curl_easy_setopt expects a long argument [-Wattribute-warning]
+   50 |               _curl_easy_setopt_err_long();                             \
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/curl.h:59:49: note: in definition of macro ‘CURL_IGNORE_DEPRECATION’
+   59 | #define CURL_IGNORE_DEPRECATION(statements)     statements
+      |                                                 ^~~~~~~~~~
+download.c:30:3: note: in expansion of macro ‘curl_easy_setopt’
+   30 |   curl_easy_setopt(handle, CURLOPT_NOPROGRESS, Rf_asLogical(quiet));
+      |   ^~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/typecheck-gcc.h:50:15: warning: call to ‘_curl_easy_setopt_err_long’ declared with attribute warning: curl_easy_setopt expects a long argument [-Wattribute-warning]
+   50 |               _curl_easy_setopt_err_long();                             \
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/curl.h:59:49: note: in definition of macro ‘CURL_IGNORE_DEPRECATION’
+   59 | #define CURL_IGNORE_DEPRECATION(statements)     statements
+      |                                                 ^~~~~~~~~~
+download.c:40:3: note: in expansion of macro ‘curl_easy_setopt’
+   40 |   curl_easy_setopt(handle, CURLOPT_NOPROGRESS, 1);
+      |   ^~~~~~~~~~~~~~~~
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c escape.c -o escape.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c fetch.c -o fetch.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c findport.c -o findport.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c form.c -o form.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c getdate.c -o getdate.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c handle.c -o handle.o
+In file included from curl-common.h:6,
+                 from handle.c:1:
+handle.c: In function ‘R_handle_setopt’:
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/typecheck-gcc.h:84:15: warning: call to ‘_curl_easy_setopt_err_xferinfo_cb’ declared with attribute warning: curl_easy_setopt expects a curl_xferinfo_callback argument [-Wattribute-warning]
+   84 |               _curl_easy_setopt_err_xferinfo_cb();                      \
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/curl.h:59:49: note: in definition of macro ‘CURL_IGNORE_DEPRECATION’
+   59 | #define CURL_IGNORE_DEPRECATION(statements)     statements
+      |                                                 ^~~~~~~~~~
+handle.c:275:14: note: in expansion of macro ‘curl_easy_setopt’
+  275 |       assert(curl_easy_setopt(handle, CURLOPT_XFERINFOFUNCTION,
+      |              ^~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/typecheck-gcc.h:50:15: warning: call to ‘_curl_easy_setopt_err_long’ declared with attribute warning: curl_easy_setopt expects a long argument [-Wattribute-warning]
+   50 |               _curl_easy_setopt_err_long();                             \
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/curl.h:59:49: note: in definition of macro ‘CURL_IGNORE_DEPRECATION’
+   59 | #define CURL_IGNORE_DEPRECATION(statements)     statements
+      |                                                 ^~~~~~~~~~
+handle.c:278:14: note: in expansion of macro ‘curl_easy_setopt’
+  278 |       assert(curl_easy_setopt(handle, CURLOPT_NOPROGRESS, 0));
+      |              ^~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/typecheck-gcc.h:50:15: warning: call to ‘_curl_easy_setopt_err_long’ declared with attribute warning: curl_easy_setopt expects a long argument [-Wattribute-warning]
+   50 |               _curl_easy_setopt_err_long();                             \
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/curl.h:59:49: note: in definition of macro ‘CURL_IGNORE_DEPRECATION’
+   59 | #define CURL_IGNORE_DEPRECATION(statements)     statements
+      |                                                 ^~~~~~~~~~
+handle.c:288:14: note: in expansion of macro ‘curl_easy_setopt’
+  288 |       assert(curl_easy_setopt(handle, CURLOPT_NOPROGRESS, 0));
+      |              ^~~~~~~~~~~~~~~~
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c ieproxy.c -o ieproxy.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c interrupt.c -o interrupt.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c multi.c -o multi.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c nslookup.c -o nslookup.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c options.c -o options.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c reflist.c -o reflist.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c split.c -o split.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c ssl.c -o ssl.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c typechecking.c -o typechecking.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c utils.c -o utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c version.c -o version.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c winidn.c -o winidn.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c writer.c -o writer.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o curl.so callbacks.o curl.o download.o escape.o fetch.o findport.o form.o getdate.o handle.o ieproxy.o init.o interrupt.o multi.o nslookup.o options.o reflist.o split.o ssl.o typechecking.o utils.o version.o winidn.o writer.o -lcurl -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/curl/src'
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/curl/libs
+
+Compiling filelock 
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/filelock/src'
+rm -f filelock.so init.o filelock-unix.o locklist.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c filelock-unix.c -o filelock-unix.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c locklist.c -o locklist.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o filelock.so init.o filelock-unix.o locklist.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/filelock/src'
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/filelock/libs
+
+Compiling jsonlite 
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/jsonlite/src'
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c base64.c -o base64.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c collapse_array.c -o collapse_array.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c collapse_object.c -o collapse_object.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c collapse_pretty.c -o collapse_pretty.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c escape_chars.c -o escape_chars.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c integer64_to_na.c -o integer64_to_na.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c is_datelist.c -o is_datelist.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c is_recordlist.c -o is_recordlist.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c is_scalarlist.c -o is_scalarlist.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c modp_numtoa.c -o modp_numtoa.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c null_to_na.c -o null_to_na.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c num_to_char.c -o num_to_char.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c parse.c -o parse.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c prettify.c -o prettify.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c push_parser.c -o push_parser.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c r-base64.c -o r-base64.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c register.c -o register.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c row_collapse.c -o row_collapse.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c transpose_list.c -o transpose_list.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c validate.c -o validate.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c yajl/yajl.c -o yajl/yajl.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c yajl/yajl_alloc.c -o yajl/yajl_alloc.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c yajl/yajl_buf.c -o yajl/yajl_buf.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c yajl/yajl_encode.c -o yajl/yajl_encode.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c yajl/yajl_gen.c -o yajl/yajl_gen.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c yajl/yajl_lex.c -o yajl/yajl_lex.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c yajl/yajl_parser.c -o yajl/yajl_parser.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -Iyajl/api  -I/usr/local/include   -fvisibility=hidden  -fpic  -g -O2  -c yajl/yajl_tree.c -o yajl/yajl_tree.o
+ar rcs yajl/libstatyajl.a yajl/yajl.o yajl/yajl_alloc.o yajl/yajl_buf.o yajl/yajl_encode.o yajl/yajl_gen.o yajl/yajl_lex.o yajl/yajl_parser.o yajl/yajl_tree.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o jsonlite.so base64.o collapse_array.o collapse_object.o collapse_pretty.o escape_chars.o integer64_to_na.o is_datelist.o is_recordlist.o is_scalarlist.o modp_numtoa.o null_to_na.o num_to_char.o parse.o prettify.o push_parser.o r-base64.o register.o row_collapse.o transpose_list.o validate.o -Lyajl -lstatyajl -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/jsonlite/src'
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/jsonlite/libs
+in method for ‘asJSON’ with signature ‘"AsIs"’: no definition for class “AsIs”
+in method for ‘asJSON’ with signature ‘"ITime"’: no definition for class “ITime”
+in method for ‘asJSON’ with signature ‘"hms"’: no definition for class “hms”
+in method for ‘asJSON’ with signature ‘"json"’: no definition for class “json”
+in method for ‘asJSON’ with signature ‘"integer64"’: no definition for class “integer64”
+in method for ‘asJSON’ with signature ‘"pairlist"’: no definition for class “pairlist”
+in method for ‘asJSON’ with signature ‘"blob"’: no definition for class “blob”
+in method for ‘asJSON’ with signature ‘"scalar"’: no definition for class “scalar”
+in method for ‘asJSON’ with signature ‘"sf"’: no definition for class “sf”
+in method for ‘asJSON’ with signature ‘"sfc"’: no definition for class “sfc”
+in method for ‘asJSON’ with signature ‘"vctrs_vctr"’: no definition for class “vctrs_vctr”
+
+Compiling lpSolve 
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/lpSolve/src'
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c colamd.c -o colamd.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c commonlib.c -o commonlib.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c hbio.c -o hbio.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c ini.c -o ini.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c isfixedvar.c -o isfixedvar.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_Hash.c -o lp_Hash.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_LUSOL.c -o lp_LUSOL.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_MDO.c -o lp_MDO.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_MPS.c -o lp_MPS.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_SOS.c -o lp_SOS.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_crash.c -o lp_crash.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_lib.c -o lp_lib.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_matrix.c -o lp_matrix.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_mipbb.c -o lp_mipbb.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_params.c -o lp_params.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_presolve.c -o lp_presolve.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_price.c -o lp_price.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_pricePSE.c -o lp_pricePSE.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_report.c -o lp_report.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_rlp.c -o lp_rlp.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_scale.c -o lp_scale.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_simplex.c -o lp_simplex.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_utils.c -o lp_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lp_wlp.c -o lp_wlp.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lpslink56.c -o lpslink56.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lusol.c -o lusol.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c lusolio.c -o lusolio.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c mmio.c -o mmio.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c myblas.c -o myblas.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c sparselib.c -o sparselib.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/usr/local/include    -fpic  -g -O2  -c yacc_read.c -o yacc_read.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o lpSolve.so colamd.o commonlib.o hbio.o ini.o init.o isfixedvar.o lp_Hash.o lp_LUSOL.o lp_MDO.o lp_MPS.o lp_SOS.o lp_crash.o lp_lib.o lp_matrix.o lp_mipbb.o lp_params.o lp_presolve.o lp_price.o lp_pricePSE.o lp_report.o lp_rlp.o lp_scale.o lp_simplex.o lp_utils.o lp_wlp.o lpslink56.o lusol.o lusolio.o mmio.o myblas.o sparselib.o yacc_read.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/lpSolve/src'
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/lpSolve/libs
+
+Compiling ps 
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/ps/src'
+/usr/bin/gcc -g -O2  -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wall px.c -o px
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c api-common.c -o api-common.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c common.c -o common.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c extra.c -o extra.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c dummy.c -o dummy.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c error-codes.c -o error-codes.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c cleancall.c -o cleancall.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c posix.c -o posix.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c api-posix.c -o api-posix.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c linux.c -o linux.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c api-linux.c -o api-linux.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o ps.so init.o api-common.o common.o extra.o dummy.o error-codes.o cleancall.o posix.o api-posix.o linux.o api-linux.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/ps/src'
+installing via 'install.libs.R' to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/ps
+
+Compiling zip 
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/zip/src'
+/usr/bin/gcc -g -O2  miniz.c zip.c unixutils.c tools/cmdzip.c -o tools/cmdzip
+/usr/bin/gcc -g -O2  miniz.c zip.c unixutils.c tools/cmdunzip.c -o tools/cmdunzip
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c miniz.c -o miniz.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c rzip.c -o rzip.o
+rzip.c:19: warning: "S_IFLNK" redefined
+   19 | #define S_IFLNK         0120000         /* [XSI] symbolic link */
+      | 
+In file included from rzip.c:5:
+/usr/include/sys/stat.h:113: note: this is the location of the previous definition
+  113 | #  define S_IFLNK       __S_IFLNK
+      | 
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c zip.c -o zip.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c unixutils.c -o unixutils.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o zip.so init.o miniz.o rzip.o zip.o unixutils.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/zip/src'
+installing via 'install.libs.R' to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/zip
+
+Compiling processx 
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/processx/src'
+/usr/bin/gcc -g -O2  -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wall tools/px.c -o tools/px
+/usr/bin/gcc -g -O2  -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -I../inst/include -Wall tools/sock.c -o tools/sock
+/usr/bin/gcc -g -O2  -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib supervisor/supervisor.c \
+      supervisor/utils.c -o supervisor/supervisor
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c base64.c -o base64.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c client.c -o client.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c errors.c -o errors.o
+/usr/bin/gcc -shared -L"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib" -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o client.so base64.o client.o errors.o  \
+	 -L"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib" -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c poll.c -o poll.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c processx-connection.c -o processx-connection.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c processx-vector.c -o processx-vector.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c create-time.c -o create-time.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c unix/childlist.c -o unix/childlist.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c unix/connection.c -o unix/connection.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c unix/processx.c -o unix/processx.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c unix/sigchld.c -o unix/sigchld.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c unix/utils.c -o unix/utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c unix/named_pipe.c -o unix/named_pipe.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c cleancall.c -o cleancall.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o processx.so init.o poll.o errors.o processx-connection.o processx-vector.o create-time.o base64.o unix/childlist.o unix/connection.o unix/processx.o unix/sigchld.o unix/utils.o unix/named_pipe.o cleancall.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/processx/src'
+installing via 'install.libs.R' to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/processx
+
+Compiling callr 
+
+Compiling desc 
+
+Compiling pkgbuild 
+
+Compiling pkgcache 
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/pkgcache/src'
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c errors.c -o errors.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c lib.c -o lib.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c winfiles.c -o winfiles.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o pkgcache.so errors.o init.o lib.o winfiles.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/pkgcache/src'
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/pkgcache/libs
+
+Compiling pkgsearch 
+
+Compiling yaml 
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/yaml/src'
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c api.c -o api.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c dumper.c -o dumper.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c emitter.c -o emitter.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c implicit.c -o implicit.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c loader.c -o loader.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c parser.c -o parser.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c r_emit.c -o r_emit.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c r_ext.c -o r_ext.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c r_parse.c -o r_parse.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c reader.c -o reader.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c scanner.c -o scanner.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I. -DNDEBUG  -I/usr/local/include    -fpic  -g -O2  -c writer.c -o writer.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o yaml.so api.o dumper.o emitter.o implicit.o loader.o parser.o r_emit.o r_ext.o r_parse.o reader.o scanner.o writer.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/yaml/src'
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/yaml/libs
+
+Compiling pkgdepends 
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/pkgdepends/src'
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c tree-sitter/lib/src/lib.c -o tree-sitter/lib/src/lib.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c tree-sitter/r/parser.c -o tree-sitter/r/parser.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c tree-sitter/r/scanner.c -o tree-sitter/r/scanner.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c tree-sitter/markdown/parser.c -o tree-sitter/markdown/parser.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c tree-sitter/markdown/scanner.c -o tree-sitter/markdown/scanner.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c tree-sitter/markdown-inline/parser.c -o tree-sitter/markdown-inline/parser.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c tree-sitter/markdown-inline/scanner.c -o tree-sitter/markdown-inline/scanner.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c tree-sitter/yaml/parser.c -o tree-sitter/yaml/parser.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c tree-sitter/yaml/scanner.c -o tree-sitter/yaml/scanner.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c yaml/api.c -o yaml/api.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c yaml/dumper.c -o yaml/dumper.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c yaml/emitter.c -o yaml/emitter.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c yaml/loader.c -o yaml/loader.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c yaml/parser.c -o yaml/parser.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c yaml/reader.c -o yaml/reader.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c yaml/scanner.c -o yaml/scanner.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c yaml/writer.c -o yaml/writer.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c cleancall.c -o cleancall.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c tree-sitter.c -o tree-sitter.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I./tree-sitter/lib/include -I./tree-sitter/lib/src -I./yaml  -I/usr/local/include    -fpic  -g -O2  -c yaml.c -o yaml.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o pkgdepends.so tree-sitter/lib/src/lib.o tree-sitter/r/parser.o tree-sitter/r/scanner.o tree-sitter/markdown/parser.o tree-sitter/markdown/scanner.o tree-sitter/markdown-inline/parser.o tree-sitter/markdown-inline/scanner.o tree-sitter/yaml/parser.o tree-sitter/yaml/scanner.o yaml/api.o yaml/dumper.o yaml/emitter.o yaml/loader.o yaml/parser.o yaml/reader.o yaml/scanner.o yaml/writer.o init.o cleancall.o tree-sitter.o yaml.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/pkgdepends/src'
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/pkgdepends/libs
+
+Compiling keyring 
+Could not find libsecret headers or libs.
+On Ubuntu, you need to install libsecret-1-dev via apt.
+On RedHat, Fedora, and CentOS, you need to install libsecret-devel via yum or dnf.
+Note that in addition to libsecret, you either need pkg-config or set the
+LIBSECRET_CFLAGS and LIBSECRET_LIBS environment variables.
+
+This keyring build will not support the libsecret backend.
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: Entering directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/keyring/src'
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c aes.c -o aes.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c aesce.c -o aesce.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c aesni.c -o aesni.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c base64.c -o base64.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c blake2b-compress-ref.c -o blake2b-compress-ref.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c blake2b-ref.c -o blake2b-ref.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c core_hsalsa20_ref2.c -o core_hsalsa20_ref2.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c core_salsa_ref.c -o core_salsa_ref.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c crypto_generichash.c -o crypto_generichash.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c crypto_secretbox_easy.c -o crypto_secretbox_easy.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c generichash_blake2b.c -o generichash_blake2b.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c keyring_macos.c -o keyring_macos.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c keyring_secret_service.c -o keyring_secret_service.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c keyring_wincred.c -o keyring_wincred.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c onetimeauth_poly1305.c -o onetimeauth_poly1305.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c padlock.c -o padlock.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c platform_util.c -o platform_util.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c poly1305_donna.c -o poly1305_donna.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c raes.c -o raes.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c randombytes_sysrandom.c -o randombytes_sysrandom.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c salsa20_ref.c -o salsa20_ref.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c sha256.c -o sha256.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c sodium-utils.c -o sodium-utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c sodium.c -o sodium.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c stream_salsa20.c -o stream_salsa20.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c verify.c -o verify.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DMBEDTLS_AES_C -DMBEDTLS_ALLOW_PRIVATE_ACCESS -DMBEDTLS_PLATFORM_PRINTF_ALT -I.  -I/usr/local/include    -fpic  -g -O2  -c win-path.c -o win-path.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o keyring.so aes.o aesce.o aesni.o base64.o blake2b-compress-ref.o blake2b-ref.o core_hsalsa20_ref2.o core_salsa_ref.o crypto_generichash.o crypto_secretbox_easy.o generichash_blake2b.o init.o keyring_macos.o keyring_secret_service.o keyring_wincred.o onetimeauth_poly1305.o padlock.o platform_util.o poly1305_donna.o raes.o randombytes_sysrandom.o salsa20_ref.o sha256.o sodium-utils.o sodium.o stream_salsa20.o verify.o win-path.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+make[1]: Leaving directory '/tmp/Rtmp8LAhqb/R.INSTALLfe5772f36605e/pak/src/library/keyring/src'
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak/library/keyring/libs
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c pause.c -o pause.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c profvis-init.c -o profvis-init.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o profvis.so pause.o profvis-init.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+Found pkg-config cflags and libs!
+Using PKG_CFLAGS=-I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP 
+Using PKG_LIBS=-lcurl 
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c callbacks.c -o callbacks.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c curl.c -o curl.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c download.c -o download.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c dryrun.c -o dryrun.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c escape.c -o escape.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c fetch.c -o fetch.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c findport.c -o findport.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c form.c -o form.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c getdate.c -o getdate.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c handle.c -o handle.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c ieproxy.c -o ieproxy.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c interrupt.c -o interrupt.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c multi.c -o multi.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c nslookup.c -o nslookup.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c options.c -o options.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c reflist.c -o reflist.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c split.c -o split.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c ssl.c -o ssl.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c typechecking.c -o typechecking.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c urlparser.c -o urlparser.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c utils.c -o utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c version.c -o version.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c winidn.c -o winidn.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/zlib-ng-2.2.4-xsdqw5trkbqasqg3a7icfcgbvmkplqph/include -DWITH_GZFILEOP  -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c writer.c -o writer.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o curl.so callbacks.o curl.o download.o dryrun.o escape.o fetch.o findport.o form.o getdate.o handle.o ieproxy.o init.o interrupt.o multi.o nslookup.o options.o reflist.o split.o ssl.o typechecking.o urlparser.o utils.o version.o winidn.o writer.o -lcurl -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+Found pkg-config cflags and libs!
+Using PKG_CFLAGS=-I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include 
+Using PKG_LIBS=-lxml2 
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include  -DUCHAR_TYPE=wchar_t -DU_SHOW_CPLUSPLUS_API=0 -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2   -c connection.cpp -o connection.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include  -DUCHAR_TYPE=wchar_t -DU_SHOW_CPLUSPLUS_API=0 -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include  -DUCHAR_TYPE=wchar_t -DU_SHOW_CPLUSPLUS_API=0 -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2   -c xml2_doc.cpp -o xml2_doc.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include  -DUCHAR_TYPE=wchar_t -DU_SHOW_CPLUSPLUS_API=0 -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c xml2_init.c -o xml2_init.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include  -DUCHAR_TYPE=wchar_t -DU_SHOW_CPLUSPLUS_API=0 -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2   -c xml2_namespace.cpp -o xml2_namespace.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include  -DUCHAR_TYPE=wchar_t -DU_SHOW_CPLUSPLUS_API=0 -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2   -c xml2_node.cpp -o xml2_node.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include  -DUCHAR_TYPE=wchar_t -DU_SHOW_CPLUSPLUS_API=0 -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2   -c xml2_output.cpp -o xml2_output.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include  -DUCHAR_TYPE=wchar_t -DU_SHOW_CPLUSPLUS_API=0 -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2   -c xml2_schema.cpp -o xml2_schema.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include  -DUCHAR_TYPE=wchar_t -DU_SHOW_CPLUSPLUS_API=0 -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2   -c xml2_url.cpp -o xml2_url.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2 -I/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libiconv-1.18-6mxjfoxolhtgcrueot7mnz4355fwhyhh/include  -DUCHAR_TYPE=wchar_t -DU_SHOW_CPLUSPLUS_API=0 -DSTRICT_R_HEADERS -DR_NO_REMAP  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2   -c xml2_xpath.cpp -o xml2_xpath.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o xml2.so connection.o init.o xml2_doc.o xml2_init.o xml2_namespace.o xml2_node.o xml2_output.o xml2_schema.o xml2_url.o xml2_xpath.o -lxml2 -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c cpp11.cpp -o cpp11.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c escapeExamples.cpp -o escapeExamples.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c isComplete.cpp -o isComplete.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c leadingSpaces.cpp -o leadingSpaces.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c parser2.cpp -o parser2.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/cpp11/include' -I/usr/local/include    -fpic  -g -O2   -c wrapUsage.cpp -o wrapUsage.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o roxygen2.so cpp11.o escapeExamples.o isComplete.o leadingSpaces.o parser2.o wrapUsage.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+Found OpenSSL3
+Using static libgit2 for Linux x86_64
+Using PKG_CFLAGS=-I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2
+Using PKG_LIBS=-L/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/lib -lstatgit2 -lrt -lpthread -lstatssh2 -lstatssl -lstatcrypto -ldl
+Configuration OK!
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c branch.c -o branch.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c clone.c -o clone.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c commit.c -o commit.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c config.c -o config.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c conflicts.c -o conflicts.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c files.c -o files.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c ignore.c -o ignore.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c merge.c -o merge.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c rebase.c -o rebase.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c stash.c -o stash.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c submodules.c -o submodules.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c tag.c -o tag.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c utils.c -o utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c version.c -o version.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/include -DSTATIC_LIBGIT2 -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2  -c worktree.c -o worktree.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o gert.so branch.o clone.o commit.o config.o conflicts.o files.o ignore.o init.o merge.o rebase.o stash.o submodules.o tag.o utils.o version.o worktree.o -L/tmp/RtmpAsWAf8/R.INSTALLff41674294081/gert/.deps/lib -lstatgit2 -lrt -lpthread -lstatssh2 -lstatssl -lstatcrypto -ldl -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c reassign.c -o reassign.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o covr.so reassign.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfontconfig -lfreetype
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the fontconfig freetype2 library. Try installing:
+ * deb: libfontconfig1-dev (Debian, Ubuntu, etc)
+ * rpm: fontconfig-devel (Fedora, EPEL)
+ * csw: fontconfig_dev (Solaris)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: freetype (OSX)
+If fontconfig freetype2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a fontconfig freetype2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: fontconfig/fontconfig.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfontconfig -lfreetype
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the fontconfig freetype2 library. Try installing:
+ * deb: libfontconfig1-dev (Debian, Ubuntu, etc)
+ * rpm: fontconfig-devel (Fedora, EPEL)
+ * csw: fontconfig_dev (Solaris)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: freetype (OSX)
+If fontconfig freetype2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a fontconfig freetype2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: fontconfig/fontconfig.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+FAILED: devtools
+SKIP (already installed): pak
+
+=== Installing: tidyverse ===
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lfontconfig -lfreetype
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the fontconfig freetype2 library. Try installing:
+ * deb: libfontconfig1-dev (Debian, Ubuntu, etc)
+ * rpm: fontconfig-devel (Fedora, EPEL)
+ * csw: fontconfig_dev (Solaris)
+ * apk: harfbuzz-dev fribidi-dev (Alpine)
+ * brew: freetype (OSX)
+If fontconfig freetype2 is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a fontconfig freetype2.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: fontconfig/fontconfig.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------

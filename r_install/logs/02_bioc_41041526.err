@@ -1,0 +1,255 @@
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'AUCell'
+also installing the dependencies ‘annotate’, ‘XML’, ‘GSEABase’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/annotate_1.88.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/XML_3.99-0.23.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSEABase_1.72.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/AUCell_1.32.0.tar.gz'
+* installing *source* package ‘XML’ ...
+** this is package ‘XML’ version ‘3.99-0.23’
+** package ‘XML’ successfully unpacked and MD5 sums checked
+** using staged installation
+ERROR: configuration failed for package ‘XML’
+* removing ‘/ref/rmlab/software/tyron/R-libs/XML’
+ERROR: dependency ‘XML’ is not available for package ‘annotate’
+Perhaps try a variation of:
+install.packages('XML')
+* removing ‘/ref/rmlab/software/tyron/R-libs/annotate’
+ERROR: dependencies ‘annotate’, ‘XML’ are not available for package ‘GSEABase’
+Perhaps try a variation of:
+install.packages(c('annotate', 'XML'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSEABase’
+ERROR: dependency ‘GSEABase’ is not available for package ‘AUCell’
+Perhaps try a variation of:
+install.packages('GSEABase')
+* removing ‘/ref/rmlab/software/tyron/R-libs/AUCell’
+
+The downloaded source packages are in
+	‘/tmp/RtmpM9DiMW/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'AUCell'
+also installing the dependencies ‘annotate’, ‘XML’, ‘GSEABase’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/annotate_1.88.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/XML_3.99-0.23.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSEABase_1.72.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/AUCell_1.32.0.tar.gz'
+* installing *source* package ‘XML’ ...
+** this is package ‘XML’ version ‘3.99-0.23’
+** package ‘XML’ successfully unpacked and MD5 sums checked
+** using staged installation
+ERROR: configuration failed for package ‘XML’
+* removing ‘/ref/rmlab/software/tyron/R-libs/XML’
+ERROR: dependency ‘XML’ is not available for package ‘annotate’
+Perhaps try a variation of:
+install.packages('XML')
+* removing ‘/ref/rmlab/software/tyron/R-libs/annotate’
+ERROR: dependencies ‘annotate’, ‘XML’ are not available for package ‘GSEABase’
+Perhaps try a variation of:
+install.packages(c('annotate', 'XML'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSEABase’
+ERROR: dependency ‘GSEABase’ is not available for package ‘AUCell’
+Perhaps try a variation of:
+install.packages('GSEABase')
+* removing ‘/ref/rmlab/software/tyron/R-libs/AUCell’
+
+The downloaded source packages are in
+	‘/tmp/RtmpM9DiMW/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'AUCell'
+also installing the dependencies ‘annotate’, ‘XML’, ‘GSEABase’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/annotate_1.88.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/XML_3.99-0.23.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GSEABase_1.72.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/AUCell_1.32.0.tar.gz'
+* installing *source* package ‘XML’ ...
+** this is package ‘XML’ version ‘3.99-0.23’
+** package ‘XML’ successfully unpacked and MD5 sums checked
+** using staged installation
+ERROR: configuration failed for package ‘XML’
+* removing ‘/ref/rmlab/software/tyron/R-libs/XML’
+ERROR: dependency ‘XML’ is not available for package ‘annotate’
+Perhaps try a variation of:
+install.packages('XML')
+* removing ‘/ref/rmlab/software/tyron/R-libs/annotate’
+ERROR: dependencies ‘annotate’, ‘XML’ are not available for package ‘GSEABase’
+Perhaps try a variation of:
+install.packages(c('annotate', 'XML'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/GSEABase’
+ERROR: dependency ‘GSEABase’ is not available for package ‘AUCell’
+Perhaps try a variation of:
+install.packages('GSEABase')
+* removing ‘/ref/rmlab/software/tyron/R-libs/AUCell’
+
+The downloaded source packages are in
+	‘/tmp/RtmpM9DiMW/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'scDblFinder'
+also installing the dependencies ‘Rhtslib’, ‘XML’, ‘GenomicAlignments’, ‘restfulr’, ‘Rsamtools’, ‘rtracklayer’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rhtslib_3.6.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/XML_3.99-0.23.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GenomicAlignments_1.46.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/restfulr_0.0.16.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rsamtools_2.26.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/rtracklayer_1.70.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/scDblFinder_1.24.10.tar.gz'
+* installing *source* package ‘Rhtslib’ ...
+** this is package ‘Rhtslib’ version ‘3.6.0’
+** package ‘Rhtslib’ successfully unpacked and MD5 sums checked
+** using non-staged installation via StagedInstall field
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+In file included from hfile_libcurl.c:47:
+hfile_libcurl.c: In function ‘libcurl_open’:
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/typecheck-gcc.h:50:15: warning: call to ‘_curl_easy_setopt_err_long’ declared with attribute warning: curl_easy_setopt expects a long argument [-Wattribute-warning]
+   50 |               _curl_easy_setopt_err_long();                             \
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/curl.h:59:49: note: in definition of macro ‘CURL_IGNORE_DEPRECATION’
+   59 | #define CURL_IGNORE_DEPRECATION(statements)     statements
+      |                                                 ^~~~~~~~~~
+hfile_libcurl.c:1225:12: note: in expansion of macro ‘curl_easy_setopt’
+ 1225 |     err |= curl_easy_setopt(fp->easy, CURLOPT_FTP_FILEMETHOD, CURLFTPMETHOD_NOCWD);
+      |            ^~~~~~~~~~~~~~~~
+In file included from hfile_libcurl.c:47:
+hfile_libcurl.c: In function ‘libcurl_open’:
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/typecheck-gcc.h:50:15: warning: call to ‘_curl_easy_setopt_err_long’ declared with attribute warning: curl_easy_setopt expects a long argument [-Wattribute-warning]
+   50 |               _curl_easy_setopt_err_long();                             \
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/curl.h:59:49: note: in definition of macro ‘CURL_IGNORE_DEPRECATION’
+   59 | #define CURL_IGNORE_DEPRECATION(statements)     statements
+      |                                                 ^~~~~~~~~~
+hfile_libcurl.c:1225:12: note: in expansion of macro ‘curl_easy_setopt’
+ 1225 |     err |= curl_easy_setopt(fp->easy, CURLOPT_FTP_FILEMETHOD, CURLFTPMETHOD_NOCWD);
+      |            ^~~~~~~~~~~~~~~~
+/usr/bin/ld: cannot find -lbz2
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile.Rhtslib:336: libhts.so] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makevars.common:22: htslib] Error 2
+ERROR: compilation failed for package ‘Rhtslib’
+* removing ‘/ref/rmlab/software/tyron/R-libs/Rhtslib’
+* installing *source* package ‘XML’ ...
+** this is package ‘XML’ version ‘3.99-0.23’
+** package ‘XML’ successfully unpacked and MD5 sums checked
+** using staged installation
+ERROR: configuration failed for package ‘XML’
+* removing ‘/ref/rmlab/software/tyron/R-libs/XML’
+ERROR: dependency ‘XML’ is not available for package ‘restfulr’
+Perhaps try a variation of:
+install.packages('XML')
+* removing ‘/ref/rmlab/software/tyron/R-libs/restfulr’
+ERROR: dependency ‘Rhtslib’ is not available for package ‘Rsamtools’
+Perhaps try a variation of:
+install.packages('Rhtslib')
+* removing ‘/ref/rmlab/software/tyron/R-libs/Rsamtools’
+ERROR: dependency ‘Rsamtools’ is not available for package ‘GenomicAlignments’
+Perhaps try a variation of:
+install.packages('Rsamtools')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GenomicAlignments’
+ERROR: dependencies ‘XML’, ‘Rsamtools’, ‘GenomicAlignments’, ‘restfulr’ are not available for package ‘rtracklayer’
+Perhaps try a variation of:
+install.packages(c('XML', 'Rsamtools', 'GenomicAlignments', 'restfulr'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/rtracklayer’
+ERROR: dependencies ‘Rsamtools’, ‘rtracklayer’ are not available for package ‘scDblFinder’
+Perhaps try a variation of:
+install.packages(c('Rsamtools', 'rtracklayer'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/scDblFinder’
+
+The downloaded source packages are in
+	‘/tmp/RtmpM9DiMW/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'scDblFinder'
+also installing the dependencies ‘Rhtslib’, ‘XML’, ‘GenomicAlignments’, ‘restfulr’, ‘Rsamtools’, ‘rtracklayer’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rhtslib_3.6.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/XML_3.99-0.23.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GenomicAlignments_1.46.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/restfulr_0.0.16.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rsamtools_2.26.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/rtracklayer_1.70.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/scDblFinder_1.24.10.tar.gz'
+* installing *source* package ‘Rhtslib’ ...
+** this is package ‘Rhtslib’ version ‘3.6.0’
+** package ‘Rhtslib’ successfully unpacked and MD5 sums checked
+** using non-staged installation via StagedInstall field
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+In file included from hfile_libcurl.c:47:
+hfile_libcurl.c: In function ‘libcurl_open’:
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/typecheck-gcc.h:50:15: warning: call to ‘_curl_easy_setopt_err_long’ declared with attribute warning: curl_easy_setopt expects a long argument [-Wattribute-warning]
+   50 |               _curl_easy_setopt_err_long();                             \
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/curl.h:59:49: note: in definition of macro ‘CURL_IGNORE_DEPRECATION’
+   59 | #define CURL_IGNORE_DEPRECATION(statements)     statements
+      |                                                 ^~~~~~~~~~
+hfile_libcurl.c:1225:12: note: in expansion of macro ‘curl_easy_setopt’
+ 1225 |     err |= curl_easy_setopt(fp->easy, CURLOPT_FTP_FILEMETHOD, CURLFTPMETHOD_NOCWD);
+      |            ^~~~~~~~~~~~~~~~
+In file included from hfile_libcurl.c:47:
+hfile_libcurl.c: In function ‘libcurl_open’:
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/typecheck-gcc.h:50:15: warning: call to ‘_curl_easy_setopt_err_long’ declared with attribute warning: curl_easy_setopt expects a long argument [-Wattribute-warning]
+   50 |               _curl_easy_setopt_err_long();                             \
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/curl-8.15.0-cjazhjsrdxhk7iz4ab3uhi4l7bjz2v4m/include/curl/curl.h:59:49: note: in definition of macro ‘CURL_IGNORE_DEPRECATION’
+   59 | #define CURL_IGNORE_DEPRECATION(statements)     statements
+      |                                                 ^~~~~~~~~~
+hfile_libcurl.c:1225:12: note: in expansion of macro ‘curl_easy_setopt’
+ 1225 |     err |= curl_easy_setopt(fp->easy, CURLOPT_FTP_FILEMETHOD, CURLFTPMETHOD_NOCWD);
+      |            ^~~~~~~~~~~~~~~~
+/usr/bin/ld: cannot find -lbz2
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile.Rhtslib:336: libhts.so] Error 1
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makevars.common:22: htslib] Error 2
+ERROR: compilation failed for package ‘Rhtslib’
+* removing ‘/ref/rmlab/software/tyron/R-libs/Rhtslib’
+* installing *source* package ‘XML’ ...
+** this is package ‘XML’ version ‘3.99-0.23’
+** package ‘XML’ successfully unpacked and MD5 sums checked
+** using staged installation
+ERROR: configuration failed for package ‘XML’
+* removing ‘/ref/rmlab/software/tyron/R-libs/XML’
+ERROR: dependency ‘XML’ is not available for package ‘restfulr’
+Perhaps try a variation of:
+install.packages('XML')
+* removing ‘/ref/rmlab/software/tyron/R-libs/restfulr’
+ERROR: dependency ‘Rhtslib’ is not available for package ‘Rsamtools’
+Perhaps try a variation of:
+install.packages('Rhtslib')
+* removing ‘/ref/rmlab/software/tyron/R-libs/Rsamtools’
+ERROR: dependency ‘Rsamtools’ is not available for package ‘GenomicAlignments’
+Perhaps try a variation of:
+install.packages('Rsamtools')
+* removing ‘/ref/rmlab/software/tyron/R-libs/GenomicAlignments’
+ERROR: dependencies ‘XML’, ‘Rsamtools’, ‘GenomicAlignments’, ‘restfulr’ are not available for package ‘rtracklayer’
+Perhaps try a variation of:
+install.packages(c('XML', 'Rsamtools', 'GenomicAlignments', 'restfulr'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/rtracklayer’
+ERROR: dependencies ‘Rsamtools’, ‘rtracklayer’ are not available for package ‘scDblFinder’
+Perhaps try a variation of:
+install.packages(c('Rsamtools', 'rtracklayer'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/scDblFinder’
+
+The downloaded source packages are in
+	‘/tmp/RtmpM9DiMW/downloaded_packages’
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'scDblFinder'
+also installing the dependencies ‘Rhtslib’, ‘XML’, ‘GenomicAlignments’, ‘restfulr’, ‘Rsamtools’, ‘rtracklayer’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rhtslib_3.6.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/XML_3.99-0.23.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GenomicAlignments_1.46.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/restfulr_0.0.16.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rsamtools_2.26.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/rtracklayer_1.70.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/scDblFinder_1.24.10.tar.gz'
+* installing *source* package ‘Rhtslib’ ...
+** this is package ‘Rhtslib’ version ‘3.6.0’
+** package ‘Rhtslib’ successfully unpacked and MD5 sums checked
+** using non-staged installation via StagedInstall field
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+[2026-05-19T23:42:30.234] error: *** JOB 41041526 ON n002 CANCELLED AT 2026-05-19T23:42:30 DUE to SIGNAL Terminated ***

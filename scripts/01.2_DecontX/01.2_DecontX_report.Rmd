@@ -1,0 +1,157 @@
+---
+title: "Stage 01.2 — Ambient RNA Removal (DecontX)"
+subtitle: "iSN snRNA-seq Pipeline"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    theme: flatly
+    self_contained: true
+    dev: ragg_png
+knit: (function(input, ...) rmarkdown::render(input, output_dir = "DecontX_out", ...))
+params:
+  project_root: "/scratch/rmlab/rmlab_shared3/tyron/Rscriptv2/iSN/iSN_claude"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "center", dev = "ragg_png")
+knitr::opts_knit$set(root.dir = params$project_root)
+options(knitr.graphics.rel_path = FALSE)
+```
+
+```{r libraries}
+library(Seurat)
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+library(knitr)
+library(viridis)
+```
+
+```{r load}
+out_dir <- file.path(params$project_root, "scripts/01.2_DecontX/DecontX_out")
+seu <- readRDS(file.path(out_dir, "iSN_decontX.rds"))
+```
+
+## Cell counts per sample
+
+```{r cell-counts}
+knitr::kable(as.data.frame(table(seu$sample_group)), col.names = c("Sample", "Cells"),
+             caption = "Post-DecontX cell counts per sample")
+```
+
+## Contamination score summary
+
+```{r contamination-summary}
+meta <- seu@meta.data
+contam_tbl <- meta %>%
+  dplyr::group_by(sample_group) %>%
+  dplyr::summarise(
+    n_cells      = dplyr::n(),
+    pct_gt_0.5   = round(mean(decontX_contamination > 0.5) * 100, 1),
+    pct_gt_0.8   = round(mean(decontX_contamination > 0.8) * 100, 1),
+    .groups = "drop"
+  )
+knitr::kable(contam_tbl,
+             col.names = c("Sample", "Cells", "% contamination > 0.5", "% contamination > 0.8"),
+             caption = "Contamination score summary per sample")
+```
+
+```{r contamination-hist, fig.width=8, fig.height=4}
+ggplot(meta, aes(x = decontX_contamination)) +
+  geom_histogram(bins = 100, fill = "steelblue", color = "white") +
+  geom_vline(xintercept = 0.5, color = "orange", linetype = "dashed", linewidth = 0.8) +
+  geom_vline(xintercept = 0.8, color = "red",    linetype = "dashed", linewidth = 0.8) +
+  theme_minimal() +
+  labs(title = "Distribution of DecontX contamination scores",
+       x = "Contamination score", y = "Count")
+```
+
+## UMAP — contamination score
+
+```{r umap-contamination, fig.width=8, fig.height=6}
+df <- seu@meta.data[, c("UMAP1", "UMAP2", "decontX_contamination", "sample_group", "decontX_clusters")]
+ggplot(df, aes(x = UMAP1, y = UMAP2, color = decontX_contamination)) +
+  geom_point(size = 0.1, alpha = 0.7) +
+  scale_color_viridis_c(option = "plasma") +
+  theme_minimal() +
+  labs(title = "DecontX contamination score", color = "Contamination")
+```
+
+## UMAP — decontX clusters
+
+```{r umap-clusters, fig.width=8, fig.height=6}
+ggplot(df, aes(x = UMAP1, y = UMAP2, color = factor(decontX_clusters))) +
+  geom_point(size = 0.1, alpha = 0.7) +
+  theme_minimal() +
+  labs(title = "DecontX clusters", color = "Cluster")
+```
+
+## UMAP — sample
+
+```{r umap-sample, fig.width=8, fig.height=6}
+ggplot(df, aes(x = UMAP1, y = UMAP2, color = sample_group)) +
+  geom_point(size = 0.1, alpha = 0.7) +
+  theme_minimal() +
+  labs(title = "Sample identity", color = "Sample")
+```
+
+## nCount before vs after decontX
+
+```{r ncount-comparison, fig.width=10, fig.height=5}
+available_cols <- colnames(seu@meta.data)
+if ("nCount_originalexp" %in% available_cols) {
+  VlnPlot(seu, features = c("nCount_RNA", "nCount_originalexp"),
+          group.by = "decontX_clusters", pt.size = 0, ncol = 2)
+} else {
+  message("nCount_originalexp not found in metadata — skipping comparison violin plot.")
+}
+```
+
+## Saved DecontX figures
+
+_Figures below are reproduced from saved outputs of `01.2_DecontX.R` using celda visualisation functions. These require the full SCE object and cannot be regenerated from the saved .rds alone._
+
+### Contamination UMAP (celda)
+
+```{r fig-01, fig.width=10}
+knitr::include_graphics(file.path(out_dir, "01_contamination_UMAP.png"))
+```
+
+### nCount violin (celda)
+
+```{r fig-02, fig.width=10}
+knitr::include_graphics(file.path(out_dir, "02_nCount_violin.png"))
+```
+
+### Marker expression — raw counts
+
+```{r fig-03, fig.width=10}
+knitr::include_graphics(file.path(out_dir, "03_markers_raw.png"))
+```
+
+### Marker expression — decontX counts
+
+```{r fig-04, fig.width=10}
+knitr::include_graphics(file.path(out_dir, "04_markers_decontX.png"))
+```
+
+### Marker percentage bar chart
+
+```{r fig-05, fig.width=10}
+knitr::include_graphics(file.path(out_dir, "05_marker_percentage.png"))
+```
+
+### Marker expression violins (counts)
+
+```{r fig-06, fig.width=10}
+knitr::include_graphics(file.path(out_dir, "06_marker_expression_counts.png"))
+```
+
+## Session info
+
+```{r session-info}
+sessionInfo()
+```

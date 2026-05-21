@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'REMINDER: Read md_files/WORKFLOW.md and the relevant .claude/skills/{stage}/SKILL.md before writing any script.'"
+          }
+        ]
+      }
+    ]
+  }
+}

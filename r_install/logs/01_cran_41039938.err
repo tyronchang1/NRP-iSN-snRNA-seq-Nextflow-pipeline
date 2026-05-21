@@ -1,0 +1,294 @@
+also installing the dependencies ‘systemfonts’, ‘textshaping’, ‘Cairo’, ‘ragg’, ‘ggrastr’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/Cairo_1.7-0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggrastr_1.0.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/scCustomize_3.3.0.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+/usr/bin/ld: cannot find -lfontconfig
+collect2: error: ld returned 1 exit status
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/share/make/shlib.mk:10: systemfonts.so] Error 1
+ERROR: compilation failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+* installing *source* package ‘Cairo’ ...
+** this is package ‘Cairo’ version ‘1.7-0’
+** package ‘Cairo’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: error: Cannot find cairo.h! Please install cairo (http://www.cairographics.org/) and/or set CAIRO_CFLAGS/LIBS correspondingly.
+ERROR: configuration failed for package ‘Cairo’
+* removing ‘/ref/rmlab/software/tyron/R-libs/Cairo’
+ERROR: dependency ‘systemfonts’ is not available for package ‘textshaping’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/textshaping’
+ERROR: dependencies ‘systemfonts’, ‘textshaping’ are not available for package ‘ragg’
+Perhaps try a variation of:
+install.packages(c('systemfonts', 'textshaping'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ragg’
+ERROR: dependencies ‘Cairo’, ‘ragg’ are not available for package ‘ggrastr’
+Perhaps try a variation of:
+install.packages(c('Cairo', 'ragg'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ggrastr’
+ERROR: dependency ‘ggrastr’ is not available for package ‘scCustomize’
+Perhaps try a variation of:
+install.packages('ggrastr')
+* removing ‘/ref/rmlab/software/tyron/R-libs/scCustomize’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpqn9wT1/downloaded_packages’
+also installing the dependencies ‘systemfonts’, ‘textshaping’, ‘Cairo’, ‘ragg’, ‘ggrastr’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/Cairo_1.7-0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggrastr_1.0.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/scCustomize_3.3.0.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+/usr/bin/ld: cannot find -lfontconfig
+collect2: error: ld returned 1 exit status
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/share/make/shlib.mk:10: systemfonts.so] Error 1
+ERROR: compilation failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+* installing *source* package ‘Cairo’ ...
+** this is package ‘Cairo’ version ‘1.7-0’
+** package ‘Cairo’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: error: Cannot find cairo.h! Please install cairo (http://www.cairographics.org/) and/or set CAIRO_CFLAGS/LIBS correspondingly.
+ERROR: configuration failed for package ‘Cairo’
+* removing ‘/ref/rmlab/software/tyron/R-libs/Cairo’
+ERROR: dependency ‘systemfonts’ is not available for package ‘textshaping’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/textshaping’
+ERROR: dependencies ‘systemfonts’, ‘textshaping’ are not available for package ‘ragg’
+Perhaps try a variation of:
+install.packages(c('systemfonts', 'textshaping'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ragg’
+ERROR: dependencies ‘Cairo’, ‘ragg’ are not available for package ‘ggrastr’
+Perhaps try a variation of:
+install.packages(c('Cairo', 'ragg'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ggrastr’
+ERROR: dependency ‘ggrastr’ is not available for package ‘scCustomize’
+Perhaps try a variation of:
+install.packages('ggrastr')
+* removing ‘/ref/rmlab/software/tyron/R-libs/scCustomize’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpqn9wT1/downloaded_packages’
+also installing the dependencies ‘systemfonts’, ‘textshaping’, ‘Cairo’, ‘ragg’, ‘ggrastr’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/Cairo_1.7-0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggrastr_1.0.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/scCustomize_3.3.0.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+/usr/bin/ld: cannot find -lfontconfig
+collect2: error: ld returned 1 exit status
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/share/make/shlib.mk:10: systemfonts.so] Error 1
+ERROR: compilation failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+* installing *source* package ‘Cairo’ ...
+** this is package ‘Cairo’ version ‘1.7-0’
+** package ‘Cairo’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: error: Cannot find cairo.h! Please install cairo (http://www.cairographics.org/) and/or set CAIRO_CFLAGS/LIBS correspondingly.
+ERROR: configuration failed for package ‘Cairo’
+* removing ‘/ref/rmlab/software/tyron/R-libs/Cairo’
+ERROR: dependency ‘systemfonts’ is not available for package ‘textshaping’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/textshaping’
+ERROR: dependencies ‘systemfonts’, ‘textshaping’ are not available for package ‘ragg’
+Perhaps try a variation of:
+install.packages(c('systemfonts', 'textshaping'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ragg’
+ERROR: dependencies ‘Cairo’, ‘ragg’ are not available for package ‘ggrastr’
+Perhaps try a variation of:
+install.packages(c('Cairo', 'ragg'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ggrastr’
+ERROR: dependency ‘ggrastr’ is not available for package ‘scCustomize’
+Perhaps try a variation of:
+install.packages('ggrastr')
+* removing ‘/ref/rmlab/software/tyron/R-libs/scCustomize’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpqn9wT1/downloaded_packages’
+also installing the dependencies ‘systemfonts’, ‘ggforce’, ‘ggraph’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggforce_0.5.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggraph_2.2.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/clustree_0.5.1.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+/usr/bin/ld: cannot find -lfontconfig
+collect2: error: ld returned 1 exit status
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/share/make/shlib.mk:10: systemfonts.so] Error 1
+ERROR: compilation failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+ERROR: dependency ‘systemfonts’ is not available for package ‘ggforce’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/ggforce’
+ERROR: dependency ‘ggforce’ is not available for package ‘ggraph’
+Perhaps try a variation of:
+install.packages('ggforce')
+* removing ‘/ref/rmlab/software/tyron/R-libs/ggraph’
+ERROR: dependency ‘ggraph’ is not available for package ‘clustree’
+Perhaps try a variation of:
+install.packages('ggraph')
+* removing ‘/ref/rmlab/software/tyron/R-libs/clustree’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpqn9wT1/downloaded_packages’
+also installing the dependencies ‘systemfonts’, ‘ggforce’, ‘ggraph’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggforce_0.5.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggraph_2.2.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/clustree_0.5.1.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+/usr/bin/ld: cannot find -lfontconfig
+collect2: error: ld returned 1 exit status
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/share/make/shlib.mk:10: systemfonts.so] Error 1
+ERROR: compilation failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+ERROR: dependency ‘systemfonts’ is not available for package ‘ggforce’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/ggforce’
+ERROR: dependency ‘ggforce’ is not available for package ‘ggraph’
+Perhaps try a variation of:
+install.packages('ggforce')
+* removing ‘/ref/rmlab/software/tyron/R-libs/ggraph’
+ERROR: dependency ‘ggraph’ is not available for package ‘clustree’
+Perhaps try a variation of:
+install.packages('ggraph')
+* removing ‘/ref/rmlab/software/tyron/R-libs/clustree’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpqn9wT1/downloaded_packages’
+also installing the dependencies ‘systemfonts’, ‘ggforce’, ‘ggraph’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggforce_0.5.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggraph_2.2.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/clustree_0.5.1.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+/usr/bin/ld: cannot find -lfontconfig
+collect2: error: ld returned 1 exit status
+make: *** [/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/share/make/shlib.mk:10: systemfonts.so] Error 1
+ERROR: compilation failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+ERROR: dependency ‘systemfonts’ is not available for package ‘ggforce’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/ggforce’
+ERROR: dependency ‘ggforce’ is not available for package ‘ggraph’
+Perhaps try a variation of:
+install.packages('ggforce')
+* removing ‘/ref/rmlab/software/tyron/R-libs/ggraph’
+ERROR: dependency ‘ggraph’ is not available for package ‘clustree’
+Perhaps try a variation of:
+install.packages('ggraph')
+* removing ‘/ref/rmlab/software/tyron/R-libs/clustree’
+
+The downloaded source packages are in
+	‘/tmp/Rtmpqn9wT1/downloaded_packages’
+trying URL 'https://cloud.r-project.org/src/contrib/RobustRankAggreg_1.2.1.tar.gz'
+Content type 'application/x-gzip' length 21798 bytes (21 KB)
+==================================================
+downloaded 21 KB
+
+* installing *source* package ‘RobustRankAggreg’ ...
+** this is package ‘RobustRankAggreg’ version ‘1.2.1’
+** package ‘RobustRankAggreg’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (RobustRankAggreg)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpqn9wT1/downloaded_packages’
+trying URL 'https://cloud.r-project.org/src/contrib/ggdendro_0.2.0.tar.gz'
+Content type 'application/x-gzip' length 167818 bytes (163 KB)
+==================================================
+downloaded 163 KB
+
+* installing *source* package ‘ggdendro’ ...
+** this is package ‘ggdendro’ version ‘0.2.0’
+** package ‘ggdendro’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (ggdendro)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpqn9wT1/downloaded_packages’
+trying URL 'https://cloud.r-project.org/src/contrib/tictoc_1.2.1.tar.gz'
+Content type 'application/x-gzip' length 528449 bytes (516 KB)
+==================================================
+downloaded 516 KB
+
+* installing *source* package ‘tictoc’ ...
+** this is package ‘tictoc’ version ‘1.2.1’
+** package ‘tictoc’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+[2026-05-19T22:08:35.289] error: *** JOB 41039938 ON n193 CANCELLED AT 2026-05-19T22:08:35 DUE to SIGNAL Terminated ***

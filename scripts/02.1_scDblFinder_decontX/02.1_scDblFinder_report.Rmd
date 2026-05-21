@@ -1,0 +1,111 @@
+---
+title: "Stage 02.1 — Doublet Removal (DecontX track)"
+subtitle: "iSN snRNA-seq Pipeline"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    theme: flatly
+    self_contained: true
+    dev: ragg_png
+knit: (function(input, ...) rmarkdown::render(input, output_dir = "scDblFinder_output", ...))
+params:
+  project_root: "/scratch/rmlab/rmlab_shared3/tyron/Rscriptv2/iSN/iSN_claude"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "center", dev = "ragg_png")
+knitr::opts_knit$set(root.dir = params$project_root)
+options(knitr.graphics.rel_path = FALSE)
+```
+
+```{r libraries}
+library(Seurat)
+library(ggplot2)
+library(dplyr)
+library(scales)
+library(patchwork)
+library(knitr)
+library(tidyr)
+```
+
+```{r load}
+out_dir <- file.path(params$project_root, "scripts/02.1_scDblFinder_decontX/scDblFinder_output")
+seu <- readRDS(file.path(out_dir, "iSN_decontX_scDblFinder.rds"))
+```
+
+## Doublet rate per sample
+
+```{r doublet-rate-table}
+db_summary <- seu@meta.data %>%
+  dplyr::group_by(sample_group, scDblFinder.class) %>%
+  dplyr::summarise(n = dplyr::n(), .groups = "drop") %>%
+  tidyr::pivot_wider(names_from = scDblFinder.class, values_from = n, values_fill = 0) %>%
+  dplyr::mutate(total = singlet + doublet,
+                pct_doublet = round(doublet / total * 100, 1))
+knitr::kable(db_summary, caption = "Doublet rate per sample (flag: >15% is unusual)")
+```
+
+```{r doublet-rate-flag, results='asis'}
+flagged <- db_summary$sample_group[db_summary$pct_doublet > 15]
+if (length(flagged) > 0) {
+  cat("**Flag:** The following samples have a doublet rate > 15%:", paste(flagged, collapse = ", "), "\n")
+} else {
+  cat("_No samples exceed the 15% doublet rate threshold._\n")
+}
+```
+
+## Overall doublet rate
+
+```{r overall-rate, results='asis'}
+total_cells    <- nrow(seu@meta.data)
+total_doublets <- sum(seu@meta.data$scDblFinder.class == "doublet")
+overall_pct    <- round(total_doublets / total_cells * 100, 1)
+cat(sprintf("**Total cells:** %d | **Doublets:** %d | **Overall doublet rate:** %.1f%%\n",
+            total_cells, total_doublets, overall_pct))
+```
+
+## nCount_RNA distribution
+
+```{r ncount-hist, fig.width=12, fig.height=8}
+ggplot(seu@meta.data, aes(x = nCount_RNA)) +
+  geom_histogram(bins = 200, fill = "white", color = "black") +
+  geom_vline(xintercept = 500, color = "red", linetype = "dashed") +
+  facet_wrap(~sample_group) +
+  xlim(0, 20000) +
+  theme_bw() +
+  labs(title = "nCount_RNA distribution per sample", x = "UMI count", y = "Count")
+```
+
+## QC by doublet class
+
+```{r qc-by-class, fig.width=10, fig.height=5}
+VlnPlot(seu, features = c("nFeature_RNA", "nCount_RNA"),
+        group.by = "scDblFinder.class", pt.size = 0.01, ncol = 2)
+```
+
+## QC by sample
+
+```{r qc-by-sample, fig.width=12, fig.height=5}
+VlnPlot(seu, features = c("nFeature_RNA", "nCount_RNA"),
+        group.by = "sample_group", pt.size = 0.01, ncol = 2) &
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## scDblFinder score distribution
+
+```{r score-dist, fig.width=8, fig.height=4}
+ggplot(seu@meta.data, aes(x = scDblFinder.score, fill = scDblFinder.class)) +
+  geom_histogram(bins = 100, alpha = 0.6, position = "identity") +
+  scale_fill_manual(values = c(singlet = "steelblue", doublet = "tomato")) +
+  theme_minimal() +
+  labs(title = "scDblFinder score distribution", x = "Score", y = "Count", fill = "Class")
+```
+
+## Session info
+
+```{r session-info}
+sessionInfo()
+```

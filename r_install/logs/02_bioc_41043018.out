@@ -1,0 +1,74 @@
+=== Bioconductor Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Wed May 20 01:46:31 AM CDT 2026
+SKIP (already installed): multtest
+SKIP (already installed): ComplexHeatmap
+SKIP (already installed): DropletUtils
+SKIP (already installed): AUCell
+SKIP (already installed): glmGamPoi
+SKIP (already installed): scDblFinder
+SKIP (already installed): Rhtslib
+SKIP (already installed): AnnotationDbi
+SKIP (already installed): clusterProfiler
+SKIP (already installed): ReactomePA
+SKIP (already installed): apeglm
+SKIP (already installed): DESeq2
+SKIP (already installed): zellkonverter
+SKIP (already installed): miloR
+SKIP (already installed): org.Mm.eg.db
+SKIP (already installed): org.Hs.eg.db
+SKIP (already installed): BiocGenerics
+SKIP (already installed): DelayedArray
+SKIP (already installed): DelayedMatrixStats
+SKIP (already installed): limma
+SKIP (already installed): S4Vectors
+SKIP (already installed): SingleCellExperiment
+SKIP (already installed): SummarizedExperiment
+SKIP (already installed): batchelor
+SKIP (already installed): HDF5Array
+SKIP (already installed): edgeR
+SKIP (already installed): GSVA
+SKIP (already installed): Biobase
+SKIP (already installed): BiocParallel
+SKIP (already installed): TOAST
+SKIP (already installed): scater
+SKIP (already installed): scran
+SKIP (already installed): celda
+
+=== Installing: singleCellTK ===
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for gcc... (cached) /usr/bin/gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether /usr/bin/gcc accepts -g... (cached) yes
+checking for /usr/bin/gcc option to accept ISO C89... (cached) none needed
+checking for pkg-config... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+
+fftwtools 0.9-10
+================
+
+compiler flags:  
+link argument:  -lfftw3  
+
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c jointlevel_fft_twosided.cpp -o jointlevel_fft_twosided.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o qqconf.so RcppExports.o jointlevel_fft_twosided.o -lfftw3 -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+OK: singleCellTK
+SKIP (already installed): scry
+SKIP (already installed): UCell
+SKIP (already installed): monocle
+
+=== All Bioconductor packages installed successfully ===
+[1] TRUE
+End: Wed May 20 01:48:44 AM CDT 2026

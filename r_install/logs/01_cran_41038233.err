@@ -1,0 +1,543 @@
+also installing the dependencies ‘credentials’, ‘systemfonts’, ‘textshaping’, ‘gert’, ‘ragg’, ‘httr’, ‘rvest’, ‘usethis’, ‘pak’, ‘pkgdown’, ‘profvis’, ‘rcmdcheck’, ‘roxygen2’, ‘rversions’, ‘urlchecker’, ‘covr’, ‘curl’, ‘DT’, ‘foghorn’, ‘gh’, ‘httr2’, ‘lintr’, ‘quarto’, ‘spelling’, ‘xml2’
+
+trying URL 'https://cloud.r-project.org/src/contrib/credentials_2.0.3.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/gert_2.3.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/httr_1.4.8.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/rvest_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/usethis_3.2.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/pak_0.9.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/pkgdown_2.2.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/profvis_0.4.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/rcmdcheck_1.4.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/roxygen2_8.0.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/rversions_3.0.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/urlchecker_1.0.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/covr_3.6.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/curl_7.1.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/DT_0.34.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/foghorn_1.6.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/gh_1.5.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/httr2_1.2.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/lintr_3.3.0-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/quarto_1.5.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spelling_2.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/xml2_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/devtools_2.5.2.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+* installing *source* package ‘pak’ ...
+** this is package ‘pak’ version ‘0.9.5’
+** package ‘pak’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+installing via 'install.libs.R' to /ref/rmlab/software/tyron/R-libs/00LOCK-pak/00new/pak
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (pak)
+* installing *source* package ‘profvis’ ...
+** this is package ‘profvis’ version ‘0.4.0’
+** package ‘profvis’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-profvis/00new/profvis/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (profvis)
+* installing *source* package ‘curl’ ...
+** this is package ‘curl’ version ‘7.1.0’
+** package ‘curl’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-curl/00new/curl/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (curl)
+* installing *source* package ‘DT’ ...
+** this is package ‘DT’ version ‘0.34.0’
+** package ‘DT’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (DT)
+* installing *source* package ‘quarto’ ...
+** this is package ‘quarto’ version ‘1.5.1’
+** package ‘quarto’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (quarto)
+* installing *source* package ‘xml2’ ...
+** this is package ‘xml2’ version ‘1.5.2’
+** package ‘xml2’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-xml2/00new/xml2/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (xml2)
+* installing *source* package ‘credentials’ ...
+** this is package ‘credentials’ version ‘2.0.3’
+** package ‘credentials’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (credentials)
+ERROR: dependency ‘systemfonts’ is not available for package ‘textshaping’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/textshaping’
+* installing *source* package ‘httr’ ...
+** this is package ‘httr’ version ‘1.4.8’
+** package ‘httr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (httr)
+* installing *source* package ‘rcmdcheck’ ...
+** this is package ‘rcmdcheck’ version ‘1.4.0’
+** package ‘rcmdcheck’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (rcmdcheck)
+* installing *source* package ‘roxygen2’ ...
+** this is package ‘roxygen2’ version ‘8.0.0’
+** package ‘roxygen2’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-roxygen2/00new/roxygen2/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (roxygen2)
+* installing *source* package ‘rversions’ ...
+** this is package ‘rversions’ version ‘3.0.0’
+** package ‘rversions’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (rversions)
+* installing *source* package ‘urlchecker’ ...
+** this is package ‘urlchecker’ version ‘1.0.1’
+** package ‘urlchecker’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (urlchecker)
+* installing *source* package ‘httr2’ ...
+** this is package ‘httr2’ version ‘1.2.2’
+** package ‘httr2’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (httr2)
+* installing *source* package ‘lintr’ ...
+** this is package ‘lintr’ version ‘3.3.0-1’
+** package ‘lintr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (lintr)
+* installing *source* package ‘spelling’ ...
+** this is package ‘spelling’ version ‘2.3.2’
+** package ‘spelling’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (spelling)
+* installing *source* package ‘gert’ ...
+** this is package ‘gert’ version ‘2.3.1’
+** package ‘gert’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-gert/00new/gert/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (gert)
+ERROR: dependencies ‘systemfonts’, ‘textshaping’ are not available for package ‘ragg’
+Perhaps try a variation of:
+install.packages(c('systemfonts', 'textshaping'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ragg’
+* installing *source* package ‘rvest’ ...
+** this is package ‘rvest’ version ‘1.0.5’
+** package ‘rvest’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (rvest)
+* installing *source* package ‘covr’ ...
+** this is package ‘covr’ version ‘3.6.5’
+** package ‘covr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-covr/00new/covr/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (covr)
+* installing *source* package ‘gh’ ...
+** this is package ‘gh’ version ‘1.5.0’
+** package ‘gh’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (gh)
+* installing *source* package ‘usethis’ ...
+** this is package ‘usethis’ version ‘3.2.1’
+** package ‘usethis’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (usethis)
+ERROR: failed to lock directory ‘/ref/rmlab/software/tyron/R-libs’ for modifying
+Try removing ‘/ref/rmlab/software/tyron/R-libs/00LOCK-pkgdown’
+* installing *source* package ‘foghorn’ ...
+** this is package ‘foghorn’ version ‘1.6.1’
+** package ‘foghorn’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (foghorn)
+ERROR: dependency ‘pkgdown’ is not available for package ‘devtools’
+Perhaps try a variation of:
+install.packages('pkgdown')
+* removing ‘/ref/rmlab/software/tyron/R-libs/devtools’
+
+The downloaded source packages are in
+	‘/tmp/RtmpNQACS9/downloaded_packages’
+also installing the dependencies ‘systemfonts’, ‘textshaping’, ‘ragg’, ‘pkgdown’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/pkgdown_2.2.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/devtools_2.5.2.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+ERROR: dependency ‘systemfonts’ is not available for package ‘textshaping’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/textshaping’
+ERROR: dependencies ‘systemfonts’, ‘textshaping’ are not available for package ‘ragg’
+Perhaps try a variation of:
+install.packages(c('systemfonts', 'textshaping'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ragg’
+ERROR: failed to lock directory ‘/ref/rmlab/software/tyron/R-libs’ for modifying
+Try removing ‘/ref/rmlab/software/tyron/R-libs/00LOCK-pkgdown’
+ERROR: dependency ‘pkgdown’ is not available for package ‘devtools’
+Perhaps try a variation of:
+install.packages('pkgdown')
+* removing ‘/ref/rmlab/software/tyron/R-libs/devtools’
+
+The downloaded source packages are in
+	‘/tmp/RtmpNQACS9/downloaded_packages’
+also installing the dependencies ‘systemfonts’, ‘textshaping’, ‘ragg’, ‘pkgdown’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/pkgdown_2.2.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/devtools_2.5.2.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+ERROR: dependency ‘systemfonts’ is not available for package ‘textshaping’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/textshaping’
+ERROR: dependencies ‘systemfonts’, ‘textshaping’ are not available for package ‘ragg’
+Perhaps try a variation of:
+install.packages(c('systemfonts', 'textshaping'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/ragg’
+ERROR: failed to lock directory ‘/ref/rmlab/software/tyron/R-libs’ for modifying
+Try removing ‘/ref/rmlab/software/tyron/R-libs/00LOCK-pkgdown’
+ERROR: dependency ‘pkgdown’ is not available for package ‘devtools’
+Perhaps try a variation of:
+install.packages('pkgdown')
+* removing ‘/ref/rmlab/software/tyron/R-libs/devtools’
+
+The downloaded source packages are in
+	‘/tmp/RtmpNQACS9/downloaded_packages’
+also installing the dependencies ‘gargle’, ‘systemfonts’, ‘textshaping’, ‘googledrive’, ‘googlesheets4’, ‘ragg’, ‘reprex’
+
+trying URL 'https://cloud.r-project.org/src/contrib/gargle_1.6.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/textshaping_1.0.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/googledrive_2.1.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/googlesheets4_1.1.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/reprex_2.1.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/tidyverse_2.0.0.tar.gz'
+* installing *source* package ‘gargle’ ...
+** this is package ‘gargle’ version ‘1.6.1’
+** package ‘gargle’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (gargle)
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+* installing *source* package ‘reprex’ ...
+** this is package ‘reprex’ version ‘2.1.1’
+** package ‘reprex’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+[2026-05-19T20:52:05.730] error: *** JOB 41038233 ON n193 CANCELLED AT 2026-05-19T20:52:05 DUE to SIGNAL Terminated ***

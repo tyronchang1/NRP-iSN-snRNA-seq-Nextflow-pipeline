@@ -1,0 +1,430 @@
+---
+title: "iSN snRNA-seq Pipeline — Final Report"
+subtitle: "`r paste0(toupper(params$track), ' track | ', Sys.Date())`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    theme: flatly
+    self_contained: true
+    dev: ragg_png
+params:
+  project_root: "/scratch/rmlab/rmlab_shared3/tyron/Rscriptv2/iSN/iSN_claude"
+  track: "decontx"
+  gene_sets: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "center", dev = "ragg_png")
+knitr::opts_knit$set(root.dir = params$project_root)
+options(knitr.graphics.rel_path = FALSE)
+```
+
+```{r libraries}
+library(Seurat)
+library(ggplot2)
+library(dplyr)
+library(knitr)
+library(patchwork)
+library(viridis)
+library(scales)
+library(tidyr)
+library(ggrepel)
+```
+
+```{r track-setup}
+track_display    <- ifelse(params$track == "decontx", "decontX", "soupX")
+timepoint_colors <- c(Day13 = "#4E8FCA", Day7 = "#D73027", iPSC = "#F5A623")
+```
+
+---
+
+## Section 0: Pipeline Summary
+
+```{r pipeline-summary}
+# --- define paths ---
+if (params$track == "decontx") {
+  rds_01  <- file.path(params$project_root,
+                       "scripts/01.2_DecontX/DecontX_out/iSN_decontX.rds")
+  rds_02  <- file.path(params$project_root,
+                       "scripts/02.1_scDblFinder_decontX/scDblFinder_output/iSN_decontX_scDblFinder.rds")
+  rds_03  <- file.path(params$project_root,
+                       "scripts/03_Cell_filtering/Cell_filtering_output/03_seu_cellfiltered_decontx.rds")
+  rds_04  <- file.path(params$project_root,
+                       "scripts/04_Clustering/clustering_output/04_seu_clustered_decontx.rds")
+  s01_method <- "DecontX"
+  s02_method <- "scDblFinder (DecontX track)"
+} else {
+  rds_02  <- file.path(params$project_root,
+                       "scripts/02_scDblFinder_soupx/scDblFinder_output/iSN_doubletstep.rds")
+  rds_03  <- file.path(params$project_root,
+                       "scripts/03_Cell_filtering/Cell_filtering_output/03_seu_cellfiltered_soupx.rds")
+  rds_04  <- file.path(params$project_root,
+                       "scripts/04_Clustering/clustering_output/04_seu_clustered_soupx.rds")
+  s01_method <- "SoupX"
+  s02_method <- "scDblFinder (SoupX track)"
+}
+
+# --- load each RDS once ---
+if (params$track == "decontx") {
+  seu_01 <- readRDS(rds_01)
+  n_01_in  <- ncol(seu_01)
+  n_01_out <- ncol(seu_01)   # DecontX corrects but does not filter
+
+  seu_02 <- readRDS(rds_02)
+  n_02_in  <- ncol(seu_01)
+  n_02_out <- sum(seu_02$scDblFinder.class == "singlet")
+} else {
+  # SoupX track: Stage 01 is per-sample correction; Stage 02 RDS is the merged object
+  seu_02 <- readRDS(rds_02)
+  n_01_in  <- ncol(seu_02)
+  n_01_out <- ncol(seu_02)   # SoupX corrects but does not filter nuclei count
+  n_02_in  <- ncol(seu_02)
+  n_02_out <- sum(seu_02$scDblFinder.class == "singlet")
+}
+
+seu_03 <- readRDS(rds_03)
+n_03_in  <- ncol(seu_02)
+n_03_out <- ncol(seu_03)
+
+seu_04 <- readRDS(rds_04)
+n_04_in  <- ncol(seu_03)
+n_04_out <- ncol(seu_04)
+
+# --- build summary table ---
+summary_tbl <- data.frame(
+  Stage   = c("01 — Ambient RNA Removal",
+              "02 — Doublet Removal",
+              "03 — Cell Filtering",
+              "04 — Clustering"),
+  Method  = c(s01_method, s02_method, "Seurat QC filters", "Harmony + Louvain"),
+  Track   = rep(track_display, 4),
+  Input_nuclei  = c(n_01_in,  n_02_in,  n_03_in,  n_04_in),
+  Output_nuclei = c(n_01_out, n_02_out, n_03_out, n_04_out),
+  Removed       = c(n_01_in - n_01_out,
+                    n_02_in - n_02_out,
+                    n_03_in - n_03_out,
+                    n_04_in - n_04_out),
+  stringsAsFactors = FALSE
+)
+
+knitr::kable(summary_tbl,
+             col.names = c("Stage", "Method", "Track",
+                           "Input nuclei", "Output nuclei", "Removed"),
+             caption = paste0("Pipeline summary — ", track_display, " track"))
+```
+
+---
+
+## Section 1: Ambient RNA Removal
+
+```{r stage01-decontx, eval=(params$track == "decontx")}
+out_01 <- file.path(params$project_root, "scripts/01.2_DecontX/DecontX_out")
+
+# Cell counts per sample
+knitr::kable(as.data.frame(table(seu_01$sample_group)),
+             col.names = c("Sample", "Nuclei"),
+             caption = "Post-DecontX nucleus counts per sample")
+
+# Contamination summary table
+meta_01 <- seu_01@meta.data
+contam_tbl <- meta_01 %>%
+  dplyr::group_by(sample_group) %>%
+  dplyr::summarise(
+    n_nuclei     = dplyr::n(),
+    pct_gt_0.5   = round(mean(decontX_contamination > 0.5) * 100, 1),
+    pct_gt_0.8   = round(mean(decontX_contamination > 0.8) * 100, 1),
+    .groups = "drop"
+  )
+knitr::kable(contam_tbl,
+             col.names = c("Sample", "Nuclei", "% contamination > 0.5", "% contamination > 0.8"),
+             caption = "Contamination score summary per sample")
+```
+
+```{r stage01-decontx-hist, eval=(params$track == "decontx"), fig.width=8, fig.height=4}
+ggplot(meta_01, aes(x = decontX_contamination)) +
+  geom_histogram(bins = 100, fill = "steelblue", color = "white") +
+  geom_vline(xintercept = 0.5, color = "orange", linetype = "dashed", linewidth = 0.8) +
+  geom_vline(xintercept = 0.8, color = "red",    linetype = "dashed", linewidth = 0.8) +
+  theme_minimal() +
+  labs(title = "DecontX contamination score distribution",
+       x = "Contamination score", y = "Count")
+```
+
+```{r stage01-decontx-umap, eval=(params$track == "decontx"), fig.width=10}
+knitr::include_graphics(file.path(out_01, "01_contamination_UMAP.png"))
+```
+
+```{r stage01-decontx-markers, eval=(params$track == "decontx"), fig.width=10}
+knitr::include_graphics(file.path(out_01, "04_markers_decontX.png"))
+```
+
+```{r stage01-soupx, eval=(params$track == "soupx")}
+soupx_dirs <- c(
+  "NR00_Day13_1Counts",
+  "NR00_Day13_1_dupCounts",
+  "NR00_Day13_2Counts",
+  "NR00_Day13_2_dupCounts",
+  "NR00_Day7_1Counts",
+  "NR00_Day7_2Counts",
+  "NR00_iPSC_1Counts",
+  "NR00_iPSC_2Counts"
+)
+
+sample_names <- c(
+  "NR00_Day13_1", "NR00_Day13_1_dup", "NR00_Day13_2", "NR00_Day13_2_dup",
+  "NR00_Day7_1", "NR00_Day7_2", "NR00_iPSC_1", "NR00_iPSC_2"
+)
+
+soupx_base <- file.path(params$project_root, "scripts/01_SoupX/SoupX_dir_out")
+
+seu_list <- lapply(seq_along(soupx_dirs), function(i) {
+  mat <- Read10X(file.path(soupx_base, soupx_dirs[i]))
+  obj <- CreateSeuratObject(counts = mat, project = as.character(i))
+  obj$sample_group <- sample_names[i]
+  obj
+})
+
+seu_soupx <- merge(seu_list[[1]],
+                   y    = seu_list[-1],
+                   add.cell.ids = sample_names)
+seu_soupx$orig.ident <- seu_soupx$sample_group
+seu_soupx <- NormalizeData(seu_soupx)
+
+knitr::kable(as.data.frame(table(seu_soupx$sample_group)),
+             col.names = c("Sample", "Nuclei"),
+             caption = "Post-SoupX nucleus counts per sample")
+```
+
+```{r stage01-soupx-vln, eval=(params$track == "soupx"), fig.width=12, fig.height=5}
+VlnPlot(seu_soupx, features = c("nCount_RNA", "nFeature_RNA"),
+        group.by = "sample_group", pt.size = 0.01, ncol = 2) &
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+---
+
+## Section 2: Doublet Removal
+
+```{r doublet-rate-table}
+db_summary <- seu_02@meta.data %>%
+  dplyr::group_by(sample_group, scDblFinder.class) %>%
+  dplyr::summarise(n = dplyr::n(), .groups = "drop") %>%
+  tidyr::pivot_wider(names_from = scDblFinder.class, values_from = n, values_fill = 0) %>%
+  dplyr::mutate(total       = singlet + doublet,
+                pct_doublet = round(doublet / total * 100, 1))
+knitr::kable(db_summary,
+             caption = paste0("Doublet rate per sample (", track_display,
+                              " track) — flag: >15% is unusual"))
+```
+
+```{r doublet-rate-flag, results='asis'}
+flagged <- db_summary$sample_group[db_summary$pct_doublet > 15]
+if (length(flagged) > 0) {
+  cat("**Flag:** The following samples have a doublet rate > 15%:",
+      paste(flagged, collapse = ", "), "\n")
+} else {
+  cat("_No samples exceed the 15% doublet rate threshold._\n")
+}
+```
+
+```{r doublet-overall, results='asis'}
+total_cells    <- nrow(seu_02@meta.data)
+total_doublets <- sum(seu_02@meta.data$scDblFinder.class == "doublet")
+overall_pct    <- round(total_doublets / total_cells * 100, 1)
+cat(sprintf("**Total nuclei:** %d | **Doublets:** %d | **Overall doublet rate:** %.1f%%\n",
+            total_cells, total_doublets, overall_pct))
+```
+
+```{r doublet-score-hist, fig.width=8, fig.height=4}
+ggplot(seu_02@meta.data, aes(x = scDblFinder.score, fill = scDblFinder.class)) +
+  geom_histogram(bins = 100, alpha = 0.6, position = "identity") +
+  scale_fill_manual(values = c(singlet = "steelblue", doublet = "tomato")) +
+  theme_minimal() +
+  labs(title = paste0("scDblFinder score distribution — ", track_display, " track"),
+       x = "Score", y = "Count", fill = "Class")
+```
+
+---
+
+## Section 3: Cell Filtering
+
+```{r cell-filtering-setup}
+nfeature_threshold <- ifelse(params$track == "decontx", 800, 700)
+track_label        <- ifelse(params$track == "decontx", "DecontX", "SoupX")
+
+seu_pre <- seu_02
+seu_pre[["percent.mt"]] <- PercentageFeatureSet(seu_pre, pattern = "^MT-")
+meta_pre <- seu_pre@meta.data
+```
+
+```{r filter-summary-table}
+keepMito  <- sum(meta_pre$percent.mt <= 20)
+keepGenes <- sum(meta_pre$nFeature_RNA > nfeature_threshold)
+keepUMI   <- sum(meta_pre$nCount_RNA > 500)
+keepDub   <- sum(meta_pre$scDblFinder.class == "singlet")
+
+kept_barcodes <- rownames(meta_pre)[
+  meta_pre$percent.mt <= 20 &
+  meta_pre$nFeature_RNA > nfeature_threshold &
+  meta_pre$nCount_RNA > 500 &
+  meta_pre$scDblFinder.class == "singlet"
+]
+
+df_filt <- data.frame(
+  Filter  = c("Total",
+              "percent.mt <= 20%",
+              paste0("nFeature > ", nfeature_threshold),
+              "nCount > 500",
+              "Singlets only",
+              "Pass all"),
+  N_nuclei = c(nrow(meta_pre), keepMito, keepGenes, keepUMI, keepDub,
+                length(kept_barcodes))
+)
+knitr::kable(df_filt,
+             col.names = c("Filter criterion", "Nuclei passing"),
+             caption = paste0(track_label, " track: nuclei passing each filter"))
+```
+
+```{r cell-filtering-vln, fig.width=12, fig.height=5}
+VlnPlot(seu_pre,
+        features = c("nFeature_RNA", "nCount_RNA", "percent.mt"),
+        group.by = "sample_group", pt.size = 0.01, ncol = 3) &
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r pre-post-counts}
+counts_tbl <- data.frame(
+  Track         = track_label,
+  Pre_filter    = ncol(seu_pre),
+  Post_filter   = ncol(seu_03),
+  Cells_removed = ncol(seu_pre) - ncol(seu_03),
+  Pct_removed   = round((ncol(seu_pre) - ncol(seu_03)) / ncol(seu_pre) * 100, 1)
+)
+knitr::kable(counts_tbl,
+             col.names = c("Track", "Pre-filter", "Post-filter",
+                           "Nuclei removed", "% removed"),
+             caption = "Nuclei removed by QC filtering")
+```
+
+---
+
+## Section 4: Clustering
+
+```{r clustering-setup}
+nf <- 10000
+isN_markers <- c("TUBB3", "PRPH", "SNAP25",
+                 "CALCA", "TRPV1",
+                 "MRGPRD",
+                 "NTRK2", "NTRK3",
+                 "POU5F1", "SOX2", "NANOG")
+```
+
+```{r clustering-counts}
+tbl_group <- as.data.frame(table(seu_04$sample_group))
+colnames(tbl_group) <- c("sample_group", "Nuclei")
+knitr::kable(tbl_group,
+             caption = paste0("Post-clustering nucleus counts per sample — ", track_display))
+```
+
+```{r umap-harmony-clusters, fig.width=8, fig.height=7}
+centroids_harm_cl <- as.data.frame(Embeddings(seu_04, "umap.harmony"))
+centroids_harm_cl$harmony_res.0.2 <- seu_04$harmony_res.0.2
+centroids_harm_cl <- aggregate(. ~ harmony_res.0.2, centroids_harm_cl, mean)
+
+p_harmony_clusters <- DimPlot(seu_04,
+                               reduction = "umap.harmony",
+                               group.by  = "harmony_res.0.2",
+                               label     = FALSE,
+                               pt.size   = 0.5) +
+  ggtitle(paste0("iSN Harmony clusters (res 0.2, nf=", nf, ") — ", track_display)) +
+  xlab("UMAP 1") + ylab("UMAP 2") +
+  theme(
+    plot.title   = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title   = element_text(size = 12, face = "bold"),
+    axis.text    = element_text(size = 12),
+    legend.title = element_text(size = 11),
+    legend.text  = element_text(size = 11)
+  ) +
+  geom_text_repel(
+    data    = centroids_harm_cl,
+    aes(x = umapharmony_1, y = umapharmony_2, label = harmony_res.0.2),
+    size    = 5, color = "black", segment.color = "grey50",
+    box.padding = 0.8, max.overlaps = Inf
+  )
+
+p_harmony_clusters
+```
+
+```{r umap-harmony-sample, fig.width=8, fig.height=7}
+p_harmony_samples <- DimPlot(seu_04,
+                              reduction = "umap.harmony",
+                              group.by  = "sample",
+                              label     = FALSE,
+                              pt.size   = 0.5) +
+  ggtitle(paste0("iSN Harmony — sample (nf=", nf, ") — ", track_display)) +
+  xlab("UMAP 1") + ylab("UMAP 2") +
+  theme(
+    plot.title   = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title   = element_text(size = 12, face = "bold"),
+    axis.text    = element_text(size = 12),
+    legend.title = element_text(size = 11),
+    legend.text  = element_text(size = 11)
+  ) +
+  scale_color_manual(values = timepoint_colors)
+
+p_harmony_samples
+```
+
+```{r dotplot-markers, fig.width=10, fig.height=6}
+p_dot <- DotPlot(seu_04, features = isN_markers, group.by = "harmony_res.0.2") +
+  RotatedAxis() +
+  scale_color_gradient(low = "white", high = "red",
+                       limits = c(-1, 3), oob = squish) +
+  ggtitle(paste0("iSN marker gene expression by cluster — ", track_display))
+
+p_dot
+```
+
+---
+
+## Section 5: Individual Stage Reports
+
+```{r stage-report-paths, results='asis'}
+if (params$track == "decontx") {
+  cat(
+    "Stage reports are available at the following paths relative to the project root:\n\n",
+    "- **Stage 01.2 (DecontX):**  \n",
+    "  `scripts/01.2_DecontX/DecontX_out/01.2_DecontX_report.html`\n\n",
+    "- **Stage 02.1 (scDblFinder — DecontX track):**  \n",
+    "  `scripts/02.1_scDblFinder_decontX/scDblFinder_output/02.1_scDblFinder_report.html`\n\n",
+    "- **Stage 03 (Cell Filtering — decontX):**  \n",
+    "  `scripts/03_Cell_filtering/Cell_filtering_output/03_cell_filtering_report_decontX.html`\n\n",
+    "- **Stage 04 (Clustering — decontX):**  \n",
+    "  `scripts/04_Clustering/clustering_output/04_clustering_report_decontX.html`\n",
+    sep = ""
+  )
+} else {
+  cat(
+    "Stage reports are available at the following paths relative to the project root:\n\n",
+    "- **Stage 01 (SoupX):**  \n",
+    "  `scripts/01_SoupX/SoupX_dir_out/01_SoupX_report.html`\n\n",
+    "- **Stage 02 (scDblFinder — SoupX track):**  \n",
+    "  `scripts/02_scDblFinder_soupx/scDblFinder_output/02_scDblFinder_report.html`\n\n",
+    "- **Stage 03 (Cell Filtering — soupX):**  \n",
+    "  `scripts/03_Cell_filtering/Cell_filtering_output/03_cell_filtering_report_soupX.html`\n\n",
+    "- **Stage 04 (Clustering — soupX):**  \n",
+    "  `scripts/04_Clustering/clustering_output/04_clustering_report_soupX.html`\n",
+    sep = ""
+  )
+}
+```
+
+---
+
+## Session Info
+
+```{r session-info}
+sessionInfo()
+```

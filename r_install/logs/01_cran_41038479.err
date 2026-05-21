@@ -1,0 +1,51 @@
+also installing the dependency ‘systemfonts’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggforce_0.5.0.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+ERROR: dependency ‘systemfonts’ is not available for package ‘ggforce’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/ggforce’
+
+The downloaded source packages are in
+	‘/tmp/RtmpVVl6o8/downloaded_packages’
+also installing the dependency ‘systemfonts’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggforce_0.5.0.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+Package fontconfig was not found in the pkg-config search path.
+Perhaps you should add the directory containing `fontconfig.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'fontconfig', required by 'virtual:world', not found
+ERROR: configuration failed for package ‘systemfonts’
+* removing ‘/ref/rmlab/software/tyron/R-libs/systemfonts’
+ERROR: dependency ‘systemfonts’ is not available for package ‘ggforce’
+Perhaps try a variation of:
+install.packages('systemfonts')
+* removing ‘/ref/rmlab/software/tyron/R-libs/ggforce’
+
+The downloaded source packages are in
+	‘/tmp/RtmpVVl6o8/downloaded_packages’
+also installing the dependency ‘systemfonts’
+
+trying URL 'https://cloud.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggforce_0.5.0.tar.gz'
+* installing *source* package ‘systemfonts’ ...
+** this is package ‘systemfonts’ version ‘1.3.2’
+** package ‘systemfonts’ successfully unpacked and MD5 sums checked
+** using staged installation
+[2026-05-19T21:04:58.157] error: *** JOB 41038479 ON n193 CANCELLED AT 2026-05-19T21:04:58 DUE to SIGNAL Terminated ***

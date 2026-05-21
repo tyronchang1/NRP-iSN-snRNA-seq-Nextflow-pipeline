@@ -1,0 +1,403 @@
+=== Bioconductor Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Tue May 19 10:23:46 PM CDT 2026
+
+=== Installing: multtest ===
+Creating a new generic function for ‘aperm’ in package ‘BiocGenerics’
+Creating a new generic function for ‘append’ in package ‘BiocGenerics’
+Creating a new generic function for ‘as.data.frame’ in package ‘BiocGenerics’
+Creating a new generic function for ‘cbind’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rbind’ in package ‘BiocGenerics’
+Creating a new generic function for ‘do.call’ in package ‘BiocGenerics’
+Creating a new generic function for ‘duplicated’ in package ‘BiocGenerics’
+Creating a new generic function for ‘anyDuplicated’ in package ‘BiocGenerics’
+Creating a new generic function for ‘eval’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmax’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmin’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmax.int’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmin.int’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Reduce’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Filter’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Find’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Map’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Position’ in package ‘BiocGenerics’
+Creating a new generic function for ‘get’ in package ‘BiocGenerics’
+Creating a new generic function for ‘mget’ in package ‘BiocGenerics’
+Creating a new generic function for ‘grep’ in package ‘BiocGenerics’
+Creating a new generic function for ‘grepl’ in package ‘BiocGenerics’
+Creating a new generic function for ‘is.unsorted’ in package ‘BiocGenerics’
+Creating a new generic function for ‘lapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘sapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘mapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘match’ in package ‘BiocGenerics’
+Creating a new generic function for ‘order’ in package ‘BiocGenerics’
+Creating a new generic function for ‘paste’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rank’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rownames’ in package ‘BiocGenerics’
+Creating a new generic function for ‘colnames’ in package ‘BiocGenerics’
+Creating a new generic function for ‘saveRDS’ in package ‘BiocGenerics’
+Creating a new generic function for ‘table’ in package ‘BiocGenerics’
+Creating a new generic function for ‘tapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘unique’ in package ‘BiocGenerics’
+Creating a new generic function for ‘unsplit’ in package ‘BiocGenerics’
+Creating a new generic function for ‘which.min’ in package ‘BiocGenerics’
+Creating a new generic function for ‘which.max’ in package ‘BiocGenerics’
+Creating a new generic function for ‘IQR’ in package ‘BiocGenerics’
+Creating a new generic function for ‘mad’ in package ‘BiocGenerics’
+Creating a new generic function for ‘var’ in package ‘BiocGenerics’
+Creating a new generic function for ‘sd’ in package ‘BiocGenerics’
+Creating a new generic function for ‘xtabs’ in package ‘BiocGenerics’
+Creating a new generic function for ‘basename’ in package ‘BiocGenerics’
+Creating a new generic function for ‘dirname’ in package ‘BiocGenerics’
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c Rinit.c -o Rinit.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c envir.c -o envir.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c matchpt.c -o matchpt.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rowMedians.c -o rowMedians.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c sublist_extract.c -o sublist_extract.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o Biobase.so Rinit.o envir.o matchpt.o rowMedians.o sublist_extract.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c Rpack.c -o Rpack.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c VScount.c -o VScount.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c block_sampling_fixed.c -o block_sampling_fixed.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c bootloop.c -o bootloop.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c mt.c -o mt.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c pairt_sampling.c -o pairt_sampling.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c pairt_sampling_fixed.c -o pairt_sampling_fixed.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c random.c -o random.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c sampling.c -o sampling.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c sampling_fixed.c -o sampling_fixed.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c stat_func.c -o stat_func.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include   -DUSEDOUBLE -fpic  -g -O2  -c stat_order.c -o stat_order.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o multtest.so Rpack.o VScount.o block_sampling_fixed.o bootloop.o mt.o pairt_sampling.o pairt_sampling_fixed.o random.o sampling.o sampling_fixed.o stat_func.o stat_order.o -lm -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+OK: multtest
+
+=== Installing: ComplexHeatmap ===
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c AEbufs.c -o AEbufs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c DFrame_class.c -o DFrame_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c Hits_class.c -o Hits_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c LLint_class.c -o LLint_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c List_class.c -o List_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c R_init_S4Vectors.c -o R_init_S4Vectors.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c Rle_class.c -o Rle_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c Rle_utils.c -o Rle_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c SEXP_utils.c -o SEXP_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c SimpleList_class.c -o SimpleList_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c character_utils.c -o character_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c eval_utils.c -o eval_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c hash_utils.c -o hash_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c integer_utils.c -o integer_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c logical_utils.c -o logical_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c map_ranges_to_runs.c -o map_ranges_to_runs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c raw_utils.c -o raw_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c safe_arithm.c -o safe_arithm.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c sort_utils.c -o sort_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c subsetting_utils.c -o subsetting_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c vector_utils.c -o vector_utils.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o S4Vectors.so AEbufs.o DFrame_class.o Hits_class.o LLint_class.o List_class.o R_init_S4Vectors.o Rle_class.o Rle_utils.o SEXP_utils.o SimpleList_class.o character_utils.o eval_utils.o hash_utils.o integer_utils.o logical_utils.o map_ranges_to_runs.o raw_utils.o safe_arithm.o sort_utils.o subsetting_utils.o vector_utils.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+in method for ‘normalizeSingleBracketReplacementValue’ with signature ‘"List"’: no definition for class “List”
+Creating a new generic function for ‘unname’ in package ‘S4Vectors’
+Creating a new generic function for ‘expand.grid’ in package ‘S4Vectors’
+Creating a new generic function for ‘findMatches’ in package ‘S4Vectors’
+in method for ‘coerce’ with signature ‘"Hits","DFrame"’: no definition for class “DFrame”
+Creating a generic function for ‘as.factor’ from package ‘base’ in package ‘S4Vectors’
+Creating a generic function for ‘tabulate’ from package ‘base’ in package ‘S4Vectors’
+Creating a generic function for ‘cov’ from package ‘stats’ in package ‘S4Vectors’
+Creating a generic function for ‘cor’ from package ‘stats’ in package ‘S4Vectors’
+Creating a generic function for ‘smoothEnds’ from package ‘stats’ in package ‘S4Vectors’
+Creating a generic function for ‘runmed’ from package ‘stats’ in package ‘S4Vectors’
+Creating a generic function for ‘nchar’ from package ‘base’ in package ‘S4Vectors’
+Creating a generic function for ‘substr’ from package ‘base’ in package ‘S4Vectors’
+Creating a generic function for ‘substring’ from package ‘base’ in package ‘S4Vectors’
+Creating a generic function for ‘chartr’ from package ‘base’ in package ‘S4Vectors’
+Creating a generic function for ‘tolower’ from package ‘base’ in package ‘S4Vectors’
+Creating a generic function for ‘toupper’ from package ‘base’ in package ‘S4Vectors’
+Creating a generic function for ‘sub’ from package ‘base’ in package ‘S4Vectors’
+Creating a generic function for ‘gsub’ from package ‘base’ in package ‘S4Vectors’
+Creating a generic function for ‘nlevels’ from package ‘base’ in package ‘S4Vectors’
+in method for ‘coerce’ with signature ‘"data.table","DFrame"’: no definition for class “data.table”
+Creating a generic function for ‘complete.cases’ from package ‘stats’ in package ‘S4Vectors’
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c assignment.c -o assignment.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c clue.c -o clue.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c lsap.c -o lsap.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c trees.c -o trees.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o clue.so assignment.o clue.o init.o lsap.o trees.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c CompressedAtomicList_utils.c -o CompressedAtomicList_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c CompressedIRangesList_class.c -o CompressedIRangesList_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c CompressedList_class.c -o CompressedList_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c Grouping_class.c -o Grouping_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c IPosRanges_comparison.c -o IPosRanges_comparison.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c IRanges_class.c -o IRanges_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c IRanges_constructor.c -o IRanges_constructor.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c NCList.c -o NCList.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c R_init_IRanges.c -o R_init_IRanges.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c Ranges_class.c -o Ranges_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c RleViews_summarization.c -o RleViews_summarization.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c S4Vectors_stubs.c -o S4Vectors_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c SimpleIRangesList_class.c -o SimpleIRangesList_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c coverage_methods.c -o coverage_methods.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c extractListFragments.c -o extractListFragments.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c inter_range_methods.c -o inter_range_methods.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include   -fopenmp -fpic  -g -O2  -c thread_control.c -o thread_control.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o IRanges.so CompressedAtomicList_utils.o CompressedIRangesList_class.o CompressedList_class.o Grouping_class.o IPosRanges_comparison.o IRanges_class.o IRanges_constructor.o NCList.o R_init_IRanges.o Ranges_class.o RleViews_summarization.o S4Vectors_stubs.o SimpleIRangesList_class.o coverage_methods.o extractListFragments.o inter_range_methods.o thread_control.o -fopenmp -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+Creating a generic function for ‘drop’ from package ‘base’ in package ‘IRanges’
+Creating a generic function for ‘runmed’ from package ‘stats’ in package ‘IRanges’
+Creating a generic function for ‘chartr’ from package ‘base’ in package ‘IRanges’
+Creating a generic function for ‘toupper’ from package ‘base’ in package ‘IRanges’
+Creating a generic function for ‘tolower’ from package ‘base’ in package ‘IRanges’
+Creating a generic function for ‘sub’ from package ‘base’ in package ‘IRanges’
+Creating a generic function for ‘gsub’ from package ‘base’ in package ‘IRanges’
+Creating a generic function for ‘startsWith’ from package ‘base’ in package ‘IRanges’
+Creating a generic function for ‘endsWith’ from package ‘base’ in package ‘IRanges’
+Creating a generic function for ‘smoothEnds’ from package ‘stats’ in package ‘IRanges’
+OK: ComplexHeatmap
+
+=== Installing: DropletUtils ===
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c expectedDeviance.c -o expectedDeviance.o
+/usr/bin/gfortran  -fpic  -g -O2  -c gaussq2.f -o gaussq2.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o statmod.so expectedDeviance.o gaussq2.o init.o -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+Creating a new generic function for ‘rowAlls’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colAlls’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowAnyNAs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colAnyNAs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowAnys’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colAnys’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowAvgsPerColSet’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colAvgsPerRowSet’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowCollapse’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colCollapse’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowCounts’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colCounts’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowCummaxs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colCummaxs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowCummins’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colCummins’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowCumprods’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colCumprods’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowCumsums’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colCumsums’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowDiffs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colDiffs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowIQRDiffs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colIQRDiffs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowIQRs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colIQRs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowLogSumExps’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colLogSumExps’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowMadDiffs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colMadDiffs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowMads’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colMads’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowMaxs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colMaxs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowMeans2’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colMeans2’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowMedians’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colMedians’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowMins’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colMins’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowOrderStats’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colOrderStats’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowProds’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colProds’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowQuantiles’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colQuantiles’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowRanges’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colRanges’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowRanks’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colRanks’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowSdDiffs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colSdDiffs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowSds’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colSds’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowSums2’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colSums2’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowTabulates’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colTabulates’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowVarDiffs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colVarDiffs’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowVars’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colVars’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowWeightedMads’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colWeightedMads’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowWeightedMeans’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colWeightedMeans’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowWeightedMedians’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colWeightedMedians’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowWeightedSds’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colWeightedSds’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘rowWeightedVars’ in package ‘MatrixGenerics’
+Creating a new generic function for ‘colWeightedVars’ in package ‘MatrixGenerics’
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2  -c R_init_S4Arrays.c -o R_init_S4Arrays.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2  -c S4Vectors_stubs.c -o S4Vectors_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2  -c abind.c -o abind.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2  -c array_selection.c -o array_selection.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2  -c dim_tuning_utils.c -o dim_tuning_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2  -c rowsum.c -o rowsum.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o S4Arrays.so R_init_S4Arrays.o S4Vectors_stubs.o abind.o array_selection.o dim_tuning_utils.o rowsum.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+Creating a new generic function for ‘rowsum’ in package ‘S4Arrays’
+Creating a new generic function for ‘abind’ in package ‘S4Arrays’
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c IRanges_stubs.c -o IRanges_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c Ocopy_byteblocks.c -o Ocopy_byteblocks.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c RDS_random_access.c -o RDS_random_access.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c R_init_XVector.c -o R_init_XVector.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c S4Vectors_stubs.c -o S4Vectors_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c SharedDouble_class.c -o SharedDouble_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c SharedInteger_class.c -o SharedInteger_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c SharedRaw_class.c -o SharedRaw_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c SharedVector_class.c -o SharedVector_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c XDouble_class.c -o XDouble_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c XInteger_class.c -o XInteger_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c XRawList_comparison.c -o XRawList_comparison.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c XRaw_class.c -o XRaw_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c XVectorList_class.c -o XVectorList_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c XVector_class.c -o XVector_class.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c io_utils.c -o io_utils.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c slice_methods.c -o slice_methods.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c vector_copy.c -o vector_copy.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I/usr/local/include    -fpic  -g -O2  -c view_summarization_methods.c -o view_summarization_methods.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o XVector.so IRanges_stubs.o Ocopy_byteblocks.o RDS_random_access.o R_init_XVector.o S4Vectors_stubs.o SharedDouble_class.o SharedInteger_class.o SharedRaw_class.o SharedVector_class.o XDouble_class.o XInteger_class.o XRawList_comparison.o XRaw_class.o XVectorList_class.o XVector_class.o io_utils.o slice_methods.o vector_copy.o view_summarization_methods.o -lz -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c S_enter.c -o S_enter.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c band.c -o band.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c dbinom.c -o dbinom.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c dens_haz.c -o dens_haz.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c dens_int.c -o dens_int.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c dens_odi.c -o dens_odi.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c density.c -o density.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c ev_atree.c -o ev_atree.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c ev_interp.c -o ev_interp.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c ev_kdtre.c -o ev_kdtre.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c ev_main.c -o ev_main.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c ev_sphere.c -o ev_sphere.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c ev_trian.c -o ev_trian.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c family.c -o family.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c fitted.c -o fitted.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c frend.c -o frend.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c lf_adap.c -o lf_adap.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c lf_dercor.c -o lf_dercor.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c lf_fitfun.c -o lf_fitfun.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c lf_nbhd.c -o lf_nbhd.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c lf_robust.c -o lf_robust.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c lf_vari.c -o lf_vari.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c lf_wdiag.c -o lf_wdiag.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c lfstr.c -o lfstr.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c locfit.c -o locfit.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_chol.c -o m_chol.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_eigen.c -o m_eigen.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_icirc.c -o m_icirc.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_imont.c -o m_imont.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_isimp.c -o m_isimp.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_isphr.c -o m_isphr.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_jacob.c -o m_jacob.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_max.c -o m_max.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_qr.c -o m_qr.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_solve.c -o m_solve.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_svd.c -o m_svd.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c m_vector.c -o m_vector.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c math.c -o math.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c minmax.c -o minmax.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c pcomp.c -o pcomp.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c preplot.c -o preplot.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c prob.c -o prob.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c procv.c -o procv.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c scb.c -o scb.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c scb_cons.c -o scb_cons.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c scb_crit.c -o scb_crit.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c scb_iface.c -o scb_iface.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c simul.c -o simul.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c smisc.c -o smisc.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c startlf.c -o startlf.o
+/usr/bin/gcc -std=gnu17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c weight.c -o weight.o
+/usr/bin/gcc -std=gnu17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o locfit.so S_enter.o band.o dbinom.o dens_haz.o dens_int.o dens_odi.o density.o ev_atree.o ev_interp.o ev_kdtre.o ev_main.o ev_sphere.o ev_trian.o family.o fitted.o frend.o lf_adap.o lf_dercor.o lf_fitfun.o lf_nbhd.o lf_robust.o lf_vari.o lf_wdiag.o lfstr.o locfit.o m_chol.o m_eigen.o m_icirc.o m_imont.o m_isimp.o m_isphr.o m_jacob.o m_max.o m_qr.o m_solve.o m_svd.o m_vector.o math.o minmax.o pcomp.o preplot.o prob.o procv.o scb.o scb_cons.o scb_crit.o scb_iface.o simul.o smisc.o startlf.o weight.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+No man pages found in package  ‘assorthead’ 
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking whether the compiler supports GNU C++... yes
+checking whether /usr/bin/g++ -std=gnu++17 accepts -g... yes
+checking for /usr/bin/g++ -std=gnu++17 option to enable C++11 features... none needed
+COMPILER = /usr/bin/gcc
+checking whether C compiler accepts -w... yes
+checking whether to use -Wl,-rpath setting... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for zlib.h... yes
+ON_BUILDER=false
+ON_BUILDER=false
+checking for szlib.h... no
+checking for libaec.h... no
+checking for curl/curl.h... yes
+checking for openssl/evp.h... yes
+checking for openssl/hmac.h... yes
+checking for openssl/sha.h... yes
+checking for curl_global_init in -lcurl... yes
+checking for EVP_sha256 in -lcrypto... no
+S3_VFD=--enable-ros3-vfd=no
+configure: creating ./config.status
+config.status: creating src/Makevars
+gunzip -dc hdf5small_cxx_hl_1.10.7.tar.gz | tar xf -;
+cd hdf5/libaec-1.0.4/build; \
+../configure --with-pic --enable-shared=no --prefix=/tmp/RtmpUaUZZk/R.INSTALL10637c21f19a21/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip --libdir=/tmp/RtmpUaUZZk/R.INSTALL10637c21f19a21/Rhdf5lib/src/hdf5/libaec-1.0.4/build/szip/lib \
+CC='/usr/bin/gcc' CXX='/usr/bin/g++ -std=gnu++17' \
+CPPFLAGS='-I/usr/local/include' \
+CFLAGS='-g -O2 -w -fpic' \
+AR='ar' RANLIB='ranlib'; \
+make; \
+make install
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking whether /usr/bin/gcc understands -c and -o together... yes
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by /usr/bin/gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 4718592
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking for gawk... gawk
+checking command to parse /usr/bin/nm -B output from /usr/bin/gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... 

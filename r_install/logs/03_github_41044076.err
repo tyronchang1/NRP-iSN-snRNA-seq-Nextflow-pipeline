@@ -1,0 +1,85 @@
+Registered S3 method overwritten by 'SeuratDisk':
+  method            from  
+  as.sparse.H5Group Seurat
+Downloading GitHub repo cole-trapnell-lab/monocle3@HEAD
+Installing 2 packages: sf, spdep
+trying URL 'https://cloud.r-project.org/src/contrib/sf_1.1-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spdep_1.4-2.tar.gz'
+* installing *source* package ‘sf’ ...
+** this is package ‘sf’ version ‘1.1-1’
+** package ‘sf’ successfully unpacked and MD5 sums checked
+** using staged installation
+./gdal_proj: /usr/lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+configure: error: OGRCoordinateTransformation() does not return a coord.trans: PROJ not available?
+ERROR: configuration failed for package ‘sf’
+* removing ‘/ref/rmlab/software/tyron/R-libs/sf’
+ERROR: dependency ‘sf’ is not available for package ‘spdep’
+Perhaps try a variation of:
+install.packages('sf')
+* removing ‘/ref/rmlab/software/tyron/R-libs/spdep’
+
+The downloaded source packages are in
+	‘/tmp/RtmpDCCjxs/downloaded_packages’
+ERROR: dependencies ‘sf’, ‘spdep’ are not available for package ‘monocle3’
+Perhaps try a variation of:
+install.packages(c('sf', 'spdep'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/monocle3’
+Downloading GitHub repo cole-trapnell-lab/monocle3@HEAD
+Installing 2 packages: sf, spdep
+trying URL 'https://cloud.r-project.org/src/contrib/sf_1.1-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spdep_1.4-2.tar.gz'
+* installing *source* package ‘sf’ ...
+** this is package ‘sf’ version ‘1.1-1’
+** package ‘sf’ successfully unpacked and MD5 sums checked
+** using staged installation
+./gdal_proj: /usr/lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+configure: error: OGRCoordinateTransformation() does not return a coord.trans: PROJ not available?
+ERROR: configuration failed for package ‘sf’
+* removing ‘/ref/rmlab/software/tyron/R-libs/sf’
+ERROR: dependency ‘sf’ is not available for package ‘spdep’
+Perhaps try a variation of:
+install.packages('sf')
+* removing ‘/ref/rmlab/software/tyron/R-libs/spdep’
+
+The downloaded source packages are in
+	‘/tmp/RtmpDCCjxs/downloaded_packages’
+ERROR: dependencies ‘sf’, ‘spdep’ are not available for package ‘monocle3’
+Perhaps try a variation of:
+install.packages(c('sf', 'spdep'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/monocle3’
+Downloading GitHub repo cole-trapnell-lab/monocle3@HEAD
+Installing 2 packages: sf, spdep
+trying URL 'https://cloud.r-project.org/src/contrib/sf_1.1-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/spdep_1.4-2.tar.gz'
+* installing *source* package ‘sf’ ...
+** this is package ‘sf’ version ‘1.1-1’
+** package ‘sf’ successfully unpacked and MD5 sums checked
+** using staged installation
+./gdal_proj: /usr/lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+configure: error: OGRCoordinateTransformation() does not return a coord.trans: PROJ not available?
+ERROR: configuration failed for package ‘sf’
+* removing ‘/ref/rmlab/software/tyron/R-libs/sf’
+ERROR: dependency ‘sf’ is not available for package ‘spdep’
+Perhaps try a variation of:
+install.packages('sf')
+* removing ‘/ref/rmlab/software/tyron/R-libs/spdep’
+
+The downloaded source packages are in
+	‘/tmp/RtmpDCCjxs/downloaded_packages’
+ERROR: dependencies ‘sf’, ‘spdep’ are not available for package ‘monocle3’
+Perhaps try a variation of:
+install.packages(c('sf', 'spdep'))
+* removing ‘/ref/rmlab/software/tyron/R-libs/monocle3’
+Warning messages:
+1: In i.p(...) : installation of package ‘sf’ had non-zero exit status
+2: In i.p(...) : installation of package ‘spdep’ had non-zero exit status
+3: In i.p(...) :
+  installation of package ‘/tmp/RtmpDCCjxs/file36f7ec49ce7c28/monocle3_1.4.27.tar.gz’ had non-zero exit status
+4: In i.p(...) : installation of package ‘sf’ had non-zero exit status
+5: In i.p(...) : installation of package ‘spdep’ had non-zero exit status
+6: In i.p(...) :
+  installation of package ‘/tmp/RtmpDCCjxs/file36f7ec63514be7/monocle3_1.4.27.tar.gz’ had non-zero exit status
+7: In i.p(...) : installation of package ‘sf’ had non-zero exit status
+8: In i.p(...) : installation of package ‘spdep’ had non-zero exit status
+9: In i.p(...) :
+  installation of package ‘/tmp/RtmpDCCjxs/file36f7ec17f313ed/monocle3_1.4.27.tar.gz’ had non-zero exit status

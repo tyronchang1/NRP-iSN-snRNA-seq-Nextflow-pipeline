@@ -1,0 +1,87 @@
+also installing the dependencies ‘Cairo’, ‘ragg’, ‘ggrastr’
+
+trying URL 'https://cloud.r-project.org/src/contrib/Cairo_1.7-0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/ggrastr_1.0.2.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/scCustomize_3.3.0.tar.gz'
+* installing *source* package ‘Cairo’ ...
+** this is package ‘Cairo’ version ‘1.7-0’
+** package ‘Cairo’ successfully unpacked and MD5 sums checked
+** using staged installation
+Please specify at least one package name on the command line.
+Please specify at least one package name on the command line.
+Package icu-uc was not found in the pkg-config search path.
+Perhaps you should add the directory containing `icu-uc.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'icu-uc', required by 'virtual:world', not found
+Package icu-uc was not found in the pkg-config search path.
+Perhaps you should add the directory containing `icu-uc.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'icu-uc', required by 'virtual:world', not found
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-Cairo/00new/Cairo/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (Cairo)
+* installing *source* package ‘ragg’ ...
+** this is package ‘ragg’ version ‘1.5.2’
+** package ‘ragg’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-ragg/00new/ragg/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (ragg)
+* installing *source* package ‘ggrastr’ ...
+** this is package ‘ggrastr’ version ‘1.0.2’
+** package ‘ggrastr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (ggrastr)
+* installing *source* package ‘scCustomize’ ...
+** this is package ‘scCustomize’ version ‘3.3.0’
+** package ‘scCustomize’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (scCustomize)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp04zp0V/downloaded_packages’

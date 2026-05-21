@@ -1,0 +1,107 @@
+=== R CRAN Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Tue May 19 09:06:26 PM CDT 2026
+SKIP (already installed): BiocManager
+SKIP (already installed): remotes
+SKIP (already installed): pak
+SKIP (already installed): ggplot2
+SKIP (already installed): dplyr
+SKIP (already installed): tidyr
+SKIP (already installed): readr
+SKIP (already installed): purrr
+SKIP (already installed): tibble
+SKIP (already installed): stringr
+SKIP (already installed): forcats
+SKIP (already installed): lubridate
+SKIP (already installed): scales
+SKIP (already installed): broom
+
+=== Installing: metap ===
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for gcc... (cached) /usr/bin/gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether /usr/bin/gcc accepts -g... (cached) yes
+checking for /usr/bin/gcc option to accept ISO C89... (cached) none needed
+checking for pkg-config... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+
+fftwtools 0.9-10
+================
+
+compiler flags:  
+link argument:   
+
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c jointlevel_fft_twosided.cpp -o jointlevel_fft_twosided.o
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for gcc... (cached) /usr/bin/gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether /usr/bin/gcc accepts -g... (cached) yes
+checking for /usr/bin/gcc option to accept ISO C89... (cached) none needed
+checking for pkg-config... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+
+fftwtools 0.9-10
+================
+
+compiler flags:  
+link argument:   
+
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c jointlevel_fft_twosided.cpp -o jointlevel_fft_twosided.o
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for gcc... (cached) /usr/bin/gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether /usr/bin/gcc accepts -g... (cached) yes
+checking for /usr/bin/gcc option to accept ISO C89... (cached) none needed
+checking for pkg-config... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+
+fftwtools 0.9-10
+================
+
+compiler flags:  
+link argument:   
+
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c jointlevel_fft_twosided.cpp -o jointlevel_fft_twosided.o
+FAILED: metap
+SKIP (already installed): knitr
+SKIP (already installed): lintr
+SKIP (already installed): styler
+SKIP (already installed): here
+SKIP (already installed): markdown
+SKIP (already installed): rmarkdown
+
+=== Installing: Seurat ===

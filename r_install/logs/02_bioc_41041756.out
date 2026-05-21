@@ -1,0 +1,552 @@
+=== Bioconductor Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Tue May 19 11:53:48 PM CDT 2026
+SKIP (already installed): multtest
+SKIP (already installed): ComplexHeatmap
+SKIP (already installed): DropletUtils
+
+=== Installing: AUCell ===
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+Checking directory of LIBXML_INCDIR
+Located parser file /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2/parser.h
+Checking for 1.8:  /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2
+Using libxml2.*
+checking for gzopen in -lz... no
+checking for xmlParseFile in -lxml2... no
+checking for xmlParseFile in -lxml... no
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+Checking directory of LIBXML_INCDIR
+Located parser file /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2/parser.h
+Checking for 1.8:  /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2
+Using libxml2.*
+checking for gzopen in -lz... no
+checking for xmlParseFile in -lxml2... no
+checking for xmlParseFile in -lxml... no
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+Checking directory of LIBXML_INCDIR
+Located parser file /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2/parser.h
+Checking for 1.8:  /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2
+Using libxml2.*
+checking for gzopen in -lz... no
+checking for xmlParseFile in -lxml2... no
+checking for xmlParseFile in -lxml... no
+FAILED: AUCell
+SKIP (already installed): glmGamPoi
+
+=== Installing: scDblFinder ===
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+Checking directory of LIBXML_INCDIR
+Located parser file /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2/parser.h
+Checking for 1.8:  /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2
+Using libxml2.*
+checking for gzopen in -lz... no
+checking for xmlParseFile in -lxml2... no
+checking for xmlParseFile in -lxml... no
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c Biostrings_stubs.c -o Biostrings_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+Checking directory of LIBXML_INCDIR
+Located parser file /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2/parser.h
+Checking for 1.8:  /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2
+Using libxml2.*
+checking for gzopen in -lz... no
+checking for xmlParseFile in -lxml2... no
+checking for xmlParseFile in -lxml... no
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c Biostrings_stubs.c -o Biostrings_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+Checking directory of LIBXML_INCDIR
+Located parser file /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2/parser.h
+Checking for 1.8:  /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2
+Using libxml2.*
+checking for gzopen in -lz... no
+checking for xmlParseFile in -lxml2... no
+checking for xmlParseFile in -lxml... no
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c Biostrings_stubs.c -o Biostrings_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+FAILED: scDblFinder
+SKIP (already installed): AnnotationDbi
+SKIP (already installed): clusterProfiler
+SKIP (already installed): ReactomePA
+SKIP (already installed): apeglm
+SKIP (already installed): DESeq2
+SKIP (already installed): zellkonverter
+
+=== Installing: miloR ===
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c computeMatrices.cpp -o computeMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitGeneticPLGlmm.cpp -o fitGeneticPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitPLGlmm.cpp -o fitPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c computeMatrices.cpp -o computeMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitGeneticPLGlmm.cpp -o fitGeneticPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitPLGlmm.cpp -o fitPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c computeMatrices.cpp -o computeMatrices.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitGeneticPLGlmm.cpp -o fitGeneticPLGlmm.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppML/include' -I/usr/local/include   -g -O2  -std=gnu++11 -fopenmp -fpic  -g -O2   -c fitPLGlmm.cpp -o fitPLGlmm.o
+FAILED: miloR
+SKIP (already installed): org.Mm.eg.db
+SKIP (already installed): org.Hs.eg.db
+SKIP (already installed): BiocGenerics
+SKIP (already installed): DelayedArray
+SKIP (already installed): DelayedMatrixStats
+SKIP (already installed): limma
+SKIP (already installed): S4Vectors
+SKIP (already installed): SingleCellExperiment
+SKIP (already installed): SummarizedExperiment
+SKIP (already installed): batchelor
+SKIP (already installed): HDF5Array
+SKIP (already installed): edgeR
+
+=== Installing: GSVA ===
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+Checking directory of LIBXML_INCDIR
+Located parser file /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2/parser.h
+Checking for 1.8:  /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2
+Using libxml2.*
+checking for gzopen in -lz... no
+checking for xmlParseFile in -lxml2... no
+checking for xmlParseFile in -lxml... no
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lMagick++-6.Q16 -lMagickWand-6.Q16 -lMagickCore-6.Q16
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the Magick++ library. Try installing:
+ - deb: libmagick++-dev (Debian, Ubuntu)
+ - rpm: ImageMagick-c++-devel (Fedora, CentOS, RHEL)
+ - brew: imagemagick or imagemagick@6 (MacOS)
+If Magick++ is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a Magick++.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: Magick++.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+Checking directory of LIBXML_INCDIR
+Located parser file /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2/parser.h
+Checking for 1.8:  /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2
+Using libxml2.*
+checking for gzopen in -lz... no
+checking for xmlParseFile in -lxml2... no
+checking for xmlParseFile in -lxml... no
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lMagick++-6.Q16 -lMagickWand-6.Q16 -lMagickCore-6.Q16
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the Magick++ library. Try installing:
+ - deb: libmagick++-dev (Debian, Ubuntu)
+ - rpm: ImageMagick-c++-devel (Fedora, CentOS, RHEL)
+ - brew: imagemagick or imagemagick@6 (MacOS)
+If Magick++ is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a Magick++.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: Magick++.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+Checking directory of LIBXML_INCDIR
+Located parser file /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2/parser.h
+Checking for 1.8:  /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2
+Using libxml2.*
+checking for gzopen in -lz... no
+checking for xmlParseFile in -lxml2... no
+checking for xmlParseFile in -lxml... no
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lMagick++-6.Q16 -lMagickWand-6.Q16 -lMagickCore-6.Q16
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the Magick++ library. Try installing:
+ - deb: libmagick++-dev (Debian, Ubuntu)
+ - rpm: ImageMagick-c++-devel (Fedora, CentOS, RHEL)
+ - brew: imagemagick or imagemagick@6 (MacOS)
+If Magick++ is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a Magick++.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: Magick++.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+FAILED: GSVA
+SKIP (already installed): Biobase
+SKIP (already installed): BiocParallel
+SKIP (already installed): TOAST
+SKIP (already installed): scater
+SKIP (already installed): scran
+
+=== Installing: celda ===
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/perf.cpp -o ANN/perf.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/bd_fix_rad_search.cpp -o ANN/bd_fix_rad_search.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/bd_search.cpp -o ANN/bd_search.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/kd_split.cpp -o ANN/kd_split.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/kd_pr_search.cpp -o ANN/kd_pr_search.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/kd_search.cpp -o ANN/kd_search.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/ANN.cpp -o ANN/ANN.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/brute.cpp -o ANN/brute.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/bd_tree.cpp -o ANN/bd_tree.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/kd_fix_rad_search.cpp -o ANN/kd_fix_rad_search.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/bd_pr_search.cpp -o ANN/bd_pr_search.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/kd_util.cpp -o ANN/kd_util.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/kd_tree.cpp -o ANN/kd_tree.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c ANN/kd_dump.cpp -o ANN/kd_dump.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c utilities.cpp -o utilities.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c cleanup.cpp -o cleanup.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c kNN.cpp -o kNN.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c connectedComps.cpp -o connectedComps.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c frNN.cpp -o frNN.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c regionQuery.cpp -o regionQuery.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c density.cpp -o density.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c dbscan.cpp -o dbscan.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c optics.cpp -o optics.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c JP.cpp -o JP.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c hdbscan.cpp -o hdbscan.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c dendrogram.cpp -o dendrogram.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c UnionFind.cpp -o UnionFind.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c mrd.cpp -o mrd.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c mst.cpp -o mst.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c lof.cpp -o lof.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c dbcv.cpp -o dbcv.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o dbscan.so ANN/perf.o ANN/bd_fix_rad_search.o ANN/bd_search.o ANN/kd_split.o ANN/kd_pr_search.o ANN/kd_search.o ANN/ANN.o ANN/brute.o ANN/bd_tree.o ANN/kd_fix_rad_search.o ANN/bd_pr_search.o ANN/kd_util.o ANN/kd_tree.o ANN/kd_dump.o utilities.o cleanup.o kNN.o connectedComps.o frNN.o regionQuery.o density.o dbscan.o optics.o JP.o hdbscan.o dendrogram.o UnionFind.o mrd.o mst.o lof.o dbcv.o RcppExports.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include    -fpic  -g -O2   -c dirichlet_minka.cpp -o dirichlet_minka.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include    -fpic  -g -O2   -c stationary.cpp -o stationary.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include    -fpic  -g -O2   -c stationary_Eigen.cpp -o stationary_Eigen.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppProgress/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include    -fpic  -g -O2   -c stationary_mle.cpp -o stationary_mle.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o MCMCprecision.so RcppExports.o dirichlet_minka.o init.o stationary.o stationary_Eigen.o stationary_mle.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openblas-0.3.30-ymof5atpgk37dyb3nxfcsanao6bttjg4/lib -lopenblas -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include   -fopenmp  -fpic  -g -O2   -c DecontX.cpp -o DecontX.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include   -fopenmp  -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include   -fopenmp  -fpic  -g -O2   -c cG_calcGibbsProbY.cpp -o cG_calcGibbsProbY.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include   -fopenmp  -fpic  -g -O2   -c eigenMatMultInt.cpp -o eigenMatMultInt.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include   -fopenmp  -fpic  -g -O2   -c matrixNorm.cpp -o matrixNorm.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include    -fpic  -g -O2  -c matrixSums.c -o matrixSums.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include   -fopenmp  -fpic  -g -O2   -c matrixSumsSparse.cpp -o matrixSumsSparse.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I/usr/local/include    -fpic  -g -O2  -c perplexity.c -o perplexity.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o celda.so DecontX.o RcppExports.o cG_calcGibbsProbY.o eigenMatMultInt.o matrixNorm.o matrixSums.o matrixSumsSparse.o perplexity.o -fopenmp -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openblas-0.3.30-ymof5atpgk37dyb3nxfcsanao6bttjg4/lib -lopenblas -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+OK: celda
+
+=== Installing: singleCellTK ===
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c anova.c -o anova.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c anovapred.c -o anovapred.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c branch.c -o branch.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c bsplit.c -o bsplit.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c choose_surg.c -o choose_surg.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c fix_cp.c -o fix_cp.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c free_tree.c -o free_tree.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c gini.c -o gini.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c graycode.c -o graycode.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c insert_split.c -o insert_split.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c make_cp_list.c -o make_cp_list.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c make_cp_table.c -o make_cp_table.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c mysort.c -o mysort.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c nodesplit.c -o nodesplit.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c partition.c -o partition.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c poisson.c -o poisson.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c pred_rpart.c -o pred_rpart.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c print_tree.c -o print_tree.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rpart.c -o rpart.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rpart_callback.c -o rpart_callback.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rpartexp.c -o rpartexp.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rpartexp2.c -o rpartexp2.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rpcountup.c -o rpcountup.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rpmatrix.c -o rpmatrix.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rundown.c -o rundown.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rundown2.c -o rundown2.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c surrogate.c -o surrogate.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c usersplit.c -o usersplit.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c xpred.c -o xpred.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c xval.c -o xval.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o rpart.so anova.o anovapred.o branch.o bsplit.o choose_surg.o fix_cp.o free_tree.o gini.o graycode.o init.o insert_split.o make_cp_list.o make_cp_table.o mysort.o nodesplit.o partition.o poisson.o pred_rpart.o print_tree.o rpart.o rpart_callback.o rpartexp.o rpartexp2.o rpcountup.o rpmatrix.o rundown.o rundown2.o surrogate.o usersplit.o xpred.o xval.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c R_systat.c -o R_systat.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c Rdbfread.c -o Rdbfread.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c Rdbfwrite.c -o Rdbfwrite.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c SASxport.c -o SASxport.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c avl.c -o avl.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c dbfopen.c -o dbfopen.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c file-handle.c -o file-handle.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c format.c -o format.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c minitab.c -o minitab.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c pfm-read.c -o pfm-read.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c sfm-read.c -o sfm-read.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c spss.c -o spss.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c stataread.c -o stataread.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o foreign.so R_systat.o Rdbfread.o Rdbfwrite.o SASxport.o avl.o dbfopen.o file-handle.o format.o init.o minitab.o pfm-read.o sfm-read.o spss.o stataread.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+No man pages found in package  ‘alabaster.schemas’ 
+Using PKG_CFLAGS=
+Using PKG_LIBS=-lMagick++-6.Q16 -lMagickWand-6.Q16 -lMagickCore-6.Q16
+--------------------------- [ANTICONF] --------------------------------
+Configuration failed to find the Magick++ library. Try installing:
+ - deb: libmagick++-dev (Debian, Ubuntu)
+ - rpm: ImageMagick-c++-devel (Fedora, CentOS, RHEL)
+ - brew: imagemagick or imagemagick@6 (MacOS)
+If Magick++ is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a Magick++.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+-------------------------- [ERROR MESSAGE] ---------------------------
+<stdin>:1:10: fatal error: Magick++.h: No such file or directory
+compilation terminated.
+--------------------------------------------------------------------
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c Biostrings_stubs.c -o Biostrings_stubs.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rhtslib/include' -I'/ref/rmlab/software/tyron/R-libs/S4Vectors/include' -I'/ref/rmlab/software/tyron/R-libs/IRanges/include' -I'/ref/rmlab/software/tyron/R-libs/XVector/include' -I'/ref/rmlab/software/tyron/R-libs/Biostrings/include' -I/usr/local/include    -fpic  -g -O2  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+Creating a new generic function for ‘smooth’ in package ‘ProtGenerics’
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether /usr/bin/g++ -std=gnu++17 accepts -g... yes
+checking for /usr/bin/g++ -std=gnu++17 option to enable C++11 features... none needed
+checking how to run the C++ preprocessor... /usr/bin/g++ -std=gnu++17 -E
+checking for gcc... /usr/bin/gcc
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking whether the compiler supports GNU C++... (cached) yes
+checking whether /usr/bin/g++ -std=gnu++17 accepts -g... (cached) yes
+checking for /usr/bin/g++ -std=gnu++17 option to enable C++11 features... (cached) none needed
+checking tbb available for compiling and linking:... no
+configure: Package CPP flags: 
+configure: Package LIBS: 
+configure: creating ./config.status
+config.status: creating src/Makevars
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -DARMA_64BIT_WORD=1  -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -DARMA_64BIT_WORD=1  -fpic  -g -O2   -c linear.cpp -o linear.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -DARMA_64BIT_WORD=1  -fpic  -g -O2   -c mask.cpp -o mask.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -DARMA_64BIT_WORD=1  -fpic  -g -O2   -c pair.cpp -o pair.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I/usr/local/include   -DARMA_64BIT_WORD=1  -fpic  -g -O2   -c utility.cpp -o utility.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o proxyC.so RcppExports.o linear.o mask.o pair.o utility.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openblas-0.3.30-ymof5atpgk37dyb3nxfcsanao6bttjg4/lib -lopenblas -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c getsizeratios.c -o getsizeratios.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c increasingreg.c -o increasingreg.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c sigmashrink.c -o sigmashrink.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c wipeout.c -o wipeout.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o ruv.so getsizeratios.o increasingreg.o init.o sigmashrink.o wipeout.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+Checking directory of LIBXML_INCDIR
+Located parser file /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2/parser.h
+Checking for 1.8:  /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/libxml2-2.13.5-qwekezfj7neddz4bmwmp2gcvsjwhh2qx/include/libxml2
+Using libxml2.*
+checking for gzopen in -lz... no
+checking for xmlParseFile in -lxml2... no
+checking for xmlParseFile in -lxml... no
+/usr/bin/gfortran  -fpic  -g -O2  -c plusregC.f -o plusregC.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c softImpute_init.c -o softImpute_init.o
+/usr/bin/gfortran  -fpic  -g -O2  -c suv.f -o suv.o
+/usr/bin/gfortran  -fpic  -g -O2  -c suvC.f -o suvC.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o softImpute.so plusregC.o softImpute_init.o suv.o suvC.o -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... /usr/bin/gcc -E
+checking for gcc... (cached) /usr/bin/gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether /usr/bin/gcc accepts -g... (cached) yes
+checking for /usr/bin/gcc option to accept ISO C89... (cached) none needed
+checking for pkg-config... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+
+fftwtools 0.9-10
+================
+
+compiler flags:  
+link argument:   
+
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c jointlevel_fft_twosided.cpp -o jointlevel_fft_twosided.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c ica.c -o ica.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o fastICA.so ica.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openblas-0.3.30-ymof5atpgk37dyb3nxfcsanao6bttjg4/lib -lopenblas -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gfortran  -fpic  -g -O2  -c mclust.f -o mclust.o
+/usr/bin/gfortran  -fpic  -g -O2  -c mclust2.f -o mclust2.o
+/usr/bin/gfortran  -fpic  -g -O2  -c util.f -o util.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o mclust.so init.o mclust.o mclust2.o util.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openblas-0.3.30-ymof5atpgk37dyb3nxfcsanao6bttjg4/lib -lopenblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c ExponentialUpperC.c -o ExponentialUpperC.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c RdistEarth.c -o RdistEarth.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c addToDiagC.c -o addToDiagC.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c compactToMatC.c -o compactToMatC.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c expfnC.c -o expfnC.o
+/usr/bin/gfortran  -fpic  -g -O2  -c fieldsF77Code.f -o fieldsF77Code.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c multebC.c -o multebC.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c rdistC.c -o rdistC.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o fields.so ExponentialUpperC.o RdistEarth.o addToDiagC.o compactToMatC.o expfnC.o fieldsF77Code.o init.o multebC.o rdistC.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openblas-0.3.30-ymof5atpgk37dyb3nxfcsanao6bttjg4/lib -lopenblas -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/beachmat/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/BiocNeighbors/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/beachmat/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/BiocNeighbors/include' -I/usr/local/include    -fpic  -g -O2   -c classify_integrated.cpp -o classify_integrated.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/beachmat/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/BiocNeighbors/include' -I/usr/local/include    -fpic  -g -O2   -c classify_single.cpp -o classify_single.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/beachmat/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/BiocNeighbors/include' -I/usr/local/include    -fpic  -g -O2   -c find_classic_markers.cpp -o find_classic_markers.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/beachmat/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/BiocNeighbors/include' -I/usr/local/include    -fpic  -g -O2   -c grouped_medians.cpp -o grouped_medians.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/beachmat/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/BiocNeighbors/include' -I/usr/local/include    -fpic  -g -O2   -c set_executor.cpp -o set_executor.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/beachmat/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/BiocNeighbors/include' -I/usr/local/include    -fpic  -g -O2   -c train_integrated.cpp -o train_integrated.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/beachmat/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/BiocNeighbors/include' -I/usr/local/include    -fpic  -g -O2   -c train_single.cpp -o train_single.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o SingleR.so RcppExports.o classify_integrated.o classify_single.o find_classic_markers.o grouped_medians.o set_executor.o train_integrated.o train_single.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++11 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c readEDS.cpp -o readEDS.o
+/usr/bin/g++ -std=gnu++11 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o eds.so RcppExports.o readEDS.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I"../inst/include" -I"/ref/rmlab/software/tyron/R-libs/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -DUSE_STANC3 -D_HAS_AUTO_PTR_ETC=0 -I'/ref/rmlab/software/tyron/R-libs/BH/include' -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -I'/ref/rmlab/software/tyron/R-libs/StanHeaders/include' -I'/ref/rmlab/software/tyron/R-libs/rstan/include' -I/usr/local/include    -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -g -O2   -c PoiSMMsliceInner.cpp -o PoiSMMsliceInner.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I"../inst/include" -I"/ref/rmlab/software/tyron/R-libs/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -DUSE_STANC3 -D_HAS_AUTO_PTR_ETC=0 -I'/ref/rmlab/software/tyron/R-libs/BH/include' -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -I'/ref/rmlab/software/tyron/R-libs/StanHeaders/include' -I'/ref/rmlab/software/tyron/R-libs/rstan/include' -I/usr/local/include    -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I"../inst/include" -I"/ref/rmlab/software/tyron/R-libs/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -DUSE_STANC3 -D_HAS_AUTO_PTR_ETC=0 -I'/ref/rmlab/software/tyron/R-libs/BH/include' -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -I'/ref/rmlab/software/tyron/R-libs/StanHeaders/include' -I'/ref/rmlab/software/tyron/R-libs/rstan/include' -I/usr/local/include    -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -g -O2   -c linbin.cpp -o linbin.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I"../inst/include" -I"/ref/rmlab/software/tyron/R-libs/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -DUSE_STANC3 -D_HAS_AUTO_PTR_ETC=0 -I'/ref/rmlab/software/tyron/R-libs/BH/include' -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -I'/ref/rmlab/software/tyron/R-libs/StanHeaders/include' -I'/ref/rmlab/software/tyron/R-libs/rstan/include' -I/usr/local/include    -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -g -O2   -c logUnnDens.cpp -o logUnnDens.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I"../inst/include" -I"/ref/rmlab/software/tyron/R-libs/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -DUSE_STANC3 -D_HAS_AUTO_PTR_ETC=0 -I'/ref/rmlab/software/tyron/R-libs/BH/include' -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -I'/ref/rmlab/software/tyron/R-libs/StanHeaders/include' -I'/ref/rmlab/software/tyron/R-libs/rstan/include' -I/usr/local/include    -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -g -O2   -c printPercMsgs.cpp -o printPercMsgs.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I"../inst/include" -I"/ref/rmlab/software/tyron/R-libs/StanHeaders/include/src" -DBOOST_DISABLE_ASSERTS -DEIGEN_NO_DEBUG -DBOOST_MATH_OVERFLOW_ERROR_POLICY=errno_on_error -DUSE_STANC3 -D_HAS_AUTO_PTR_ETC=0 -I'/ref/rmlab/software/tyron/R-libs/BH/include' -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/RcppArmadillo/include' -I'/ref/rmlab/software/tyron/R-libs/RcppEigen/include' -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -I'/ref/rmlab/software/tyron/R-libs/StanHeaders/include' -I'/ref/rmlab/software/tyron/R-libs/rstan/include' -I/usr/local/include    -I'/ref/rmlab/software/tyron/R-libs/RcppParallel/include' -D_REENTRANT -DSTAN_THREADS   -fpic  -g -O2   -c stanExports_PoissonSimpleMixedModel.cc -o stanExports_PoissonSimpleMixedModel.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o densEstBayes.so PoiSMMsliceInner.o RcppExports.o linbin.o logUnnDens.o printPercMsgs.o stanExports_PoissonSimpleMixedModel.o -L/ref/rmlab/software/tyron/R-libs/RcppParallel/lib/ -Wl,-rpath,/ref/rmlab/software/tyron/R-libs/RcppParallel/lib/ -ltbb -ltbbmalloc -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openblas-0.3.30-ymof5atpgk37dyb3nxfcsanao6bttjg4/lib -lopenblas -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c Hmisc.c -o Hmisc.o
+/usr/bin/gfortran  -fpic  -g -O2  -c  cidxcn.f90 -o cidxcn.o
+/usr/bin/gfortran  -fpic  -g -O2  -c  cidxcp.f90 -o cidxcp.o
+/usr/bin/gfortran  -fpic  -g -O2  -c  cutgn.f90 -o cutgn.o
+/usr/bin/gfortran  -fpic  -g -O2  -c  hlqest.f90 -o hlqest.o
+/usr/bin/gfortran  -fpic  -g -O2  -c  hoeffd.f90 -o hoeffd.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gfortran  -fpic  -g -O2  -c  jacklins.f90 -o jacklins.o
+/usr/bin/gfortran  -fpic  -g -O2  -c largrec.f -o largrec.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c mChoice.c -o mChoice.o
+/usr/bin/gfortran  -fpic  -g -O2  -c  maxempr.f90 -o maxempr.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c nstr.c -o nstr.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c ranksort.c -o ranksort.o
+/usr/bin/gfortran  -fpic  -g -O2  -c  rcorr.f90 -o rcorr.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c string_box.c -o string_box.o
+/usr/bin/gfortran  -fpic  -g -O2  -c  wclosest.f90 -o wclosest.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o Hmisc.so Hmisc.o cidxcn.o cidxcp.o cutgn.o hlqest.o hoeffd.o init.o jacklins.o largrec.o mChoice.o maxempr.o nstr.o ranksort.o rcorr.o string_box.o wclosest.o -lgfortran -lm -lquadmath -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/Rhdf5lib/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/Rhdf5lib/include' -I/usr/local/include    -fpic  -g -O2   -c check_csv.cpp -o check_csv.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/Rhdf5lib/include' -I/usr/local/include    -fpic  -g -O2   -c check_list.cpp -o check_list.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/Rhdf5lib/include' -I/usr/local/include    -fpic  -g -O2   -c choose_numeric_missing_placeholder.cpp -o choose_numeric_missing_placeholder.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/Rhdf5lib/include' -I/usr/local/include    -fpic  -g -O2   -c is_rfc3339.cpp -o is_rfc3339.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/Rhdf5lib/include' -I/usr/local/include    -fpic  -g -O2   -c load_csv.cpp -o load_csv.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/Rhdf5lib/include' -I/usr/local/include    -fpic  -g -O2   -c load_list.cpp -o load_list.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/Rhdf5lib/include' -I/usr/local/include    -fpic  -g -O2   -c validate.cpp -o validate.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -I../inst/include -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I'/ref/rmlab/software/tyron/R-libs/assorthead/include' -I'/ref/rmlab/software/tyron/R-libs/Rhdf5lib/include' -I/usr/local/include    -fpic  -g -O2   -c vls.cpp -o vls.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o alabaster.base.so RcppExports.o check_csv.o check_list.o choose_numeric_missing_placeholder.o is_rfc3339.o load_csv.o load_list.o validate.o vls.o /ref/rmlab/software/tyron/R-libs/Rhdf5lib/lib/libhdf5_cpp.a /ref/rmlab/software/tyron/R-libs/Rhdf5lib/lib/libhdf5.a -L/ref/rmlab/software/tyron/R-libs/Rhdf5lib/lib -lsz -laec -lz -ldl -lm -lz -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c init.c -o init.o
+/usr/bin/gcc -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c ks.c -o ks.o
+/usr/bin/gcc -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o distr.so init.o ks.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+Warning in packageDescription("distrEx") :
+  no package 'distrEx' was found
+Creating a new generic function for ‘qqplot’ in package ‘distr’
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c collect_attributes.cpp -o collect_attributes.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o alabaster.matrix.so RcppExports.o collect_attributes.o -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR

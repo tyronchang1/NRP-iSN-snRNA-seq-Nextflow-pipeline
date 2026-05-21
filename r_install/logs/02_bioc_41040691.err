@@ -1,0 +1,139 @@
+Bioconductor version 3.22 (BiocManager 1.30.27), R 4.5.2 (2025-10-31)
+Installing package(s) 'DropletUtils'
+also installing the dependencies ‘sparseMatrixStats’, ‘h5mread’, ‘rhdf5filters’, ‘limma’, ‘SingleCellExperiment’, ‘GenomicRanges’, ‘SummarizedExperiment’, ‘BiocParallel’, ‘SparseArray’, ‘DelayedArray’, ‘DelayedMatrixStats’, ‘HDF5Array’, ‘rhdf5’, ‘edgeR’, ‘beachmat’, ‘scuttle’, ‘Rhdf5lib’
+
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/sparseMatrixStats_1.22.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/h5mread_1.2.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/rhdf5filters_1.22.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/limma_3.66.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SingleCellExperiment_1.32.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/GenomicRanges_1.62.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SummarizedExperiment_1.40.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/BiocParallel_1.44.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/SparseArray_1.10.10.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/DelayedArray_0.36.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/DelayedMatrixStats_1.32.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/HDF5Array_1.38.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/rhdf5_2.54.1.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/edgeR_4.8.2.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/beachmat_2.26.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/scuttle_1.20.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/Rhdf5lib_1.32.0.tar.gz'
+trying URL 'https://bioconductor.org/packages/3.22/bioc/src/contrib/DropletUtils_1.30.0.tar.gz'
+* installing *source* package ‘sparseMatrixStats’ ...
+** this is package ‘sparseMatrixStats’ version ‘1.22.0’
+** package ‘sparseMatrixStats’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using C++11
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-sparseMatrixStats/00new/sparseMatrixStats/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (sparseMatrixStats)
+* installing *source* package ‘limma’ ...
+** this is package ‘limma’ version ‘3.66.0’
+** package ‘limma’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-limma/00new/limma/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (limma)
+* installing *source* package ‘GenomicRanges’ ...
+** this is package ‘GenomicRanges’ version ‘1.62.1’
+** package ‘GenomicRanges’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-GenomicRanges/00new/GenomicRanges/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (GenomicRanges)
+* installing *source* package ‘BiocParallel’ ...
+** this is package ‘BiocParallel’ version ‘1.44.0’
+** package ‘BiocParallel’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+using C++11
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-BiocParallel/00new/BiocParallel/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (BiocParallel)
+* installing *source* package ‘SparseArray’ ...
+** this is package ‘SparseArray’ version ‘1.10.10’
+** package ‘SparseArray’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+SparseArray_subsetting.c: In function ‘REC_subset_SVT_as_SVT’:
+SparseArray_subsetting.c:843:26: warning: comparison between pointer and integer
+  843 |                 if (offs != i2 || ans_elt != subSVT)
+      |                          ^~
+installing to /ref/rmlab/software/tyron/R-libs/00LOCK-SparseArray/00new/SparseArray/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+readelf: /lib64/libcrypto.so.3: version `OPENSSL_3.6.0' not found (required by /ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/openssl-3.6.0-hdu4phhqvbzn54grs4bbnfjpbma7zlux/lib64/libssl.so.3)
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (SparseArray)
+* installing *source* package ‘Rhdf5lib’ ...
+** this is package ‘Rhdf5lib’ version ‘1.32.0’
+** package ‘Rhdf5lib’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-11)’
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+[2026-05-19T22:39:41.253] error: *** JOB 41040691 ON n193 CANCELLED AT 2026-05-19T22:39:41 DUE to SIGNAL Terminated ***

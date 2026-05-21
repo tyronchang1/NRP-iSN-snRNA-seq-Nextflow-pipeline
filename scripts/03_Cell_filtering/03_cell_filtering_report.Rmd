@@ -1,0 +1,204 @@
+---
+title: "Stage 03 — Cell Quality Filtering"
+subtitle: "iSN snRNA-seq Pipeline"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    theme: flatly
+    self_contained: true
+    dev: ragg_png
+knit: (function(input, ...) rmarkdown::render(input, output_dir = "Cell_filtering_output", ...))
+params:
+  project_root: "/scratch/rmlab/rmlab_shared3/tyron/Rscriptv2/iSN/iSN_claude"
+  track: "decontx"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.align = "center", dev = "ragg_png")
+knitr::opts_knit$set(root.dir = params$project_root)
+options(knitr.graphics.rel_path = FALSE)
+```
+
+```{r libraries}
+library(Seurat)
+library(ggplot2)
+library(dplyr)
+library(scales)
+library(patchwork)
+library(knitr)
+```
+
+```{r load}
+out_dir <- file.path(params$project_root, "scripts/03_Cell_filtering/Cell_filtering_output")
+
+if (params$track == "soupx") {
+  seu_pre  <- readRDS(file.path(params$project_root,
+    "scripts/02_scDblFinder_soupx/scDblFinder_output/iSN_doubletstep.rds"))
+  seu_post <- readRDS(file.path(out_dir, "03_seu_cellfiltered_soupx.rds"))
+  nfeature_threshold <- 700
+  xlim_ncount        <- 90000
+  track_label        <- "SoupX"
+} else {
+  seu_pre  <- readRDS(file.path(params$project_root,
+    "scripts/02.1_scDblFinder_decontX/scDblFinder_output/iSN_decontX_scDblFinder.rds"))
+  seu_post <- readRDS(file.path(out_dir, "03_seu_cellfiltered_decontx.rds"))
+  nfeature_threshold <- 800
+  xlim_ncount        <- 40000
+  track_label        <- "DecontX"
+}
+
+seu_pre[["percent.mt"]] <- PercentageFeatureSet(seu_pre, pattern = "^MT-")
+meta_pre <- seu_pre@meta.data
+```
+
+---
+
+## `r track_label` track — QC metric distributions
+
+```{r violin-sample, fig.width=12, fig.height=5}
+VlnPlot(seu_pre, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"),
+        group.by = "sample_group", pt.size = 0.01, ncol = 3) &
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r violin-doublet, fig.width=12, fig.height=5}
+VlnPlot(seu_pre, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"),
+        group.by = "scDblFinder.class", pt.size = 0.01, ncol = 3)
+```
+
+## `r track_label` track — QC scatter plots
+
+```{r g1, fig.width=11, fig.height=8}
+# 1 — nFeature vs percent.mt (color = doublet classification)
+ggplot(meta_pre, aes(x = percent.mt, y = nFeature_RNA, color = scDblFinder.class)) +
+  geom_point(size = 0.01) +
+  geom_vline(aes(xintercept = 20), color = "red", lty = "longdash") +
+  geom_hline(yintercept = nfeature_threshold, color = "black", lty = "longdash") +
+  facet_wrap(~sample_group) +
+  scale_x_continuous(breaks = seq(0, 100, 10), lim = c(0, 100)) +
+  scale_y_continuous(breaks = seq(0, 10000, 2000), lim = c(0, 10000)) +
+  theme_bw() +
+  labs(title = paste0("nFeature vs percent.mt — color: doublet class [", track_label, "]"))
+```
+
+```{r g2, fig.width=11, fig.height=8}
+# 2 — nFeature vs percent.mt (color = sample)
+ggplot(meta_pre, aes(x = percent.mt, y = nFeature_RNA, color = sample_group)) +
+  geom_point(size = 0.01) +
+  geom_vline(aes(xintercept = 20), color = "red", lty = "longdash") +
+  geom_hline(aes(yintercept = 5000), color = "black", lty = "longdash") +
+  facet_wrap(~sample_group) +
+  scale_x_continuous(breaks = seq(0, 100, 10), lim = c(0, 100)) +
+  scale_y_continuous(breaks = seq(0, 10000, 2000), lim = c(0, 10000)) +
+  theme_bw() +
+  labs(title = paste0("nFeature vs percent.mt — color: sample [", track_label, "]"))
+```
+
+```{r g3, fig.width=11, fig.height=8}
+# 3 — nFeature vs percent.mt (color = UMI count)
+ggplot(meta_pre, aes(x = percent.mt, y = nFeature_RNA, color = nCount_RNA)) +
+  geom_point(size = 0.75) +
+  facet_grid(~sample_group) +
+  scale_y_continuous(breaks = seq(0, 10000, 500), limits = c(0, 10000)) +
+  geom_hline(yintercept = nfeature_threshold, color = "black", lty = "longdash") +
+  geom_vline(aes(xintercept = 20), color = "black", lty = "longdash") +
+  theme_get() +
+  scale_colour_gradient(low = "gold", high = "red", limits = c(0, 8000), oob = squish) +
+  labs(title = paste0("nFeature vs percent.mt — color: nCount_RNA [", track_label, "]"))
+```
+
+```{r g4, fig.width=11, fig.height=8}
+# 4 — nFeature vs percent.mt (color = doublet classification, larger points)
+ggplot(meta_pre, aes(x = percent.mt, y = nFeature_RNA, color = scDblFinder.class)) +
+  geom_point(size = 0.75) +
+  facet_wrap(~sample_group, ncol = 3) +
+  scale_x_continuous(breaks = seq(0, 100, 10), lim = c(0, 100)) +
+  geom_vline(aes(xintercept = 20), color = "black", lty = "longdash") +
+  theme_bw() +
+  labs(title = paste0("nFeature vs percent.mt — color: doublet class (larger points) [", track_label, "]"))
+```
+
+```{r g5, fig.width=11, fig.height=8}
+# 5 — nFeature vs nCount (color = percent.mt)
+ggplot(meta_pre, aes(x = nCount_RNA, y = nFeature_RNA, color = percent.mt)) +
+  geom_point(size = 0.75) +
+  facet_wrap(~sample_group, ncol = 3) +
+  theme_bw() +
+  theme(plot.title = element_text(size = 10)) +
+  geom_vline(aes(xintercept = 500), color = "black", lty = "longdash") +
+  RotatedAxis() +
+  xlim(0, xlim_ncount) +
+  ylim(0, 10000) +
+  scale_colour_gradient(low = "gold", high = "red", limits = c(0, 50), oob = squish) +
+  ggtitle(paste0("nFeature vs nCounts [", track_label, "]"))
+```
+
+```{r g6, fig.width=11, fig.height=8}
+# 6 — nFeature vs nCount (color = doublet classification)
+ggplot(meta_pre, aes(x = nCount_RNA, y = nFeature_RNA, color = scDblFinder.class)) +
+  geom_point(size = 0.75) +
+  geom_vline(aes(xintercept = 500), color = "black", lty = "longdash") +
+  geom_hline(yintercept = nfeature_threshold, color = "black", lty = "longdash") +
+  facet_wrap(~sample_group, ncol = 3) +
+  scale_x_continuous(breaks = seq(0, 20000, 2000), lim = c(0, 20000)) +
+  theme_bw() +
+  ylim(0, 10000) +
+  labs(title = paste0("nFeature vs nCount — color: doublet class [", track_label, "]"))
+```
+
+## Filter summary and overlay
+
+```{r filter-summary}
+keepMito  <- sum(meta_pre$percent.mt <= 20)
+keepGenes <- sum(meta_pre$nFeature_RNA > nfeature_threshold)
+keepUMI   <- sum(meta_pre$nCount_RNA > 500)
+keepDub   <- sum(meta_pre$scDblFinder.class == "singlet")
+
+kept_barcodes <- rownames(meta_pre)[
+  meta_pre$percent.mt <= 20 &
+  meta_pre$nFeature_RNA > nfeature_threshold &
+  meta_pre$nCount_RNA > 500 &
+  meta_pre$scDblFinder.class == "singlet"
+]
+
+df_filt <- data.frame(
+  Filter  = c("Total", "percent.mt <= 20%",
+              paste0("nFeature > ", nfeature_threshold),
+              "nCount > 500", "Singlets only", "Pass all"),
+  N_cells = c(nrow(meta_pre), keepMito, keepGenes, keepUMI, keepDub, length(kept_barcodes))
+)
+knitr::kable(df_filt, caption = paste0(track_label, " track: cells passing each filter"))
+```
+
+```{r overlay, fig.width=14, fig.height=5}
+metaKeep <- meta_pre[kept_barcodes, , drop = FALSE]
+ggplot(meta_pre, aes(x = percent.mt, y = nFeature_RNA)) +
+  geom_point(aes(color = "all"), size = 0.75) +
+  facet_wrap(~sample_group, nrow = 1) +
+  theme_bw() +
+  geom_point(data = metaKeep, aes(x = percent.mt, y = nFeature_RNA, color = "kept"), size = 0.75) +
+  scale_color_manual(values = c(all = "grey90", kept = "red")) +
+  ggtitle(paste0(track_label, ": pre-filter (grey) vs kept (red)"))
+```
+
+## Pre- vs post-filter cell counts
+
+```{r cell-counts}
+counts_tbl <- data.frame(
+  Track         = track_label,
+  Pre_filter    = ncol(seu_pre),
+  Post_filter   = ncol(seu_post),
+  Cells_removed = ncol(seu_pre) - ncol(seu_post),
+  Pct_removed   = round((ncol(seu_pre) - ncol(seu_post)) / ncol(seu_pre) * 100, 1)
+)
+knitr::kable(counts_tbl, caption = "Cells removed by QC filtering")
+```
+
+## Session info
+
+```{r session-info}
+sessionInfo()
+```

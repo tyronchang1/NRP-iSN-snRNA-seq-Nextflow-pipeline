@@ -1,0 +1,189 @@
+=== GitHub Package Install ===
+R: R version 4.5.2 (2025-10-31) -- "[Not] Part in a Rumble"
+Library: /ref/rmlab/software/tyron/R-libs
+Start: Wed May 20 02:40:52 AM CDT 2026
+SKIP (already installed): DoubletFinder
+SKIP (already installed): BPCells
+SKIP (already installed): SeuratDisk
+SKIP (already installed): harmony
+SKIP (already installed): presto
+
+=== Installing: monocle3 (cole-trapnell-lab/monocle3) ===
+configure: units: 1.0-1
+checking for default C++ standard... 201703
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether /usr/bin/g++ -std=gnu++17 accepts -g... yes
+checking for /usr/bin/g++ -std=gnu++17 option to enable C++11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for _Bool... no
+checking for stdbool.h that conforms to C99 or later... yes
+checking for error_at_line... yes
+checking for gcc... /usr/bin/gcc
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for brew... no
+checking for XML_ParserCreate in -lexpat... no
+checking for udunits2.h... no
+checking for udunits2/udunits2.h... yes
+checking for ut_read_xml in -ludunits2... yes
+checking for exception propagation in -ludunits2... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DUDUNITS2_DIR=1 -I/ref/rmlab/software/tyron/udunits2-devel/usr/include  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DUDUNITS2_DIR=1 -I/ref/rmlab/software/tyron/udunits2-devel/usr/include  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c tokenizer.cpp -o tokenizer.o
+/usr/bin/g++ -std=gnu++17 -I"/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/include" -DNDEBUG -DUDUNITS2_DIR=1 -I/ref/rmlab/software/tyron/udunits2-devel/usr/include  -I'/ref/rmlab/software/tyron/R-libs/Rcpp/include' -I/usr/local/include    -fpic  -g -O2   -c udunits.cpp -o udunits.o
+/usr/bin/g++ -std=gnu++17 -shared -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -Wl,-rpath,/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -o units.so RcppExports.o tokenizer.o udunits.o -L-L/ref/rmlab/software/tyron/udunits2-devel/usr/lib64 -ludunits2 -ludunits2 -L/ref/rmlab/software/spack-1.1.0/opt/spack/linux-x86_64/r-4.5.2-jga4yt5sdbzfddqszotqf64bn5a6iu2m/rlib/R/lib -lR
+configure: CC: /usr/bin/gcc
+configure: CXX: /usr/bin/g++ -std=gnu++17
+checking for gdal-config... /ref/rmlab/software/tyron/spatial-devel/usr/bin/gdal-config
+checking gdal-config usability... yes
+configure: GDAL: 3.10.3
+checking GDAL version >= 2.0.1... yes
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for gdal.h... no
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/RtmpdnQOXb/remotes36db5f11959447/cole-trapnell-lab-monocle3-536f103/DESCRIPTION’ ... OK
+* preparing ‘monocle3’:
+* checking DESCRIPTION meta-information ... OK
+* cleaning src
+* excluding invalid files
+Subdirectory 'R' contains invalid file names:
+  ‘bpcells.R.0’
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+Omitted ‘LazyData’ from DESCRIPTION
+* building ‘monocle3_1.4.27.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+configure: CC: /usr/bin/gcc
+configure: CXX: /usr/bin/g++ -std=gnu++17
+checking for gdal-config... /ref/rmlab/software/tyron/spatial-devel/usr/bin/gdal-config
+checking gdal-config usability... yes
+configure: GDAL: 3.10.3
+checking GDAL version >= 2.0.1... yes
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for gdal.h... no
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/RtmpdnQOXb/remotes36db5f593660d5/cole-trapnell-lab-monocle3-536f103/DESCRIPTION’ ... OK
+* preparing ‘monocle3’:
+* checking DESCRIPTION meta-information ... OK
+* cleaning src
+* excluding invalid files
+Subdirectory 'R' contains invalid file names:
+  ‘bpcells.R.0’
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+Omitted ‘LazyData’ from DESCRIPTION
+* building ‘monocle3_1.4.27.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+configure: CC: /usr/bin/gcc
+configure: CXX: /usr/bin/g++ -std=gnu++17
+checking for gdal-config... /ref/rmlab/software/tyron/spatial-devel/usr/bin/gdal-config
+checking gdal-config usability... yes
+configure: GDAL: 3.10.3
+checking GDAL version >= 2.0.1... yes
+checking for gcc... /usr/bin/gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /usr/bin/gcc accepts -g... yes
+checking for /usr/bin/gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for gdal.h... no
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file ‘/tmp/RtmpdnQOXb/remotes36db5f78339b9c/cole-trapnell-lab-monocle3-536f103/DESCRIPTION’ ... OK
+* preparing ‘monocle3’:
+* checking DESCRIPTION meta-information ... OK
+* cleaning src
+* excluding invalid files
+Subdirectory 'R' contains invalid file names:
+  ‘bpcells.R.0’
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+Omitted ‘LazyData’ from DESCRIPTION
+* building ‘monocle3_1.4.27.tar.gz’
+Warning: invalid uid value replaced by that for user 'nobody'
+Warning: invalid gid value replaced by that for user 'nobody'
+
+FAILED: cole-trapnell-lab/monocle3
+SKIP (already installed): SeuratWrappers
+SKIP (already installed): SeuratData
+SKIP (already installed): scSHC
+SKIP (already installed): scclusteval
+SKIP (already installed): scGSVA
+SKIP (already installed): garnett
+SKIP (already installed): ShinyCell2
+SKIP (already installed): EPIC
+SKIP (already installed): MuSiC
+SKIP (already installed): xbioc
+SKIP (already installed): MuSiC2
+SKIP (already installed): decontX
+
+--- FAILED REPOS ---
+cole-trapnell-lab/monocle3 
+
+To retry a single package:
+  remotes::install_github('<repo>', lib='/ref/rmlab/software/tyron/R-libs', dependencies=TRUE)
+End: Wed May 20 02:43:24 AM CDT 2026
