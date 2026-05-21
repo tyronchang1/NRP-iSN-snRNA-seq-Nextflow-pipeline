@@ -51,7 +51,7 @@ snRNA-seq analysis of human induced sensory neurons (iSNs), Stages 01–04: ambi
 ### 1. Clone the repo
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/tyronchang1/NRP-iSN-snRNA-seq-Nextflow-pipeline
 cd iSN_claude
 ```
 
