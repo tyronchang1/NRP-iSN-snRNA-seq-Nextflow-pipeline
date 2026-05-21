@@ -97,16 +97,17 @@ Two ambient RNA removal methods run in parallel throughout the full pipeline:
 
 ---
 
-## Reference — Available Claude Code Skills
+## Reference — Pipeline Skill Files
 
-| Skill | Slash command | What it does |
-|-------|--------------|--------------|
-| Ambient RNA removal | `/ambient-rna-removal` | Stage 01 workflow, sample list, output paths for SoupX scripts |
-| Doublet removal | `/doublet-removal` | Stage 02 workflow, sample status, scDblFinder gotchas |
-| Simplify | `/simplify` | Reviews changed code for reuse, quality, and efficiency; fixes issues found |
-| Review | `/review` | Reviews a pull request or set of changes for correctness and consistency |
-| Security review | `/security-review` | Audits pending changes for security issues (hard-coded paths, credentials, injection) |
-| Init | `/init` | Initialises a new CLAUDE.md with codebase documentation |
+These are agent instruction files, not slash commands. Agents read them at session start. See Rule 10 in `.claude/rules/07_behavior.md`.
+
+| Skill file | Stage | What it defines |
+|------------|-------|-----------------|
+| `.claude/skills/ambient-rna-removal/SKILL.md` | 01 — SoupX | Workflow steps, sample list, output paths, marker gene checks |
+| `.claude/skills/doublet-removal/SKILL.md` | 02 — scDblFinder (SoupX) | Workflow steps, sample status, scDblFinder gotchas |
+| `.claude/skills/cell-filtering/SKILL.md` | 03 — Cell filtering | QC thresholds, output structure, track conventions |
+| `.claude/skills/clustering/SKILL.md` | 04 — Clustering | Fixed parameters, all 16 pipeline steps, disabled sections, key conventions |
+| `.claude/skills/grill-with-docs/SKILL.md` | All stages | Design interview system — term challenges, ADR criteria, CONTEXT.md updates |
 
 ---
 
