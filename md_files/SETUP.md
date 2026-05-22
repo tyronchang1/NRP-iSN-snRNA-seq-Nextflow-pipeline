@@ -6,7 +6,7 @@ Detailed installation and configuration reference for the iSN Claude pipeline. F
 
 ## Software dependencies
 
-If you are in the Mitra lab on HTCF, these are already at `/ref/rmlab/software/` and the default paths will work. If you are on a different account or cluster, install them yourself and update the paths in step 2.
+If you are in the Mitra lab on HTCF, many of these are already at `/ref/rmlab/software/`, but again I will still double check them. If you are on a different account or cluster, install them yourself and update the paths in step 2.
 
 **Must install yourself** (paths set in `r_install/01_cran.sh` lines 27–42):
 

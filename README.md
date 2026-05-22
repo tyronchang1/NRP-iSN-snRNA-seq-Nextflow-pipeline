@@ -63,7 +63,7 @@ flowchart TD
 
 - **HTCF cluster account** — all jobs run on HTCF via SLURM
 - **Claude Code** — install from [Claude Code](https://code.claude.com/docs/en/quickstart)
-- **Software dependencies** — see [md_files/SETUP.md](md_files/SETUP.md) for the full list. Mitra lab members on HTCF: already installed at `/ref/rmlab/software/`, no action needed.
+- **Software dependencies** — see [md_files/SETUP.md](md_files/SETUP.md) for the full list. Mitra lab members on HTCF: many packages are already installed at `/ref/rmlab/software/`, but still double check them.
 
 ---
 
