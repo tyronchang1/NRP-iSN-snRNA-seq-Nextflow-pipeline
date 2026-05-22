@@ -59,3 +59,4 @@ For each modified file found, read it and append an entry to the `REPORT.md` in 
 ## Constraints
 - Only update `REPORT.md` — never modify scripts without explicit user permission
 - The user should never need to ask
+- `md_files/REPORT.md` is gitignored and not shipped with the repo. If it does not exist when you first go to write an entry, create it with a `# md_files Change Report` header before appending.
