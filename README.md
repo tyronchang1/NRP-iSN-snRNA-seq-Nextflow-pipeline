@@ -106,3 +106,5 @@ Claude enforces 11 behavioral rules every session — no inline script edits, au
 ## Credits
 
 The `grill-with-docs` skill is adapted from [Matt Pocock's skills library](https://github.com/mattpocock/skills/tree/main/skills/engineering/grill-with-docs).
+
+The principles in `.claude/rules/01_principles.md` are adapted from [Andrej Karpathy](https://karpathy.ai/).
