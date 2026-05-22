@@ -25,7 +25,10 @@ cd iSN_claude
 
 ### 2. Open in Claude Code
 
+Start an interactive SLURM session, then open Claude Code:
+
 ```bash
+srun --mem=24GB --cpus-per-task=1 -J interactive -p interactive --pty /bin/bash -l
 claude
 ```
 
@@ -52,10 +55,9 @@ Also, install Java 17 and Nextflow in: <your path>
 
 Claude updates every hardcoded path and email across `r_install/` and `nextflow/` in one pass. For manual path updates, see [md_files/SETUP.md](md_files/SETUP.md).
 
-Once paths are updated, start an interactive SLURM session and run the install:
+Once paths are updated, run the install from the same interactive session:
 
 ```bash
-srun --mem=24GB --cpus-per-task=1 -J interactive -p interactive --pty /bin/bash -l
 bash r_install/submit_all.sh
 ```
 
