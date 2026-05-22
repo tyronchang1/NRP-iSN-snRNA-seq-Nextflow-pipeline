@@ -122,6 +122,12 @@
 ---
 
 **Date:** 2026-05-21
+**Files changed:** `README.md`, `md_files/PIPELINE.md` (created)
+**Change:** Moved full Pipeline Stages table to `md_files/PIPELINE.md`. README.md now shows a simplified 4-row summary table with a link to PIPELINE.md for full details.
+
+---
+
+**Date:** 2026-05-21
 **Files changed:** `README.md` (trimmed), `md_files/SETUP.md` (created), `md_files/packages.md` → `md_files/PACKAGES.md` (renamed), `md_files/setup.md` → `md_files/SETUP.md` (renamed)
 **Change:** Trimmed README.md to lean step-by-step instructions only. Moved verbose content (software dependency tables, path-update tables, agent behavior section, directory structure) to new `md_files/SETUP.md`. Capitalized both `SETUP.md` and `PACKAGES.md`. Updated all links in README.md and SETUP.md accordingly.
 
