@@ -63,7 +63,7 @@ Claude automatically reads all rules, bootstraps your personal memory with the p
 
 > [!IMPORTANT]
 > **Type `start` as your first message at the beginning of every session.**
-> Claude will run the full session-start checklist step-by-step and announce each item so you can verify compliance.
+> This is a critical agent priming step — it loads all rules, skills, and project context into Claude before any work begins. Skipping it means agents may operate without the full behavioral ruleset. Claude will run the full session-start checklist step-by-step and announce each item so you can verify compliance.
 
 ### 4. Run the pipeline
 
