@@ -122,6 +122,12 @@
 ---
 
 **Date:** 2026-05-21
+**Files changed:** `README.md` (trimmed), `md_files/SETUP.md` (created), `md_files/packages.md` → `md_files/PACKAGES.md` (renamed), `md_files/setup.md` → `md_files/SETUP.md` (renamed)
+**Change:** Trimmed README.md to lean step-by-step instructions only. Moved verbose content (software dependency tables, path-update tables, agent behavior section, directory structure) to new `md_files/SETUP.md`. Capitalized both `SETUP.md` and `PACKAGES.md`. Updated all links in README.md and SETUP.md accordingly.
+
+---
+
+**Date:** 2026-05-21
 **Files changed:** `CLAUDE.md`, `.claude/rules/00_session-checklist.md`, `README.md`
 **Change:** Added `start` keyword rule. (1) `CLAUDE.md`: new **Start keyword rule** block after Auto-pipeline-check rule — when user's first message is `start`, execute the full session-start checklist steps 0–19 in order, announcing each step. (2) `00_session-checklist.md`: new `## start keyword trigger` section before the non-negotiable rule — instructs Claude to run the checklist visibly if user types `start`. (3) `README.md`: added `> Tip — start keyword` callout in Step 3 (Open in Claude Code) so new users are aware of the shortcut.
 
