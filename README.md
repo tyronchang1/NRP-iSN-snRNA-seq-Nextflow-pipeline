@@ -42,7 +42,7 @@ Claude automatically reads all rules, bootstraps your personal memory with the p
 **Easiest: let Claude do it.** In the Claude Code session you just opened, type:
 
 ```
-Customize all paths and email in r_install/ and the entire Nextflow pipeline for my HTCF account.
+Customize all paths and emails in r_install/ and the entire Nextflow pipeline for my HTCF account.
 My R library path is: <your path>
 My R binary path is:  <your path>
 My email is:          <your email>
