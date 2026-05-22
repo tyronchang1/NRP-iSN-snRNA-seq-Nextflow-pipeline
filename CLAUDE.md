@@ -41,7 +41,7 @@ The subagent reads its own definition file and follows its session-start sequenc
 2. **User signals completion** — if the user says the pipeline finished (e.g., "pipeline done", "nextflow finished"), spawn `BIOLOGIST` immediately even if `nextflow-stage-report-agent` did not catch it.
 In both cases: pass paths to all HTML reports that exist on disk. BIOLOGIST reviews all stages in sequence, appends findings to `final_output/Biologist_Chat.md`, and produces a summary table.
 
-**Auto-pipeline-check rule:** At the start of every session, immediately spawn `nextflow-stage-report-agent` before responding to the user. It will:
+**Auto-pipeline-check rule:** At the start of every session, spawn `nextflow-stage-report-agent` at step 18 of the session-start checklist — after all rule files, skill files, and project state files have been read (steps 1–17). Do not spawn it before the reading steps are complete. It will:
 - Check if a Nextflow SLURM job is currently running (`squeue`)
 - Check if `.nextflow.log` exists with stage results
 - If running or finished: report per-stage status and hand failures to `troubleshoot_agent`
