@@ -10,8 +10,8 @@ snRNA-seq analysis of human induced sensory neurons (iSNs), Stages 01–04: ambi
 flowchart TD
     IN["🧬 8 snRNA-seq Samples\nNR00 · Day7 · Day13 · iPSC"]
 
-    subgraph ORCH["⚙️ Orchestration — Nextflow · SLURM · HPC Cluster"]
-        NF["Nextflow Orchestrator\nEach stage = 1 SLURM job · Parallel tracks via --track flag"]
+    subgraph ORCH["⚙️ Nextflow · SLURM · HPC"]
+        NF["Nextflow Orchestrator\nSLURM jobs · --track flag"]
     end
 
     subgraph PIPE["🔬 Biological Pipeline"]
@@ -25,8 +25,8 @@ flowchart TD
             D02["02.1 · scDblFinder\nDoublet Removal"]
             D01 --> D02
         end
-        S03["03 · Seurat QC — Cell Filtering\nnFeature · nCount · percent.mt · doublets"]
-        S04["04 · Seurat + Harmony\nIntegration · Clustering · UMAP\n15 clusters · harmony_res.0.2"]
+        S03["03 · Seurat QC\nCell Filtering"]
+        S04["04 · Seurat + Harmony\nClustering · UMAP"]
         S02 --> S03
         D02 --> S03
         S03 --> S04
