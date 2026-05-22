@@ -4,6 +4,59 @@ snRNA-seq analysis of human induced sensory neurons (iSNs), Stages 01–04: ambi
 
 ![System Design and Workflow](Design.png)
 
+> **Interactive view:** [Open in Mermaid Live Editor](https://mermaid.live/edit#pako:nVVtj9o4EP4rIz7clztQAmxfTrpKacJ2kVjgCEiVjqoyyRB869ic7ex21e1/v3HeWGBpq/pDFI/n7Rk/M/7aSVSKnT+hsxXqIdkxbWEZrSXQGk__WXfWRfpmgPRNMYE3YORiGnQN_gcxy_cCzXotpwvPg3XheZvXELHH18_-_UGz4fM4XHc-rWXl2xSbTLP9DmaL8KYM03_19u262KK3hZlOdmisZpYrSQ76nj-EKX6xLsfGYTxZLW6bzc08hFAUxqIug0C9ptfku7U8-FWa8h6xZAfGsgzhL_Brh_-qTeN0zjQTAgWQRXJn4J4z6HbLDWwFy9pIKNMzXPPxfNSUL3Xl6yfwniuhMp4wAXO-R8ElHmXbGsez1fwjWceq2H-EpYt4pOhW7Pmk4fltPZwuoQryDUdpge4JFpireyZesO07235ja5JoI665TNHVJVLFRqD9jrVPdXjnvBwOyhqcAYlG4Wy6dFAiTJS0l8BENZhem1Kt_5OAohpQz_81SFENKboIKfYGLkLL5xgL4hH8HTb8DFEIuOaCKMhlRjHlNTJbaGwsZKgKglHv9qgTQtXLW0la5WiOkou9oQs7PAn7O9wwnSv5SHHG0mLW9kqpVbcC5dFIVrfBnHT9K0iqM9Oc7CpHnzWantfrn0Tv1zc9OAijl4S0qYXDs56YrZbPOyFJhlQnSU2wwL3StilgkGUaM2YxhZvl7YSypeLmaDVPzAkw2AtlW-Et03cky1CieWnEhJNgFY2OZpn_ilyxIkUIafy1GYwpCUe1CXs8GSQTx89FQQOvjUpU0o_tvdxxIdwwHIBwxgbUlm40Z1zCnVQPAtPsQrMHH0bTZUzuy9jmjJsp15iUtztZHJ8ELimTaMncRO7SH9_bLnNuzrwErkFkPQl_oDqo3DoNjfccHy4pOm6WA5T03FVe0rsivffj2WT2YRwvj46PeiwoOfS05V_gNyA-Fpuc2yeC-WOVZ20bDEuVfT1hIVHuobJIWldn3BxPS9q6V6gmK_1VTHYz-ERWj7NKSlSvbFfLSlDxDLo9is4Kq6TKVWGAuovTg_OsGd1h10Go9wcchzwcCueoep-q8ponF7TzB3Ry1EStlN7trx27w7x8wVPcskLYzrdv_wM) — drag to pan · scroll to zoom
+
+```mermaid
+flowchart TD
+    IN["🧬 8 snRNA-seq Samples\nNR00 · Day7 · Day13 · iPSC"]
+
+    subgraph ORCH["⚙️ Orchestration — Nextflow · SLURM · HPC Cluster"]
+        NF["Nextflow Orchestrator\nEach stage = 1 SLURM job · Parallel tracks via --track flag"]
+    end
+
+    subgraph PIPE["🔬 Biological Pipeline"]
+        subgraph SOUPX["SoupX Track"]
+            S01["01 · SoupX\nAmbient RNA Removal"]
+            S02["02 · scDblFinder\nDoublet Removal"]
+            S01 --> S02
+        end
+        subgraph DECONTX["DecontX Track"]
+            D01["01.2 · DecontX\nAmbient RNA Removal"]
+            D02["02.1 · scDblFinder\nDoublet Removal"]
+            D01 --> D02
+        end
+        S03["03 · Seurat QC — Cell Filtering\nnFeature · nCount · percent.mt · doublets"]
+        S04["04 · Seurat + Harmony\nIntegration · Clustering · UMAP\n15 clusters · harmony_res.0.2"]
+        S02 --> S03
+        D02 --> S03
+        S03 --> S04
+    end
+
+    OUT["📄 Final Report — Aggregated HTML\nQC metrics · Cluster plots · Marker genes"]
+
+    subgraph CLAUDE["🤖 Claude Code — AI Agent Layer"]
+        L1["Rules · Memory · Skills\n3 layers of domain knowledge"]
+        subgraph AGENTS["Agents"]
+            direction LR
+            A1["scrna-seq-script-agent"]
+            A2["nextflow-script-agent"]
+            A3["script-review-agent"]
+            A4["stage-report-agent"]
+            A5["BIOLOGIST"]
+        end
+        A3 -->|fix & resubmit| A1
+        A3 -->|fix & resubmit| A2
+        A4 -->|pipeline complete| A5
+    end
+
+    IN --> ORCH
+    ORCH --> SOUPX
+    ORCH --> DECONTX
+    S04 --> OUT
+    CLAUDE -.->|autonomous monitoring · auto-fix · resubmit| ORCH
+    A4 -.->|stage reports| S04
+```
+
 ---
 
 ## Requirements
