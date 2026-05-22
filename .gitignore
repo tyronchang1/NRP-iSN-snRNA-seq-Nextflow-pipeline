@@ -1,4 +1,5 @@
-samples/
+samples/*/**
+!samples/*/.gitkeep
 work/
 nextflow/work/
 nextflow/logs/
