@@ -98,6 +98,12 @@
 ---
 
 **Date:** 2026-05-21
+**Files changed:** `.claude/memory/feedback_checklist_display.md` (created), `.claude/rules/00_session-checklist.md`
+**Change:** Added `feedback_checklist_display.md` to `.claude/memory/` so it travels with the repo and gets bootstrapped into every new user's personal memory. Updated the memory bootstrap block in `00_session-checklist.md` to a table-driven format — lists all repo memory files, their target filenames, and MEMORY.md pointer lines; Claude copies any missing file on every session start (no-op if already present).
+
+---
+
+**Date:** 2026-05-21
 **File changed:** `.claude/rules/00_session-checklist.md`
 **Change:** Added **Display rule** to Step 1–7 section — instructs Claude to print `- [ ] N. Read <file>` before each Read call and `- [x] N. Read <file>` after it completes; one item at a time, no batching.
 

@@ -47,15 +47,20 @@ Each item requires a Read tool call. Read the file. Apply its instructions for t
 
 **After reading step 7 — memory bootstrap (runs every session, no-op after first time):**
 
-1. Read `.claude/memory/project_behavior_rules.md` — this file is committed to the repo and travels with every clone.
-2. Check whether `project_behavior_rules.md` already exists in your project memory directory (the path shown in your system context under "auto memory").
-3. If it does **not** exist there:
-   - Use the Write tool to create it at `<memory_dir>/project_behavior_rules.md`, copying the exact content from `.claude/memory/project_behavior_rules.md`.
-   - Open `<memory_dir>/MEMORY.md` (create it if it does not exist) and append this line:
-     `- [Project: Behavioral rules](project_behavior_rules.md) — 10 binding rules from 07_behavior.md; covers no-inline-edits, SLURM autonomy, subagent constraints block, Stage 05 removal, and more`
-4. If it **does** exist: skip — bootstrap already ran.
+For each file in `.claude/memory/`, check whether it already exists in your project memory directory (the path shown in your system context under "auto memory"). If it does **not** exist there, copy it. If it **does** exist, skip.
 
-This is a one-time bootstrap. It ensures every new clone immediately has the behavioral spec in their personal project memory, with no manual setup required.
+Files to bootstrap:
+
+| Repo file | Memory filename | MEMORY.md pointer line |
+|-----------|----------------|------------------------|
+| `.claude/memory/project_behavior_rules.md` | `project_behavior_rules.md` | `- [Project: Behavioral rules](project_behavior_rules.md) — 11 binding rules from 07_behavior.md; covers no-inline-edits, SLURM autonomy, subagent constraints block, Stage 05 removal, rename/delete propagation, and more` |
+| `.claude/memory/feedback_checklist_display.md` | `feedback_checklist_display.md` | `- [Feedback: Checklist display](feedback_checklist_display.md) — Print [ ] before and [x] after each Read call, one item at a time — never batch reads or summarize after the fact` |
+
+For each file not yet in memory:
+1. Use the Write tool to create it at `<memory_dir>/<filename>`, copying the exact content from the repo file.
+2. Open `<memory_dir>/MEMORY.md` (create it if it does not exist) and append the corresponding pointer line from the table above.
+
+This is a one-time bootstrap per file. It ensures every new clone immediately has the shared behavioral spec and feedback rules in their personal project memory, with no manual setup required.
 
 ---
 
