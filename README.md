@@ -88,8 +88,8 @@ claude
 Claude automatically reads all rules, bootstraps your personal memory with the project behavioral rules, and checks pipeline status — no manual setup needed.
 
 > [!IMPORTANT]
-> **Type `start` as your first message at the beginning of every session.**
-> This is a critical agent priming step — it loads all rules, skills, and project context into Claude before any work begins. Skipping it means agents may operate without the full behavioral ruleset. Claude will run the full session-start checklist step-by-step and announce each item so you can verify compliance.
+> **Type `start` once at the beginning of each new Claude Code session.**
+> Only needed when you open a fresh session — not again within the same session. This loads all rules, skills, and project context into Claude before any work begins. Skipping it means agents may operate without the full behavioral ruleset. Claude will run the full session-start checklist step-by-step and announce each item so you can verify compliance.
 
 ### 3. Update paths and install R packages
 
