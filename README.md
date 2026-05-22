@@ -67,7 +67,10 @@ Claude automatically reads all rules, bootstraps your personal memory with the p
 
 ### 4. Run the pipeline
 
+Start an interactive SLURM session first, then run the pipeline:
+
 ```bash
+srun --mem=24GB --cpus-per-task=1 -J interactive -p interactive --pty /bin/bash -l
 bash nextflow/submit.sh
 ```
 
