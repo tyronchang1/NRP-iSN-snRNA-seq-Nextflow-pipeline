@@ -162,3 +162,22 @@ Whenever any file is renamed, deleted, moved, or any path string changes (whethe
 **Why:** Rename/delete operations silently break references across md files, agent prompts, CLAUDE.md, run scripts, and R scripts. The Biologist_Chat.md move in session 16 required manual fixes to 4 files — this rule prevents that.
 
 **Applies to:** Any rename, `mv`, `rm`, or path-string change — whether Claude executed it via Bash or the user did it outside the session.
+
+---
+
+## 12. All agent spawns run in the background
+
+Every Agent tool call must include `run_in_background: true`, without exception.
+
+| Agent | run_in_background |
+|-------|------------------|
+| scrna-seq-script-agent | true |
+| nextflow-script-agent | true |
+| script-review-agent | true |
+| nextflow-stage-report-agent | true |
+| BIOLOGIST | true |
+| troubleshoot_agent | true |
+
+**Why:** Keeps the local Claude session responsive while agents run. Results surface at the bottom of the conversation when complete.
+
+**Applies to:** Every Agent tool call in every session, for all users.
