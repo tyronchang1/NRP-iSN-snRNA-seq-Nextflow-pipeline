@@ -9,4 +9,4 @@ Print each checklist item as `- [ ] N. Read <file>` before calling the Read tool
 
 **Why:** User caught that the start keyword run grouped reads into parallel batches and gave narrative summaries ("Steps 1–7 complete") instead of showing individual item confirmation. The rule requires each item to be visibly checked so the user can verify compliance line by line.
 
-**How to apply:** Every session-start checklist run (triggered by `start` keyword or after compaction). No exceptions — even when parallel reads are efficient, the display must be sequential and item-by-item.
+**How to apply:** Every session-start checklist run (triggered by `/start` skill or after compaction). No exceptions — even when parallel reads are efficient, the display must be sequential and item-by-item.

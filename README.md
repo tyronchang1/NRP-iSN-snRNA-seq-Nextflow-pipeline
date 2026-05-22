@@ -88,10 +88,12 @@ claude
 Claude automatically reads all rules, bootstraps your personal memory with the project behavioral rules, and checks pipeline status — no manual setup needed.
 
 > [!IMPORTANT]
-> **Type `start` once at the beginning of each new Claude Code session.**
+> **Type `/start` once at the beginning of each new Claude Code session.**
 > Only needed when you open a fresh session — not again within the same session. This triggers **agent priming** — Claude loads all rules, skills, domain glossary, and project context before any work begins. Without priming, spawned agents (scrna-seq-script-agent, nextflow-stage-report-agent, BIOLOGIST, etc.) operate without the full behavioral ruleset and may make incorrect decisions. Claude will run the full session-start checklist step-by-step and announce each item so you can verify compliance.
 >
-> **Also type `start` after any context compaction.** If you run `/compact` or the context window is auto-compacted, the session context is reset — type `start` again to re-prime before continuing work.
+> **If you already have a task in mind, include it:** `/start I want to cluster the DecontX track`. After priming, `/start` will automatically invoke `/grill-with-docs` to probe your task against the domain glossary before any work begins.
+>
+> **Also type `/start` after any context reset.** If you run `/compact`, `/clear`, or the context window is auto-compacted, the session context is reset — type `/start` again to re-prime before continuing work.
 
 ### 3. Update paths and install R packages
 

@@ -7,11 +7,13 @@ paths:
 
 This file is read FIRST, before all other rules. It defines every file that must be read at session start and every gate that must be checked before doing any work.
 
-## `start` keyword trigger
+## `/start` skill trigger
 
-If the user's first message is exactly `start`, execute this entire checklist explicitly and visibly — announce each step as you complete it so the user can verify compliance. Do not wait for any other input.
+When the user invokes `/start`, execute this entire checklist explicitly and visibly — announce each step as you complete it so the user can verify compliance. Do not wait for any other input.
 
-**If `start` is typed again mid-session (not as the first message): do NOT re-run the checklist.** The session is already primed. Simply acknowledge: "Session already primed — checklist ran at session open." Then continue with whatever the user needs.
+**If `/start` is invoked again mid-session and the checklist has already run: do NOT re-run the checklist.** The session is already primed. Simply acknowledge: "Session already primed — `/start` already ran this session." Then continue with whatever the user needs.
+
+**Exception — after `/compact`, `/clear`, or auto-compaction:** Session context is reset. Re-running `/start` is correct and expected — context was cleared, so priming is needed again.
 
 ---
 
