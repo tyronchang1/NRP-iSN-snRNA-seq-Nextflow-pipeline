@@ -20,6 +20,9 @@ When a task matches the table below, spawn a subagent using the `Agent` tool —
 | Write or edit any `nextflow/**/*.nf` or `nextflow/nextflow.config` | `nextflow-script-agent` | `.claude/agents/nextflow-script-agent.md` |
 | Review any R or Nextflow script for correctness; troubleshoot and fix errors | `script-review-agent` | `.claude/agents/script-review-agent.md` |
 | Inspect Nextflow stage execution results (`.nextflow.log`, `work/`); produce success/failure report | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
+| User says the pipeline is running or was just submitted (e.g., "I ran submit.sh", "pipeline started", "I submitted the job", "pipeline running") | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
+| Claude just ran `sbatch` to submit the Nextflow pipeline (job ID returned) | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
+| A `ScheduleWakeup` fires with "iSN Nextflow pipeline monitoring check" in the prompt | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
 | Review clustering parameters, QC distributions, doublet rates, or expression plots for biological interpretability | `BIOLOGIST` | `.claude/agents/BIOLOGIST.md` |
 | User says the Nextflow pipeline has finished (e.g., "pipeline finished", "nextflow done", "run is complete") | `BIOLOGIST` | `.claude/agents/BIOLOGIST.md` |
 | User reports a SLURM job failure, pastes a SLURM/Nextflow error, or shares a log path from a failed run | `troubleshoot_agent` | `.claude/agents/troubleshoot_agent.md` |

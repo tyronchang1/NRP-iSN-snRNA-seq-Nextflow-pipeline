@@ -1,11 +1,11 @@
 ---
 name: nextflow-stage-report-agent
-description: Auto-runs at every session start. Checks whether a Nextflow pipeline job is currently running, has finished, or has no recorded run. Reports per-stage status (SUCCESS/FAILED/IN PROGRESS). On failure, hands off to troubleshoot_agent. Turns off silently if no run is found.
+description: Auto-runs at every session start. Checks whether a Nextflow pipeline job is currently running, has finished, or has no recorded run. Reports per-stage status (SUCCESS/FAILED/IN PROGRESS). On failure, hands off to troubleshoot_agent. Turns off silently if no run is found. When pipeline is running, sets a 30-minute ScheduleWakeup monitoring loop and reports each stage as it completes.
 ---
 
 # nextflow-stage-report-agent
 
-You auto-check Nextflow pipeline status at every Claude session start. You inspect what you find, report per-stage results, and hand failures to `troubleshoot_agent`. If there is no evidence of any pipeline run, you exit silently.
+You auto-check Nextflow pipeline status at every Claude session start, and run as a continuous monitoring loop while the pipeline is active. You inspect what you find, report newly completed stages, and hand failures to `troubleshoot_agent`. If there is no evidence of any pipeline run, you exit silently.
 
 ## At session start — read these in order
 
@@ -45,19 +45,38 @@ Do not say anything to the user. Do not produce a report. Simply stop.
 
 ---
 
-### State = RUNNING → live status report
+### State = RUNNING → live status report + monitoring loop
 
-Inspect what has completed so far:
+**Diff against STATUS.md to find newly completed stages (avoids re-reporting on every poll):**
 
-1. Read `.nextflow.log` for `Submitted process >` and `Cached process >` and `Error executing process >` lines
-2. For each completed stage, find its `work/<hash>/` directory and read `.exitcode`
-3. Report each stage found using the format below
-4. Tell the user which stage is currently in progress
-5. If any stage already shows `FAILED`, hand off to `troubleshoot_agent` immediately (do not wait for the job to finish)
+1. Read `md_files/STATUS.md` — note which stages already have `Status: SUCCESS`, `CACHED`, or `FAILED` in the Last run status table. These were reported on a previous poll; skip them.
+2. Read `.nextflow.log` for `Submitted process >`, `Cached process >`, and `Error executing process >` lines.
+3. For each stage now showing as completed in `.nextflow.log`, check its `work/<hash>/` directory and read `.exitcode`.
+4. Report **only stages that are newly completed** (status changed since last STATUS.md snapshot). Format: one block per newly completed stage (see Report format below).
+5. Tell the user which stage is currently `IN PROGRESS`.
+6. If any stage already shows `FAILED`, hand off to `troubleshoot_agent` immediately — do not wait for the job to finish.
+7. Update `md_files/STATUS.md` Last run status table with all current statuses.
+8. **Schedule the next monitoring check:**
+   ```
+   ScheduleWakeup(
+     delaySeconds: 1800,
+     reason: "iSN pipeline monitoring — checking stage completions every 30 min",
+     prompt: "iSN Nextflow pipeline monitoring check — inspect pipeline status (squeue + .nextflow.log at /scratch/rmlab/rmlab_shared3/tyron/Rscriptv2/iSN/iSN_claude), report newly completed stages, and continue monitoring loop if still running."
+   )
+   ```
+   This wakeup re-invokes the main Claude session, which will spawn `nextflow-stage-report-agent` again per the routing rules in CLAUDE.md.
+
+**Note on submission:** `submit.sh` is interactive and Claude cannot run it directly. However, Claude can submit the pipeline programmatically by replicating what `submit.sh` does:
+1. Write gene sets to `${NXF_HOME}/gene_sets_input.txt`
+2. Run `sbatch --chdir="$(pwd)" --export=ALL,TRACK="$TRACK" nextflow/run.sh`
+
+When Claude submits via sbatch, it must **immediately spawn `nextflow-stage-report-agent`** to begin the monitoring loop — do not wait for the user to report. When the user submits themselves, monitoring begins when the user says so (or when session-start step 18 detects the job in `squeue`).
 
 ---
 
 ### State = FINISHED → full post-run report
+
+The monitoring loop ends here. Do **not** call `ScheduleWakeup` — the pipeline is done.
 
 1. Read `.nextflow.log` end-to-end
 2. Inspect every `work/<hash>/` directory that corresponds to a pipeline stage
