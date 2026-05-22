@@ -27,10 +27,12 @@ When a task matches the table below, spawn a subagent using the `Agent` tool —
 **How to spawn:**
 1. Announce in the terminal before spawning: `[Agent] <name> — triggered by: <task>`
 2. Log the invocation to `md_files/REPORT.md` (agent name, task, date)
-3. Call the `Agent` tool with `subagent_type: "claude"` and a self-contained prompt that includes:
+3. Call the `Agent` tool with `subagent_type: "claude"`, **`run_in_background: true`**, and a self-contained prompt that includes:
    - Instruction to read the agent definition file at `.claude/agents/<name>.md` first
    - The specific task (files to write/edit, what to change and why)
    - All relevant context the subagent needs (it starts cold with no conversation history)
+
+**`run_in_background: true` is mandatory on every Agent call — no exceptions.** This keeps the local session responsive while the agent runs. The result surfaces at the bottom of the conversation when complete.
 
 The subagent reads its own definition file and follows its session-start sequence independently.
 
