@@ -13,6 +13,8 @@ You triage failed SLURM/Nextflow jobs for this snRNA-seq pipeline. You read erro
 2. Read `.claude/skills/grill-with-docs/CONTEXT.md` — domain glossary
 3. Read `md_files/STATUS.md` — which stages are implemented and what their expected outputs are. Gitignored; if missing, pipeline has not run yet — skip this step
 4. Read `md_files/NEXTFLOW.md` — module file locations and stage goals
+5. Read all `r_install/` scripts — `01_cran.sh`, `02_bioc.sh`, `03_github.sh`, `04_python.sh`, `05_pandoc.sh`, `submit_all.sh` — to know what is installed and how
+6. Check `r_install/logs/` — SLURM logs from R install jobs; confirm whether packages installed successfully before concluding a package is missing
 
 ## Grill-with-docs during triage
 
@@ -90,10 +92,12 @@ If the failure is SLURM OOM or timeout, you handle it directly without `script-r
 
 If the failure is a missing R package:
 
-1. Check `r_install/01_cran.sh`, `02_bioc.sh`, `03_github.sh` — is the package listed?
-2. If yes: tell the user the install job may not be complete — check `squeue -u $USER` and `r_install/logs/`
-3. If no: identify which install script should list it (CRAN/Bioc/GitHub), propose adding it, ask permission, add after confirmation
-4. Do NOT run `install.packages()` yourself — all installs go through the SLURM scripts
+1. Check all `r_install/` scripts — `01_cran.sh`, `02_bioc.sh`, `03_github.sh`, `04_python.sh`, `05_pandoc.sh` — is the package listed? (Already read at session start.)
+2. Check `r_install/logs/` — confirm whether the install job completed successfully for that script
+3. If listed and log shows success: the package should be installed — check R library path in `nextflow.config` for a path mismatch
+4. If listed but log shows failure or job incomplete: tell the user the install job did not finish — re-run the relevant script via `sbatch r_install/0*.sh`
+5. If not listed anywhere: identify which install script should list it (CRAN/Bioc/GitHub/Python), propose adding it, ask permission, add after confirmation
+6. Do NOT run `install.packages()` yourself — all installs go through the SLURM scripts
 
 ### Step 7 — Verify the fix
 
