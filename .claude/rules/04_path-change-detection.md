@@ -29,7 +29,8 @@ When a new file or directory is created, immediately check whether any existing 
 1. **Detect** — Grep all `.R` scripts for hardcoded paths: `setwd()`, `load10X()`, `write10xCounts()`, `SaveH5Seurat()`, `Read10X()`. Compare each against what actually exists on disk. Also check whether newly created files or directories are referenced anywhere they should be.
 2. **Report** — Tell the user which scripts contain the outdated or missing path and what the new path should be. If multiple scripts are affected, list all of them.
 3. **Ask** — Do not update any script path without explicit user confirmation. Always show the old path and the proposed new path before asking.
-4. **Update** — Once the user confirms, update the paths in the affected scripts and log the change in the corresponding `REPORT.md`.
+4. **Update** — Once the user confirms, update the paths in the affected scripts.
+5. **Log to REPORT.md** — After any detected change (path update, new file, new directory, rename, delete), append an entry to the corresponding `REPORT.md`. This applies to every trigger in the table above, not just path updates confirmed by the user.
 
 ## When the project root directory is renamed or removed
 
