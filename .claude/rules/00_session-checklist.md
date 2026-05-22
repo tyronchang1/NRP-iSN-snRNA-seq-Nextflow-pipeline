@@ -35,6 +35,8 @@ After the compact log is written, continue with Steps 1–13 below.
 
 Each item requires a Read tool call. Read the file. Apply its instructions for the rest of the session.
 
+**Display rule:** Print each item as `- [ ] N. Read <file>` before the Read call, then update to `- [x] N. Read <file>` after it completes. One item at a time — do not batch reads and summarise after the fact.
+
 - [ ] 1. Read `.claude/rules/01_principles.md`
 - [ ] 2. Read `.claude/rules/02_guardrails.md`
 - [ ] 3. Read `.claude/rules/03_task-gate.md`
