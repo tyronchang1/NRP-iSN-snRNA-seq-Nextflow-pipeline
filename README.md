@@ -89,7 +89,7 @@ Claude automatically reads all rules, bootstraps your personal memory with the p
 
 > [!IMPORTANT]
 > **Type `start` once at the beginning of each new Claude Code session.**
-> Only needed when you open a fresh session — not again within the same session. This loads all rules, skills, and project context into Claude before any work begins. Skipping it means agents may operate without the full behavioral ruleset. Claude will run the full session-start checklist step-by-step and announce each item so you can verify compliance.
+> Only needed when you open a fresh session — not again within the same session. This triggers **agent priming** — Claude loads all rules, skills, domain glossary, and project context before any work begins. Without priming, spawned agents (scrna-seq-script-agent, nextflow-stage-report-agent, BIOLOGIST, etc.) operate without the full behavioral ruleset and may make incorrect decisions. Claude will run the full session-start checklist step-by-step and announce each item so you can verify compliance.
 
 ### 3. Update paths and install R packages
 
