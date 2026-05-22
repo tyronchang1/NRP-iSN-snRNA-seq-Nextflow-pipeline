@@ -8,12 +8,26 @@ paths:
 ## When to run
 
 - **At the start of every conversation** — always, without being asked
-- **Whenever** a directory or file is moved, renamed, or a path inconsistency is noticed
+- **Whenever** a directory or file is moved, renamed, created, or a path inconsistency is noticed
+
+## Triggers
+
+Path-change detection covers all of the following events:
+
+| Event | Examples |
+|-------|---------|
+| File or directory renamed or moved | `mv scripts/02_old/ scripts/02_new/` |
+| File or directory deleted | `rm -rf scripts/01_SoupX/old_output/` |
+| **New file created** | A new `.R` script, output directory, or stage folder added |
+| **New directory created** | A new pipeline stage folder, output folder, or subdirectory |
+| Path string changed in any script | `setwd()`, `Read10X()`, `write10xCounts()` updated |
+
+When a new file or directory is created, immediately check whether any existing scripts, config files, or `.md` files need to reference it — and whether any hardcoded paths need updating to reflect the new structure.
 
 ## Steps
 
-1. **Detect** — Grep all `.R` scripts for hardcoded paths: `setwd()`, `load10X()`, `write10xCounts()`, `SaveH5Seurat()`, `Read10X()`. Compare each against what actually exists on disk.
-2. **Report** — Tell the user which scripts contain the outdated path and what the new path should be. If multiple scripts are affected, list all of them.
+1. **Detect** — Grep all `.R` scripts for hardcoded paths: `setwd()`, `load10X()`, `write10xCounts()`, `SaveH5Seurat()`, `Read10X()`. Compare each against what actually exists on disk. Also check whether newly created files or directories are referenced anywhere they should be.
+2. **Report** — Tell the user which scripts contain the outdated or missing path and what the new path should be. If multiple scripts are affected, list all of them.
 3. **Ask** — Do not update any script path without explicit user confirmation. Always show the old path and the proposed new path before asking.
 4. **Update** — Once the user confirms, update the paths in the affected scripts and log the change in the corresponding `REPORT.md`.
 
