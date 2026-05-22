@@ -109,13 +109,13 @@ Also, install Java 17 and Nextflow in: <your path>
 
 Claude updates every hardcoded path and email across `r_install/` and `nextflow/` in one pass. For manual path updates, see [md_files/SETUP.md](md_files/SETUP.md).
 
-Once paths are updated, run the install from the same interactive session:
+Once paths are updated, ask Claude to run the install:
 
-```bash
-bash r_install/submit_all.sh
+```
+Run r_install/submit_all.sh
 ```
 
-This submits 5 jobs in dependency order (CRAN → Bioconductor → GitHub → Python → Pandoc). Takes several hours. Monitor with `squeue -u $USER`. If any stage fails, re-run the same command — it skips already-installed packages.
+Claude will run it directly and monitor progress. This submits 5 jobs in dependency order (CRAN → Bioconductor → GitHub → Python → Pandoc). Takes several hours. If any stage fails, Claude will fix and resubmit automatically.
 
 Full package list: [md_files/PACKAGES.md](md_files/PACKAGES.md)
 
