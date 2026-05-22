@@ -61,7 +61,7 @@ claude
 
 Claude automatically reads all rules, bootstraps your personal memory with the project behavioral rules, and checks pipeline status — no manual setup needed.
 
-> **Tip:** Type `start` as your first message each session. Claude will run the full session-start checklist step-by-step and announce each item so you can verify compliance.
+**At the beginning of every session, type `start` as your first message.** Claude will run the full session-start checklist step-by-step and announce each item so you can verify compliance.
 
 ### 4. Run the pipeline
 
