@@ -99,6 +99,12 @@
 
 **Date:** 2026-05-21
 **File changed:** `.claude/rules/00_session-checklist.md`
+**Change:** Tightened memory bootstrap — each file is now checked independently; MEMORY.md pointer line is checked for existence before appending to prevent duplicates. Logic: Read file → skip if exists, copy if not; Read MEMORY.md → create if missing, else check if pointer already present before appending.
+
+---
+
+**Date:** 2026-05-21
+**File changed:** `.claude/rules/00_session-checklist.md`
 **Change:** Improved memory bootstrap instructions — step 2 now tells Claude to use the Read tool to check file existence (rather than vague "check whether it exists"); step for MEMORY.md now uses Read to verify existence before writing. Clarifies the auto memory path format `~/.claude/projects/<hash>/memory/`.
 
 ---

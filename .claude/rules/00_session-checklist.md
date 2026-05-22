@@ -56,9 +56,9 @@ Files to bootstrap:
 | `.claude/memory/project_behavior_rules.md` | `project_behavior_rules.md` | `- [Project: Behavioral rules](project_behavior_rules.md) — 11 binding rules from 07_behavior.md; covers no-inline-edits, SLURM autonomy, subagent constraints block, Stage 05 removal, rename/delete propagation, and more` |
 | `.claude/memory/feedback_checklist_display.md` | `feedback_checklist_display.md` | `- [Feedback: Checklist display](feedback_checklist_display.md) — Print [ ] before and [x] after each Read call, one item at a time — never batch reads or summarize after the fact` |
 
-For each file not yet in memory:
-1. Use the Write tool to create it at `<memory_dir>/<filename>`, copying the exact content from the repo file.
-2. Use the Read tool to check if `<memory_dir>/MEMORY.md` exists. If not, create it. Then append the corresponding pointer line from the table above.
+For each file in the table, run this check independently:
+1. Use the Read tool to attempt `<memory_dir>/<filename>`. If Read succeeds → file already exists, skip to the next file. If "File does not exist" → use the Write tool to copy the exact content from the repo file.
+2. Use the Read tool to attempt `<memory_dir>/MEMORY.md`. If "File does not exist" → create it with the Write tool, then add the pointer line. If it exists → check whether the pointer line for this file is already present. If yes → skip. If no → append the pointer line.
 
 This is a one-time bootstrap per file. It ensures every new clone immediately has the shared behavioral spec and feedback rules in their personal project memory, with no manual setup required.
 
