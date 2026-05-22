@@ -23,11 +23,23 @@ git clone https://github.com/tyronchang1/NRP-iSN-snRNA-seq-Nextflow-pipeline
 cd iSN_claude
 ```
 
-### 2. Update paths and install R packages
+### 2. Open in Claude Code
+
+```bash
+claude
+```
+
+Claude automatically reads all rules, bootstraps your personal memory with the project behavioral rules, and checks pipeline status — no manual setup needed.
+
+> [!IMPORTANT]
+> **Type `start` as your first message at the beginning of every session.**
+> This is a critical agent priming step — it loads all rules, skills, and project context into Claude before any work begins. Skipping it means agents may operate without the full behavioral ruleset. Claude will run the full session-start checklist step-by-step and announce each item so you can verify compliance.
+
+### 3. Update paths and install R packages
 
 > **STOP — update all paths before running anything.** Every file in `r_install/` has hardcoded paths pointing to Tyron's HTCF directories. Running without updating will fail silently or install to the wrong location.
 
-**Easiest: let Claude do it.** Open Claude Code in the repo root and type:
+**Easiest: let Claude do it.** In the Claude Code session you just opened, type:
 
 ```
 Customize all paths and email in r_install/ and the entire Nextflow pipeline for my HTCF account.
@@ -38,9 +50,7 @@ My email is:          <your email>
 Also, install Java 17 and Nextflow in: <your path>
 ```
 
-Claude updates every hardcoded path and email across `r_install/` and `nextflow/` in one pass.
-
-For manual path updates, see [md_files/SETUP.md](md_files/SETUP.md).
+Claude updates every hardcoded path and email across `r_install/` and `nextflow/` in one pass. For manual path updates, see [md_files/SETUP.md](md_files/SETUP.md).
 
 Once paths are updated, start an interactive SLURM session and run the install:
 
@@ -53,21 +63,9 @@ This submits 5 jobs in dependency order (CRAN → Bioconductor → GitHub → Py
 
 Full package list: [md_files/PACKAGES.md](md_files/PACKAGES.md)
 
-### 3. Open in Claude Code
-
-```bash
-claude
-```
-
-Claude automatically reads all rules, bootstraps your personal memory with the project behavioral rules, and checks pipeline status — no manual setup needed.
-
-> [!IMPORTANT]
-> **Type `start` as your first message at the beginning of every session.**
-> This is a critical agent priming step — it loads all rules, skills, and project context into Claude before any work begins. Skipping it means agents may operate without the full behavioral ruleset. Claude will run the full session-start checklist step-by-step and announce each item so you can verify compliance.
-
 ### 4. Run the pipeline
 
-Start an interactive SLURM session first, then run the pipeline:
+Once install is complete, open a new interactive SLURM session and run:
 
 ```bash
 srun --mem=24GB --cpus-per-task=1 -J interactive -p interactive --pty /bin/bash -l
