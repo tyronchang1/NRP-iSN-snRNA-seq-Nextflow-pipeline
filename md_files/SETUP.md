@@ -144,7 +144,7 @@ iSN_claude/
 ├── final_output/                    Final pipeline outputs (written after Stage 04)
 │   ├── final_report.Rmd             R Markdown source for the merged pipeline report
 │   ├── final_report_decontX.html    Rendered pipeline report — DecontX track
-│   └── Biologist_Chat.md            BIOLOGIST agent review log (gitignored — generated at runtime)
+│   └── Biologist_Chat.md            BIOLOGIST agent review log
 │
 ├── r_install/                       SLURM scripts for installing R/Python packages on HTCF
 │   ├── submit_all.sh                Run this once: submits all install jobs in dependency order
