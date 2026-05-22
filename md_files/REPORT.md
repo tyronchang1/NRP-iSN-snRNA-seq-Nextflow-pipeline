@@ -98,6 +98,12 @@
 ---
 
 **Date:** 2026-05-21
+**Files changed:** `CLAUDE.md`, `.claude/rules/00_session-checklist.md`, `README.md`
+**Change:** Added `start` keyword rule. (1) `CLAUDE.md`: new **Start keyword rule** block after Auto-pipeline-check rule — when user's first message is `start`, execute the full session-start checklist steps 0–19 in order, announcing each step. (2) `00_session-checklist.md`: new `## start keyword trigger` section before the non-negotiable rule — instructs Claude to run the checklist visibly if user types `start`. (3) `README.md`: added `> Tip — start keyword` callout in Step 3 (Open in Claude Code) so new users are aware of the shortcut.
+
+---
+
+**Date:** 2026-05-21
 **Files changed:** `README.md`, `nextflow/submit.sh`, `nextflow/run.sh`
 **Change:** Added `submit.sh` to README directory tree and Running Scripts section (marked as the pipeline entry point). Fixed three pipeline-breaking bugs:
 1. `submit.sh` line 109 — hardcoded absolute path to `run.sh` replaced with `$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/run.sh`; works from any clone location

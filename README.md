@@ -160,6 +160,8 @@ On your **first session**, Claude automatically:
 
 No manual setup required.
 
+> **Tip — `start` keyword:** At the beginning of any session, type `start` as your first message. Claude will execute the full session-start checklist step-by-step (read all rules, skills, and project files → run path-change detection → spawn the pipeline status agent → invoke grill-with-docs), announcing each step so you can verify compliance.
+
 ### 4. Run the pipeline
 
 From the project root, in an **interactive terminal** (not via sbatch):

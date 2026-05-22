@@ -7,6 +7,12 @@ paths:
 
 This file is read FIRST, before all other rules. It defines every file that must be read at session start and every gate that must be checked before doing any work.
 
+## `start` keyword trigger
+
+If the user's first message is exactly `start`, execute this entire checklist explicitly and visibly — announce each step as you complete it so the user can verify compliance. Do not wait for any other input.
+
+---
+
 ## Non-negotiable rule
 
 **A checked item means you called the Read tool and received the file contents. No memory substitution. No "I already know this file." No skipping because the file "hasn't changed." Each item requires an actual Read tool call every session.**

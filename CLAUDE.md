@@ -47,6 +47,8 @@ In both cases: pass paths to all HTML reports that exist on disk. BIOLOGIST revi
 - If running or finished: report per-stage status and hand failures to `troubleshoot_agent`
 - If nothing found: exit silently — do not mention it to the user
 
+**Start keyword rule:** If the user's first message in a session is `start`, immediately execute the full session-start checklist (steps 0–19) in order, announcing each step as it completes: read all rule files (steps 1–7), run the memory bootstrap, read the domain glossary (step 8), read all pipeline skill files (steps 9–12), read all project state files (steps 13–15), run path-change detection and REPORT.md staleness check (steps 16–17), spawn `nextflow-stage-report-agent` (step 18), and invoke `grill-with-docs` (step 19). Make each step visible to the user so they can verify compliance.
+
 ## Project Overview
 
 This is a Nextflow snRNA-seq pipeline for **human induced sensory neurons (iSNs)** — iPSC-derived neurons that model dorsal root ganglion (DRG) sensory subtypes. Eight samples from experiment NR00 (timepoints: iPSC, Day7, Day13) are processed through four sequential stages:
