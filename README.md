@@ -10,7 +10,7 @@ snRNA-seq analysis of human induced sensory neurons (iSNs), Stages 01–04: ambi
 
 - **HTCF cluster account** — all jobs run on HTCF via SLURM
 - **Claude Code** — install from [Claude Code](https://code.claude.com/docs/en/quickstart)
-- **Software dependencies** — see [md_files/SETUP.md](md_files/SETUP.md) for the full list. rmlab members on HTCF: already installed at `/ref/rmlab/software/`, no action needed.
+- **Software dependencies** — see [md_files/SETUP.md](md_files/SETUP.md) for the full list. Mitra lab members on HTCF: already installed at `/ref/rmlab/software/`, no action needed.
 
 ---
 
