@@ -47,7 +47,7 @@ Each item requires a Read tool call. Read the file. Apply its instructions for t
 
 **After reading step 7 — memory bootstrap (runs every session, no-op after first time):**
 
-For each file in `.claude/memory/`, check whether it already exists in your project memory directory (the path shown in your system context under "auto memory"). If it does **not** exist there, copy it. If it **does** exist, skip.
+Find your personal project memory directory from the system context "auto memory" path (format: `~/.claude/projects/<hash>/memory/`). For each file in the table below, use the Read tool to attempt to read `<memory_dir>/<filename>`. If the Read returns "File does not exist" → bootstrap is needed. If Read succeeds → skip, already bootstrapped.
 
 Files to bootstrap:
 
@@ -58,7 +58,7 @@ Files to bootstrap:
 
 For each file not yet in memory:
 1. Use the Write tool to create it at `<memory_dir>/<filename>`, copying the exact content from the repo file.
-2. Open `<memory_dir>/MEMORY.md` (create it if it does not exist) and append the corresponding pointer line from the table above.
+2. Use the Read tool to check if `<memory_dir>/MEMORY.md` exists. If not, create it. Then append the corresponding pointer line from the table above.
 
 This is a one-time bootstrap per file. It ensures every new clone immediately has the shared behavioral spec and feedback rules in their personal project memory, with no manual setup required.
 

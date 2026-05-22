@@ -98,6 +98,12 @@
 ---
 
 **Date:** 2026-05-21
+**File changed:** `.claude/rules/00_session-checklist.md`
+**Change:** Improved memory bootstrap instructions — step 2 now tells Claude to use the Read tool to check file existence (rather than vague "check whether it exists"); step for MEMORY.md now uses Read to verify existence before writing. Clarifies the auto memory path format `~/.claude/projects/<hash>/memory/`.
+
+---
+
+**Date:** 2026-05-21
 **Files changed:** `.claude/memory/feedback_checklist_display.md` (created), `.claude/rules/00_session-checklist.md`
 **Change:** Added `feedback_checklist_display.md` to `.claude/memory/` so it travels with the repo and gets bootstrapped into every new user's personal memory. Updated the memory bootstrap block in `00_session-checklist.md` to a table-driven format — lists all repo memory files, their target filenames, and MEMORY.md pointer lines; Claude copies any missing file on every session start (no-op if already present).
 
