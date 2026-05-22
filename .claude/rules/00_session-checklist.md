@@ -47,7 +47,9 @@ Each item requires a Read tool call. Read the file. Apply its instructions for t
 
 **After reading step 7 — memory bootstrap (runs every session, no-op after first time):**
 
-Find your personal project memory directory from the system context "auto memory" path (format: `~/.claude/projects/<hash>/memory/`). For each file in the table below, use the Read tool to attempt to read `<memory_dir>/<filename>`. If the Read returns "File does not exist" → bootstrap is needed. If Read succeeds → skip, already bootstrapped.
+Find your personal project memory directory from the system context "auto memory" path (format: `~/.claude/projects/<hash>/memory/`).
+
+**First — check `md_files/REPORT.md` for prior bootstrap entries.** Read `md_files/REPORT.md` and search for lines containing `[memory bootstrap]`. Any filename already logged there was already copied in a previous session — skip it entirely, no Read needed.
 
 Files to bootstrap:
 
@@ -56,11 +58,13 @@ Files to bootstrap:
 | `.claude/memory/project_behavior_rules.md` | `project_behavior_rules.md` | `- [Project: Behavioral rules](project_behavior_rules.md) — 11 binding rules from 07_behavior.md; covers no-inline-edits, SLURM autonomy, subagent constraints block, Stage 05 removal, rename/delete propagation, and more` |
 | `.claude/memory/feedback_checklist_display.md` | `feedback_checklist_display.md` | `- [Feedback: Checklist display](feedback_checklist_display.md) — Print [ ] before and [x] after each Read call, one item at a time — never batch reads or summarize after the fact` |
 
-For each file in the table, run this check independently:
+For each file **not already logged in REPORT.md**, run this check independently:
 1. Use the Read tool to attempt `<memory_dir>/<filename>`. If Read succeeds → file already exists, skip to the next file. If "File does not exist" → use the Write tool to copy the exact content from the repo file.
 2. Use the Read tool to attempt `<memory_dir>/MEMORY.md`. If "File does not exist" → create it with the Write tool, then add the pointer line. If it exists → check whether the pointer line for this file is already present. If yes → skip. If no → append the pointer line.
+3. Append this line to `md_files/REPORT.md`:
+   `[memory bootstrap] <filename> copied to <memory_dir> on <date>`
 
-This is a one-time bootstrap per file. It ensures every new clone immediately has the shared behavioral spec and feedback rules in their personal project memory, with no manual setup required.
+This log entry is the authoritative record that bootstrap ran. On every subsequent session, REPORT.md is checked first — files already logged are skipped without any Read tool calls into the memory directory.
 
 ---
 
