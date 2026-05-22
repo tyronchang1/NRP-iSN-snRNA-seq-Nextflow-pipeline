@@ -78,7 +78,7 @@ cd iSN_claude
 
 ### 2. Open in Claude Code
 
-Start an interactive SLURM session, then open Claude Code:
+Start an interactive SLURM session, then open Claude Code(or use Claude locally):
 
 ```bash
 srun --mem=24GB --cpus-per-task=1 -J interactive -p interactive --pty /bin/bash -l
