@@ -2,6 +2,91 @@
 
 ---
 
+## 2026-05-21 — Full post-run report (SLURM jobs 41072269–41073468) — run: jolly_feynman
+
+**Run name:** jolly_feynman
+**Track:** decontx
+**SLURM head job:** 41072269 (DECONTX) → 41072556 (SCDBLFINDER_DECONTX) → 41072717 (CELL_FILTERING) → 41072879 (CLUSTERING) → 41073468 (MERGE_REPORT)
+**Started:** 2026-05-21 17:29 CDT | **Finished:** 2026-05-21 19:53 CDT | **Wall time:** ~2h 24m
+**Nextflow summary:** succeededCount=5; failedCount=0; cachedCount=0 (full fresh run — no resume from cache)
+**Note:** execution_report.html and timeline.html WARNs at start and end — pre-existing files could not be overwritten. trace.txt written successfully. These are cosmetic only; all stages ran and completed successfully.
+
+### Stage report (DecontX track)
+
+```
+Stage:        SOUPX
+Status:       NOT STARTED
+Exit code:    —
+Output files: N/A (SoupX track not selected for this run)
+Error:        none
+Origin:       nextflow/modules/soupx.nf
+
+Stage:        DECONTX
+Status:       SUCCESS
+Exit code:    0
+Output files: iSN_decontX.rds — exists
+              01.2_DecontX_report.html — exists
+Error:        none
+Origin:       nextflow/modules/decontx.nf | SLURM job 41072269 | duration ~32 min
+              work/51/cb94b2eb8e829a52f91c2f6f1ae063/
+
+Stage:        SCDBLFINDER
+Status:       NOT STARTED
+Exit code:    —
+Output files: N/A (SoupX track not selected for this run)
+Error:        none
+Origin:       nextflow/modules/scdblfinder.nf
+
+Stage:        SCDBLFINDER_DECONTX
+Status:       SUCCESS
+Exit code:    0
+Output files: iSN_decontX_scDblFinder.rds — exists
+              02.1_scDblFinder_report.html — exists
+Error:        none
+Origin:       nextflow/modules/scdblfinder_decontx.nf | SLURM job 41072556 | duration ~24 min
+              work/f5/fc091d1a46978b4294a5771939aa57/
+
+Stage:        CELL_FILTERING
+Status:       SUCCESS
+Exit code:    0
+Output files: 03_seu_cellfiltered_decontx.rds — exists
+              03_cell_filtering_report_decontX.html — exists
+Error:        none
+Origin:       nextflow/modules/cell_filtering.nf | SLURM job 41072717 | duration ~18 min
+              work/c9/d98cafd264957656f62148b938ff20/
+
+Stage:        CLUSTERING
+Status:       SUCCESS
+Exit code:    0
+Output files: 04_seu_clustered_decontx.rds — exists
+              04_clustering_report_decontX.html — exists
+Error:        none
+Origin:       nextflow/modules/clustering.nf | SLURM job 41072879 | duration ~1h 3m
+              work/a8/77eb7a9c32eec969f8ee1a346c505e/
+
+Stage:        MERGE_REPORT
+Status:       SUCCESS
+Exit code:    0
+Output files: final_report_decontX.html — exists
+              final_report.Rmd — exists
+Error:        none (execution_report.html and timeline.html overwrite blocked — cosmetic WARN)
+Origin:       nextflow/modules/merge_report.nf | SLURM job 41073468 | duration ~5 min
+              work/fc/8576cb4566d324181165595a64ad2b/
+```
+
+```
+───────────────────────────────
+Stages passed:      5 / 5 (DECONTX, SCDBLFINDER_DECONTX, CELL_FILTERING, CLUSTERING, MERGE_REPORT)
+Stages failed:      0 / 5
+Stages in progress: 0 / 5
+Stages not started: 2 (SOUPX, SCDBLFINDER — SoupX track not selected)
+───────────────────────────────
+```
+
+**All stages SUCCESS. No failures. Pipeline complete — spawning BIOLOGIST.**
+
+---
+
 ## 2026-05-21 — script-review-agent: notification config review
 
 **Agent:** script-review-agent
