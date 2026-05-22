@@ -11,6 +11,8 @@ This file is read FIRST, before all other rules. It defines every file that must
 
 If the user's first message is exactly `start`, execute this entire checklist explicitly and visibly — announce each step as you complete it so the user can verify compliance. Do not wait for any other input.
 
+**If `start` is typed again mid-session (not as the first message): do NOT re-run the checklist.** The session is already primed. Simply acknowledge: "Session already primed — checklist ran at session open." Then continue with whatever the user needs.
+
 ---
 
 ## Non-negotiable rule
