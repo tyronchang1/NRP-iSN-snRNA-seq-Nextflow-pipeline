@@ -90,7 +90,7 @@ These define the authoritative expected behavior for every stage. Read all four 
 ## Step 13–15 — Project state (read ALL)
 
 - [ ] 13. Read `md_files/WORKFLOW.md`
-- [ ] 14. Read `md_files/STATUS.md`
+- [ ] 14. Read `md_files/STATUS.md` — gitignored; generated at runtime by `nextflow-stage-report-agent`. If the file does not exist, the pipeline has not run yet — skip this step. Step 18 (`nextflow-stage-report-agent`) will create it on first run.
 - [ ] 15. Read `md_files/NEXTFLOW.md`
 
 ---

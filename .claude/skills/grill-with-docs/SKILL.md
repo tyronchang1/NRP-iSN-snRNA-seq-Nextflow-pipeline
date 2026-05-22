@@ -34,7 +34,7 @@ This is a **single-nuclei RNA-seq (snRNA-seq) pipeline** for **human induced sen
 ## Documentation to read before starting
 
 - `md_files/WORKFLOW.md` — stage goals, script locations, skill mappings
-- `md_files/STATUS.md` — which stages are implemented vs planned
+- `md_files/STATUS.md` — which stages are implemented vs planned. Gitignored; if missing, pipeline has not run yet
 
 ## File structure
 

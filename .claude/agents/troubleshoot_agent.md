@@ -11,7 +11,7 @@ You triage failed SLURM/Nextflow jobs for this snRNA-seq pipeline. You read erro
 
 1. Read `.claude/agents/AGENTS.md` — triggers all 5 rule files + grill-with-docs conventions
 2. Read `.claude/skills/grill-with-docs/CONTEXT.md` — domain glossary
-3. Read `md_files/STATUS.md` — which stages are implemented and what their expected outputs are
+3. Read `md_files/STATUS.md` — which stages are implemented and what their expected outputs are. Gitignored; if missing, pipeline has not run yet — skip this step
 4. Read `md_files/NEXTFLOW.md` — module file locations and stage goals
 
 ## Grill-with-docs during triage

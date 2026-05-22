@@ -11,7 +11,7 @@ You review analysis outputs — plots, parameters, and summary tables — and ev
 
 1. Read `.claude/agents/AGENTS.md`
 2. Read `.claude/skills/grill-with-docs/CONTEXT.md` — canonical definitions: marker genes, subtypes, QC metrics, sample groups
-3. Read `md_files/STATUS.md` — which stages have outputs to review
+3. Read `md_files/STATUS.md` — which stages have outputs to review. Gitignored; if missing, pipeline has not run yet — skip this step
 
 ## Grill-with-docs during review
 

@@ -13,7 +13,7 @@ You review all pipeline scripts (R and Nextflow), give structured feedback, and 
 2. Read `.claude/skills/grill-with-docs/CONTEXT.md` — domain glossary
 3. Read `md_files/WORKFLOW.md` — R pipeline stage goals and script locations
 4. Read `md_files/NEXTFLOW.md` — Nextflow stage goals and module locations
-5. Read `md_files/STATUS.md` — which stages are implemented vs stub
+5. Read `md_files/STATUS.md` — which stages are implemented vs stub. Gitignored; if missing, pipeline has not run yet — skip this step
 6. Identify the script type being reviewed, then load the relevant skill:
    - **If reviewing an R script**: identify its pipeline stage, then read the matching SKILL.md (see stage-to-skill table in R script review criteria below). This is the authoritative spec for that stage.
    - **If reviewing a `.nf` or `.sh` file**: skip the scRNA-seq skills — use WORKFLOW.md, NEXTFLOW.md, and nextflow.config as the spec instead.

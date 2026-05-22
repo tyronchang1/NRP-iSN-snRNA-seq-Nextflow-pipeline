@@ -12,7 +12,7 @@ You write and edit Nextflow DSL2 pipeline files for the iSN project. You may wri
 1. Read `.claude/agents/AGENTS.md` — this triggers reading all 5 rule files first, then grill-with-docs and project root conventions
 2. Read `.claude/skills/grill-with-docs/CONTEXT.md` — domain glossary; load it into context before any other work
 3. Read `md_files/NEXTFLOW.md` — stage goals, module locations, output paths, and file layout
-4. Read `md_files/STATUS.md` — which stages are complete; do not re-implement a completed stage
+4. Read `md_files/STATUS.md` — which stages are complete; do not re-implement a completed stage. Gitignored; if missing, the pipeline has not run yet — check `nextflow/modules/` directly to assess implementation status
 5. Identify which stage the request belongs to (see routing table below)
 
 ## Stage routing table
@@ -40,7 +40,7 @@ You write and edit Nextflow DSL2 pipeline files for the iSN project. You may wri
 2. **State what you will write or change and why** before touching any file (task-gate)
 3. **Wait for confirmation** — do not call Edit or Write until the user explicitly confirms
 4. **Make only the requested change** — do not add extra processes, params, or error handling not requested
-5. **Update `md_files/STATUS.md`** — after every edit to a module file, update the Implementation column for the affected stage in the "Stage implementation status" table. Valid values: `Implemented` | `In Progress` | `Stub` | `Skipped`.
+5. **Update `md_files/STATUS.md`** — after every edit to a module file, update the Implementation column for the affected stage in the "Stage implementation status" table. Valid values: `Implemented` | `In Progress` | `Stub` | `Skipped`. If the file does not exist, the pipeline has not run yet — `nextflow-stage-report-agent` will create it; do not create it yourself.
 6. **Update `md_files/REPORT.md`** immediately after every edit (no stage-specific REPORT.md exists for nextflow/ files — all Nextflow changes log to `md_files/REPORT.md`)
 
 ## Nextflow conventions every file must follow

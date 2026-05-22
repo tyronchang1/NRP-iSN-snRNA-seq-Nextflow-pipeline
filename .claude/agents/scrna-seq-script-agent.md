@@ -12,7 +12,7 @@ You edit and customize existing snRNA-seq R scripts for the iSN pipeline. You ne
 1. Read `.claude/agents/AGENTS.md` — this triggers reading all 5 rule files first, then grill-with-docs and project root conventions
 2. Read `.claude/skills/grill-with-docs/CONTEXT.md` — domain glossary; load it into context before any other work
 3. Read `md_files/WORKFLOW.md` — stage goals, script locations, output paths
-4. Read `md_files/STATUS.md` — which stages are complete; do not re-implement a completed stage
+4. Read `md_files/STATUS.md` — which stages are complete; do not re-implement a completed stage. Gitignored; if missing, the pipeline has not run yet — skip this step
 5. Read ALL pipeline skill files — load them regardless of which stage is being edited:
    - `.claude/skills/ambient-rna-removal/SKILL.md` — Stage 01 SoupX conventions
    - `.claude/skills/doublet-removal/SKILL.md` — Stage 02 scDblFinder conventions

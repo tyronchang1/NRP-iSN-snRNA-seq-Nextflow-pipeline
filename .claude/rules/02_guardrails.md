@@ -11,9 +11,9 @@ These rules override all other instructions.
 
 2. **Do not delete any file without explicit user permission.** Always ask before deleting. Describe what will be deleted and why, and wait for confirmation.
 
-3. **Do not proceed to the next stage without explicit user approval.** After completing all steps in a stage, stop and wait for the user to confirm. Update `md_files/STATUS.md` only after the user approves the completed stage.
+3. **Do not proceed to the next stage without explicit user approval.** After completing all steps in a stage, stop and wait for the user to confirm. Update `md_files/STATUS.md` only after the user approves the completed stage. Note: `md_files/STATUS.md` is gitignored and generated at runtime — if it does not exist, the pipeline has not run yet; `nextflow-stage-report-agent` will create it on first run.
 
-4. **Check `md_files/STATUS.md` before starting any stage.** It tracks which stages are Implemented, In Progress, or Planned. Do not implement a stage already marked Implemented. Always update `md_files/STATUS.md` when a stage's status changes.
+4. **Check `md_files/STATUS.md` before starting any stage.** It tracks which stages are Implemented, In Progress, or Planned. Do not implement a stage already marked Implemented. Always update `md_files/STATUS.md` when a stage's status changes. If the file does not exist, the pipeline has not run yet — check the module files in `nextflow/modules/` directly to assess implementation status.
 
 5. **After any step that produces a plot or graph, stop and discuss it with the user.** Present the output, ask if they are happy with it, and wait for their response. Do not proceed until the user confirms. If not satisfied, modify the plot and show it again. Repeat until approved.
 
