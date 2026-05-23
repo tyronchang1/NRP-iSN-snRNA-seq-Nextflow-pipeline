@@ -61,6 +61,7 @@ Files to bootstrap:
 |-----------|----------------|------------------------|
 | `.claude/memory/project_behavior_rules.md` | `project_behavior_rules.md` | `- [Project: Behavioral rules](project_behavior_rules.md) — 11 binding rules from 07_behavior.md; covers no-inline-edits, SLURM autonomy, subagent constraints block, Stage 05 removal, rename/delete propagation, and more` |
 | `.claude/memory/feedback_checklist_display.md` | `feedback_checklist_display.md` | `- [Feedback: Checklist display](feedback_checklist_display.md) — Print [ ] before and [x] after each Read call, one item at a time — never batch reads or summarize after the fact` |
+| `.claude/memory/feedback_schedulewakeup_routing.md` | `feedback_schedulewakeup_routing.md` | `- [Feedback: ScheduleWakeup routing](feedback_schedulewakeup_routing.md) — When wakeup fires with "iSN Nextflow pipeline monitoring check", spawn nextflow-stage-report-agent first — never handle inline` |
 
 For each file **not already logged in REPORT.md**, run this check independently:
 1. Use the Read tool to attempt `<memory_dir>/<filename>`. If Read succeeds → file already exists, skip to the next file. If "File does not exist" → use the Write tool to copy the exact content from the repo file.

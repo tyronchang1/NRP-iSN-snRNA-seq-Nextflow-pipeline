@@ -181,3 +181,18 @@ Every Agent tool call must include `run_in_background: true`, without exception.
 **Why:** Keeps the local Claude session responsive while agents run. Results surface at the bottom of the conversation when complete.
 
 **Applies to:** Every Agent tool call in every session, for all users.
+
+---
+
+## 13. ScheduleWakeup fires → always spawn nextflow-stage-report-agent first
+
+When a `ScheduleWakeup` fires with "iSN Nextflow pipeline monitoring check" in the prompt, the **only valid first action** is spawning `nextflow-stage-report-agent` via the Agent tool with `run_in_background: true`. Do not handle it inline under any circumstances.
+
+**Prohibited reasoning patterns — all of these are violations:**
+- "I already have context from the conversation, I can report faster myself"
+- "The pipeline state is obvious from prior messages, no need for an agent"
+- "It would be more efficient to just check the log directly"
+
+**Why:** Claude violated this on 2026-05-23 — it reasoned "I already have context" and bypassed the agent entirely, checking `.nextflow.log` and reporting status inline. The routing rule exists to enforce consistency and auditability for all users, not just for cases where Claude lacks context. Inline handling defeats the purpose.
+
+**How to apply:** Before any other action when a ScheduleWakeup fires with this prompt string — spawn `nextflow-stage-report-agent`. No exceptions.

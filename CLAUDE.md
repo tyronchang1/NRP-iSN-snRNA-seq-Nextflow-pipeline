@@ -23,6 +23,8 @@ When a task matches the table below, spawn a subagent using the `Agent` tool —
 | User says the pipeline is running or was just submitted (e.g., "I ran submit.sh", "pipeline started", "I submitted the job", "pipeline running") | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
 | Claude just ran `sbatch` to submit the Nextflow pipeline (job ID returned) | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
 | A `ScheduleWakeup` fires with "iSN Nextflow pipeline monitoring check" in the prompt | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
+
+> **HARD RULE — no inline handling of ScheduleWakeup:** When the prompt contains "iSN Nextflow pipeline monitoring check", spawn `nextflow-stage-report-agent` as the **first and only action**. Do NOT check `.nextflow.log` yourself, do NOT report stage status inline, do NOT reason "I already have context from the conversation." Spawn the agent unconditionally. See Rule 13 in `.claude/rules/07_behavior.md`.
 | Review clustering parameters, QC distributions, doublet rates, or expression plots for biological interpretability | `BIOLOGIST` | `.claude/agents/BIOLOGIST.md` |
 | User says the Nextflow pipeline has finished (e.g., "pipeline finished", "nextflow done", "run is complete") | `BIOLOGIST` | `.claude/agents/BIOLOGIST.md` |
 | User reports a SLURM job failure, pastes a SLURM/Nextflow error, or shares a log path from a failed run | `troubleshoot_agent` | `.claude/agents/troubleshoot_agent.md` |
