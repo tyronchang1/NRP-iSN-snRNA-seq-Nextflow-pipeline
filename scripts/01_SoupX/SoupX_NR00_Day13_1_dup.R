@@ -127,4 +127,5 @@ tail(sort(rowSums(sc$toc > out_NR00_Day13_1_dup) / rowSums(sc$toc > 0)), n = 100
 # write corrected count matrix to disk in 10x Genomics format (barcodes.tsv, features.tsv, matrix.mtx)
 # output consumed by Stage 02 (DoubletRemoval)
 dir.create("./scripts/01_SoupX/SoupX_dir_out", recursive = TRUE, showWarnings = FALSE)
+unlink("./scripts/01_SoupX/SoupX_dir_out/NR00_Day13_1_dupCounts", recursive = TRUE)
 DropletUtils:::write10xCounts("./scripts/01_SoupX/SoupX_dir_out/NR00_Day13_1_dupCounts", out_NR00_Day13_1_dup)

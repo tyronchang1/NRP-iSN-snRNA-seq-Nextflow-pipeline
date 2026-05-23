@@ -2,6 +2,92 @@
 
 ---
 
+## 2026-05-23 — Bug fix: unlink() before write10xCounts() — all 8 SoupX scripts
+
+**Bug fix applied:** 2026-05-23
+- **Bug:** `write10xCounts()` errors on pre-existing `SoupX_dir_out/<sample>Counts` paths (SLURM job 41098229, run backstabbing_lalande)
+- **Fix:** Added `unlink(<outpath>, recursive=TRUE)` immediately before `write10xCounts()` in all 8 SoupX scripts
+- **Agent:** scrna-seq-script-agent
+
+---
+
+## 2026-05-23 — Post-run failure report: job 41098229 (--track both) — run: backstabbing_lalande
+
+**Run name:** backstabbing_lalande
+**Track:** both (SoupX + DecontX parallel)
+**SLURM job:** 41098229
+**Time of failure:** 15:53 CDT
+**State:** FINISHED with FAILURE — pipeline aborted after SOUPX (NR00_Day13_1) exit 1
+
+### Per-stage status
+
+```
+Stage:        SOUPX (NR00_Day13_1)
+Status:       FAILED
+Exit code:    1
+Work dir:     work/17/0b9518c69b7ebb8489a9d07619a41c
+Output files: SoupX_dir_out/NR00_Day13_1Counts — EXISTS from previous run (conflict)
+Error:        Error in DropletUtils:::write10xCounts("./scripts/01_SoupX/SoupX_dir_out/NR00_Day13_1Counts", ...):
+              specified 'path' already exists
+Origin:       scripts/01_SoupX/SoupX_NR00_Day13_1.R
+Root cause:   All 8 SoupX_dir_out/<sample>Counts directories exist from a prior run.
+              write10xCounts() in DropletUtils refuses to overwrite an existing directory.
+              The script does not delete or check for the prior output before writing.
+
+Stage:        SOUPX (NR00_Day13_1_dup)
+Status:       ABORTED (exit 143 — SIGTERM)
+Exit code:    143
+Work dir:     work/e6/008ee5db87352d59d29ace3cf61ec1
+Error:        Killed by Nextflow session abort triggered by NR00_Day13_1 failure
+
+Stage:        SOUPX (NR00_Day13_2, NR00_Day13_2_dup, NR00_Day7_1, NR00_Day7_2, NR00_iPSC_1, NR00_iPSC_2)
+Status:       NOT STARTED (6 jobs — were PENDING at time of failure, never ran)
+Exit code:    — (no .exitcode)
+
+Stage:        DECONTX
+Status:       SUCCESS
+Exit code:    0
+Work dir:     work/7d/95a0ea186391a01099c857c5d927d3
+Output files: iSN_decontX.rds — exists
+              01.2_DecontX_report.html — exists (+ 13 other PNG/JPEG outputs)
+Error:        none
+Duration:     ~2h 47m (completed 15:49 CDT)
+
+Stage:        SCDBLFINDER_DECONTX
+Status:       ABORTED
+Exit code:    — (submitted as SLURM job 41098636; work/e4/cabe63; no .exitcode written — job killed before task ran)
+
+Stage:        SCDBLFINDER
+Status:       NOT STARTED
+
+Stage:        CELL_FILTERING_SOUPX
+Status:       NOT STARTED
+
+Stage:        CELL_FILTERING_DECONTX
+Status:       NOT STARTED
+
+Stage:        CLUSTERING_SOUPX
+Status:       NOT STARTED
+
+Stage:        CLUSTERING_DECONTX
+Status:       NOT STARTED
+```
+
+```
+───────────────────────────────
+Stages passed:      1 / 10 (DECONTX)
+Stages failed:      1 / 10 (SOUPX NR00_Day13_1, exit 1)
+Stages aborted:     2 / 10 (SOUPX NR00_Day13_1_dup exit 143; SCDBLFINDER_DECONTX submitted but killed)
+Stages not started: 6 / 10
+───────────────────────────────
+```
+
+**Root cause summary:** All 8 `SoupX_dir_out/<sample>Counts` directories exist on disk from a previous run. `DropletUtils::write10xCounts()` errors if the target path already exists and does not have an `overwrite=TRUE` option. The SoupX R scripts do not delete or guard against pre-existing output directories before calling `write10xCounts()`. Fix required: add pre-run directory removal or use `overwrite = TRUE` in each SoupX R script.
+
+**Handoff:** troubleshoot_agent spawned — see below.
+
+---
+
 ## 2026-05-23 — Monitoring check: job 41098229 (--track both) — poll 3
 
 **Run name:** backstabbing_lalande
