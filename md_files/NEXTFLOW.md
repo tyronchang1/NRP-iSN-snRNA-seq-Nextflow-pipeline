@@ -107,5 +107,6 @@ nextflow/
     ├── scdblfinder.nf       Stage 02 — SCDBLFINDER (SoupX track)
     ├── scdblfinder_decontx.nf  Stage 02.1 — SCDBLFINDER_DECONTX (DecontX track)
     ├── cell_filtering.nf    Stage 03 — CELL_FILTERING
-    └── clustering.nf        Stage 04 — CLUSTERING
+    ├── clustering.nf        Stage 04 — CLUSTERING
+    └── merge_report.nf      Stage 04 — MERGE_REPORT (combined HTML report for both tracks)
 ```

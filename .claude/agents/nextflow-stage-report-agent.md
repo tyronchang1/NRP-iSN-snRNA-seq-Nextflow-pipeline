@@ -56,14 +56,19 @@ Do not say anything to the user. Do not produce a report. Simply stop.
 5. Tell the user which stage is currently `IN PROGRESS`.
 6. If any stage already shows `FAILED`, hand off to `troubleshoot_agent` immediately — do not wait for the job to finish.
 7. Update `md_files/STATUS.md` Last run status table with all current statuses.
-8. **Schedule the next monitoring check:**
+8. **Schedule the next monitoring check** — `ScheduleWakeup` is a deferred tool; you MUST load it via `ToolSearch` before calling it:
    ```
+   Step 1 — load the schema:
+   ToolSearch(query: "select:ScheduleWakeup", max_results: 1)
+
+   Step 2 — call it:
    ScheduleWakeup(
      delaySeconds: 1800,
      reason: "iSN pipeline monitoring — checking stage completions every 30 min",
-     prompt: "iSN Nextflow pipeline monitoring check — inspect pipeline status (squeue + .nextflow.log at /scratch/rmlab/rmlab_shared3/tyron/Rscriptv2/iSN/iSN_claude), report newly completed stages, and continue monitoring loop if still running."
+     prompt: "iSN Nextflow pipeline monitoring check"
    )
    ```
+   Do NOT use the `/schedule` skill — that is a different mechanism for remote cron jobs and is not available in subagent context. `ScheduleWakeup` (loaded via ToolSearch) is the correct tool and works in subagents.
    This wakeup re-invokes the main Claude session, which will spawn `nextflow-stage-report-agent` again per the routing rules in CLAUDE.md.
 
 **Note on submission:** `submit.sh` is interactive and Claude cannot run it directly. However, Claude can submit the pipeline programmatically by replicating what `submit.sh` does:
@@ -121,8 +126,8 @@ When all stages are `SUCCESS` or `CACHED`:
 
 1. Collect every HTML report produced by the run. Standard paths:
    - `scripts/01.2_DecontX/DecontX_out/01.2_DecontX_report.html` (DecontX track)
-   - `scripts/02.1_scDblFinder_decontX/scDblFinder_output/02.1_scDblFinder_report.html` (DecontX track)
-   - `scripts/02_scDblFinder_soupx/scDblFinder_output/02_scDblFinder_report.html` (SoupX track)
+   - `scripts/02.1_scDblFinder_decontX/scDblFinder_output/02.1_scDblFinder_report_decontX.html` (DecontX track)
+   - `scripts/02_scDblFinder_soupx/scDblFinder_output/02_scDblFinder_report_soupX.html` (SoupX track)
    - `scripts/03_Cell_filtering/Cell_filtering_output/03_cell_filtering_report.html`
    - `scripts/04_Clustering/clustering_output/04_clustering_report_decontX.html` (DecontX track)
    - `scripts/04_Clustering/clustering_output/04_clustering_report_soupX.html` (SoupX track)

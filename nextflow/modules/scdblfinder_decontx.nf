@@ -15,7 +15,7 @@ process SCDBLFINDER_DECONTX {
       input          = '${params.project_root}/scripts/02.1_scDblFinder_decontX/02.1_scDblFinder_report.Rmd',
       output_options = list(dev = 'ragg_png'),
       params         = list(project_root = '${params.project_root}'),
-      output_file    = '${params.project_root}/scripts/02.1_scDblFinder_decontX/scDblFinder_output/02.1_scDblFinder_report.html',
+      output_file    = '${params.project_root}/scripts/02.1_scDblFinder_decontX/scDblFinder_output/02.1_scDblFinder_report_decontX.html',
       envir          = new.env()
     )"
     """

@@ -1,15 +1,18 @@
 process MERGE_REPORT {
 
+    tag "${track}"
+
     publishDir "${params.project_root}/final_output", mode: 'copy'
 
     input:
     val ready
+    val track
 
     output:
     val true, emit: done
 
     script:
-    def track_display = params.track == "decontx" ? "decontX" : "soupX"
+    def track_display = track == "decontx" ? "decontX" : "soupX"
     """
     export PATH=${params.r_bin}:\$PATH
     export R_LIBS=${params.r_libs}
@@ -20,7 +23,7 @@ process MERGE_REPORT {
       output_options = list(dev = 'ragg_png'),
       params         = list(
         project_root = '${params.project_root}',
-        track        = '${params.track}',
+        track        = '${track}',
         gene_sets    = Sys.getenv('GENE_SETS')
       ),
       output_file    = '${params.project_root}/final_output/final_report_${track_display}.html',

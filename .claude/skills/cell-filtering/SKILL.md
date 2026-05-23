@@ -54,16 +54,19 @@ Cell_filtering_output/
    - Canonical header: `rm(list = ls(all.name = TRUE))`, `dir <- "..."`, `setwd(dir)`
    - `dir.create()` for `Cell_filtering_output/`, `Cell_filtering_output/soupx/`, `Cell_filtering_output/decontx/`
 
-2. **Load both track inputs**
-   - `seu_soupx   <- readRDS("./scripts/02_scDblFinder_soupx/scDblFinder_output/iSN_doubletstep.rds")`
-   - `seu_decontx <- readRDS("./scripts/02.1_scDblFinder_decontX/scDblFinder_output/iSN_decontX_scDblFinder.rds")`
+2. **Parse `--track` and load the matching input**
+   - `args_track <- .get_arg("--track", "decontx")` — reads the CLI flag; defaults to `"decontx"`
+   - Only one RDS is loaded per invocation, chosen by `args_track`:
+     - SoupX: `readRDS("./scripts/02_scDblFinder_soupx/scDblFinder_output/iSN_doubletstep.rds")`
+     - DecontX: `readRDS("./scripts/02.1_scDblFinder_decontX/scDblFinder_output/iSN_decontX_scDblFinder.rds")`
+   - The other track's RDS is never read in the same run
 
 3. **Calculate mitochondrial percentage**
    - `seu_soupx[["percent.mt"]]   <- PercentageFeatureSet(seu_soupx,   pattern = "^MT-")`
    - `seu_decontx[["percent.mt"]] <- PercentageFeatureSet(seu_decontx, pattern = "^MT-")`
    - Always `percent.mt` — never `percent.mito`
 
-4. **Run both tracks independently** — the script has two clearly marked sections (`## SoupX track ----`, `## DecontX track ----`). Each section runs the same steps 5–10 on its own object.
+4. **Run the selected track's section only** — the script has two clearly marked sections (`## SoupX track ----`, `## DecontX track ----`), each guarded by `if (args_track == "soupx")` / `if (args_track == "decontx")`. Only one block executes per invocation. Nextflow calls the script twice (once per track) when `--track both` is used.
 
 5. **Plot QC metrics (9 plots per track)**
    - `violin1` — VlnPlot of `nFeature_RNA`, `nCount_RNA`, `percent.mt`, grouped by `sample_group`

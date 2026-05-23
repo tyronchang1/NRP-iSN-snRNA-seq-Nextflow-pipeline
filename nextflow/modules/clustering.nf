@@ -1,24 +1,23 @@
 process CLUSTERING {
 
-    tag "parameter_sweep"
-
-    publishDir "${params.project_root}/scripts/04_Clustering/clustering_output", mode: 'copy'
+    tag "${track}"
 
     input:
     val ready
+    val track
 
     output:
-    val true, emit: done
+    val track, emit: done
 
     script:
-    def track_display = params.track == "decontx" ? "decontX" : "soupX"
+    def track_display = track == "decontx" ? "decontX" : "soupX"
     """
     export PATH=${params.r_bin}:\$PATH
     export R_LIBS=${params.r_libs}
     export GENE_SETS='${params.gene_sets}'
     Rscript ${params.project_root}/scripts/04_Clustering/04_clustering.R \
         --gene_sets        "\$GENE_SETS" \
-        --track            ${params.track} \
+        --track            ${track} \
         --seed             ${params.seed} \
         --project_root     ${params.project_root}
     Rscript -e "rmarkdown::render(
@@ -28,7 +27,7 @@ process CLUSTERING {
         project_root = '${params.project_root}',
         gene_sets    = Sys.getenv('GENE_SETS'),
         seed         = ${params.seed},
-        track        = '${params.track}'
+        track        = '${track}'
       ),
       output_file    = '${params.project_root}/scripts/04_Clustering/clustering_output/04_clustering_report_${track_display}.html',
       envir          = new.env()

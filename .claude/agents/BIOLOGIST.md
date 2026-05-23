@@ -112,7 +112,7 @@ After reviewing all stages in a pipeline run, append a single summary table to `
 | Stage | Report | Overall flag | Key finding |
 |-------|--------|-------------|-------------|
 | 01.2 DECONTX | 01.2_DecontX_report.html | [OK] / [FLAG] / [ASK] | {one sentence} |
-| 02.1 SCDBLFINDER_DECONTX | 02.1_scDblFinder_report.html | [OK] / [FLAG] / [ASK] | {one sentence} |
+| 02.1 SCDBLFINDER_DECONTX | 02.1_scDblFinder_report_decontX.html | [OK] / [FLAG] / [ASK] | {one sentence} |
 | 03 CELL_FILTERING | 03_cell_filtering_report.html | [OK] / [FLAG] / [ASK] | {one sentence} |
 | 04 CLUSTERING | 04_clustering_report.html | [OK] / [FLAG] / [ASK] | {one sentence} |
 | Pipeline | final_report.html | [OK] / [FLAG] / [ASK] | {overall verdict} |

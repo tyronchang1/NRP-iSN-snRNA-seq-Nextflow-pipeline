@@ -25,8 +25,9 @@ if [ -n "${TRACK:-}" ]; then
     case "$track_input_lower" in
         1|soupx)   TRACK="soupx"   ;;
         2|decontx) TRACK="decontx" ;;
+        3|both)    TRACK="both"    ;;
         *)
-            echo "Invalid TRACK env var: '$TRACK'. Must be 'soupx' or 'decontx'. Exiting."
+            echo "Invalid TRACK env var: '$TRACK'. Must be 'soupx', 'decontx', or 'both'. Exiting."
             exit 1
             ;;
     esac
@@ -36,14 +37,16 @@ else
     echo "Which ambient RNA track to use for cell filtering and clustering?"
     echo "  1) SoupX"
     echo "  2) DecontX"
-    echo -n "Choice [1/2] or type 'soupx'/'decontx': "
+    echo "  3) Both (run both tracks in parallel)"
+    echo -n "Choice [1/2/3] or type 'soupx'/'decontx'/'both': "
     read -r track_input
     track_input_lower=$(echo "$track_input" | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')
     case "$track_input_lower" in
         1|soupx)   TRACK="soupx"   ;;
         2|decontx) TRACK="decontx" ;;
+        3|both)    TRACK="both"    ;;
         *)
-            echo "Invalid track choice: '$track_input'. Must be 1, 2, 'soupx', or 'decontx'. Exiting."
+            echo "Invalid track choice: '$track_input'. Must be 1, 2, 3, 'soupx', 'decontx', or 'both'. Exiting."
             exit 1
             ;;
     esac
