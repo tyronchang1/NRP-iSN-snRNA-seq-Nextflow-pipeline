@@ -2,6 +2,15 @@
 
 ---
 
+**Date:** 2026-05-23
+**File:** `scripts/02_scDblFinder_soupx/02_scDblFinder_soupx.R`
+**Change:** Commented out 4 `View()` calls at lines 37, 59, 103, 115.
+**Why:** `View()` requires X11/display and fails immediately in SLURM (`Error in View() : X11 is not available`). These are interactive inspection calls that have no effect in a non-interactive pipeline run. DecontX equivalent already had View() removed in a prior session.
+
+---
+
+---
+
 **Date:** 2026-05-20
 **File changed:** `scripts/02_Doublets_Removal/02_scDblFinder_report.Rmd`
 **Change:** YAML `html_document: dev: png` → `dev: ragg_png`. Fixes Cairo SVG device crash on cluster R binary compiled without Cairo/X11 support. `ragg_png` from the `ragg` package works without cairo or X11. R chunk `dev = "png"` in `knitr::opts_chunk$set()` was not changed.
@@ -97,4 +106,12 @@
 **File changed:** `scripts/02_scDblFinder_soupx/02_scDblFinder_soupx.R`
 **Change:** Replaced all 5 occurrences of `./scripts/02_Doublets_Removal/` with `./scripts/02_scDblFinder_soupx/` (lines 76, 118, 120, 122, 124). Covers `ggsave path=`, two commented `dir.create`/`SaveH5Seurat` lines, `saveRDS()`, and `capture.output()` session_info path.
 **Reason:** Directory `scripts/02_Doublets_Removal/` was renamed to `scripts/02_scDblFinder_soupx/` and script was renamed to `02_scDblFinder_soupx.R`. Internal path strings updated to match.
+
+---
+
+**Date:** 2026-05-23
+**File:** `scripts/02_scDblFinder_soupx/02_scDblFinder_soupx.R`
+**Change:** Commented out 4 `View()` calls at lines 37, 59, 103, 115.
+**Why:** `View()` requires X11/display and fails immediately in SLURM (`Error in View() : X11 is not available`). These are interactive inspection calls that have no effect in a non-interactive pipeline run. DecontX equivalent already had View() removed in a prior session.
+**Review:** script-review-agent — PASS. All 4 lines confirmed commented; no other lines modified; all referenced objects (`all_cts_meta`, `all_sce`, `all_seu`) remain defined and used in active code; no bare `View()` calls remain.
 

@@ -34,7 +34,7 @@ all_seu <- CreateSeuratObject(counts = cts) # create combined Seurat object
 
 
 all_cts_meta <- all_seu@meta.data
-View(all_cts_meta)
+# View(all_cts_meta)
 desired_order <- c("NR00_Day13_1", "NR00_Day13_1_dup",
                    "NR00_Day13_2",
                    "NR00_Day13_2_dup",  
@@ -56,7 +56,7 @@ all_cts_meta <- all_cts_meta %>%
   left_join(sample_mapping, by = c("orig.ident" = "orig_ident")) %>%
   mutate(sample_group = factor(sample_group, levels = desired_order))
 
-View(all_cts_meta)
+# View(all_cts_meta)
 
 # Restore rownames so AddMetaData can match cells
 rownames(all_cts_meta) <- barcodes
@@ -100,7 +100,7 @@ all_sce <- scDblFinder(all_sce,
                        clusters = TRUE)          # pre-cluster to improve sensitivity
 
 all_sce@colData # inspect per-cell metadata including scDblFinder scores and calls
-View(all_sce$ident)
+# View(all_sce$ident)
 # Summarise doublet counts and percentages per sample
 db_table    <- table(all_sce$scDblFinder.class, all_sce$orig.ident)
 percent_db  <- db_table[2, ] / colSums(db_table) * 100
@@ -112,7 +112,7 @@ sum(db_table[2, ]) # total number of doublets across all samples
 # logcounts slot is required by as.Seurat(); assign counts as a placeholder
 logcounts(all_sce) <- assay(all_sce, "counts") # not true log counts — required for conversion
 all_seu <- as.Seurat(all_sce)
-View(all_seu@meta.data)
+# View(all_seu@meta.data)
 table(all_seu$scDblFinder.class) # expected ~8–10% doublets per sample
 # Save Seurat object with doublet labels; actual doublet removal happens in Stage 03
 # dir.create("./scripts/02_scDblFinder_soupx/scDblFinder_output", recursive = TRUE, showWarnings = FALSE)
