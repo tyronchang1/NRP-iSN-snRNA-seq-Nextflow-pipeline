@@ -134,9 +134,17 @@ bash nextflow/submit.sh
 
 `submit.sh` prompts for track (`SoupX` or `DecontX`) and gene sets, then submits to SLURM. You will receive an email at job start, end, and failure.
 
+After submitting, return to your Claude Code session and type:
+
+```
+I submitted the job
+```
+
+This triggers `nextflow-stage-report-agent`, which checks SLURM status and sets a 30-minute monitoring loop. From that point, Claude monitors automatically — reporting stage status, fixing failures, and resubmitting without further input.
+
 ### 5. Check results
 
-Once the job finishes, Claude automatically reports per-stage status and spawns the BIOLOGIST agent to review outputs. Final outputs are in `final_output/`.
+Once the pipeline finishes, Claude automatically spawns the BIOLOGIST agent to review all stage outputs. Final outputs are in `final_output/`.
 
 ---
 
