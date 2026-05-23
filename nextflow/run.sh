@@ -98,6 +98,7 @@ $NXF_BIN run nextflow/main.nf \
     -with-trace    nextflow/logs/trace.txt             \
     -with-report   nextflow/logs/execution_report.html \
     -with-timeline nextflow/logs/timeline.html         \
+    -name          tyron                             \
     -resume
 
 PIPELINE_END=$(date +%s)

@@ -189,3 +189,10 @@ All iSN samples show substantially higher ambient contamination than the typical
 **Bug:** `DropletUtils:::write10xCounts()` errors unconditionally if the output path already exists. All 8 `SoupX_dir_out/<sample>Counts` directories were present on disk from a previous run. Error: `Error in DropletUtils:::write10xCounts(...) : specified 'path' already exists`
 **Fix:** Added `unlink("<outpath>", recursive = TRUE)` immediately before `write10xCounts()` in all 8 scripts to remove stale directories before writing new output.
 **Agent:** scrna-seq-script-agent
+
+---
+
+Bug fix: 2026-05-23
+- Bug: Cairo SVG device unavailable on HTCF compute nodes — SOUPX_REPORT stage failed at knitr setup chunk
+- Fix: Added dev = "png" to knitr::opts_chunk$set() in 01_SoupX_report.Rmd
+- Agent: scrna-seq-script-agent
