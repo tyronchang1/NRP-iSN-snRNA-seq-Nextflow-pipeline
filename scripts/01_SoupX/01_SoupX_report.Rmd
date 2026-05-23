@@ -9,6 +9,7 @@ output:
     toc_depth: 3
     theme: flatly
     self_contained: true
+    dev: ragg_png
 knit: (function(input, ...) rmarkdown::render(input, output_dir = "SoupX_dir_out", ...))
 params:
   project_root: "/scratch/rmlab/rmlab_shared3/tyron/Rscriptv2/iSN/iSN_claude"
