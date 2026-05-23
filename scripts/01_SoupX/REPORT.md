@@ -180,3 +180,12 @@ All iSN samples show substantially higher ambient contamination than the typical
 **Files changed:** All 8 `SoupX_*.R` scripts (`SoupX_NR00_Day13_1.R`, `SoupX_NR00_Day13_1_dup.R`, `SoupX_NR00_Day13_2.R`, `SoupX_NR00_Day13_2_dup.R`, `SoupX_NR00_Day7_1.R`, `SoupX_NR00_Day7_2.R`, `SoupX_NR00_iPSC_1.R`, `SoupX_NR00_iPSC_2.R`)
 **Change:** Added `pdf(NULL)` on the line immediately after `setwd(dir)` in each script.
 **Reason:** After `setwd(dir)`, R opens a default graphics device which writes stray plots to `Rplots.pdf` in the project root. `pdf(NULL)` kills the default device so no stray file is created; all explicit `ggsave()`, `jpeg()`, `png()`, `pdf("filename.pdf")` calls are unaffected.
+
+---
+
+**Date:** 2026-05-23
+**Bug fix applied — SLURM job 41098229 (run backstabbing_lalande) SOUPX stage failure**
+**Files changed:** All 8 `SoupX_*.R` scripts
+**Bug:** `DropletUtils:::write10xCounts()` errors unconditionally if the output path already exists. All 8 `SoupX_dir_out/<sample>Counts` directories were present on disk from a previous run. Error: `Error in DropletUtils:::write10xCounts(...) : specified 'path' already exists`
+**Fix:** Added `unlink("<outpath>", recursive = TRUE)` immediately before `write10xCounts()` in all 8 scripts to remove stale directories before writing new output.
+**Agent:** scrna-seq-script-agent

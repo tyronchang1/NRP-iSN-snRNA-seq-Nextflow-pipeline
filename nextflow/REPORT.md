@@ -2,6 +2,58 @@
 
 ---
 
+## 2026-05-23 — Resubmit failure: job 41098727 (--track both) — TRACK env var not exported
+
+**SLURM job:** 41098727
+**Submitted:** ~16:02 CDT 2026-05-23
+**Duration:** 0 seconds — failed immediately (exit 1:0)
+**State:** FAILED before Nextflow could start
+
+### Root cause
+
+`run.sh` requires `TRACK` to be set as an environment variable (via `--export=ALL,TRACK=...` in sbatch) or it drops to an interactive `read` prompt. The sbatch command that submitted job 41098727 did not export TRACK, so the script received an empty string and exited with:
+
+```
+Invalid track choice: ''. Must be 1, 2, 3, 'soupx', 'decontx', or 'both'. Exiting.
+```
+
+No Nextflow session started. No stages ran. No `.nextflow.log` written for this job.
+
+### Evidence
+
+- `sacct -j 41098727`: State=FAILED, ExitCode=1:0, Elapsed=00:00:00
+- `nextflow/logs/nextflow_41098727.out`: Interactive prompt hit, empty input received
+- `nextflow/logs/nextflow_41098727.err`: Empty (0 bytes)
+
+### Per-stage status (job 41098727)
+
+All stages: NOT STARTED — job failed before Nextflow launched.
+
+### Correct resubmit command
+
+```bash
+# From project root, with gene_sets_input.txt pre-written:
+echo "pan_neuronal=TUBB3" > /scratch/rmlab/rmlab_shared3/tyron/.nextflow/gene_sets_input.txt
+sbatch --chdir="$(pwd)" --export=ALL,TRACK="both" nextflow/run.sh
+```
+
+Gene sets used in last successful submission (job 41098229): `pan_neuronal=TUBB3`
+
+### State after job 41098229 + fix (ready to resume)
+
+| Stage | Track | Status | Notes |
+|-------|-------|--------|-------|
+| DECONTX | DecontX | SUCCESS (cached) | work/7d/95a0ea; iSN_decontX.rds + report exist |
+| SOUPX (x8) | SoupX | FAILED → fix applied | unlink() added; all 8 SoupX_dir_out dirs exist from prior runs |
+| SCDBLFINDER_DECONTX | DecontX | ABORTED | work/e4/cabe63; no .exitcode; will rerun |
+| SCDBLFINDER | SoupX | NOT STARTED | |
+| CELL_FILTERING_* | Both | NOT STARTED | |
+| CLUSTERING_* | Both | NOT STARTED | |
+
+With `-resume`, DECONTX should be CACHED; all SoupX + downstream stages will rerun.
+
+---
+
 ## 2026-05-23 — Bug fix: unlink() before write10xCounts() — all 8 SoupX scripts
 
 **Bug fix applied:** 2026-05-23
