@@ -132,7 +132,7 @@ srun --mem=24GB --cpus-per-task=1 -J interactive -p interactive --pty /bin/bash 
 bash nextflow/submit.sh
 ```
 
-`submit.sh` prompts for track (`SoupX` or `DecontX`) and gene sets, then submits to SLURM. You will receive an email at job start, end, and failure.
+`submit.sh` prompts for track (`SoupX`, `DecontX`, or `Both`) and gene sets, then submits to SLURM. You will receive an email at job start, end, and failure.
 
 After submitting, return to your Claude Code session and type:
 
