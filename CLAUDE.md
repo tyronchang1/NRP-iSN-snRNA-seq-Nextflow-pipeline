@@ -22,6 +22,12 @@ When a task matches the table below, spawn a subagent using the `Agent` tool —
 | Inspect Nextflow stage execution results (`.nextflow.log`, `work/`); produce success/failure report | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
 | User says the pipeline is running or was just submitted (e.g., "I ran submit.sh", "pipeline started", "I submitted the job", "pipeline running") | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
 | Claude just ran `sbatch` to submit the Nextflow pipeline (job ID returned) | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
+
+> **ScheduleWakeup on submission:** Whenever `nextflow-stage-report-agent` is spawned due to a user submission signal or a Claude `sbatch` call (the two rows above), the **main session** must immediately set the monitoring wakeup after spawning — do not wait for the agent to complete:
+> ```
+> ToolSearch(query: "select:ScheduleWakeup", max_results: 1)
+> ScheduleWakeup(delaySeconds: 1800, reason: "iSN pipeline monitoring — checking stage completions every 30 min", prompt: "iSN Nextflow pipeline monitoring check")
+> ```
 | A `ScheduleWakeup` fires with "iSN Nextflow pipeline monitoring check" in the prompt | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
 
 > **HARD RULE — no inline handling of ScheduleWakeup:** When the prompt contains "iSN Nextflow pipeline monitoring check", spawn `nextflow-stage-report-agent` as the **first and only action**. Do NOT check `.nextflow.log` yourself, do NOT report stage status inline, do NOT reason "I already have context from the conversation." Spawn the agent unconditionally. See Rule 13 in `.claude/rules/07_behavior.md`.
