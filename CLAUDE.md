@@ -22,18 +22,12 @@ When a task matches the table below, spawn a subagent using the `Agent` tool —
 | Inspect Nextflow stage execution results (`.nextflow.log`, `work/`); produce success/failure report | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
 | User says the pipeline is running or was just submitted (e.g., "I ran submit.sh", "pipeline started", "I submitted the job", "pipeline running") | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
 | Claude just ran `sbatch` to submit the Nextflow pipeline (job ID returned) | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
-
-> **ScheduleWakeup on submission:** Whenever `nextflow-stage-report-agent` is spawned due to a user submission signal or a Claude `sbatch` call (the two rows above), the **main session** must immediately set the monitoring wakeup after spawning — do not wait for the agent to complete:
-> ```
-> ToolSearch(query: "select:ScheduleWakeup", max_results: 1)
-> ScheduleWakeup(delaySeconds: 1800, reason: "iSN pipeline monitoring — checking stage completions every 30 min", prompt: "iSN Nextflow pipeline monitoring check")
-> ```
 | A `ScheduleWakeup` fires with "iSN Nextflow pipeline monitoring check" in the prompt | `nextflow-stage-report-agent` | `.claude/agents/nextflow-stage-report-agent.md` |
-
-> **HARD RULE — no inline handling of ScheduleWakeup:** When the prompt contains "iSN Nextflow pipeline monitoring check", spawn `nextflow-stage-report-agent` as the **first and only action**. Do NOT check `.nextflow.log` yourself, do NOT report stage status inline, do NOT reason "I already have context from the conversation." Spawn the agent unconditionally. See Rule 13 in `.claude/rules/07_behavior.md`.
 | Review clustering parameters, QC distributions, doublet rates, or expression plots for biological interpretability | `BIOLOGIST` | `.claude/agents/BIOLOGIST.md` |
 | User says the Nextflow pipeline has finished (e.g., "pipeline finished", "nextflow done", "run is complete") | `BIOLOGIST` | `.claude/agents/BIOLOGIST.md` |
 | User reports a SLURM job failure, pastes a SLURM/Nextflow error, or shares a log path from a failed run | `troubleshoot_agent` | `.claude/agents/troubleshoot_agent.md` |
+
+> **HARD RULE — no inline handling of ScheduleWakeup:** When the prompt contains "iSN Nextflow pipeline monitoring check", spawn `nextflow-stage-report-agent` as the **first and only action**. Do NOT check `.nextflow.log` yourself, do NOT report stage status inline, do NOT reason "I already have context from the conversation." Spawn the agent unconditionally. See Rule 13 in `.claude/rules/07_behavior.md`.
 
 **How to spawn:**
 1. Announce in the terminal before spawning: `[Agent] <name> — triggered by: <task>`
@@ -43,9 +37,7 @@ When a task matches the table below, spawn a subagent using the `Agent` tool —
    - The specific task (files to write/edit, what to change and why)
    - All relevant context the subagent needs (it starts cold with no conversation history)
 
-**`run_in_background: true` is mandatory on every Agent call — no exceptions.** This keeps the local session responsive while the agent runs. The result surfaces at the bottom of the conversation when complete.
-
-The subagent reads its own definition file and follows its session-start sequence independently.
+**`run_in_background: true` is mandatory on every Agent call — no exceptions.**
 
 **Auto-review rule:** After every R or Nextflow script edit — regardless of size — spawn `script-review-agent` to review the changes before reporting the work as done. No exceptions. Small edits still require review.
 
@@ -54,24 +46,23 @@ The subagent reads its own definition file and follows its session-start sequenc
 2. **User signals completion** — if the user says the pipeline finished (e.g., "pipeline done", "nextflow finished"), spawn `BIOLOGIST` immediately even if `nextflow-stage-report-agent` did not catch it.
 In both cases: pass paths to all HTML reports that exist on disk. BIOLOGIST reviews all stages in sequence, appends findings to `final_output/Biologist_Chat.md`, and produces a summary table.
 
-**Auto-pipeline-check rule:** At the start of every session, spawn `nextflow-stage-report-agent` at step 18 of the session-start checklist — after all rule files, skill files, and project state files have been read (steps 1–17). Do not spawn it before the reading steps are complete. It will:
-- Check if a Nextflow SLURM job is currently running (`squeue`)
-- Check if `.nextflow.log` exists with stage results
-- If running or finished: report per-stage status and hand failures to `troubleshoot_agent`
-- If nothing found: exit silently — do not mention it to the user
+**Auto-pipeline-check rule:** At the start of every session, spawn `nextflow-stage-report-agent` at step 18 of the session-start checklist — after all rule files, skill files, and project state files have been read (steps 1–17). Do not spawn it before the reading steps are complete. It will check SLURM status, report per-stage results, and hand failures to `troubleshoot_agent`. If nothing found, it exits silently.
 
-After spawning `nextflow-stage-report-agent`, the **main session** must immediately run this check to decide whether to set the monitoring wakeup:
-```bash
-squeue -u $USER --format="%i %j %T" --noheader | grep nextflow_iSN
+**ScheduleWakeup rule:** `ScheduleWakeup` is a session-level tool — it is not available to subagents. Always call it from the main session. Set it in two situations:
+
+1. **Session start** — after spawning `nextflow-stage-report-agent` (step 18), run:
+   ```bash
+   squeue -u $USER --format="%i %j %T" --noheader | grep nextflow_iSN
+   ```
+   If any job is `RUNNING` or `PENDING`, load and call `ScheduleWakeup`. If no job found, skip.
+
+2. **Pipeline submission** — whenever `nextflow-stage-report-agent` is spawned because the user submitted a job or Claude ran `sbatch`, immediately set `ScheduleWakeup` without waiting for the agent to complete.
+
+In both cases:
 ```
-- If any job is `RUNNING` or `PENDING` → load and call `ScheduleWakeup`:
-  ```
-  ToolSearch(query: "select:ScheduleWakeup", max_results: 1)
-  ScheduleWakeup(delaySeconds: 1800, reason: "iSN pipeline monitoring — checking stage completions every 30 min", prompt: "iSN Nextflow pipeline monitoring check")
-  ```
-- If no job found → do not set `ScheduleWakeup`
-
-`ScheduleWakeup` is a session-level tool not available to subagents — always call it from the main session.
+ToolSearch(query: "select:ScheduleWakeup", max_results: 1)
+ScheduleWakeup(delaySeconds: 1800, reason: "iSN pipeline monitoring — checking stage completions every 30 min", prompt: "iSN Nextflow pipeline monitoring check")
+```
 
 **`/start` skill rule:** When the user invokes `/start`, immediately execute the full session-start checklist (steps 0–19) in order via the Skill tool, announcing each step as it completes: read all rule files (steps 1–7), run the memory bootstrap, read the domain glossary (step 8), read all pipeline skill files (steps 9–12), read all project state files (steps 13–15), run path-change detection and REPORT.md staleness check (steps 16–17), spawn `nextflow-stage-report-agent` (step 18), and invoke `grill-with-docs` (step 19). Make each step visible to the user so they can verify compliance. **If `/start` is invoked again mid-session and the checklist has already run, do NOT re-run — acknowledge and move on. Exception: after `/compact` or auto-compaction, re-running `/start` is correct.**
 
