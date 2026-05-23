@@ -1,6 +1,7 @@
 nextflow.enable.dsl = 2
 
 include { SOUPX                                      } from './modules/soupx'
+include { SOUPX_REPORT                               } from './modules/soupx'
 include { DECONTX                                    } from './modules/decontx'
 include { SCDBLFINDER                                } from './modules/scdblfinder'
 include { SCDBLFINDER_DECONTX                        } from './modules/scdblfinder_decontx'
@@ -18,7 +19,8 @@ workflow {
     // ── SoupX track: 01 → 02 → 03 → 04 → report ─────────────────────
     if (params.track == 'soupx' || params.track == 'both') {
         SOUPX(samples_ch)
-        SCDBLFINDER(SOUPX.out.done.collect())
+        SOUPX_REPORT(SOUPX.out.done.collect())
+        SCDBLFINDER(SOUPX_REPORT.out.done)
         CELL_FILTERING_SOUPX(SCDBLFINDER.out.done, 'soupx')
         CLUSTERING_SOUPX(CELL_FILTERING_SOUPX.out.done, 'soupx')
         MERGE_REPORT_SOUPX(CLUSTERING_SOUPX.out.done, 'soupx')
