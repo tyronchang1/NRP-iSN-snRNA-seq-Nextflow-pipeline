@@ -1,6 +1,12 @@
 {
   "permissions": {
-    "allow": ["Bash", "Edit", "Write", "Read"],
+    "allow": [
+      "Bash(git *)", "Bash(squeue *)", "Bash(sacct *)",
+      "Bash(scancel *)", "Bash(sbatch *)", "Bash(cat *)",
+      "Bash(grep *)", "Bash(find *)", "Bash(tail *)",
+      "Bash(ls *)", "Bash(head *)",
+      "Edit", "Write", "Read"
+    ],
     "deny": ["Bash(rm *)", "Bash(mv *)"]
   },
   "hooks": {
