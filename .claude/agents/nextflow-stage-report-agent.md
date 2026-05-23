@@ -56,20 +56,7 @@ Do not say anything to the user. Do not produce a report. Simply stop.
 5. Tell the user which stage is currently `IN PROGRESS`.
 6. If any stage already shows `FAILED`, hand off to `troubleshoot_agent` immediately — do not wait for the job to finish.
 7. Update `md_files/STATUS.md` Last run status table with all current statuses.
-8. **Schedule the next monitoring check** — `ScheduleWakeup` is a deferred tool; you MUST load it via `ToolSearch` before calling it:
-   ```
-   Step 1 — load the schema:
-   ToolSearch(query: "select:ScheduleWakeup", max_results: 1)
-
-   Step 2 — call it:
-   ScheduleWakeup(
-     delaySeconds: 1800,
-     reason: "iSN pipeline monitoring — checking stage completions every 30 min",
-     prompt: "iSN Nextflow pipeline monitoring check"
-   )
-   ```
-   Do NOT use the `/schedule` skill — that is a different mechanism for remote cron jobs and is not available in subagent context. `ScheduleWakeup` (loaded via ToolSearch) is the correct tool and works in subagents.
-   This wakeup re-invokes the main Claude session, which will spawn `nextflow-stage-report-agent` again per the routing rules in CLAUDE.md.
+8. **Do NOT attempt to schedule the next monitoring check.** `ScheduleWakeup` is a session-level tool available only to the main Claude session — it is not exposed to subagents. Calling `ToolSearch` for it from a subagent will return empty. The main session sets the 30-minute `ScheduleWakeup` loop itself after spawning this agent. Simply complete your report and exit.
 
 **Note on submission:** `submit.sh` is interactive and Claude cannot run it directly. However, Claude can submit the pipeline programmatically by replicating what `submit.sh` does:
 1. Write gene sets to `${NXF_HOME}/gene_sets_input.txt`
