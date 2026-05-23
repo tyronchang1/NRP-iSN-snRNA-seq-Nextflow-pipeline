@@ -2,6 +2,832 @@
 
 ---
 
+## 2026-05-23 — Session-start check: job 41099378 — ABORTED IMMEDIATELY (duplicate run name)
+
+**Run name:** tyron (duplicate — already used by job 41099360)
+**Track:** both (intended)
+**SLURM head job:** 41099378
+**Submitted:** ~18:27 CDT 2026-05-23
+**Time of check:** session start 2026-05-23
+**State:** ABORTED — Nextflow exited before any stage ran
+
+### What happened
+
+Job 41099378 lasted 3 seconds. `run.sh` called `nextflow run ... -name tyron -resume` — but Nextflow's internal run history already recorded a run named `tyron` (job 41099360). Nextflow aborted immediately with:
+
+```
+AbortOperationException: Run name `tyron` has been already used -- Specify a different one
+```
+
+No stages ran. No work directories were created. The SOUPX_REPORT fix (adding `dev: ragg_png` to YAML) was NOT tested by this job — the fix was already applied before the run, but the run name collision prevented execution entirely.
+
+### Per-stage status (job 41099378)
+
+All stages: NOT STARTED — Nextflow aborted before launching any process.
+
+```
+───────────────────────────────
+Stages passed:      0 / 17
+Stages failed:      0 / 17 (abort ≠ failure)
+Stages in progress: 0 / 17
+Stages not started: 17 / 17
+───────────────────────────────
+```
+
+### Two blocking issues — must fix before next run
+
+**Issue 1 — Wrong ragg device name (existing bug, still unresolved):**
+- Current: `dev = "ragg_png"` in all Rmd setup chunks + `dev: ragg_png` in YAML headers
+- Required: `dev = "agg_png"` (ragg package exports `agg_png`, not `ragg_png`)
+- Files affected: `01_SoupX_report.Rmd`, `02_scDblFinder_report.Rmd`, `02.1_scDblFinder_report.Rmd`, `03_cell_filtering_report.Rmd`, `04_clustering.Rmd`, `merge_report.nf`
+- Effect if unresolved: knitr fails to find `ragg_png()`, falls back to svg, Cairo crash, exit 1
+
+**Issue 2 — Hardcoded run name `tyron` in `run.sh`:**
+- Current: `nextflow run ... -name tyron -resume` in `nextflow/run.sh`
+- Problem: Nextflow tracks run names in its session history. Once `tyron` is used, every subsequent run with the same name fails unless the name is changed or the history is cleared.
+- Options: (a) Remove the `-name tyron` flag entirely (Nextflow auto-generates a unique adjective-surname name each run); (b) Make the name dynamic, e.g., `-name "tyron_$(date +%Y%m%d_%H%M%S")"`; (c) Manually clear Nextflow history: `nextflow log -delete tyron` (if supported in this version).
+- Recommended: Remove `-name tyron` from `run.sh` to avoid recurrence.
+
+### Evidence
+
+- `nextflow/logs/nextflow_41099378.err`: `Run name 'tyron' has been already used -- Specify a different one`
+- `nextflow/logs/nextflow_41099378.out`: Pipeline started at 18:26, finished at 18:26, wall time 3 seconds
+- `.nextflow.log` (current, 776 bytes): `AbortOperationException: Run name 'tyron' has been already used`
+
+---
+
+## 2026-05-23 — Final run report: job 41099360 (--track both) — run: tyron — FINISHED WITH FAILURE
+
+**Run name:** tyron
+**Track:** both (SoupX + DecontX parallel)
+**SLURM head job:** 41099360
+**Time of check:** 18:22 CDT 2026-05-23
+**State:** FINISHED — pipeline aborted due to SOUPX_REPORT failure (same error as job 41098954)
+
+### Pipeline stats (from .nextflow.log)
+
+- succeededCount: 0
+- failedCount: 1 (SOUPX_REPORT — exit 1)
+- cachedCount: 12 (all 8 SOUPX + DECONTX + SCDBLFINDER_DECONTX + CELL_FILTERING_DECONTX + CLUSTERING_DECONTX)
+- abortedCount: 1 (MERGE_REPORT_DECONTX — killed by pipeline abort)
+- Total wall time: 16 seconds (18:22:19 → 18:22:35 CDT)
+
+### Stage report
+
+---
+
+**Stage: SOUPX (all 8 samples)**
+
+```
+Stage:        SOUPX (NR00_Day13_1, NR00_Day13_1_dup, NR00_Day13_2, NR00_Day13_2_dup,
+              NR00_Day7_1, NR00_Day7_2, NR00_iPSC_1, NR00_iPSC_2)
+Status:       CACHED
+Exit code:    0 (all 8)
+Work dirs:    fc/2580d0, 62/2f62e2, 20/27f33e, b3/2e112a, 46/9a4e3f, 56/d92f95, 61/04419f, 49/75218c
+Output files: <sample>Counts/{barcodes.tsv, genes.tsv, matrix.mtx} — all exist (confirmed from prior run)
+Error:        —
+```
+
+---
+
+**Stage: SOUPX_REPORT (SoupX track)**
+
+```
+Stage:        SOUPX_REPORT
+Status:       FAILED
+Exit code:    1
+SLURM subjob: 41099364
+Work dir:     work/2b/758d441ebc7b98ee3c4c2d444bb485
+Submitted at: 2026-05-23T23:22:28Z
+Completed at: 2026-05-23T23:22:30Z (2 seconds — crashed before any chunk ran)
+Output files: 01_SoupX_report.html — MISSING (render failed before output)
+Error (full .command.err):
+  processing file: 01_SoupX_report.Rmd
+  Error in (function (filename = if (onefile) "Rplots.svg" else "Rplot%03d.svg",  :
+    svg: Cairo-based devices are not available for this platform
+  Calls: <Anonymous> ... block_exec -> eng_r -> chunk_device -> do.call -> <Anonymous>
+
+  Quitting from 01_SoupX_report.Rmd:17-20 [setup]
+  Execution halted
+Origin:       scripts/01_SoupX/01_SoupX_report.Rmd, lines 17–20 (setup chunk)
+Root cause:   `dev = "ragg_png"` is not a valid ragg device name. The ragg package exports
+              `agg_png` (not `ragg_png`). knitr tried to call ragg_png() — function not found —
+              and fell back to its default device (svg), which requires Cairo. Cairo is unavailable
+              on the HTCF compute node. The identical error reoccurred because the fix applied the
+              wrong device name. Correct device name: "agg_png".
+Scope:        All five pipeline Rmd files have `dev = "ragg_png"` in their setup chunks (01_SoupX,
+              02_scDblFinder_soupx, 02.1_scDblFinder_decontX, 03_cell_filtering, 04_clustering).
+              Four Rmd files also have `dev: ragg_png` in their YAML html_document headers.
+              merge_report.nf uses `output_options = list(dev = 'ragg_png')` in its render call.
+              All must be changed to "agg_png".
+```
+
+---
+
+**Stage: DECONTX**
+
+```
+Stage:        DECONTX
+Status:       CACHED
+Exit code:    0
+Work dir:     work/7d/95a0ea (from job 41098229)
+Output files: confirmed from prior run
+Error:        —
+```
+
+---
+
+**Stage: SCDBLFINDER_DECONTX**
+
+```
+Stage:        SCDBLFINDER_DECONTX
+Status:       CACHED
+Exit code:    0
+Work dir:     work/ff/9db669
+Output files: confirmed from prior run
+Error:        —
+```
+
+---
+
+**Stage: CELL_FILTERING_DECONTX**
+
+```
+Stage:        CELL_FILTERING_DECONTX
+Status:       CACHED
+Exit code:    0
+Work dir:     work/9f/da6f54
+Output files: confirmed from prior run
+Error:        —
+```
+
+---
+
+**Stage: CLUSTERING_DECONTX**
+
+```
+Stage:        CLUSTERING_DECONTX
+Status:       CACHED
+Exit code:    0
+Work dir:     work/1f/0652db
+Output files: confirmed from prior run (04_clustering_report_decontX.html, 04_seu_clustered_decontx.rds, etc.)
+Error:        —
+```
+
+---
+
+**Stage: MERGE_REPORT_DECONTX**
+
+```
+Stage:        MERGE_REPORT_DECONTX (decontx)
+Status:       ABORTED
+Exit code:    143 (SIGTERM — killed by Nextflow on pipeline abort)
+SLURM subjob: 41099365
+Work dir:     work/11/cce894e354f1a3d94d07213b0705bf
+Note:         Submitted at 18:22:28Z, immediately killed when SOUPX_REPORT triggered pipeline abort.
+              No outputs produced.
+```
+
+---
+
+**Stages not run (SoupX downstream — blocked by SOUPX_REPORT)**
+
+```
+SCDBLFINDER           — NOT STARTED
+CELL_FILTERING_SOUPX  — NOT STARTED
+CLUSTERING_SOUPX      — NOT STARTED
+MERGE_REPORT_SOUPX    — NOT STARTED
+```
+
+---
+
+```
+───────────────────────────────
+Stages passed:      12 / 17 (all cached — no new successes)
+Stages failed:       1 / 17 (SOUPX_REPORT — exit 1)
+Stages aborted:      1 / 17 (MERGE_REPORT_DECONTX — SIGTERM)
+Stages not started:  4 / 17 (SoupX downstream)
+───────────────────────────────
+```
+
+### Bug report
+
+**Bug:** `ragg_png` is not a valid ragg device name. The correct function exported by the ragg package is `agg_png`. When knitr is given `dev = "ragg_png"`, it looks for a function named `ragg_png` in the global environment or loaded packages, finds none, and falls back to its HTML output default device (`svg`). The svg device requires Cairo graphics support, which is absent on HTCF compute nodes. Pipeline fails identically every run until corrected.
+
+**Files affected (all must change `ragg_png` → `agg_png`):**
+
+| File | Location | Fix needed |
+|------|----------|------------|
+| `scripts/01_SoupX/01_SoupX_report.Rmd` | Line 18 `knitr::opts_chunk$set(dev = "ragg_png")` | Change to `"agg_png"` |
+| `scripts/02_scDblFinder_soupx/02_scDblFinder_report.Rmd` | Line 19 `knitr::opts_chunk$set(dev = "ragg_png")` + Line 12 YAML `dev: ragg_png` | Change both to `agg_png` |
+| `scripts/02.1_scDblFinder_decontX/02.1_scDblFinder_report.Rmd` | Line 19 `knitr::opts_chunk$set(dev = "ragg_png")` + Line 12 YAML `dev: ragg_png` | Change both to `agg_png` |
+| `scripts/03_Cell_filtering/03_cell_filtering_report.Rmd` | Line 20 `knitr::opts_chunk$set(dev = "ragg_png")` + Line 12 YAML `dev: ragg_png` | Change both to `agg_png` |
+| `scripts/04_Clustering/04_clustering.Rmd` | Line 22 `knitr::opts_chunk$set(dev = "ragg_png")` + Line 12 YAML `dev: ragg_png` | Change both to `agg_png` |
+| `nextflow/modules/merge_report.nf` | Line 23 `output_options = list(dev = 'ragg_png')` | Change to `'agg_png'` |
+
+[Handoff] troubleshoot_agent — Stage SOUPX_REPORT failed again (wrong ragg device name: ragg_png → agg_png needed in all 6 files)
+
+---
+
+## 2026-05-23 — Final run report: job 41098954 (--track both) — run: awesome_swartz — FINISHED WITH FAILURE
+
+**Run name:** awesome_swartz
+**Track:** both (SoupX + DecontX parallel)
+**SLURM head job:** 41098954
+**Time of check:** ~18:20 CDT 2026-05-23
+**State:** FINISHED — pipeline aborted due to SOUPX_REPORT failure
+
+### Pipeline stats (from .nextflow.log)
+
+- succeededCount: 1 (CLUSTERING_DECONTX)
+- failedCount: 1 (SOUPX_REPORT)
+- cachedCount: 11 (all 8 SOUPX invocations + DECONTX + SCDBLFINDER_DECONTX + CELL_FILTERING_DECONTX)
+- abortedCount: 1 (MERGE_REPORT_DECONTX — killed when pipeline aborted)
+- Total wall time: ~62 min (17:12 → 18:15 CDT)
+
+### Stage report — NEWLY COMPLETED since poll 5
+
+---
+
+**Stage: CLUSTERING_DECONTX (decontx)**
+
+```
+Stage:        CLUSTERING_DECONTX (decontx)
+Status:       SUCCESS
+Exit code:    0
+SLURM job:    41098969
+Work dir:     work/1f/0652dbb91c077df06305190b551178
+Completed:    2026-05-23T23:14:55Z
+Output files:
+  scripts/04_Clustering/clustering_output/04_clustering_report_decontX.html — exists (7.1 MB)
+  scripts/04_Clustering/clustering_output/04_seu_clustered_decontx.rds     — exists (8.6 GB)
+  scripts/04_Clustering/clustering_output/decontx/04_all_markers_harmony_res0.2.csv — exists (1.3 MB)
+  scripts/04_Clustering/clustering_output/decontx/04_heatmap_top5_markers.pdf       — exists
+  scripts/04_Clustering/clustering_output/decontx/04_session_info.txt               — exists
+  scripts/04_Clustering/clustering_output/decontx/featureplot_markers_harmony.pdf   — exists
+  scripts/04_Clustering/clustering_output/decontx/dotplot_isN_markers.pdf           — exists
+  scripts/04_Clustering/clustering_output/decontx/violin_*.pdf (multiple)           — exist
+Error:        —
+```
+
+---
+
+**Stage: SOUPX_REPORT (SoupX track)**
+
+```
+Stage:        SOUPX_REPORT
+Status:       FAILED
+Exit code:    1
+SLURM job:    41098970
+Work dir:     work/28/629f580c3ad56255aaab5ab63ff90d
+Completed:    2026-05-23T23:14:57Z
+Output files: 01_SoupX_report.html — MISSING (render failed before output)
+Error (first 10 lines of .command.err):
+  processing file: 01_SoupX_report.Rmd
+  Error in (function (filename = if (onefile) "Rplots.svg" else "Rplot%03d.svg",  :
+    svg: Cairo-based devices are not available for this platform
+  Calls: <Anonymous> ... block_exec -> eng_r -> chunk_device -> do.call -> <Anonymous>
+
+  Quitting from 01_SoupX_report.Rmd:17-20 [setup]
+  Execution halted
+Origin:       scripts/01_SoupX/01_SoupX_report.Rmd, lines 17–20 (setup chunk — knitr device option sets svg/Cairo)
+Root cause:   Compute node lacks Cairo graphics support. The knitr setup chunk calls `knitr::opts_chunk$set(dev = "svg")` or similar, which tries to open a Cairo-based SVG device. Cairo is not available in the HTCF SLURM environment.
+```
+
+---
+
+**Stage: MERGE_REPORT_DECONTX (DecontX track)**
+
+```
+Stage:        MERGE_REPORT_DECONTX (decontx)
+Status:       ABORTED
+Exit code:    143 (SIGTERM — killed by Nextflow on pipeline abort)
+SLURM job:    41099334
+Work dir:     work/7f/548e92894305648899b95e8ffe8e3e
+Note:         Submitted at 18:14:59Z, immediately killed when SOUPX_REPORT triggered pipeline abort.
+              No outputs produced.
+```
+
+---
+
+### Previously cached stages (confirmed from .nextflow.log)
+
+| Stage | Process | Work dir | Exit |
+|-------|---------|----------|------|
+| 01 (8×) | SOUPX | fc/2580d0, 62/2f62e2, 20/27f33e, b3/2e112a, 46/9a4e3f, 56/d92f95, 61/04419f, 49/75218c | 0 each |
+| 01.2 | DECONTX | 7d/95a0ea | 0 |
+| 02.1 | SCDBLFINDER_DECONTX | ff/9db669 | 0 |
+| 03 (DecontX) | CELL_FILTERING_DECONTX | 9f/da6f54 | 0 |
+
+### Stages that did NOT run (SoupX track blocked)
+
+SCDBLFINDER, CELL_FILTERING_SOUPX, CLUSTERING_SOUPX, MERGE_REPORT_SOUPX — all NOT STARTED due to SOUPX_REPORT failure.
+
+---
+
+```
+───────────────────────────────
+Stages passed:      12 / 17 (11 cached + 1 success)
+Stages failed:       1 / 17 (SOUPX_REPORT)
+Stages aborted:      1 / 17 (MERGE_REPORT_DECONTX)
+Stages not started:  4 / 17 (SoupX downstream)
+───────────────────────────────
+```
+
+[Handoff] troubleshoot_agent — Stage SOUPX_REPORT failed (Cairo SVG device unavailable on HTCF compute node)
+
+---
+
+## 2026-05-23 — Monitoring check: job 41098954 (--track both) — run: awesome_swartz — poll 5
+
+**Run name:** awesome_swartz
+**Track:** both (SoupX + DecontX parallel)
+**SLURM head job:** 41098954
+**Time of check:** ~18:10 CDT 2026-05-23
+**State:** RUNNING
+
+### Newly completed since poll 4
+
+No stages newly completed since poll 4 (~17:38 CDT). Both previously pending stages now have distinct statuses:
+
+- `CLUSTERING_DECONTX` (job 41098969): changed from PENDING → RUNNING. Started at 17:40 CDT; running for ~29 min on n019. Louvain clustering is complete (resolutions tested: 16, 22, 24, 25 communities on 65,235 nodes). Many output files already published to `scripts/04_Clustering/clustering_output/decontx/` (timestamps 17:36–18:09). The `.rds` file (8.4 GB) was written at 18:09. No `.exitcode` present — job still running; session info or final cleanup may still be in progress.
+- `SOUPX_REPORT` (job 41098970): remains PENDING (AssocMaxJobsLimit). Work dir has no `.command.begin` — job has not yet started on a compute node.
+
+### Currently in progress
+
+```
+Stage:        CLUSTERING_DECONTX (DecontX track)
+Status:       IN PROGRESS (RUNNING — ~29 min on n019)
+Exit code:    — (no .exitcode)
+SLURM subjob: 41098969
+Work dir:     work/1f/0652dbb91c077df06305190b551178
+Started at:   2026-05-23 17:40 CDT
+Progress:     Louvain finished (15 clusters at res=0.2). Output files publishing:
+              04_clustering_report_decontX.html — exists (7.0 MB, published 17:40)
+              04_seu_clustered_decontx.rds — exists (8.4 GB, written 18:09)
+              04_all_markers_harmony_res0.2.csv — exists (1.2 MB)
+              04_heatmap_top5_markers.pdf — exists (27 kB)
+              featureplot_markers_harmony.pdf, featureplot_markers_pca.pdf, etc. — exists
+              violin plots (CALCA, MCM2, MKI67, NANOG, NTRK2, NTRK3, etc.) — exists
+Warnings:     14 features omitted from DoHeatmap (not in scale.data): CABP7, NT5E, NOSTRIN,
+              FOXN4, ERVMER34-1, DPPA5, AC106864.1, LINC02735, AC090572.3, MEOX2, AL353784.1,
+              DANT1, LINC02523, AC097520.2 — non-critical; these are likely lowly-expressed
+              genes absent from the scaled layer at res=0.2.
+              Also: em dash (—) substituted in PDF plot title — cosmetic only.
+
+Stage:        SOUPX_REPORT (SoupX track)
+Status:       IN PROGRESS (PENDING — AssocMaxJobsLimit, 0:00 elapsed)
+Exit code:    — (no .exitcode, no .command.begin)
+SLURM subjob: 41098970
+Work dir:     work/28/629f580c3ad56255aaab5ab63ff90d
+Note:         Still waiting for SLURM job slot. Has not started on any compute node.
+```
+
+### Previously cached / completed (unchanged since poll 4)
+
+```
+SOUPX (all 8 samples)       — CACHED (exit 0)
+DECONTX                      — CACHED (exit 0)
+SCDBLFINDER_DECONTX          — CACHED (exit 0)
+CELL_FILTERING_DECONTX       — CACHED (exit 0)
+SCDBLFINDER (old job)        — SUCCESS (exit 0, work/1e/b19556, from job 41098844)
+```
+
+### Still not started (waiting on SOUPX_REPORT)
+
+```
+Stage:        SCDBLFINDER           — waiting for SOUPX_REPORT (41098970)
+Stage:        CELL_FILTERING_SOUPX  — waiting for SCDBLFINDER
+Stage:        CLUSTERING_SOUPX      — waiting for CELL_FILTERING_SOUPX
+Stage:        MERGE_REPORT_SOUPX    — waiting for CLUSTERING_SOUPX
+Stage:        MERGE_REPORT_DECONTX  — waiting for CLUSTERING_DECONTX (41098969)
+```
+
+```
+───────────────────────────────
+Stages passed (cached/success): 12 / 17 (unchanged from poll 4)
+Stages in progress:              2 / 17 (CLUSTERING_DECONTX RUNNING; SOUPX_REPORT PENDING)
+Stages not started:              5 / 17 (SCDBLFINDER [new job], CELL_FILTERING_SOUPX, CLUSTERING_SOUPX, MERGE_REPORT_SOUPX, MERGE_REPORT_DECONTX)
+Stages failed:                   0 / 17
+───────────────────────────────
+```
+
+**No failures. CLUSTERING_DECONTX is the active stage — nearing completion (~29 min elapsed, output files written). SOUPX_REPORT still queued. Orphaned job 41098847 confirmed gone from squeue.**
+
+**NOTE — Orphan resolved:** Job 41098847 (the orphaned CLUSTERING_DECONTX from cancelled job 41098731) is no longer in squeue. It either completed or was killed before this check. The race condition on output paths noted in poll 4 may have been resolved by whichever job won. The current files in `scripts/04_Clustering/clustering_output/` reflect either the orphan's run or the new job 41098969's run (likely 41098969, given active file timestamps 17:36–18:09 CDT aligned with its start time of 17:40 CDT).
+
+---
+
+## 2026-05-23 — Monitoring check: job 41098954 (--track both) — run: awesome_swartz — poll 4
+
+**Run name:** awesome_swartz
+**Track:** both (SoupX + DecontX parallel)
+**SLURM head job:** 41098954
+**Time of check:** ~17:38 CDT 2026-05-23
+**State:** RUNNING
+**Previous job:** 41098731 (shrivelled_rosalind) — cancelled by user; orphaned subjob 41098847 (CLUSTERING_DECONTX) still running on n019
+
+### Pipeline wiring change in this run
+
+`SOUPX_REPORT` is a new process inserted between `SOUPX` and `SCDBLFINDER` in the SoupX track. The wiring in job 41098731 had SCDBLFINDER triggered directly by SOUPX outputs; the new wiring requires SOUPX_REPORT to complete first. As a result, the SCDBLFINDER work/1e/b19556 output (completed 17:04 in old job) is NOT being reused — SCDBLFINDER will run fresh after SOUPX_REPORT completes.
+
+### Newly completed since poll 3 (new job scope)
+
+```
+Stage:        SCDBLFINDER (SoupX track)
+Status:       SUCCESS (completed in previous job 41098731 — orphaned; used as basis for SOUPX_REPORT submission)
+Exit code:    0
+Work dir:     work/1e/b19556c4c22c3347d53b82118a86e2
+Completed at: 2026-05-23 17:04 CDT (job 41098844, SLURM job completed before job 41098731 was cancelled)
+Output files: iSN_doubletstep.rds — exists
+              02_scDblFinder_report_soupX.html — exists
+              01_totalcounts_preQC_all.png — exists
+              session_info.txt — exists
+Error:        none
+Note:         This work dir is from the old job. In the new job 41098954 (awesome_swartz), SOUPX_REPORT
+              was submitted immediately after all 8 SOUPX were cached, bypassing SCDBLFINDER.
+              SCDBLFINDER will re-run in new job after SOUPX_REPORT completes.
+```
+
+### Currently in progress
+
+```
+Stage:        SOUPX_REPORT (new stage — SoupX track)
+Status:       IN PROGRESS (PENDING — AssocMaxJobsLimit)
+Exit code:    — (no .exitcode)
+Work dir:     work/28/629f580c3ad56255aaab5ab63ff90d
+SLURM subjob: 41098970
+Submitted at: 2026-05-23 17:12 CDT (triggered by all 8 SOUPX CACHED)
+Script:       renders scripts/01_SoupX/01_SoupX_report.Rmd → scripts/01_SoupX/SoupX_dir_out/01_SoupX_report.html
+
+Stage:        CLUSTERING_DECONTX (DecontX track) — NEW instance
+Status:       IN PROGRESS (PENDING — AssocMaxJobsLimit)
+Exit code:    — (no .exitcode)
+Work dir:     work/1f/0652dbb91c077df06305190b551178
+SLURM subjob: 41098969
+Submitted at: 2026-05-23 17:12 CDT (triggered by CELL_FILTERING_DECONTX CACHED)
+Note:         Old orphaned instance (job 41098847, work/43/2638d2) STILL RUNNING on n019 from cancelled job 41098731.
+              Two parallel instances of CLUSTERING_DECONTX now exist simultaneously. This is an orphan issue —
+              the new job 41098954 is not aware of 41098847. Result: whichever finishes first writes its output;
+              they both write to the same absolute publishDir path. Race condition risk on output files.
+```
+
+### Stage status (CACHED — DecontX track)
+
+```
+Stage:        DECONTX
+Status:       CACHED
+Exit code:    0
+Work dir:     work/7d/95a0ea (from job 41098230)
+Output files: confirmed present in prior polls
+
+Stage:        SCDBLFINDER_DECONTX
+Status:       CACHED
+Exit code:    0
+Work dir:     work/ff/9db669 (from job 41098738)
+Output files: confirmed present in prior polls
+
+Stage:        CELL_FILTERING_DECONTX
+Status:       CACHED
+Exit code:    0
+Work dir:     work/9f/da6f54 (from job 41098811)
+Output files: confirmed present in prior polls
+```
+
+### Stage status (CACHED — SoupX track)
+
+```
+Stage:        SOUPX (all 8 samples)
+Status:       CACHED (all 8)
+Exit code:    0 (all 8)
+Work dirs:    fc/2580d0 (NR00_Day13_1), 62/2f62e2 (NR00_Day13_1_dup), 20/27f33e (NR00_Day13_2),
+              b3/2e112a (NR00_Day13_2_dup), 46/9a4e3f (NR00_Day7_1), 56/d92f95 (NR00_Day7_2),
+              61/04419f (NR00_iPSC_1), 49/75218c (NR00_iPSC_2)
+```
+
+### Still not started
+
+```
+Stage:        SCDBLFINDER           — waiting for SOUPX_REPORT (41098970)
+Stage:        CELL_FILTERING_SOUPX  — waiting for SCDBLFINDER
+Stage:        CLUSTERING_SOUPX      — waiting for CELL_FILTERING_SOUPX
+Stage:        MERGE_REPORT_SOUPX    — waiting for CLUSTERING_SOUPX
+Stage:        MERGE_REPORT_DECONTX  — waiting for CLUSTERING_DECONTX (41098969)
+```
+
+```
+───────────────────────────────
+Stages passed (cached/success): 12 / 17 (8 SOUPX + DECONTX + SCDBLFINDER_DECONTX + CELL_FILTERING_DECONTX + SCDBLFINDER from old job)
+Stages in progress:              2 / 17 (SOUPX_REPORT PENDING; CLUSTERING_DECONTX PENDING + orphan RUNNING)
+Stages not started:              5 / 17 (SCDBLFINDER [new job], CELL_FILTERING_SOUPX, CLUSTERING_SOUPX, MERGE_REPORT_SOUPX, MERGE_REPORT_DECONTX)
+Stages failed:                   0 / 17
+───────────────────────────────
+```
+
+**No failures. Bottleneck: AssocMaxJobsLimit preventing SOUPX_REPORT and CLUSTERING_DECONTX from starting.**
+**FLAG: Orphaned CLUSTERING_DECONTX job 41098847 (RUNNING) creates a race condition on DecontX clustering outputs. Both it and the new job 41098969 will write to the same absolute output paths. The first to finish will succeed; the second may fail or silently overwrite. User should be aware.**
+
+---
+
+## 2026-05-23 — Monitoring check: job 41098731 (--track both) — run: shrivelled_rosalind — poll 3
+
+**Run name:** shrivelled_rosalind
+**Track:** both (SoupX + DecontX parallel)
+**SLURM job:** 41098731
+**Time of check:** ~16:55 CDT 2026-05-23
+**State:** RUNNING
+
+### Newly completed since poll 2
+
+```
+Stage:        SOUPX (NR00_iPSC_2)
+Status:       SUCCESS (newly completed)
+Exit code:    0
+Work dir:     work/49/75218cf9ad9f92fbf00b2fa069a1af
+SLURM subjob: 41098740
+Completed at: 2026-05-23 21:44:08 UTC (~16:44 CDT)
+Output files: NR00_iPSC_2Counts/barcodes.tsv — exists
+              NR00_iPSC_2Counts/genes.tsv — exists
+              NR00_iPSC_2Counts/matrix.mtx — exists
+Error:        none
+
+Stage:        CELL_FILTERING_DECONTX
+Status:       SUCCESS (newly completed)
+Exit code:    0
+Work dir:     work/9f/da6f54f68ce23f3b9d84ef70f1ac7e
+SLURM subjob: 41098811
+Completed at: 2026-05-23 21:49:23 UTC (~16:49 CDT)
+Duration:     ~5m 15s (submitted 16:34, completed 16:49; was PENDING until slot freed)
+Output files: 03_seu_cellfiltered_decontx.rds — exists
+              03_seu_cellfiltered_soupx.rds — exists
+              03_cell_filtering_report_decontX.html — exists
+              03_session_info.txt — exists
+              decontx/overlay_pre_post_filter.pdf — exists
+              decontx/scatter_count_vs_gene_doublet.pdf — exists
+              decontx/scatter_count_vs_gene_mito.pdf — exists
+              decontx/scatter_mito_vs_gene_*.pdf — exists (4 files)
+              decontx/violin_by_doublet.pdf — exists
+              decontx/violin_by_sample.pdf — exists
+              soupx/ (same PDF set) — exists
+Error:        none
+```
+
+### Currently in progress
+
+```
+Stage:        SCDBLFINDER
+Status:       IN PROGRESS (RUNNING)
+Exit code:    — (no .exitcode)
+Work dir:     work/1e/b19556c4c22c3347d53b82118a86e2
+SLURM subjob: 41098844
+Submitted at: 2026-05-23 16:44 CDT (triggered by NR00_iPSC_2 SOUPX completion)
+Running on:   n019
+
+Stage:        CLUSTERING_DECONTX
+Status:       IN PROGRESS (PENDING — AssocMaxJobsLimit)
+Exit code:    — (no .exitcode)
+Work dir:     work/43/2638d2b744fdae2f2230d8cc446024
+SLURM subjob: 41098847
+Submitted at: 2026-05-23 16:49 CDT (triggered by CELL_FILTERING_DECONTX completion)
+```
+
+### Still not started
+
+```
+Stage:        CELL_FILTERING_SOUPX — waiting for SCDBLFINDER
+Stage:        CLUSTERING_SOUPX    — waiting for CELL_FILTERING_SOUPX
+```
+
+```
+───────────────────────────────
+Stages passed:      11 / 14 (DECONTX cached + 8 SOUPX SUCCESS + SCDBLFINDER_DECONTX SUCCESS + CELL_FILTERING_DECONTX SUCCESS)
+Stages failed:       0 / 14
+Stages in progress:  2 / 14 (SCDBLFINDER RUNNING; CLUSTERING_DECONTX PENDING)
+Stages not started:  2 / 14 (CELL_FILTERING_SOUPX; CLUSTERING_SOUPX)
+───────────────────────────────
+```
+
+**No failures. Pipeline progressing cleanly. CELL_FILTERING_DECONTX completed in ~5 min and triggered CLUSTERING_DECONTX (PENDING). All 8 SOUPX samples done; SCDBLFINDER now RUNNING on n019.**
+
+---
+
+## 2026-05-23 — Monitoring check: job 41098731 (--track both) — run: shrivelled_rosalind — poll 2
+
+**Run name:** shrivelled_rosalind
+**Track:** both (SoupX + DecontX parallel)
+**SLURM job:** 41098731
+**Time of check:** ~16:42 CDT 2026-05-23
+**State:** RUNNING
+
+### Newly completed since poll 1
+
+```
+Stage:        SCDBLFINDER_DECONTX
+Status:       SUCCESS (newly completed)
+Exit code:    0
+Work dir:     work/ff/9db6693b6f7d6d0cbd45983911d1d5
+SLURM subjob: 41098738
+Completed at: 2026-05-23 16:34:34 UTC (~16:34 CDT)
+Duration:     24m 59s | Realtime: 11m 29s | CPU: 145.1% | Peak RSS: 20.6 GB
+Output files: iSN_decontX_scDblFinder.rds — exists
+              02.1_scDblFinder_report_decontX.html — exists
+              01_totalcounts_preQC_all.png — exists
+              session_info.txt — exists
+Error:        none
+
+Stage:        SOUPX (NR00_iPSC_1)
+Status:       SUCCESS (newly completed)
+Exit code:    0
+Work dir:     work/61/04419f24ab65de3a04802561c3d4df
+SLURM subjob: 41098739
+Completed at: 2026-05-23 16:38:49 UTC (~16:38 CDT)
+Duration:     29m 14s | Realtime: 4m 15s | CPU: 99.0% | Peak RSS: 10.4 GB
+Output files: NR00_iPSC_1Counts/barcodes.tsv — exists
+              NR00_iPSC_1Counts/genes.tsv — exists
+              NR00_iPSC_1Counts/matrix.mtx — exists
+Error:        none
+```
+
+### Currently in progress
+
+```
+Stage:        SOUPX (NR00_iPSC_2)
+Status:       IN PROGRESS (RUNNING)
+Exit code:    — (no .exitcode)
+Work dir:     work/49/75218cf9ad9f92fbf00b2fa069a1af
+SLURM subjob: 41098740
+Started at:   ~16:39 CDT (job state RUNNING as of 16:42 CDT)
+
+Stage:        CELL_FILTERING_DECONTX
+Status:       IN PROGRESS (PENDING — AssocMaxJobsLimit)
+Exit code:    — (no .exitcode)
+Work dir:     work/9f/da6f54f68ce23f3b9d84ef70f1ac7e
+SLURM subjob: 41098811
+Submitted at: 2026-05-23 16:34 CDT (triggered by SCDBLFINDER_DECONTX completion)
+```
+
+### Still not started
+
+```
+Stage:        SCDBLFINDER        — waiting for all 8 SOUPX tasks (7/8 done; NR00_iPSC_2 in progress)
+Stage:        CELL_FILTERING_SOUPX — waiting for SCDBLFINDER
+Stage:        CLUSTERING_SOUPX   — waiting for CELL_FILTERING_SOUPX
+Stage:        CLUSTERING_DECONTX — waiting for CELL_FILTERING_DECONTX
+```
+
+```
+───────────────────────────────
+Stages passed:      9 / 14 (DECONTX cached + 7 SOUPX samples SUCCESS + SCDBLFINDER_DECONTX SUCCESS)
+Stages failed:      0 / 14
+Stages in progress: 2 / 14 (SOUPX NR00_iPSC_2 RUNNING; CELL_FILTERING_DECONTX PENDING)
+Stages not started: 3 / 14 (SCDBLFINDER, CELL_FILTERING_SOUPX, CLUSTERING_SOUPX, CLUSTERING_DECONTX)
+───────────────────────────────
+```
+
+**No failures. Pipeline progressing normally. SCDBLFINDER_DECONTX completed cleanly (exit 0, all outputs present). CELL_FILTERING_DECONTX submitted and waiting for a SLURM slot.**
+
+---
+
+## 2026-05-23 — Monitoring check: job 41098731 (--track both) — run: shrivelled_rosalind — poll 1
+
+**Run name:** shrivelled_rosalind
+**Track:** both (SoupX + DecontX parallel)
+**SLURM job:** 41098731
+**Time of check:** ~16:30 CDT 2026-05-23
+**State:** RUNNING
+
+### Per-stage status
+
+```
+Stage:        DECONTX
+Status:       CACHED
+Exit code:    0
+Output files: iSN_decontX.rds — exists
+              01.2_DecontX_report.html — exists (+ 13 PNG/JPEG outputs)
+Error:        none
+Origin:       work/7d/95a0ea (from job 41098230) — cache hit
+
+Stage:        SOUPX (NR00_Day13_1)
+Status:       SUCCESS (newly completed)
+Exit code:    0
+Work dir:     work/fc/2580d0bc87792abdfd59d8b3a18a89
+Output files: NR00_Day13_1Counts/barcodes.tsv — exists
+              NR00_Day13_1Counts/genes.tsv — exists
+              NR00_Day13_1Counts/matrix.mtx — exists
+Error:        none
+SLURM subjob: 41098732
+
+Stage:        SOUPX (NR00_Day13_1_dup)
+Status:       SUCCESS (newly completed)
+Exit code:    0
+Work dir:     work/62/2f62e20a340aa1de4ea6602d54ec05
+Output files: NR00_Day13_1_dupCounts/barcodes.tsv — exists
+              NR00_Day13_1_dupCounts/genes.tsv — exists
+              NR00_Day13_1_dupCounts/matrix.mtx — exists
+Error:        none
+SLURM subjob: 41098733
+
+Stage:        SOUPX (NR00_Day13_2)
+Status:       SUCCESS (newly completed)
+Exit code:    0
+Work dir:     work/20/27f33e7814bf0a86d048c17a772a05
+Output files: NR00_Day13_2Counts/barcodes.tsv — exists
+              NR00_Day13_2Counts/genes.tsv — exists
+              NR00_Day13_2Counts/matrix.mtx — exists
+Error:        none
+SLURM subjob: 41098734
+
+Stage:        SOUPX (NR00_Day13_2_dup)
+Status:       SUCCESS (newly completed)
+Exit code:    0
+Work dir:     work/b3/2e112a5aab2b22b22f51e010152bde
+Output files: NR00_Day13_2_dupCounts/barcodes.tsv — exists
+              NR00_Day13_2_dupCounts/genes.tsv — exists
+              NR00_Day13_2_dupCounts/matrix.mtx — exists
+Error:        none
+SLURM subjob: 41098735
+
+Stage:        SOUPX (NR00_Day7_2)
+Status:       SUCCESS (newly completed)
+Exit code:    0
+Work dir:     work/56/d92f954453242ac5f6a855cc270853
+Output files: NR00_Day7_2Counts/barcodes.tsv — exists
+              NR00_Day7_2Counts/genes.tsv — exists
+              NR00_Day7_2Counts/matrix.mtx — exists
+Error:        none
+SLURM subjob: 41098736
+
+Stage:        SOUPX (NR00_Day7_1)
+Status:       SUCCESS (newly completed)
+Exit code:    0
+Work dir:     work/46/9a4e3fdbf9fa314ecbd64c116e5217
+Output files: NR00_Day7_1Counts/barcodes.tsv — exists
+              NR00_Day7_1Counts/genes.tsv — exists
+              NR00_Day7_1Counts/matrix.mtx — exists
+Error:        none
+SLURM subjob: 41098737
+
+Stage:        SOUPX (NR00_iPSC_1)
+Status:       IN PROGRESS
+Exit code:    — (no .exitcode)
+Work dir:     work/61/04419f24ab65de3a04802561c3d4df
+Error:        none (PENDING — AssocMaxJobsLimit)
+SLURM subjob: 41098739
+
+Stage:        SOUPX (NR00_iPSC_2)
+Status:       IN PROGRESS
+Exit code:    — (no .exitcode)
+Work dir:     work/49/75218cf9ad9f92fbf00b2fa069a1af
+Error:        none (PENDING — AssocMaxJobsLimit)
+SLURM subjob: 41098740
+
+Stage:        SCDBLFINDER_DECONTX
+Status:       IN PROGRESS
+Exit code:    — (no .exitcode)
+Work dir:     work/ff/9db6693b6f7d6d0cbd45983911d1d5
+Error:        none (RUNNING on n019)
+SLURM subjob: 41098738
+
+Stage:        SCDBLFINDER
+Status:       NOT STARTED
+Exit code:    —
+Output files: waiting for all 8 SOUPX tasks to complete
+Error:        none
+
+Stage:        CELL_FILTERING_SOUPX
+Status:       NOT STARTED
+Exit code:    —
+Error:        none (waiting for SCDBLFINDER)
+
+Stage:        CELL_FILTERING_DECONTX
+Status:       NOT STARTED
+Exit code:    —
+Error:        none (waiting for SCDBLFINDER_DECONTX)
+
+Stage:        CLUSTERING_SOUPX
+Status:       NOT STARTED
+Exit code:    —
+Error:        none (waiting for CELL_FILTERING_SOUPX)
+
+Stage:        CLUSTERING_DECONTX
+Status:       NOT STARTED
+Exit code:    —
+Error:        none (waiting for CELL_FILTERING_DECONTX)
+```
+
+```
+───────────────────────────────
+Stages passed:      7 / 14 (DECONTX cached + 6 SOUPX samples success)
+Stages failed:      0 / 14
+Stages in progress: 3 / 14 (SOUPX NR00_iPSC_1, NR00_iPSC_2 PENDING; SCDBLFINDER_DECONTX RUNNING)
+Stages not started: 4 / 14 (SCDBLFINDER, CELL_FILTERING_SOUPX, CELL_FILTERING_DECONTX, CLUSTERING_SOUPX, CLUSTERING_DECONTX)
+───────────────────────────────
+```
+
+**No failures. Pipeline progressing normally. unlink() fix confirmed working — all 6 completed SOUPX samples exited 0.**
+
+---
+
 ## 2026-05-23 — Resubmit failure: job 41098727 (--track both) — TRACK env var not exported
 
 **SLURM job:** 41098727
