@@ -1,6 +1,7 @@
 {
   "permissions": {
-    "allow": ["Bash", "Edit", "Write", "Read"]
+    "allow": ["Bash", "Edit", "Write", "Read"],
+    "deny": ["Bash(rm *)", "Bash(mv *)"]
   },
   "hooks": {
     "PreToolUse": [
