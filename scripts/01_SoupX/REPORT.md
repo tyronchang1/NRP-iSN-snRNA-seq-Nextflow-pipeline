@@ -4,6 +4,15 @@
 
 **Date:** 2026-05-23
 **File:** `scripts/01_SoupX/SoupX_NR00_iPSC_1.R`
+**Change:** Inserted `genes_check` definition (3 lines) before the sanity-check block at line 119. Copied verbatim from `SoupX_NR00_iPSC_2.R` (same timepoint).
+**Why:** `genes_check` was referenced at lines 124–127 but never defined — omitted during script creation. All other SoupX scripts define it before use.
+
+---
+
+---
+
+**Date:** 2026-05-23
+**File:** `scripts/01_SoupX/SoupX_NR00_iPSC_1.R`
 **Change:** Commented out line 109 (`sc <- autoEstCont(sc)#0.65`) so that line 110 (`sc <- autoEstCont(sc, forceAccept = TRUE, verbose = TRUE)`) executes instead.
 **Why:** Line 109 called `autoEstCont()` without `forceAccept=TRUE`; SoupX estimated rho=0.65 and refused to proceed (exit 1). Line 110 already had the correct call but was never reached.
 

@@ -116,6 +116,10 @@ sc <- autoEstCont(sc, forceAccept = TRUE, verbose = TRUE)
 # Set manually and adjust
 out <- adjustCounts(sc)
 
+genes_check <- c("TUBB3", "PRPH", "NTRK2", "CALCA", "POU5F1", "SOX2", "NANOG", "STMN2","MAP2","SNAP25",
+                 "RBFOX3","NEFH","ACTB")
+genes_check <- genes_check[genes_check %in% rownames(sc$toc)]
+
 # Sanity check on key markers
 cntSoggy   <- rowSums(sc$toc > 0)
 cntStrained <- rowSums(out > 0)
