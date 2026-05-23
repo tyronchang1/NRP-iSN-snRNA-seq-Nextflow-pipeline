@@ -1,5 +1,33 @@
 # 01_SoupX Script Update Report
 
+---
+
+**Date:** 2026-05-23
+**File:** `scripts/01_SoupX/SoupX_NR00_iPSC_1.R`
+**Change:** Commented out line 109 (`sc <- autoEstCont(sc)#0.65`) so that line 110 (`sc <- autoEstCont(sc, forceAccept = TRUE, verbose = TRUE)`) executes instead.
+**Why:** Line 109 called `autoEstCont()` without `forceAccept=TRUE`; SoupX estimated rho=0.65 and refused to proceed (exit 1). Line 110 already had the correct call but was never reached.
+
+---
+
+---
+
+**Date:** 2026-05-23
+
+**Issue:** SoupX pipeline failed on first task (`NR00_Day13_1_dup`, SLURM job 41097332) with exit 1. Error: `failed to open file "./scripts/01_SoupX/SoupX_dir_out/file.../matrix.mtx" for writing`. The `SoupX_dir_out/` directory did not exist on disk. `DropletUtils:::write10xCounts()` cannot create its parent directory — it requires the parent to exist before writing. Only `SoupX_NR00_Day13_1.R` had a `dir.create()` call; the other 7 scripts were missing it. When `NR00_Day13_1_dup` ran first, it crashed immediately, and Nextflow aborted the remaining 7 tasks.
+
+**Fix:** Added `dir.create("./scripts/01_SoupX/SoupX_dir_out", recursive = TRUE, showWarnings = FALSE)` on the line immediately before `write10xCounts()` in all 7 affected scripts. `showWarnings = FALSE` prevents spurious warnings if multiple tasks race to create the same directory.
+
+**Files changed:**
+- `scripts/01_SoupX/SoupX_NR00_Day13_1_dup.R`
+- `scripts/01_SoupX/SoupX_NR00_Day13_2_dup.R`
+- `scripts/01_SoupX/SoupX_NR00_Day13_2.R`
+- `scripts/01_SoupX/SoupX_NR00_Day7_1.R`
+- `scripts/01_SoupX/SoupX_NR00_Day7_2.R`
+- `scripts/01_SoupX/SoupX_NR00_iPSC_1.R`
+- `scripts/01_SoupX/SoupX_NR00_iPSC_2.R`
+
+---
+
 **Date:** 2026-05-11
 
 ## Summary

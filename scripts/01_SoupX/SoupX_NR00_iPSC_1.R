@@ -106,7 +106,7 @@ plotMarkerMap(sc, "NANOG")
 # autoEstCont() automatically estimates the global contamination fraction (rho)
 # it uses TF-IDF to identify genes highly enriched in empty droplets (soup) vs real cells
 # rho ~ 0.01 is typical; rho > 0.05 warrants investigation
-sc <- autoEstCont(sc)#0.65
+# sc <- autoEstCont(sc)#0.65
 sc <- autoEstCont(sc, forceAccept = TRUE, verbose = TRUE)
 # Estimated global rho of 0.01
 
@@ -161,4 +161,5 @@ head(sort(rowSums(sc$toc > out_NR00_iPSC_1) / rowSums(sc$toc > 0)), n = 200) # t
 
 # write corrected count matrix to disk in 10x Genomics format (barcodes.tsv, features.tsv, matrix.mtx)
 # output consumed by Stage 02 (DoubletRemoval)
+dir.create("./scripts/01_SoupX/SoupX_dir_out", recursive = TRUE, showWarnings = FALSE)
 DropletUtils:::write10xCounts("./scripts/01_SoupX/SoupX_dir_out/NR00_iPSC_1Counts", out_NR00_iPSC_1)
