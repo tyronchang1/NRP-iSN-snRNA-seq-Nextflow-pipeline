@@ -54,11 +54,17 @@ In both cases: pass paths to all HTML reports that exist on disk. BIOLOGIST revi
 - If running or finished: report per-stage status and hand failures to `troubleshoot_agent`
 - If nothing found: exit silently — do not mention it to the user
 
-After spawning `nextflow-stage-report-agent` and if the pipeline is RUNNING, the **main session** (not the subagent) must set the 30-minute monitoring wakeup:
+After spawning `nextflow-stage-report-agent`, the **main session** must immediately run this check to decide whether to set the monitoring wakeup:
+```bash
+squeue -u $USER --format="%i %j %T" --noheader | grep nextflow_iSN
 ```
-ToolSearch(query: "select:ScheduleWakeup", max_results: 1)
-ScheduleWakeup(delaySeconds: 1800, reason: "iSN pipeline monitoring — checking stage completions every 30 min", prompt: "iSN Nextflow pipeline monitoring check")
-```
+- If any job is `RUNNING` or `PENDING` → load and call `ScheduleWakeup`:
+  ```
+  ToolSearch(query: "select:ScheduleWakeup", max_results: 1)
+  ScheduleWakeup(delaySeconds: 1800, reason: "iSN pipeline monitoring — checking stage completions every 30 min", prompt: "iSN Nextflow pipeline monitoring check")
+  ```
+- If no job found → do not set `ScheduleWakeup`
+
 `ScheduleWakeup` is a session-level tool not available to subagents — always call it from the main session.
 
 **`/start` skill rule:** When the user invokes `/start`, immediately execute the full session-start checklist (steps 0–19) in order via the Skill tool, announcing each step as it completes: read all rule files (steps 1–7), run the memory bootstrap, read the domain glossary (step 8), read all pipeline skill files (steps 9–12), read all project state files (steps 13–15), run path-change detection and REPORT.md staleness check (steps 16–17), spawn `nextflow-stage-report-agent` (step 18), and invoke `grill-with-docs` (step 19). Make each step visible to the user so they can verify compliance. **If `/start` is invoked again mid-session and the checklist has already run, do NOT re-run — acknowledge and move on. Exception: after `/compact` or auto-compaction, re-running `/start` is correct.**
