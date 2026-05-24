@@ -172,6 +172,7 @@ ggsave("./scripts/03_Cell_filtering/Cell_filtering_output/soupx/overlay_pre_post
 counts <- seuKeep@assays$RNA@counts
 seuNew <- CreateSeuratObject(counts = counts, min.cells = 1)
 seuNew #33635 genes across 66566 cells within 1 assay
+seuNew <- AddMetaData(seuNew, metadata = seuKeep@meta.data[colnames(seuNew), , drop = FALSE])
 
 # Seurat v5 -> v3 compatibility shim:
 seuNew[["RNA"]] <- CreateAssayObject(counts = seuNew[["RNA"]]$counts)

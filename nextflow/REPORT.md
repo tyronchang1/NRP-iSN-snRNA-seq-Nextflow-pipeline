@@ -2,6 +2,202 @@
 
 ---
 
+## 2026-05-23 — Monitoring check: job 41099426 (--track both) — poll 1
+
+**Track:** both (SoupX + DecontX parallel)
+**SLURM head job:** 41099426
+**Time of check:** ~19:14 CDT 2026-05-23 (1m 32s elapsed)
+**State:** RUNNING — CELL_FILTERING_SOUPX in progress
+
+### Newly completed since last STATUS.md snapshot (job tyron_20260523_1831)
+
+No stages newly completed. CELL_FILTERING_SOUPX cache was busted before this submission; the stage is re-running fresh as SLURM job 41099427 in work/a2/af6c26.
+
+### Currently in progress
+
+```
+Stage:        CELL_FILTERING_SOUPX (soupx)
+Status:       IN PROGRESS
+Exit code:    — (no .exitcode)
+SLURM subjob: 41099427
+Work dir:     work/a2/af6c2606e7e96964f8c1096bc5347c
+Script:       03_cell_filtering.R --track soupx → 03_cell_filtering_report_soupX.html
+.command.err: Seurat, SeuratObject, dplyr loading normally (standard package startup messages only)
+              "Warning: Assay RNA changing from Assay5 to Assay" — expected/benign Seurat v5 message
+.command.out: empty (R stdout goes to .command.err)
+Note:         No errors at time of poll. Script is actively executing.
+```
+
+### All other stages (unchanged from prior run — cached)
+
+```
+Stage:        SOUPX (all 8 samples)     — CACHED (exit 0, work dirs fc/2580d0–49/75218c)
+Stage:        SOUPX_REPORT              — CACHED (exit 0, work/aa/ae6831)
+Stage:        DECONTX                   — CACHED (exit 0, work/7d/95a0ea)
+Stage:        SCDBLFINDER               — CACHED (exit 0, work/23/7ffe29)
+Stage:        SCDBLFINDER_DECONTX       — CACHED (exit 0, work/ff/9db669)
+Stage:        CELL_FILTERING_DECONTX    — CACHED (exit 0, work/9f/da6f54)
+Stage:        CLUSTERING_DECONTX        — CACHED (exit 0, work/1f/0652db)
+Stage:        MERGE_REPORT_DECONTX      — CACHED (exit 0, work/82/5030e8)
+```
+
+### Not yet started (waiting on CELL_FILTERING_SOUPX)
+
+```
+Stage:        CLUSTERING_SOUPX     — NOT STARTED
+Stage:        MERGE_REPORT_SOUPX   — NOT STARTED
+```
+
+```
+───────────────────────────────
+Stages passed (cached):     10 / 13
+Stages in progress:          1 / 13 (CELL_FILTERING_SOUPX, SLURM job 41099427)
+Stages not started:          2 / 13 (CLUSTERING_SOUPX, MERGE_REPORT_SOUPX)
+Stages failed:               0 / 13
+───────────────────────────────
+```
+
+**No failures. Pipeline progressing. Cache bust confirmed — CELL_FILTERING_SOUPX is re-running with fixed 03_cell_filtering.R (AddMetaData call to restore sample_group and other metadata before saveRDS). If the fix is correct, CLUSTERING_SOUPX should pass when it runs next.**
+
+---
+
+## 2026-05-23 — Resubmit: job 41099426 (--track both) — SUBMITTED (cache busted for CELL_FILTERING_SOUPX)
+
+**Track:** both (SoupX + DecontX parallel)
+**SLURM head job:** 41099426
+**Submitted:** ~19:13 CDT 2026-05-23
+**State:** RUNNING (monitoring — next check ~19:43 CDT)
+
+### Cache bust performed before this run
+
+Job 41099416 (previous run) failed because Nextflow cached the CELL_FILTERING_SOUPX output from run tyron_20260523_1831 — a run where `AddMetaData` was not yet in the script. The fix to `03_cell_filtering.R` was applied after that run completed, so Nextflow had no reason to invalidate the cache.
+
+Manually deleted before resubmit:
+- Work dir: `work/a2/af6c2606e7e96964f8c1096bc5347c` (CELL_FILTERING_SOUPX cached result)
+- Output RDS: `scripts/03_Cell_filtering/Cell_filtering_output/03_seu_cellfiltered_soupx.rds`
+
+With the cache gone, Nextflow will re-run CELL_FILTERING_SOUPX using the fixed script (with `AddMetaData`), then proceed to CLUSTERING_SOUPX and MERGE_REPORT_SOUPX.
+
+---
+
+## 2026-05-23 — Resubmit: job 41099416 (--track both) — FAILED (CELL_FILTERING_SOUPX cached, old broken RDS reused)
+
+**Track:** both (SoupX + DecontX parallel)
+**SLURM head job:** 41099416
+**Submitted:** ~19:08 CDT 2026-05-23
+**State:** FAILED — CLUSTERING_SOUPX exit 1 (same `sample_group` error)
+
+### What happened
+
+Despite the `AddMetaData` fix being applied to `03_cell_filtering.R`, CELL_FILTERING_SOUPX was CACHED (`cached=16`). Nextflow reused the output RDS from run tyron_20260523_1831 which was generated before the fix. The clustering script loaded the old metadata-less RDS and crashed at `table(seu$sample_group)`.
+
+**Root cause:** The fix was applied after CELL_FILTERING_SOUPX had already run and been cached. Nextflow's cache is based on input hash — changing the R script alone does not invalidate the cache. Manual deletion of the work dir and output RDS was required.
+
+```
+───────────────────────────────
+Stages passed (cached/success): 16 / 17
+Stages failed:                   1 / 17 (CLUSTERING_SOUPX — exit 1, same error)
+───────────────────────────────
+```
+
+---
+
+## 2026-05-23 — Resubmit: job 41099410 (--track both) — FAILED IMMEDIATELY (no gene sets provided)
+
+**Track:** both (SoupX + DecontX parallel)
+**SLURM head job:** 41099410
+**Submitted:** ~19:07 CDT 2026-05-23
+**State:** FAILED — exit 1 in 0 seconds; Nextflow never started
+
+### What happened
+
+Job 41099410 failed before Nextflow launched. `run.sh` checks for gene sets in this order:
+1. File at `${NXF_HOME}/gene_sets_input.txt`
+2. Env var `$GENE_SETS_INPUT`
+3. Interactive `read` prompt (not available in SLURM batch context)
+
+Neither the file nor the env var was present when the job ran. The script hit the else-branch and exited with:
+
+```
+Track (from env): both
+ERROR: No gene sets provided.
+       Always run the pipeline via:  bash nextflow/submit.sh
+       submit.sh collects gene set inputs interactively, then submits this job.
+```
+
+**Root cause:** `sbatch` was called directly (e.g. `sbatch nextflow/run.sh` with `--export=ALL,TRACK=both`) without first writing gene sets to `${NXF_HOME}/gene_sets_input.txt`. The pipeline was never submitted via `submit.sh`, which is the mechanism that writes that file.
+
+**No Nextflow stages ran.** The `.nextflow.log` was NOT updated — it still reflects the prior run (tyron_20260523_1831). No new work directories were created.
+
+### SLURM accounting (job 41099410)
+
+| Field | Value |
+|-------|-------|
+| Job state | FAILED |
+| Exit code | 1:0 |
+| Start | 2026-05-23T19:05:58 |
+| End | 2026-05-23T19:05:58 |
+| Elapsed | 0 seconds |
+| SLURM .out | `nextflow/logs/nextflow_41099410.out` |
+| SLURM .err | `nextflow/logs/nextflow_41099410.err` (empty) |
+
+### Per-stage status (job 41099410)
+
+All stages: NOT STARTED — Nextflow never launched.
+
+```
+───────────────────────────────
+Stages passed:      0 / 12
+Stages failed:      0 / 12 (run.sh failed before Nextflow, not a stage failure)
+Stages in progress: 0 / 12
+Stages not started: 12 / 12
+───────────────────────────────
+```
+
+### Active pipeline failure still outstanding
+
+The CLUSTERING_SOUPX failure from run tyron_20260523_1831 (job 41099405, work/12/9ad4af) is unresolved:
+- Error: `'sample_group' not found in this Seurat object`
+- Work dir: `/scratch/rmlab/rmlab_shared3/tyron/Rscriptv2/iSN/iSN_claude/work/12/9ad4af7b60ab426f3d7795de2a4b48`
+- The AddMetaData fix recorded above was applied to `03_cell_filtering.R` but job 41099410 never ran it
+
+### How to resubmit correctly
+
+Gene sets must be written before `sbatch`. Options:
+1. Use `bash nextflow/submit.sh` (interactive — writes gene_sets_input.txt automatically)
+2. Write the file manually then sbatch:
+   ```bash
+   echo "pan_neuronal=TUBB3,PRPH,SNAP25 peptidergic=CALCA,TRPV1 ..." \
+     > /scratch/rmlab/rmlab_shared3/tyron/.nextflow/gene_sets_input.txt
+   sbatch --export=ALL,TRACK=both nextflow/run.sh
+   ```
+
+### Fix applied before this run
+
+`scripts/03_Cell_filtering/03_cell_filtering.R` — added `AddMetaData` call in SoupX save section (line 175):
+```r
+seuNew <- AddMetaData(seuNew, metadata = seuKeep@meta.data[colnames(seuNew), , drop = FALSE])
+```
+**Root cause of previous failure (CLUSTERING_SOUPX, job 41099405):** `CreateSeuratObject` builds a fresh object from counts only — metadata including `sample_group`, `percent.mt`, `scDblFinder.class` was not transferred to `seuNew` before save. Clustering script crashed at `table(seu$sample_group)`. DecontX path already had this call; SoupX path was missing it.
+
+### Expected resume behavior
+
+With `-resume`, all previously cached/completed stages will be skipped:
+- SOUPX ×8 — CACHED
+- SOUPX_REPORT — CACHED
+- SCDBLFINDER — CACHED
+- DECONTX — CACHED
+- SCDBLFINDER_DECONTX — CACHED
+- CLUSTERING_DECONTX — CACHED
+- MERGE_REPORT_DECONTX — will re-run (was aborted in prior run)
+
+Stages expected to re-run:
+- CELL_FILTERING_SOUPX — re-run (RDS needs regeneration with metadata)
+- CLUSTERING_SOUPX — re-run (depends on fixed RDS)
+- MERGE_REPORT_SOUPX — re-run (depends on clustering)
+
+---
+
 ## 2026-05-23 — Session-start check: job 41099378 — ABORTED IMMEDIATELY (duplicate run name)
 
 **Run name:** tyron (duplicate — already used by job 41099360)
@@ -1540,3 +1736,75 @@ Single-quoting `'${params.gene_sets}'` is the correct approach: Nextflow Groovy-
 - `nextflow/modules/cell_filtering.nf` — removed `val track` input; hardcoded tag as `"both_tracks"`. The R script processes both tracks in one run; CELL_FILTERING must be called only once, not once per track.
 - `nextflow/modules/clustering.nf` — changed input block from two `val` inputs (`ready1`, `ready2`) to a single `val ready`. CLUSTERING now gates on CELL_FILTERING completion only.
 - `nextflow/main.nf` — replaced commented-out stages 03–04 stubs with live calls: `CELL_FILTERING(SCDBLFINDER.out.done.mix(SCDBLFINDER_DECONTX.out.done).collect())` (gates on both doublet-removal tracks); `CLUSTERING(CELL_FILTERING.out.done)` (gates on cell filtering).
+
+---
+
+## 2026-05-23 — Monitoring check: job 41099426 (--track both) — poll 2
+
+**Track:** both (SoupX + DecontX parallel)
+**SLURM head job:** 41099426 (running 31m at time of check)
+**SLURM clustering job:** 41099431 (CLUSTERING_SOUPX, running 26m at time of check)
+**Time of check:** ~19:43 CDT 2026-05-23
+**State:** RUNNING — CLUSTERING_SOUPX in progress
+
+### Newly completed since poll 1
+
+```
+Stage:        CELL_FILTERING_SOUPX (soupx)
+Status:       SUCCESS
+Exit code:    0
+Work dir:     work/a2/af6c2606e7e96964f8c1096bc5347c
+SLURM job:    41099427
+Completed:    ~19:17 CDT (approx 5 min runtime)
+Output files:
+  scripts/03_Cell_filtering/Cell_filtering_output/03_seu_cellfiltered_soupx.rds — exists (980M)
+  scripts/03_Cell_filtering/Cell_filtering_output/03_cell_filtering_report_soupX.html — exists (5.1M)
+  scripts/03_Cell_filtering/Cell_filtering_output/soupx/ — 9 PDF plots exist
+Error:        none
+```
+
+This is the re-run with the fixed 03_cell_filtering.R (metadata restore fix — sample_group and other metadata columns now preserved after CreateSeuratObject at line 173).
+
+### Currently in progress
+
+```
+Stage:        CLUSTERING_SOUPX (soupx)
+Status:       IN PROGRESS
+Exit code:    — (not yet finished)
+Work dir:     work/41/6be6ebb76535501918cafa2fbefc99
+SLURM job:    41099431
+Progress:     PCA, Harmony integration, SNN graph (67047 nodes, 2765380 edges), Louvain clustering
+              (res=0.3: 27 communities; res=0.5: 32 communities) completed.
+              UMAP and report rendering in progress.
+Warnings:     future.seed warnings (non-fatal, parallel RNG); sparse->dense 16.8 GiB allocation;
+              geom_point missing value rows (482) — all non-fatal.
+```
+
+### Stages not yet started
+
+- MERGE_REPORT_SOUPX — waiting on CLUSTERING_SOUPX
+
+### Full stage summary
+
+```
+───────────────────────────────────────────────────────
+Stage              Track     Status      Exit code
+───────────────────────────────────────────────────────
+SOUPX              SoupX     CACHED      0 (all 8)
+SOUPX_REPORT       SoupX     CACHED      0
+DECONTX            DecontX   CACHED      0
+SCDBLFINDER        SoupX     CACHED      0
+SCDBLFINDER_DECONTX DecontX  CACHED      0
+CELL_FILTERING_SOUPX SoupX   SUCCESS     0
+CELL_FILTERING_DECONTX DecontX CACHED    0
+CLUSTERING_SOUPX   SoupX     IN PROGRESS —
+CLUSTERING_DECONTX DecontX   CACHED      0
+MERGE_REPORT_SOUPX SoupX     NOT STARTED —
+MERGE_REPORT_DECONTX DecontX SUCCESS     0
+───────────────────────────────────────────────────────
+Stages passed:       9 / 11
+Stages failed:       0 / 11
+Stages in progress:  1 / 11
+Stages not started:  1 / 11
+───────────────────────────────────────────────────────
+```

@@ -1,5 +1,13 @@
 # Stage 03 Cell Filtering — Change Log
 
+## 2026-05-23
+
+**File:** `scripts/03_Cell_filtering/03_cell_filtering.R`
+**Change:** Added missing `AddMetaData` call in the SoupX track's Save section. Inserted `seuNew <- AddMetaData(seuNew, metadata = seuKeep@meta.data[colnames(seuNew), , drop = FALSE])` immediately after `CreateSeuratObject` and before the Seurat v5→v3 compatibility shim.
+**Reason:** `seuNew` was created from raw counts only; `sample_group` and all other metadata from `seuKeep` were never copied into it. This caused `CLUSTERING_SOUPX` to crash with `'sample_group' not found in this Seurat object`. The DecontX track already had the equivalent `AddMetaData` call (line 333); this brings the SoupX track into parity.
+
+---
+
 ## 2026-05-21 — Rmd: stale SoupX input path corrected
 
 **File:** `scripts/03_Cell_filtering/03_cell_filtering_report.Rmd`
